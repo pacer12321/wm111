@@ -1,0 +1,19 @@
+{
+  "http_success": true,
+  "requested_steps": 12,
+  "case": "B",
+  "request_seconds": 406.583696,
+  "gpu_memory_sampled_peak_mib": {
+    "GPU-b6d13423-832a-9f23-cf2f-6dd9aabc8670": 54894,
+    "GPU-ce70e1b4-48b4-fd02-3b8a-5484cf25fff3": 54036
+  },
+  "quality_verified": false,
+  "scope": "HTTP request excluding model load; same offload/settings across ABCD",
+  "decoded_frames": 124,
+  "shape_verified": true,
+  "schedule_points": 12,
+  "actual_dit_forwards": 11,
+  "decoded_semantics": "full denoising output",
+  "purpose": "Exploratory interleaved-SP profile; 4 refresh forwards followed by 7 partial-query skip forwards",
+  "formal_speed_comparison": false
+}

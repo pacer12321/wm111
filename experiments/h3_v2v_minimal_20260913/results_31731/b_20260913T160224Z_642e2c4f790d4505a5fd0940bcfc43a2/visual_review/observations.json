@@ -1,0 +1,137 @@
+{
+  "review_type": "limited_manual_source_forward_reversed_reference_A8_B8_temporal_order_comparison",
+  "review_date_local": "2026-09-14",
+  "formal_not_smoke": true,
+  "sample_id": "explicit_reverse_couple_124",
+  "runs": {
+    "A8": "a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd",
+    "B8": "b_20260913T160224Z_642e2c4f790d4505a5fd0940bcfc43a2"
+  },
+  "input_identity": {
+    "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+    "source_bytes": 1527004,
+    "source_dimensions": [1280, 720],
+    "source_has_audio": false,
+    "A8_sha256": "17b83ee2196302e9523e3e54aa239e3d6e7c8d5070c83d7c066e4f8cf06b38d7",
+    "A8_bytes": 4271598,
+    "B8_sha256": "c15f08b33a5419ee704350133afd7441386738e11836aa7c605e71ae481c75cc",
+    "B8_bytes": 4657820,
+    "A8_B8_dimensions": [1344, 768],
+    "A8_B8_have_audio": true,
+    "B8_result_sha256": "be970bc20378ca2b4e54c776ccfe16922108024b5ebeeb5e296e15c353411b3c",
+    "B8_request_sha256": "2ff23c11e1c0510ae0eb126e8e7e1bd0e45e92eb5d143b3a1b9b48aa38ab43d9",
+    "all_decoded_frame_counts": 124,
+    "all_fps": 24,
+    "all_video_track_duration_seconds": 5.166666666666667,
+    "every_decoded_pts_equals_frame_index_divided_by_24": true,
+    "all_video_hashes_verified_before_and_after_decode": true,
+    "B8_result_success_50_steps_and_exact_run_output_path_verified": true,
+    "B8_request_identity_source_sha_and_prompt_verified": true
+  },
+  "execution": {
+    "script": "extract_review.py",
+    "successful_script_invocations": 1,
+    "exit_code": 0,
+    "python": "C:/Users/DZH/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "PYTHONPATH": "C:/Users/DZH/OneDrive/Documents/ChatGPT/wm111/.audio_tools",
+    "readonly_A_extraction_helper_sha256": "b641e849c6aa903c7fb5494d32884fca7b2e2ecea4279ac5fc8673192a4e6fe5",
+    "A_helper_main_invoked": false,
+    "new_packages_installed": false,
+    "remote_or_NPU_operations": false,
+    "model_or_VLM_calls": false,
+    "input_production_or_previous_A_review_modifications": false
+  },
+  "inspection": {
+    "native_png_count": 36,
+    "native_dimensions_and_aspect_ratios_preserved": true,
+    "contact_resizing": "Aspect-preserving scaling with black letterbox; no registration or forced source-to-output aspect change",
+    "columns": ["source forward", "source frame 123-i diagnostic reference", "formal A8 output", "formal B8 output"],
+    "output_row_indices": [0, 15, 30, 45, 60, 75, 90, 105, 123],
+    "output_row_pts_seconds": [0.0, 0.625, 1.25, 1.875, 2.5, 3.125, 3.75, 4.375, 5.125],
+    "reverse_reference_source_indices": [123, 108, 93, 78, 63, 48, 33, 18, 0],
+    "reverse_reference_is_generated_ground_truth": false,
+    "new_reverse_video_created": false,
+    "full_contact": "source_forward_reversed_A8_B8_contact.jpg",
+    "contacts_actually_viewed": [
+      "source_forward_reversed_A8_B8_contact_part_1.jpg",
+      "source_forward_reversed_A8_B8_contact_part_3.jpg",
+      "source_forward_reversed_A8_B8_contact_part_2.jpg"
+    ],
+    "all_nine_contact_rows_seen": true,
+    "B8_native_resolution_frames_additionally_seen": [0, 60, 123],
+    "continuous_playback_performed": false,
+    "audio_reviewed": false
+  },
+  "requested_edit": {
+    "prompt": "Reverse the temporal order of the entire reference clip: play all of its actions backward in time. Keep the same two people, their appearance, lighting, camera framing, and background.",
+    "required_coarse_order": "Start from the final close chest embrace and return through the earlier face-contact states to the initial separated-face pose.",
+    "appearance_requirement": "The prompt explicitly asks to keep the people's appearance; it does not request a clothing color or material change.",
+    "router_scope": "The reversal request is explicit in text. This sample is not evidence that a source-dependent VLM router is needed or effective."
+  },
+  "observed_events": [
+    {
+      "frames": [0],
+      "times_seconds": [0.0],
+      "source_and_A8": "Faces are separated and oriented toward each other, with the man's hand resting against the woman's head.",
+      "B8": "Starts in the same coarse face-to-face state, not the final chest embrace.",
+      "reverse_reference": "Already in the final close chest embrace, with the woman's head against him and face oriented toward the camera.",
+      "evidence": "The initial B8 state contradicts whole-clip reversal."
+    },
+    {
+      "frames": [15, 30],
+      "times_seconds": [0.625, 1.25],
+      "source_and_A8": "Move into close facial contact/kissing before the later chest embrace.",
+      "B8": "Also progresses from facial approach into contact in these early samples.",
+      "reverse_reference": "Still in the later chest-embrace phase of the original source.",
+      "evidence": "B8 follows the forward coarse progression rather than the reversed phase ordering."
+    },
+    {
+      "frames": [45, 60],
+      "times_seconds": [1.875, 2.5],
+      "source_and_A8": "At frame 45 the faces are already apart; by frame 60 the woman's head rests more closely against the man's chest.",
+      "B8": "At frame 45 the faces remain in close contact; at frame 60 her head is still more upright/separated while moving toward the embrace.",
+      "evidence": "B8 has local action-phase/timing differences from source/A8. It should not be called a frame-for-frame copy, and the offset does not constitute reversal.",
+      "offset_not_measured": "No continuous tracking was performed, so no exact delay duration is assigned."
+    },
+    {
+      "frames": [75, 90, 105, 123],
+      "times_seconds": [3.125, 3.75, 4.375, 5.125],
+      "source_and_A8": "Remain in a close chest embrace; by the end her face is turned toward the camera.",
+      "B8": "Also reaches and remains in the close chest embrace, ending with her face turned toward the camera.",
+      "reverse_reference": "Returns through earlier face-to-face/contact states and ends at source frame 0 with faces separated.",
+      "evidence": "The final B8 state and late event ordering agree with forward source order, not the required reversed order."
+    }
+  ],
+  "temporal_edit_assessment": {
+    "B8_label": "observed_global_reversal_failure_forward_coarse_order_with_local_timing_differences",
+    "A8_label_reconfirmed": "observed_global_reversal_failure_forward_source_order_at_sampled_times",
+    "confidence_scope": "Distinct initial/final states plus all nine sampled phases provide clear evidence against the requested entire-clip reversal; this is not an every-frame motion-direction measurement.",
+    "B8_coarse_order": "face-to-face -> approach/contact -> separate and transition -> chest embrace -> continued embrace with face toward camera",
+    "not_claimed": [
+      "No pixel identity or exact source/A/B frame correspondence claim.",
+      "No assertion that all small intermediate motions are forward.",
+      "No claim that B8 changes no timing: the frame 45/60 phase difference is explicitly observed."
+    ]
+  },
+  "appearance_and_other_quality": {
+    "unrequested_change": {
+      "assessment": "B8_man_shirt_changes_from_light_to_dark_blue",
+      "evidence": "All nine B8 contact samples show a dark-blue/denim-like shirt with lighter rolled cuffs, while source and A8 show a pale shirt. Native B8 frames 0, 60, and 123 confirm the change.",
+      "relation_to_instruction": "This is an observable deviation from the instruction to preserve appearance; it is not a requested edit and is not merely a small uncertain edge-color artifact."
+    },
+    "broad_preservation": "The same two-person composition, pale sky, green field, and broad facial/embrace sequence remain recognizable in B8. This is not a biometric identity or exact camera-match assessment.",
+    "gross_failure_screen": "No inspected B8 frame is black, blank, or dominated by a gross geometric collapse.",
+    "not_equivalent_quality": "B8 differs from A8 in clothing appearance and sampled motion phase; no equal-quality claim is supported.",
+    "unmeasured": "Subtle hand/face quality, transient artifacts, full-video flicker, and generated audio were not evaluated."
+  },
+  "experiment_implication": "Both dense A8 and global-source B8 fail the explicit whole-clip reversal on this sample. This alone cannot attribute temporal failure to sparse attention, since dense A8 already fails. B8 additionally changes clothing appearance and some sampled action phases. Successful HTTP generation and acceptable-looking stills do not imply a successful temporal edit.",
+  "limits": [
+    "Only nine sampled states were visually compared, plus the recorded B8 native views. Full decoding validates metadata but is not continuous visual playback.",
+    "The middle source reverse reference uses still indices 123-i only; it is not generated ground truth or a newly created target video.",
+    "Source and output dimensions/aspect ratios differ; native images were preserved and contacts letterboxed. No geometric registration or camera-correspondence measurement was done.",
+    "No audio listening, VLM, new model, remote operation, or package installation was used.",
+    "Only this B run's visual_review directory was written. Prior A review, all input videos, formal request/result/status files, and production code were unchanged.",
+    "This review does not validate latency, DiT time, NFE, memory, or acceleration claims."
+  ],
+  "concise_conclusion_zh": "B8 也未完成整段倒放：先面对面靠近/接触，后贴胸拥抱，起止状态和主要事件顺序仍沿 source 正向；但45/60帧动作阶段与A/source有偏移，不能说逐帧复制。另一个明确问题是男士浅色衬衫变成深蓝色，违背保留外观的指令。A/B均未倒放成功，不能据此单独归因稀疏注意力；未连续播放或检查音频，也不能宣称等质。"
+}

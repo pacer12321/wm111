@@ -1,0 +1,165 @@
+{
+  "status": "passed",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "run_id": "91c6c0f98ba84c7c828202d5934176cd",
+  "group": "01234567",
+  "smoke_result": {
+    "path": "/cache/zhonghao/h3/model_trial/01234567/explicit_reverse_couple_124/A/runs/a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd/smoke_2step/result.json",
+    "sha256": "366f26d643642d779762312175af1b185041967c86b158ee1380db2955363096",
+    "size_bytes": 1530
+  },
+  "smoke_request": {
+    "path": "/cache/zhonghao/h3/model_trial/01234567/explicit_reverse_couple_124/A/runs/a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd/smoke_2step/request.json",
+    "sha256": "43cfecfcc8241b68cb875d0cf85ee6d3aae24cba58cb707415832537e271e120",
+    "size_bytes": 1182
+  },
+  "server_identity": {
+    "pid": 322752,
+    "state": "S",
+    "pgrp": 322752,
+    "session": 322752,
+    "start_ticks": 125040225
+  },
+  "worker_identities_by_card": {
+    "0": {
+      "pid": 323631,
+      "state": "S",
+      "pgrp": 322752,
+      "session": 322752,
+      "start_ticks": 125045365
+    },
+    "1": {
+      "pid": 323632,
+      "state": "S",
+      "pgrp": 322752,
+      "session": 322752,
+      "start_ticks": 125045365
+    },
+    "2": {
+      "pid": 323633,
+      "state": "S",
+      "pgrp": 322752,
+      "session": 322752,
+      "start_ticks": 125045365
+    },
+    "3": {
+      "pid": 323634,
+      "state": "S",
+      "pgrp": 322752,
+      "session": 322752,
+      "start_ticks": 125045365
+    },
+    "4": {
+      "pid": 323635,
+      "state": "S",
+      "pgrp": 322752,
+      "session": 322752,
+      "start_ticks": 125045365
+    },
+    "5": {
+      "pid": 323636,
+      "state": "S",
+      "pgrp": 322752,
+      "session": 322752,
+      "start_ticks": 125045365
+    },
+    "6": {
+      "pid": 323637,
+      "state": "S",
+      "pgrp": 322752,
+      "session": 322752,
+      "start_ticks": 125045365
+    },
+    "7": {
+      "pid": 323638,
+      "state": "S",
+      "pgrp": 322752,
+      "session": 322752,
+      "start_ticks": 125045365
+    }
+  },
+  "health": {
+    "health": {
+      "0": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "1": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "2": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "3": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "4": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "5": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "6": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "7": {
+        "model": "910B3",
+        "health": "OK"
+      }
+    },
+    "hbm": {
+      "0": {
+        "used_mib": 60909,
+        "total_mib": 65536,
+        "free_mib": 4627
+      },
+      "1": {
+        "used_mib": 60910,
+        "total_mib": 65536,
+        "free_mib": 4626
+      },
+      "2": {
+        "used_mib": 60908,
+        "total_mib": 65536,
+        "free_mib": 4628
+      },
+      "3": {
+        "used_mib": 60909,
+        "total_mib": 65536,
+        "free_mib": 4627
+      },
+      "4": {
+        "used_mib": 60909,
+        "total_mib": 65536,
+        "free_mib": 4627
+      },
+      "5": {
+        "used_mib": 60910,
+        "total_mib": 65536,
+        "free_mib": 4626
+      },
+      "6": {
+        "used_mib": 60908,
+        "total_mib": 65536,
+        "free_mib": 4628
+      },
+      "7": {
+        "used_mib": 60908,
+        "total_mib": 65536,
+        "free_mib": 4628
+      }
+    }
+  },
+  "sample_id": "explicit_reverse_couple_124",
+  "note": "Connectivity/metadata only, not edit-quality evidence."
+}

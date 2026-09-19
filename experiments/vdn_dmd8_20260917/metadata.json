@@ -1,0 +1,19 @@
+{
+  "checkpoint_format_version": 2,
+  "kind": "weights",
+  "metadata": {
+    "audio_shift": 3.0,
+    "fake_rank": 128,
+    "fake_updates_per_step": 3,
+    "fake_warmup_steps": 10,
+    "objective": "dmd2_no_gan",
+    "real_score": "vdn",
+    "stage": "dmd",
+    "step": 250,
+    "student": "stage_b_vdn+external_v4_step600_ema_trainable",
+    "teacher": "vdn_stage_b_step2000",
+    "turbo_num_steps": 8,
+    "video_shift": 12.0
+  },
+  "weights_dtype": "bfloat16"
+}

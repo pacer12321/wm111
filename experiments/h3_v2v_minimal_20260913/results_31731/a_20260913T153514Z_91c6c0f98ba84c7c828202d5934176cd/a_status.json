@@ -1,0 +1,507 @@
+{
+  "case": "A",
+  "sample_id": "explicit_reverse_couple_124",
+  "group": "01234567",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "run_id": "91c6c0f98ba84c7c828202d5934176cd",
+  "started_at": "2026-09-13T15:35:14.784841+00:00",
+  "supervisor_pid": 322556,
+  "supervisor_proc_identity": {
+    "pid": 322556,
+    "state": "R",
+    "pgrp": 321375,
+    "session": 321375,
+    "start_ticks": 125039821
+  },
+  "allocated_physical_npu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "port": 19098,
+  "parallelism": {
+    "num_gpus": 8,
+    "usp": 8,
+    "ring": 1,
+    "dit_tensor_parallel_size": 1,
+    "text_encoder_tp_size": 8,
+    "layerwise_offload": true,
+    "vae_use_tiling": true,
+    "vae_parallel_mode": "tile",
+    "vae_patch_parallel_size": 8,
+    "attention_backend": "FLASH_ATTN",
+    "listen_host": "127.0.0.1",
+    "listen_port": 19098,
+    "dtype_cli_override": null,
+    "hccl_internal_ports": "Unchanged original vLLM automatic allocation"
+  },
+  "requested_generation": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "duration_seconds": 5.0,
+    "seed": 4101,
+    "num_inference_steps": 50,
+    "flow_shift": 12.0,
+    "audio_flow_shift": 3.0
+  },
+  "formal_request_attempts": 1,
+  "formal_50step_started": true,
+  "formal_50step_completed": true,
+  "quality_evidence": false,
+  "actual_model_forward_calls": null,
+  "new_acceleration_results": null,
+  "startup_timeouts": {
+    "init": 2400,
+    "stage_init": 2400,
+    "health": 2700
+  },
+  "request_timeout_seconds": 1800,
+  "run_directory": "/cache/zhonghao/h3/model_trial/01234567/explicit_reverse_couple_124/A/runs/a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd",
+  "phase": "formal_completed_review_required",
+  "updated_at": "2026-09-13T15:56:22.550472+00:00",
+  "resource_snapshot": {
+    "selected_physical_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_busy_cards": []
+  },
+  "card_health_memory": {
+    "health": {
+      "0": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "1": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "2": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "3": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "4": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "5": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "6": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "7": {
+        "model": "910B3",
+        "health": "OK"
+      }
+    },
+    "hbm": {
+      "0": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "1": {
+        "used_mib": 3411,
+        "total_mib": 65536,
+        "free_mib": 62125
+      },
+      "2": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "3": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "4": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "5": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "6": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "7": {
+        "used_mib": 3407,
+        "total_mib": 65536,
+        "free_mib": 62129
+      }
+    }
+  },
+  "host_memory": {
+    "host_mem_available_bytes": 1608708026368,
+    "cgroup_limit_bytes": 1520999997440,
+    "cgroup_used_bytes": 728530944,
+    "effective_available_bytes": 1520271466496,
+    "required_available_bytes": 644245094400,
+    "cgroup_files": [
+      "/sys/fs/cgroup/memory/memory.limit_in_bytes",
+      "/sys/fs/cgroup/memory/memory.usage_in_bytes"
+    ]
+  },
+  "frozen_evidence_sha256": "155236583775cf8822d17e5755693a1efe8f24d32eedec6b541316a1a76aafd9",
+  "source_video": "/cache/zhonghao/h3/data/explicit_reverse_couple_124/source.mp4",
+  "edit_prompt": "Reverse the temporal order of the entire reference clip: play all of its actions backward in time. Keep the same two people, their appearance, lighting, camera framing, and background.",
+  "note": "Original A only. Edit quality, NFE and acceleration remain unreviewed.",
+  "server_pid": 322752,
+  "server_started_at": "2026-09-13T15:35:18.664307+00:00",
+  "server_proc_identity": {
+    "pid": 322752,
+    "state": "R",
+    "pgrp": 322752,
+    "session": 322752,
+    "start_ticks": 125040225
+  },
+  "server_ready_at": "2026-09-13T15:39:29.001273+00:00",
+  "smoke_2step": {
+    "completed_at": "2026-09-13T15:41:40.044135+00:00",
+    "requested_steps": 2,
+    "success": true,
+    "http_code": "200",
+    "content_type": "video/mp4",
+    "curl_returncode": 0,
+    "request_end_to_end_seconds": 131.03361859801225,
+    "actual_model_forward_calls": null,
+    "dit_latency_seconds": null,
+    "quality_evidence": false,
+    "output_video": "/cache/zhonghao/h3/model_trial/01234567/explicit_reverse_couple_124/A/runs/a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd/output/smoke_2step.mp4",
+    "output_sha256": "13fd0d90d11f92f30b74001353074e0cf86fd8d7c7ae9c2a86ab4db7133e1e34",
+    "ffprobe": {
+      "verified": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1344,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "nb_frames": "124",
+            "nb_read_frames": "124"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "nb_frames": "163",
+            "nb_read_frames": "163"
+          }
+        ],
+        "format": {
+          "duration": "5.207000",
+          "size": "5872068"
+        }
+      },
+      "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+      "checks": {
+        "dimensions": [
+          1344,
+          768
+        ],
+        "fps": 24.0,
+        "frame_count": 124,
+        "container_duration_seconds": 5.207
+      }
+    }
+  },
+  "formal_smoke_gate_passed": true,
+  "formal_smoke_gate": {
+    "status": "passed",
+    "host": {
+      "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+      "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+      "machine": "aarch64"
+    },
+    "run_id": "91c6c0f98ba84c7c828202d5934176cd",
+    "group": "01234567",
+    "smoke_result": {
+      "path": "/cache/zhonghao/h3/model_trial/01234567/explicit_reverse_couple_124/A/runs/a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd/smoke_2step/result.json",
+      "sha256": "366f26d643642d779762312175af1b185041967c86b158ee1380db2955363096",
+      "size_bytes": 1530
+    },
+    "smoke_request": {
+      "path": "/cache/zhonghao/h3/model_trial/01234567/explicit_reverse_couple_124/A/runs/a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd/smoke_2step/request.json",
+      "sha256": "43cfecfcc8241b68cb875d0cf85ee6d3aae24cba58cb707415832537e271e120",
+      "size_bytes": 1182
+    },
+    "server_identity": {
+      "pid": 322752,
+      "state": "S",
+      "pgrp": 322752,
+      "session": 322752,
+      "start_ticks": 125040225
+    },
+    "worker_identities_by_card": {
+      "0": {
+        "pid": 323631,
+        "state": "S",
+        "pgrp": 322752,
+        "session": 322752,
+        "start_ticks": 125045365
+      },
+      "1": {
+        "pid": 323632,
+        "state": "S",
+        "pgrp": 322752,
+        "session": 322752,
+        "start_ticks": 125045365
+      },
+      "2": {
+        "pid": 323633,
+        "state": "S",
+        "pgrp": 322752,
+        "session": 322752,
+        "start_ticks": 125045365
+      },
+      "3": {
+        "pid": 323634,
+        "state": "S",
+        "pgrp": 322752,
+        "session": 322752,
+        "start_ticks": 125045365
+      },
+      "4": {
+        "pid": 323635,
+        "state": "S",
+        "pgrp": 322752,
+        "session": 322752,
+        "start_ticks": 125045365
+      },
+      "5": {
+        "pid": 323636,
+        "state": "S",
+        "pgrp": 322752,
+        "session": 322752,
+        "start_ticks": 125045365
+      },
+      "6": {
+        "pid": 323637,
+        "state": "S",
+        "pgrp": 322752,
+        "session": 322752,
+        "start_ticks": 125045365
+      },
+      "7": {
+        "pid": 323638,
+        "state": "S",
+        "pgrp": 322752,
+        "session": 322752,
+        "start_ticks": 125045365
+      }
+    },
+    "health": {
+      "health": {
+        "0": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "1": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "2": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "3": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "4": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "5": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "6": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "7": {
+          "model": "910B3",
+          "health": "OK"
+        }
+      },
+      "hbm": {
+        "0": {
+          "used_mib": 60909,
+          "total_mib": 65536,
+          "free_mib": 4627
+        },
+        "1": {
+          "used_mib": 60910,
+          "total_mib": 65536,
+          "free_mib": 4626
+        },
+        "2": {
+          "used_mib": 60908,
+          "total_mib": 65536,
+          "free_mib": 4628
+        },
+        "3": {
+          "used_mib": 60909,
+          "total_mib": 65536,
+          "free_mib": 4627
+        },
+        "4": {
+          "used_mib": 60909,
+          "total_mib": 65536,
+          "free_mib": 4627
+        },
+        "5": {
+          "used_mib": 60910,
+          "total_mib": 65536,
+          "free_mib": 4626
+        },
+        "6": {
+          "used_mib": 60908,
+          "total_mib": 65536,
+          "free_mib": 4628
+        },
+        "7": {
+          "used_mib": 60908,
+          "total_mib": 65536,
+          "free_mib": 4628
+        }
+      }
+    },
+    "sample_id": "explicit_reverse_couple_124",
+    "note": "Connectivity/metadata only, not edit-quality evidence."
+  },
+  "formal_request_started_at": "2026-09-13T15:41:43.297391+00:00",
+  "a_50step": {
+    "completed_at": "2026-09-13T15:55:49.400031+00:00",
+    "requested_steps": 50,
+    "success": true,
+    "http_code": "200",
+    "content_type": "video/mp4",
+    "curl_returncode": 0,
+    "request_end_to_end_seconds": 846.0936839610804,
+    "actual_model_forward_calls": null,
+    "dit_latency_seconds": null,
+    "quality_evidence": false,
+    "output_video": "/cache/zhonghao/h3/model_trial/01234567/explicit_reverse_couple_124/A/runs/a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd/output/a_50step.mp4",
+    "output_sha256": "17b83ee2196302e9523e3e54aa239e3d6e7c8d5070c83d7c066e4f8cf06b38d7",
+    "ffprobe": {
+      "verified": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1344,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "nb_frames": "124",
+            "nb_read_frames": "124"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "nb_frames": "163",
+            "nb_read_frames": "163"
+          }
+        ],
+        "format": {
+          "duration": "5.207000",
+          "size": "4271598"
+        }
+      },
+      "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+      "checks": {
+        "dimensions": [
+          1344,
+          768
+        ],
+        "fps": 24.0,
+        "frame_count": 124,
+        "container_duration_seconds": 5.207
+      }
+    }
+  },
+  "review_required": true,
+  "remaining_owned_process_groups": {},
+  "cleanup_completed": true,
+  "needs_attention": false,
+  "resource_release_check": {
+    "selected_physical_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_busy_cards": []
+  },
+  "selected_cards_verified_idle_after_cleanup": true,
+  "error": null,
+  "finished_at": "2026-09-13T15:56:22.550435+00:00"
+}

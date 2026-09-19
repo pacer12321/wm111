@@ -1,0 +1,23 @@
+{
+  "run_id": "e2a7c9c133ca49a6af00134623e9e719",
+  "sample_id": "explicit_reverse_couple_124",
+  "ssh_port": 31731,
+  "check_type": "lightweight_readonly_while_formal_running",
+  "actual_tool_result": {
+    "chunk_id": "729fc4",
+    "wall_time_seconds": 4.2762553,
+    "exit_code": 0,
+    "original_token_count": 584,
+    "output": "{\"verified_at\": \"2026-09-13T16:58:10.174111+00:00\", \"phase\": \"c_50step_request_running\", \"run_id\": \"e2a7c9c133ca49a6af00134623e9e719\", \"formal_attempts\": 1, \"formal_completed\": false, \"formal_request_started_at\": \"2026-09-13T16:48:30.811521+00:00\", \"formal_request_file\": {\"started_at\": \"2026-09-13T16:48:30.819341+00:00\", \"host\": {\"hostname\": \"ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0\", \"boot_id\": \"8e904236-bb23-44b5-b7ba-af73ba5c1f77\", \"machine\": \"aarch64\"}, \"group\": \"01234567\", \"run_id\": \"e2a7c9c133ca49a6af00134623e9e719\", \"sample_id\": \"explicit_reverse_couple_124\", \"fields\": {\"width\": 1344, \"height\": 768, \"fps\": 24, \"flow_shift\": 12.0, \"seed\": 4101, \"prompt\": \"Reverse the temporal order of the entire reference clip: play all of its actions backward in time. Keep the same two people, their appearance, lighting, camera framing, and background.\", \"num_inference_steps\": 50, \"extra_params\": \"{\\\"task\\\": \\\"ref2va\\\", \\\"duration\\\": 5.0, \\\"audio_flow_shift\\\": 3.0}\"}, \"source_video\": \"/cache/zhonghao/h3/data/explicit_reverse_couple_124/source.mp4\", \"source_sha256\": \"4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2\", \"requested_steps\": 50, \"actual_model_forward_calls\": null, \"quality_evidence\": false, \"server_proc_identity\": {\"pid\": 537293, \"state\": \"S\", \"pgrp\": 537293, \"session\": 537293, \"start_ticks\": 125413847}}, \"last_progress\": \"0\", \"smoke_passed\": true, \"smoke_video_sha256\": \"8ad2670465a487eb8e6e4346e5f594c5c37088902b5899a97b43605b9ee7610a\", \"smoke_request_sha256\": \"90f1f6cfc48b26e259e3db769519eb0cf094542756db725d22c17cd3c667a13c\", \"smoke_result_sha256\": \"eaf1e22501b099b2dc090514b7c9cdcaa66106b2e6e90fe4a59171930cc691c0\", \"prefix_bytes\": 142068, \"prefix_sha256\": \"ebab3e69d5e769944a65e90f08a5f5cd03c4598a396b53232aa8c426f4559779\", \"current_10_identity_matches\": true, \"actual_strict_metadata_per_pid_smoke\": 1, \"actual_strict_metadata_per_pid_total\": 2, \"strict_metadata\": {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6138, \"source_audio_t\": 0, \"target_audio_t\": 207}, \"scope\": \"Lightweight read-only active-run check; full load-log reparsing, ffprobe recheck and frozen snapshot comparison deferred until formal completion.\"}\n"
+  },
+  "reader_limitation": "The raw last_progress=0 was a diagnostic regex bug: the carriage-return progress stream was consumed by [^\\n]*. It is NOT a reset or failed experiment. Last independently read progress at 00:56:24 CST was 26/49. Parse splitlines() individually on future reads.",
+  "completion_checks_deferred": [
+    "current full frozen snapshot and source pins",
+    "smoke/formal ffprobe recheck",
+    "prefix and full parse_full_load_evidence",
+    "completed formal_strict_metadata.json versus actual requests=2",
+    "formal media/result/request/HTTP and final latency",
+    "old process identities exit and fresh eight-card idle",
+    "download and visual review"
+  ]
+}

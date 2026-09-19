@@ -1,0 +1,13 @@
+{
+  "mean_total_st_mass": 0.30853164196014404,
+  "mean_corresponding_absolute_mass": 0.009786810725927353,
+  "mean_corresponding_share_within_st": 0.031854379922151566,
+  "median_corresponding_share_within_st": 0.030974771827459335,
+  "top1_corresponding_rate": 0.027027027681469917,
+  "uniform_share": 0.02702702702702703,
+  "layer": 24,
+  "step": 4,
+  "source_queries": 592,
+  "heads": 56,
+  "png": "/cache/zhonghao/h3/fastest_drop_st_formal_20260917_v1/review/fastest_step04_layer24_st_frame_map.png"
+}

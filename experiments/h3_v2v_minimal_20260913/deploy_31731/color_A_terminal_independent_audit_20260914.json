@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "artifact_type": "independent_read_only_terminal_dependency_audit",
+  "scope": "Latest shirt-color A only. Dependency equality, terminal-record consistency, original process exit, and cleanup-log order; not an all-inclusive request/media/visual completion verification.",
+  "author_agent": "/root/h3_b_smoke_result_audit",
+  "record_prepared_at_utc": "2026-09-14T04:43:08.1398336Z",
+  "observation_time": {
+    "exact_remote_read_timestamp_recorded": false,
+    "exact_remote_read_timestamp_utc": null,
+    "observation_occurred_before_record_preparation_utc": "2026-09-14T04:43:08.1398336Z",
+    "note": "The actual remote commands did not emit a wall-clock timestamp. Tool chunk IDs identify the observations; run event timestamps below must not be mistaken for audit observation times."
+  },
+  "target": {
+    "ssh_port": 31731,
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64",
+    "run_id": "5bcd246fd46d4965915dbf8d2c990304",
+    "sample_id": "shirt_red_couple_124",
+    "run_directory": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304",
+    "code_root": "/cache/zhonghao/h3/color_trial_v1/a",
+    "excluded_host_port": 30213
+  },
+  "safety": {
+    "remote_file_writes": false,
+    "model_or_npu_launches": false,
+    "torch_imported": false,
+    "new_B_or_C_started": false,
+    "large_model_payload_rehashed": false,
+    "allowed_subprocesses": [
+      [
+        "/usr/local/ffmpeg/bin/ffprobe",
+        "-v",
+        "error",
+        "-count_frames",
+        "-show_entries",
+        "stream=index,codec_type,codec_name,width,height,r_frame_rate,avg_frame_rate,nb_frames,nb_read_frames",
+        "-show_entries",
+        "format=duration,size",
+        "-of",
+        "json",
+        "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4"
+      ]
+    ],
+    "in_memory_guards": "Blocked torch/torch_npu/vllm/vllm_omni/vllm_ascend/transformers imports; replaced subprocess.run with a guard allowing only ffprobe; replaced base.atomic_json with an exception. No production file was edited."
+  },
+  "tools": [
+    {
+      "chunk_id": "de6418",
+      "exit_code": 1,
+      "remote_executed": false,
+      "note": "Initial local PowerShell quoting parse error; no SSH executed."
+    },
+    {
+      "chunk_id": "8196dc",
+      "exit_code": 0,
+      "wall_time_seconds": 4.1529271,
+      "purpose": "Fixed-run status, frozen/release/code SHA, and selected log lines."
+    },
+    {
+      "functions_cell_id": "197",
+      "chunk_id": "1b364d",
+      "exit_code": 0,
+      "wall_time_seconds": 9.6051058,
+      "purpose": "Release 19-file hashes, actual evidence_snapshot equality, original PID/start exit, historical release, record consistency, cleanup-log sequence."
+    },
+    {
+      "chunk_id": "0880fb",
+      "exit_code": 0,
+      "purpose": "Local existence check before creating this file and local UTC preparation time.",
+      "target_existed": false
+    }
+  ],
+  "commands": {
+    "transport": "ssh -F C:/Users/DZH/.ssh/config-vdn-h3-30213 -p 31731 -T -o BatchMode=yes -o ConnectTimeout=15 vdn-h3-ascend-30213 $taskRemote",
+    "representation": "Actual decoded Python payloads retained below; transport encoded these bytes with PowerShell UTF8 Base64 and invoked Python -c 'import base64;exec(base64.b64decode(\"<payload>\"))'. No remote script file was written.",
+    "first_remote_environment": "env PYTHONDONTWRITEBYTECODE=1 TORCH_DEVICE_BACKEND_AUTOLOAD=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /cache/zhonghao/h3/env/bin/python -B",
+    "second_remote_environment": "env PYTHONDONTWRITEBYTECODE=1 TORCH_DEVICE_BACKEND_AUTOLOAD=0 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /cache/zhonghao/h3/env/bin/python -B",
+    "first_python_source": "import hashlib,json\nfrom pathlib import Path\nr=Path('/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304')\nb=Path('/cache/zhonghao/h3/color_trial_v1')\ndef sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()\nassert r.resolve()==r and r.is_dir()\ns=json.loads((r/'a_status.json').read_text()); f=json.loads((r/'frozen_evidence.json').read_text())\nprint(json.dumps({'status':{k:s.get(k) for k in ('host','run_id','phase','finished_at','formal_request_started_at','formal_50step_started','formal_50step_completed','formal_request_attempts','cleanup_completed','selected_cards_verified_idle_after_cleanup','error','needs_attention','frozen_evidence_sha256','server_pid','supervisor_pid')},'frozen_sha':sha(r/'frozen_evidence.json'),'release_sha':sha(b/'release_sha256.json'),'files':{name:sha(b/name) for name in ('a/run_a_trial.py','a/trial_gates.py','a/vlm_gate.py','vlm/run_vlm.py','vlm/vlm_contract.py')},'run_small_files':[p.name for p in r.iterdir() if p.is_file()],'frozen_keys':list(f),'vlm_keys':list(f['sample']['vlm']),'log_size':(r/'server.log').stat().st_size}))\nlog=(r/'server.log').read_text(errors='replace').splitlines()\nindices=[i for i,line in enumerate(log) if any(x in line for x in ('ConnectionRefused','SystemExit','timeout','Timeout','timed out','/v1/videos/sync','Shutting down','Finished server process','ERROR'))]\nprint('LOG_SELECTED')\nfor i in indices[-28:]: print(str(i+1)+': '+log[i][:1200])",
+    "second_python_source": "import hashlib,json,os,sys,time,subprocess\nfrom pathlib import Path\nr=Path('/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304'); b=Path('/cache/zhonghao/h3/color_trial_v1')\ndef sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()\nassert sha(r/'frozen_evidence.json')=='0f5939af72ecaccca74d14cc5c75bc1f04c6e296284da491bbe4cdc267202e7b'\nassert sha(b/'release_sha256.json')=='a70c2cea17e254a7fb2857ea0e5f98816be50fe5e42756eaa60b8df95d659878'\nrelease=json.loads((b/'release_sha256.json').read_text()); bad=[]\nfor name,want in release['files'].items():\n p=b/name\n if not p.is_file() or p.is_symlink() or p.resolve()!=p or sha(p)!=want: bad.append(name)\nprint(json.dumps({'release_files':len(release['files']),'release_mismatches':bad}),flush=True)\nassert not bad\nclass NoModelImports:\n def find_spec(self,fullname,path=None,target=None):\n  if fullname.split('.')[0] in {'torch','torch_npu','vllm','vllm_omni','vllm_ascend','transformers'}: raise RuntimeError('Readonly audit blocked device/model import: '+fullname)\nsys.meta_path.insert(0,NoModelImports())\noriginal_run=subprocess.run\ncalled=[]\ndef readonly_run(command,*args,**kwargs):\n if not isinstance(command,list) or Path(command[0]).name!='ffprobe': raise RuntimeError('Readonly audit blocked subprocess')\n called.append(command)\n return original_run(command,*args,**kwargs)\nsubprocess.run=readonly_run\nsys.path.insert(0,str(b/'a'))\nimport run_a_trial as a\nassert Path(a.__file__).resolve()==b/'a/run_a_trial.py'\ndef no_write(*args,**kwargs): raise RuntimeError('Readonly audit blocked evidence write')\na.base.atomic_json=no_write\ns=json.loads((r/'a_status.json').read_text()); f=json.loads((r/'frozen_evidence.json').read_text())\nobj=object.__new__(a.ATrialSupervisor); obj.host=s['host']; obj.run_id=s['run_id']; obj.sample=a.gates.sample_profile(s['sample_id']); obj.selected=a.gates.selected_profile(s['group'],s['sample_id']); obj.run_dir=r\nstart=time.monotonic(); current=obj.evidence_snapshot(); elapsed=time.monotonic()-start\nprint(json.dumps({'snapshot_equal':current==f,'different_top_keys':[k for k in set(current)|set(f) if current.get(k)!=f.get(k)],'snapshot_seconds':elapsed,'source_records':len(current['sources']),'weight_file_records':len(current['weights']['files']),'source':current['sample']['source'],'vlm_run_id':current['sample']['vlm']['evidence']['status']['run_id'],'vlm_classification':current['sample']['vlm']['evidence']['result']['classification'],'readonly_subprocesses':called,'torch_imported':'torch' in sys.modules}),flush=True)\nassert current==f\nproof=json.loads((r/'formal_smoke_gate.json').read_text())\nidentities=[('supervisor',s['supervisor_proc_identity']),('server',s['server_proc_identity'])]+[(str(k),v) for k,v in proof['worker_identities_by_card'].items()]\nhealth=[]\nfor label,identity in identities:\n now=a.base.proc_identity(identity['pid']); health.append({'label':label,'pid':identity['pid'],'start_ticks':identity['start_ticks'],'original_alive':now is not None and now['start_ticks']==identity['start_ticks']})\nrelease_proof=a.base.selected_idle((r/'npu_after.txt').read_text(),tuple(range(8)))\nprint(json.dumps({'original_identities':health,'historical_release_matches':release_proof==s.get('resource_release_check'),'historical_release':release_proof,'formal_result_matches_status':json.loads((r/'a_50step/result.json').read_text())==s.get('a_50step'),'smoke_gate_matches_status':proof==s.get('formal_smoke_gate')}),flush=True)\nlog=(r/'server.log').read_text(errors='replace').splitlines()\nhttp=[i for i,x in enumerate(log) if '/v1/videos/sync' in x and '200 OK' in x]\nwarning=[i for i,x in enumerate(log) if 'ConnectionRefusedError:' in x or 'SystemExit: 143' in x or ('Terminating diffusion worker' in x and 'after timeout' in x)]\nother=[i for i,x in enumerate(log) if any(y in x for y in ('Shutting down','Application shutdown','Finished server process','Received SIGTERM'))]\nprint(json.dumps({'http_200_lines':[(i+1,log[i]) for i in http],'cleanup_error_count':len(warning),'all_cleanup_errors_after_last_http_200':bool(http) and all(i>http[-1] for i in warning),'first_cleanup_error_context':[(i+1,log[i]) for i in range(max(0,warning[0]-10),warning[0]+1)] if warning else [],'shutdown_lines':[(i+1,log[i]) for i in other],'timeout_lines':[(i+1,log[i]) for i in warning if 'after timeout' in log[i]]}),flush=True)"
+  },
+  "key_raw_output": {
+    "initial_snapshot": {
+      "phase": "formal_completed_review_required",
+      "finished_at": "2026-09-14T04:19:20.814637+00:00",
+      "formal_request_started_at": "2026-09-14T04:04:32.195024+00:00",
+      "formal_50step_started": true,
+      "formal_50step_completed": true,
+      "formal_request_attempts": 1,
+      "cleanup_completed": true,
+      "selected_cards_verified_idle_after_cleanup": true,
+      "error": null,
+      "needs_attention": false,
+      "frozen_evidence_sha256": "0f5939af72ecaccca74d14cc5c75bc1f04c6e296284da491bbe4cdc267202e7b",
+      "frozen_sha": "0f5939af72ecaccca74d14cc5c75bc1f04c6e296284da491bbe4cdc267202e7b",
+      "release_sha": "a70c2cea17e254a7fb2857ea0e5f98816be50fe5e42756eaa60b8df95d659878",
+      "server_pid": 759877,
+      "supervisor_pid": 759621,
+      "log_size": 132944,
+      "files": {
+        "a/run_a_trial.py": "2afe8d793ed7c2cd9a16746f7fb1e918b41f92fae0e87224b0dea11a970f3bc7",
+        "a/trial_gates.py": "f786cb3c3ccead8b6de365ca62d2f9dea8aaece1493cd9be0b01e1a4fd4cefa0",
+        "a/vlm_gate.py": "8cb2f37ef94461e62f65882ee6a8b049de1f34679d680f13cf7d37511351f021",
+        "vlm/run_vlm.py": "cfaaf60ae7f914369aaacc7f4ccddb002e56250a659eeb6f5a2799b61a9092c0",
+        "vlm/vlm_contract.py": "a1af1e66166a4f2da9fcd3a12061dc9865fbf85d299adaf277bf2cf397e43ea7"
+      }
+    },
+    "release_check": {
+      "release_files": 19,
+      "release_mismatches": []
+    },
+    "dependency_check": {
+      "snapshot_equal": true,
+      "different_top_keys": [],
+      "snapshot_seconds": 1.4260980689432472,
+      "source_records": 16,
+      "weight_file_records": 81,
+      "torch_imported": false,
+      "source": {
+        "path": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+        "sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+        "size_bytes": 1527004
+      },
+      "vlm_run_id": "4cfa7803ddc3482a8906b91184743384",
+      "vlm_classification": {
+        "classification": "preserve",
+        "confidence": 1,
+        "source_evidence": [
+          {
+            "frame_index": 0,
+            "observation": "The man is wearing a pale shirt and embracing the woman; his hands are on her face and neck."
+          },
+          {
+            "frame_index": 25,
+            "observation": "The couple continues to embrace, with the man's arms around the woman and her arms around his waist; no change in action or timing is observed."
+          },
+          {
+            "frame_index": 57,
+            "observation": "The man maintains his embrace, and the woman rests her head on his chest; the action flow remains consistent with prior frames."
+          },
+          {
+            "frame_index": 107,
+            "observation": "The couple remains in the same embrace, with no change in their relative positions or movements; the action sequence is continuous and unaltered."
+          }
+        ],
+        "edit_effects": {
+          "order": "unchanged",
+          "speed": "unchanged",
+          "duration": "unchanged",
+          "events": "unchanged"
+        },
+        "reason": "The edit only changes the color of the man's shirt to red while preserving its fabric, shape, and details. The actions, their order, timing, and all other elements including the woman's clothing, camera viewpoint, framing, lighting, and background remain unchanged. No action-timeline modification is required."
+      }
+    },
+    "original_identities": [
+      {
+        "label": "supervisor",
+        "pid": 759621,
+        "start_ticks": 129493821,
+        "original_alive": false
+      },
+      {
+        "label": "server",
+        "pid": 759877,
+        "start_ticks": 129496385,
+        "original_alive": false
+      },
+      {
+        "label": "0",
+        "pid": 760561,
+        "start_ticks": 129501518,
+        "original_alive": false
+      },
+      {
+        "label": "1",
+        "pid": 760562,
+        "start_ticks": 129501518,
+        "original_alive": false
+      },
+      {
+        "label": "2",
+        "pid": 760563,
+        "start_ticks": 129501518,
+        "original_alive": false
+      },
+      {
+        "label": "3",
+        "pid": 760564,
+        "start_ticks": 129501518,
+        "original_alive": false
+      },
+      {
+        "label": "4",
+        "pid": 760565,
+        "start_ticks": 129501519,
+        "original_alive": false
+      },
+      {
+        "label": "5",
+        "pid": 760566,
+        "start_ticks": 129501519,
+        "original_alive": false
+      },
+      {
+        "label": "6",
+        "pid": 760567,
+        "start_ticks": 129501519,
+        "original_alive": false
+      },
+      {
+        "label": "7",
+        "pid": 760568,
+        "start_ticks": 129501519,
+        "original_alive": false
+      }
+    ],
+    "historical_release_matches": true,
+    "historical_release": {
+      "selected_physical_cards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "explicitly_idle_cards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "other_busy_cards": []
+    },
+    "formal_result_matches_status": true,
+    "smoke_gate_matches_status": true,
+    "log_order": {
+      "line_numbers_are_one_based": true,
+      "http_200_lines": [
+        [
+          638,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m INFO:     127.0.0.1:49510 - \"POST /v1/videos/sync HTTP/1.1\" 200 OK"
+        ],
+        [
+          736,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m INFO:     127.0.0.1:49516 - \"POST /v1/videos/sync HTTP/1.1\" 200 OK"
+        ]
+      ],
+      "cleanup_error_count": 19,
+      "all_cleanup_errors_after_last_http_200": true,
+      "first_matching_cleanup_error_line": 946,
+      "first_matching_cleanup_error": "SystemExit: 143",
+      "shutdown_lines": [
+        [
+          746,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m INFO:     Shutting down"
+        ],
+        [
+          748,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m INFO:     Application shutdown complete."
+        ],
+        [
+          749,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m INFO:     Finished server process [759877]"
+        ],
+        [
+          750,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m INFO 09-14 12:18:49 [omni_base.py:630] [AsyncOmni] Shutting down"
+        ],
+        [
+          751,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m INFO 09-14 12:18:49 [async_omni_engine.py:1827] [AsyncOmniEngine] Shutting down Orchestrator"
+        ],
+        [
+          753,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m INFO 09-14 12:18:49 [orchestrator.py:2258] [Orchestrator] Shutting down all 1 client(s)"
+        ]
+      ],
+      "timeout_lines": [
+        [
+          1490,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m WARNING 09-14 12:18:54 [multiproc_executor.py:60] Terminating diffusion worker DiffusionWorker-0 after timeout"
+        ],
+        [
+          1491,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m WARNING 09-14 12:19:04 [multiproc_executor.py:60] Terminating diffusion worker DiffusionWorker-1 after timeout"
+        ],
+        [
+          1492,
+          "\u001b[0;36m(APIServer pid=759877)\u001b[0;0m WARNING 09-14 12:19:14 [multiproc_executor.py:60] Terminating diffusion worker DiffusionWorker-2 after timeout"
+        ]
+      ],
+      "interpretation": "All 19 matched ConnectionRefusedError/SystemExit143/worker-after-timeout messages occur after the second HTTP200 and after shutdown begins. They are cleanup-tail warnings, not evidence in this audit of a failed formal HTTP request.",
+      "limitation": "The log search was for the explicitly named cleanup errors and lifecycle markers, not an exhaustive semantic review of every warning."
+    }
+  },
+  "checked": [
+    "Pinned frozen and release manifest SHA match parent-supplied expectations.",
+    "All 19 files in actual release manifest match SHA and canonical regular paths.",
+    "Actual ATrialSupervisor.evidence_snapshot equals per-run frozen JSON exactly: host/run/cards/parallelism/generation/source code/transfer/runtime/tiny/sample/weights/precision.",
+    "Current source video hash and ffprobe result are rechecked by sample_gate.",
+    "Existing VLM admission verifier ran read-only as part of sample_gate and its result equals frozen VLM evidence; this is not a fresh VLM prediction.",
+    "81 weight file records use transfer payload SHA plus current stat identity, safetensors headers, and small configuration hashes; no full large-payload rehash.",
+    "All ten recorded original PID/start identities no longer exist as the original process.",
+    "Historical npu_after text parses as all eight idle and equals recorded release check.",
+    "Formal a_50step/result.json equals status.a_50step; formal_smoke_gate.json equals status.formal_smoke_gate.",
+    "Cleanup error markers appear after the second HTTP200 and shutdown initiation."
+  ],
+  "formal_request_content_audit": {
+    "request_json_read": false,
+    "request_json_hash_checked": false,
+    "actual_request_source_path_and_sha_crosschecked": false,
+    "actual_request_prompt_crosschecked": false,
+    "actual_requested_steps_50_crosschecked": false,
+    "actual_request_seed_and_other_fields_crosschecked": false,
+    "actual_formal_request_server_identity_crosschecked": false,
+    "note": "This audit compared the dependency snapshot (which includes intended source, prompt and generation parameters) and compared formal result to status. It did NOT read a_50step/request.json or independently bind its actual fields/hash to that source/prompt/50 steps/seed/other matching parameters. Snapshot equality must not be reported as completion of those request checks. Parent may supplement."
+  },
+  "not_checked": [
+    "Fresh current npu-smi/eight-card idle was NOT queried; only historical npu_after.txt was verified.",
+    "Actual formal request.json content/hash/fields were NOT independently checked; see formal_request_content_audit.",
+    "The smoke request.json contents/hash were NOT independently revalidated here beyond equality of saved smoke-gate object with status.",
+    "Formal output MP4 was NOT downloaded, viewed, hashed or ffprobed again by this subagent in this audit.",
+    "Formal response headers and curl stdout/return code were NOT independently read; result-to-status equality and server HTTP200 log markers are the narrower checks performed.",
+    "No new visual edit quality, temporal consistency, NFE, latency instrumentation, or acceleration claim was validated.",
+    "No exhaustive full-model payload rehash or all-environment dependency/file audit beyond the existing evidence_snapshot contract was performed."
+  ],
+  "parent_reported_context_not_independent_verification": {
+    "formal_completed_at_utc": "2026-09-14T04:18:47",
+    "request_end_to_end_seconds": 855.1022686900105,
+    "output_sha256": "392fd304bab4ca92f8a883f6c85c8a27f7adbd61dd5f1b5a6f678e1dee06d9ba",
+    "output_size_bytes": 5031092,
+    "output_frames": 124,
+    "output_fps": 24,
+    "output_width": 1344,
+    "output_height": 768,
+    "note": "Provided by parent before this audit; not rechecked as media facts by this subagent."
+  },
+  "conclusion": "No blocker found in the audited dependency, record-consistency, original-process-exit and cleanup-order scope. This is explicitly not a complete formal-request/media/quality audit."
+}

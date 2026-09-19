@@ -1,0 +1,350 @@
+{
+  "schema": "h3_svoo_isa_query_block_oracle_v1",
+  "definition": "Deployment-granularity calibration on the existing sampled source queries. Contiguous query blocks share one exact-key-block route per head, and dense fallback is selected for whole query blocks. Key blocks remain contiguous and unselected blocks remain visible via the ISA zeroth-order Taylor mean-K/V remainder.",
+  "capture_dir": "/cache/zhonghao/h3/ss_spatial_oracle_fastest_redshirt_20260917_v1/source_qkv_capture",
+  "branch": "qskt",
+  "results": [
+    {
+      "layer": 8,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 16,
+      "query_blocks": 37,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.5,
+      "exact_blocks": 292,
+      "exact_block_ratio_realized": 0.5008576329331046,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 18,
+      "dense_query_block_fraction_realized": 0.4864864864864865,
+      "ideal_branch_compute_fraction": 0.7543283662092624,
+      "ideal_branch_compute_reduction": 0.24567163379073764,
+      "global_relative_output_l2": 0.023046616464853287,
+      "per_query_head_relative_output_error": {
+        "mean": 0.009840757586061954,
+        "median": 1.1311389243928716e-05,
+        "p95": 0.058408886194229126,
+        "max": 0.8565216064453125
+      },
+      "output_cosine": {
+        "mean": 0.99958735704422,
+        "median": 0.9999999403953552,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.012710643000900745,
+        "median": 0.008779538795351982,
+        "p95": 0.03344699740409851,
+        "max": 0.21620336174964905
+      }
+    },
+    {
+      "layer": 24,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 16,
+      "query_blocks": 37,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.5,
+      "exact_blocks": 292,
+      "exact_block_ratio_realized": 0.5008576329331046,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 18,
+      "dense_query_block_fraction_realized": 0.4864864864864865,
+      "ideal_branch_compute_fraction": 0.7543283662092624,
+      "ideal_branch_compute_reduction": 0.24567163379073764,
+      "global_relative_output_l2": 0.045880939811468124,
+      "per_query_head_relative_output_error": {
+        "mean": 0.02569492533802986,
+        "median": 5.9078014601254836e-05,
+        "p95": 0.13849994540214539,
+        "max": 1.0876294374465942
+      },
+      "output_cosine": {
+        "mean": 0.9986607432365417,
+        "median": 0.9999998807907104,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.006882108747959137,
+        "median": 0.005448854062706232,
+        "p95": 0.015014075674116611,
+        "max": 0.07936355471611023
+      }
+    },
+    {
+      "layer": 41,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 16,
+      "query_blocks": 37,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.5,
+      "exact_blocks": 292,
+      "exact_block_ratio_realized": 0.5008576329331046,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 18,
+      "dense_query_block_fraction_realized": 0.4864864864864865,
+      "ideal_branch_compute_fraction": 0.7543283662092624,
+      "ideal_branch_compute_reduction": 0.24567163379073764,
+      "global_relative_output_l2": 0.0467987060546875,
+      "per_query_head_relative_output_error": {
+        "mean": 0.04469610005617142,
+        "median": 0.003948534373193979,
+        "p95": 0.20227034389972687,
+        "max": 0.8928532600402832
+      },
+      "output_cosine": {
+        "mean": 0.9979972839355469,
+        "median": 0.9999982714653015,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.006624678615480661,
+        "median": 0.004847089760005474,
+        "p95": 0.015614863485097885,
+        "max": 0.08130740374326706
+      }
+    },
+    {
+      "layer": 8,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 32,
+      "query_blocks": 19,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.5,
+      "exact_blocks": 292,
+      "exact_block_ratio_realized": 0.5008576329331046,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 10,
+      "dense_query_block_fraction_realized": 0.5263157894736842,
+      "ideal_branch_compute_fraction": 0.7543283662092624,
+      "ideal_branch_compute_reduction": 0.24567163379073764,
+      "global_relative_output_l2": 0.026357656344771385,
+      "per_query_head_relative_output_error": {
+        "mean": 0.010849283076822758,
+        "median": 0.0,
+        "p95": 0.06697272509336472,
+        "max": 0.9147211909294128
+      },
+      "output_cosine": {
+        "mean": 0.9994980692863464,
+        "median": 0.9999999403953552,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.009687943384051323,
+        "median": 0.00712209427729249,
+        "p95": 0.024724582210183144,
+        "max": 0.09983539581298828
+      }
+    },
+    {
+      "layer": 24,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 32,
+      "query_blocks": 19,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.5,
+      "exact_blocks": 292,
+      "exact_block_ratio_realized": 0.5008576329331046,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 10,
+      "dense_query_block_fraction_realized": 0.5263157894736842,
+      "ideal_branch_compute_fraction": 0.7543283662092624,
+      "ideal_branch_compute_reduction": 0.24567163379073764,
+      "global_relative_output_l2": 0.046640682965517044,
+      "per_query_head_relative_output_error": {
+        "mean": 0.025379793718457222,
+        "median": 0.0,
+        "p95": 0.1420040875673294,
+        "max": 1.045466661453247
+      },
+      "output_cosine": {
+        "mean": 0.9986239075660706,
+        "median": 0.9999998807907104,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.006385531276464462,
+        "median": 0.004827008582651615,
+        "p95": 0.013454094529151917,
+        "max": 0.07936355471611023
+      }
+    },
+    {
+      "layer": 41,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 32,
+      "query_blocks": 19,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.5,
+      "exact_blocks": 292,
+      "exact_block_ratio_realized": 0.5008576329331046,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 10,
+      "dense_query_block_fraction_realized": 0.5263157894736842,
+      "ideal_branch_compute_fraction": 0.7543283662092624,
+      "ideal_branch_compute_reduction": 0.24567163379073764,
+      "global_relative_output_l2": 0.046985577791929245,
+      "per_query_head_relative_output_error": {
+        "mean": 0.042636848986148834,
+        "median": 0.0,
+        "p95": 0.2000686526298523,
+        "max": 1.0774590969085693
+      },
+      "output_cosine": {
+        "mean": 0.9980669021606445,
+        "median": 0.9999998807907104,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.0066691129468381405,
+        "median": 0.004820934496819973,
+        "p95": 0.014678861014544964,
+        "max": 0.07940599322319031
+      }
+    },
+    {
+      "layer": 8,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 64,
+      "query_blocks": 10,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.5,
+      "exact_blocks": 292,
+      "exact_block_ratio_realized": 0.5008576329331046,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 5,
+      "dense_query_block_fraction_realized": 0.5,
+      "ideal_branch_compute_fraction": 0.7543283662092624,
+      "ideal_branch_compute_reduction": 0.24567163379073764,
+      "global_relative_output_l2": 0.03312450647354126,
+      "per_query_head_relative_output_error": {
+        "mean": 0.014984640292823315,
+        "median": 5.726007293560542e-05,
+        "p95": 0.08873768150806427,
+        "max": 0.8857268691062927
+      },
+      "output_cosine": {
+        "mean": 0.9991946220397949,
+        "median": 0.9999999403953552,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.007951735518872738,
+        "median": 0.005720716901123524,
+        "p95": 0.019833289086818695,
+        "max": 0.09983539581298828
+      }
+    },
+    {
+      "layer": 24,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 64,
+      "query_blocks": 10,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.5,
+      "exact_blocks": 292,
+      "exact_block_ratio_realized": 0.5008576329331046,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 5,
+      "dense_query_block_fraction_realized": 0.5,
+      "ideal_branch_compute_fraction": 0.7543283662092624,
+      "ideal_branch_compute_reduction": 0.24567163379073764,
+      "global_relative_output_l2": 0.05161023139953613,
+      "per_query_head_relative_output_error": {
+        "mean": 0.029780833050608635,
+        "median": 0.0002804562100209296,
+        "p95": 0.15960818529129028,
+        "max": 0.9366605281829834
+      },
+      "output_cosine": {
+        "mean": 0.9982916116714478,
+        "median": 0.9999998807907104,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.006266193930059671,
+        "median": 0.004460824653506279,
+        "p95": 0.014057942666113377,
+        "max": 0.07936355471611023
+      }
+    },
+    {
+      "layer": 41,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 64,
+      "query_blocks": 10,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.5,
+      "exact_blocks": 292,
+      "exact_block_ratio_realized": 0.5008576329331046,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 5,
+      "dense_query_block_fraction_realized": 0.5,
+      "ideal_branch_compute_fraction": 0.7543283662092624,
+      "ideal_branch_compute_reduction": 0.24567163379073764,
+      "global_relative_output_l2": 0.04846424609422684,
+      "per_query_head_relative_output_error": {
+        "mean": 0.04492822289466858,
+        "median": 0.007362521253526211,
+        "p95": 0.1934523731470108,
+        "max": 0.8683704137802124
+      },
+      "output_cosine": {
+        "mean": 0.9979998469352722,
+        "median": 0.9999939203262329,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.0069584595039486885,
+        "median": 0.004795825574547052,
+        "p95": 0.018370861187577248,
+        "max": 0.07377657294273376
+      }
+    }
+  ]
+}

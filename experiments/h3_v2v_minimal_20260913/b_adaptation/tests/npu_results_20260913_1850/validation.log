@@ -1,0 +1,89 @@
+B tiny NPU validation: cards=2,3,6,7, port=29673, result=/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c/npu_wrapper.json
+INFO 09-13 18:49:27 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-13 18:49:27 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-13 18:49:27 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-13 18:49:27 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-13 18:49:27 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+INFO 09-13 18:49:28 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-13 18:49:28 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-13 18:49:28 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-13 18:49:28 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-13 18:49:28 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+INFO 09-13 18:49:28 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-13 18:49:28 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-13 18:49:28 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-13 18:49:28 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-13 18:49:28 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+INFO 09-13 18:49:28 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-13 18:49:28 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-13 18:49:28 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-13 18:49:28 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-13 18:49:28 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+INFO 09-13 18:49:40 [patch.py:252] NVFP4 W4A4 weight_scale NaN-clamp: installed.
+INFO 09-13 18:49:40 [patch.py:252] NVFP4 W4A4 weight_scale NaN-clamp: installed.
+INFO 09-13 18:49:40 [patch.py:481] [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+INFO 09-13 18:49:40 [patch.py:481] [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+INFO 09-13 18:49:40 [patch.py:252] NVFP4 W4A4 weight_scale NaN-clamp: installed.
+INFO 09-13 18:49:40 [patch.py:481] [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+INFO 09-13 18:49:42 [patch.py:252] NVFP4 W4A4 weight_scale NaN-clamp: installed.
+INFO 09-13 18:49:42 [patch.py:481] [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+WARNING 09-13 18:49:43 [ring_globals.py:73] FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+WARNING 09-13 18:49:43 [ring_globals.py:73] FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+WARNING 09-13 18:49:44 [ring_globals.py:73] FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+WARNING 09-13 18:49:44 [ring_globals.py:73] FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[W913 18:49:44.927145276 ProcessGroupHCCL.cpp:1152] Warning: The watchdog timeout 180000ms(which is set by init_process_group) is less than or equal to HCCL execution timeout 1836000ms! The plog may not be recorded. (function ProcessGroupHCCL)
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+INFO 09-13 18:49:44 [parallel_state.py:634] Building SP subgroups from explicit sp_group_ranks (sp_size=4, ulysses=4, ring=1, use_ulysses_low=True).
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+INFO 09-13 18:49:44 [parallel_state.py:634] Building SP subgroups from explicit sp_group_ranks (sp_size=4, ulysses=4, ring=1, use_ulysses_low=True).
+INFO 09-13 18:49:44 [parallel_state.py:634] Building SP subgroups from explicit sp_group_ranks (sp_size=4, ulysses=4, ring=1, use_ulysses_low=True).
+INFO 09-13 18:49:44 [parallel_state.py:676] SP group details for rank 0: sp_group=[0, 1, 2, 3], ulysses_group=[0, 1, 2, 3], ring_group=[0]
+INFO 09-13 18:49:44 [parallel_state.py:634] Building SP subgroups from explicit sp_group_ranks (sp_size=4, ulysses=4, ring=1, use_ulysses_low=True).
+INFO 09-13 18:49:44 [parallel_state.py:676] SP group details for rank 2: sp_group=[0, 1, 2, 3], ulysses_group=[0, 1, 2, 3], ring_group=[2]
+INFO 09-13 18:49:44 [parallel_state.py:676] SP group details for rank 1: sp_group=[0, 1, 2, 3], ulysses_group=[0, 1, 2, 3], ring_group=[1]
+INFO 09-13 18:49:44 [parallel_state.py:676] SP group details for rank 3: sp_group=[0, 1, 2, 3], ulysses_group=[0, 1, 2, 3], ring_group=[3]
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/upstream/openvdn_npu.py:154: UserWarning: Cannot create tensor with interal format while allow_internel_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:340.)
+  out = torch.zeros_like(query)
+/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/upstream/openvdn_npu.py:154: UserWarning: Cannot create tensor with interal format while allow_internel_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:340.)
+  out = torch.zeros_like(query)
+/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/upstream/openvdn_npu.py:154: UserWarning: Cannot create tensor with interal format while allow_internel_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:340.)
+  out = torch.zeros_like(query)
+/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/upstream/openvdn_npu.py:154: UserWarning: Cannot create tensor with interal format while allow_internel_format=False, tensor will be created with base format. (Triggered internally at ../torch_npu/csrc/aten/common/TensorFactories.cpp:340.)
+  out = torch.zeros_like(query)
+{"rank": 2, "case": "source_prefix", "status": "passed", "max_abs": 0.0}
+{"rank": 3, "case": "source_prefix", "status": "passed", "max_abs": 9.313225746154785e-10}
+{"rank": 1, "case": "source_prefix", "status": "passed", "max_abs": 1.862645149230957e-09}
+{"rank": 0, "case": "source_prefix", "status": "passed", "max_abs": 4.76837158203125e-07}
+{"rank": 1, "case": "source_suffix", "status": "passed", "max_abs": 0.0}
+{"rank": 0, "case": "source_suffix", "status": "passed", "max_abs": 0.0}
+/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+{"rank": 3, "case": "source_suffix", "status": "passed", "max_abs": 0.0001220703125}
+{"rank": 2, "case": "source_suffix", "status": "passed", "max_abs": 0.0}
+{"status": "passed", "output": "/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c/npu_wrapper.json"}

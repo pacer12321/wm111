@@ -1,0 +1,45 @@
+{
+  "run_id": "7de1704b57104dc5adc17f78211f6395",
+  "sample": "shirt_red_couple_124",
+  "method": "Root inspected three corresponding-index contact sheets (9 points) and native D frames 0/60/123; complete 124-frame media decoding is separate from visual inspection.",
+  "sampled_frames": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    123
+  ],
+  "recolor": "Man's shirt is red and woman's clothing remains white at inspected points.",
+  "preservation_passed": false,
+  "findings": [
+    "D begins with man on left/woman on right and woman facing away from camera, while source has man on right/woman on left and source hand-to-face interaction.",
+    "D background tree line, composition and relative person orientations differ markedly from source.",
+    "At frame60 and through123 D remains face-to-face/forehead-close, while source woman rests against man's chest and the couple embraces; source action timing and progression not preserved.",
+    "D framing tightens over time. Matching the requested shirt color does not constitute a faithful edit."
+  ],
+  "limitations": [
+    "Not continuous playback or audio review.",
+    "No exhaustive identity, fingers, temporal flicker or perceptual metric assessment.",
+    "No statistical conclusion from one sample/seed; no measured attention-kernel profile or causal runtime attribution."
+  ],
+  "latency": {
+    "metric": "single formal HTTP request end-to-end seconds; excludes model startup, smoke and separately reused VLM route",
+    "D": 972.1087382230908,
+    "A": 855.1022686900105,
+    "B": 956.1085797089618,
+    "C": 888.0960794389248,
+    "D_vs_C_latency_increase_percent": 9.459861464228393,
+    "D_vs_B_latency_increase_percent": 1.673466680844915,
+    "D_vs_A_latency_increase_percent": 13.683330499441947
+  },
+  "conclusion": "This untrained D trial did not achieve quality-preserving acceleration.",
+  "supervisor_note": "Original phase remains failed due to one tqdm-prefixed execution log line. Separate read-only audit stripped only that exact prefix in memory and passed unchanged original strict 800-record verifier; original code/log/status preserved.",
+  "comparison_video": "source_vs_D_synchronized.mp4",
+  "comparison_silent": true,
+  "raw_inputs_modified": false,
+  "no_new_model_or_training_run": true
+}

@@ -1,0 +1,136 @@
+{
+  "review_type": "limited_manual_source_forward_vs_reversed_reference_vs_formal_A8_temporal_order_review",
+  "run": "a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd",
+  "sample_id": "explicit_reverse_couple_124",
+  "review_date_local": "2026-09-14",
+  "formal_not_smoke": true,
+  "input_identity": {
+    "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+    "source_bytes": 1527004,
+    "source_dimensions": [1280, 720],
+    "source_has_audio": false,
+    "A8_sha256": "17b83ee2196302e9523e3e54aa239e3d6e7c8d5070c83d7c066e4f8cf06b38d7",
+    "A8_bytes": 4271598,
+    "A8_dimensions": [1344, 768],
+    "A8_has_audio": true,
+    "result_sha256": "c15ab3b9319b9f1c3e40810848041a6419d8ed3222d0dbb3ba9e1d73e44e5d28",
+    "both_decoded_frame_counts": 124,
+    "both_fps": 24,
+    "both_video_track_duration_seconds": 5.166666666666667,
+    "every_decoded_pts_equals_frame_index_divided_by_24": true,
+    "both_video_hashes_verified_before_and_after_decode": true,
+    "result_success_requested_50_steps_and_exact_run_output_path_verified": true,
+    "request_identity_source_sha_and_prompt_verified": true
+  },
+  "execution": {
+    "script": "extract_review.py",
+    "successful_script_invocations": 1,
+    "exit_code": 0,
+    "python": "C:/Users/DZH/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "PYTHONPATH": "C:/Users/DZH/OneDrive/Documents/ChatGPT/wm111/.audio_tools",
+    "no_new_installation": true,
+    "no_remote_operation": true,
+    "no_model_or_VLM_call": true,
+    "no_NPU_operation": true,
+    "no_input_or_production_modification": true
+  },
+  "inspection": {
+    "native_png_count": 27,
+    "native_dimensions_and_aspect_ratios_preserved": true,
+    "contact_resizing": "Aspect-preserving scaling with black letterbox; no forced source-to-output shape warp",
+    "columns": ["source in forward order", "source index 123-i as diagnostic reverse reference", "formal A8 output"],
+    "output_row_indices": [0, 15, 30, 45, 60, 75, 90, 105, 123],
+    "output_row_pts_seconds": [0.0, 0.625, 1.25, 1.875, 2.5, 3.125, 3.75, 4.375, 5.125],
+    "reverse_reference_source_indices": [123, 108, 93, 78, 63, 48, 33, 18, 0],
+    "reverse_reference_is_generated_ground_truth": false,
+    "new_reverse_video_created": false,
+    "full_contact": "source_forward_reversed_A8_contact.jpg",
+    "contacts_actually_viewed": [
+      "source_forward_reversed_A8_contact_part_1.jpg",
+      "source_forward_reversed_A8_contact_part_2.jpg",
+      "source_forward_reversed_A8_contact_part_3.jpg"
+    ],
+    "all_nine_contact_rows_seen": true,
+    "A8_native_resolution_frames_additionally_seen": [0, 30, 123],
+    "continuous_playback_performed": false,
+    "audio_reviewed": false
+  },
+  "requested_edit": {
+    "prompt": "Reverse the temporal order of the entire reference clip: play all of its actions backward in time. Keep the same two people, their appearance, lighting, camera framing, and background.",
+    "expected_coarse_temporal_order": "Start with the final close chest embrace, then move back toward face-to-face contact, and end at the initial separated-face pose with the man's hand against the woman's head.",
+    "diagnostic_scope": "This explicitly asks for reversal; a text-only classifier can identify the requested temporal change. It is not a source-dependent VLM routing test."
+  },
+  "observed_events": [
+    {
+      "frames": [0],
+      "times_seconds": [0.0],
+      "source_forward": "They face each other with their faces separated; his hand rests against the side/back of her head and her arm reaches around his waist.",
+      "A8": "The same face-to-face separated-face pose is present, closely resembling source frame 0 rather than the final source embrace.",
+      "reverse_reference": "Source frame 123 is already a close chest embrace; her head rests against him and her face is turned toward the camera.",
+      "order_evidence": "A8 begins at the forward-source state, not at the required reverse-source endpoint."
+    },
+    {
+      "frames": [15, 30],
+      "times_seconds": [0.625, 1.25],
+      "source_forward": "They bring their faces together; by frame 30 a kissing/contact pose is visible while his hand remains against her head.",
+      "A8": "The same approach/contact progression is visible at the corresponding sampled times, including the kissing/contact pose in native frame 30.",
+      "reverse_reference": "Source frames 108 and 93 remain in the later chest-embrace phase.",
+      "order_evidence": "Early A8 remains consistent with forward progression and differs from the reversed-source reference."
+    },
+    {
+      "frames": [45],
+      "times_seconds": [1.875],
+      "source_forward": "The faces are apart again, before the woman's head settles against his chest.",
+      "A8": "The same separated-face transition appears at this sampled time.",
+      "reverse_reference": "Source frame 78 has already reached the chest-embrace state.",
+      "order_evidence": "A8 continues the forward sequence from face contact toward chest embrace."
+    },
+    {
+      "frames": [60, 75],
+      "times_seconds": [2.5, 3.125],
+      "source_forward": "She leans her head against his chest and the arm placement becomes a close embrace.",
+      "A8": "The same close embrace appears and continues.",
+      "reverse_reference": "Frame 63 is near the same middle state, so row 60 alone is ambiguous; by reverse row 75, source frame 48 is back toward the earlier face-to-face transition.",
+      "order_evidence": "The near-midpoint resemblance is not evidence of reversal; later samples separate the two directions."
+    },
+    {
+      "frames": [90, 105, 123],
+      "times_seconds": [3.75, 4.375, 5.125],
+      "source_forward": "The chest embrace continues; at the end her face turns toward the camera while remaining nestled against him.",
+      "A8": "The chest embrace also continues to the final frame, where her face turns toward the camera. Native frame 123 confirms this final state.",
+      "reverse_reference": "Source frames 33 and 18 return to the earlier face-contact phase and the final reversed reference is source frame 0 with separated faces.",
+      "order_evidence": "A8 ends at the forward-source ending rather than the required reversed-source ending."
+    }
+  ],
+  "temporal_edit_assessment": {
+    "label": "observed_global_reversal_failure_forward_source_order_preserved_at_sampled_times",
+    "confidence_scope": "Clear negative evidence for the requested whole-clip reversal, based on distinct initial/final poses and all nine sampled states; not a per-frame motion or pixel-equality measurement.",
+    "successful_generation_is_not_successful_reversal": true,
+    "A8_sequence_summary": "face-to-face -> facial approach/contact -> faces apart -> close chest embrace -> continued embrace with face toward camera",
+    "source_sequence_summary": "face-to-face -> facial approach/contact -> faces apart -> close chest embrace -> continued embrace with face toward camera",
+    "required_reverse_summary": "final embrace -> reverse the transition out of the embrace -> earlier facial contact -> initial face-to-face state",
+    "not_claimed": [
+      "No claim that A8 is pixel-identical to source.",
+      "No claim that every tiny motion between sampled frames is forward.",
+      "No claim of exact camera or spatial correspondence, because the input and output have different dimensions/aspect ratios and no registration was measured."
+    ]
+  },
+  "other_visible_quality": {
+    "assessment": "recognizable_coherent_people_and_background_in_the_inspected_frames",
+    "details": [
+      "The two people, light clothing, green field, pale sky, and close framing are visibly retained in the inspected A8 samples.",
+      "No selected A8 frame is black, blank, or affected by a gross geometric collapse.",
+      "These observations do not establish full-video visual quality, subtle hand/face fidelity, absence of flicker, or audio quality."
+    ]
+  },
+  "experiment_implication": "This formal dense A run is already a negative reversal result. If B or C also fails this sample, that alone cannot attribute the reversal failure to sparse attention. A temporal-success comparison needs a dense baseline that actually performs the intended temporal edit, or must explicitly report all methods' failures.",
+  "limits": [
+    "Nine sampled states provide strong evidence against whole-clip reversal here, but no continuous playback, optical-flow metric, or per-frame motion-direction analysis was performed.",
+    "The reversed source column consists only of diagnostic still-image index selection. It is not a newly generated target video or an officially provided ground-truth edit.",
+    "No audio listening or speech inference was performed; the source is silent and the generated A8 contains an audio stream that remains unreviewed.",
+    "No VLM, new model, remote operation, or package installation was used.",
+    "Only this run's visual_review directory was created; formal videos, request/result/status files, and production code remain unchanged.",
+    "This review does not measure or validate latency, DiT time, memory, or speedup."
+  ],
+  "concise_conclusion_zh": "倒放 A 的正式输出未完成整段倒放：九个抽样状态都沿 source 正序，先面对面靠近/接触，后贴胸拥抱，末尾仍是拥抱中望向镜头。真正倒放应从最后的拥抱起，回到开头面对面；A 的起止状态和事件先后均与此相反。画面可用不代表编辑成功，不能把这次 dense A 当作成功倒放基线；未连续播放，不断言每个细小动作或全程质量。"
+}

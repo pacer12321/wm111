@@ -1,0 +1,3797 @@
+{
+  "method": "CPU PyAV full decode and every-frame PTS verification; five native PNGs per video; PIL contact; no continuous playback",
+  "videos": {
+    "source": {
+      "path": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\a_20260913T133502Z_294205bef2e043dc84b41315e544b36d\\source.mp4",
+      "sha256": "e02b3df481f66d0968ab65eac1d56ded8493da952c0bfb21b70ecd5715f87cf9",
+      "bytes": 12754317,
+      "width": 1344,
+      "height": 768,
+      "average_rate": "24",
+      "time_base": "1/12288",
+      "declared_frames": 124,
+      "video_duration_seconds": 5.166666666666667,
+      "has_audio": true,
+      "audio_reviewed": false,
+      "decoded_frame_count": 124,
+      "samples": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "exact_seconds": "0",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\source_frame_000.png"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "exact_seconds": "5/4",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\source_frame_030.png"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "exact_seconds": "5/2",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\source_frame_060.png"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "exact_seconds": "15/4",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\source_frame_090.png"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "exact_seconds": "41/8",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\source_frame_123.png"
+        }
+      ],
+      "all_decoded_pts": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "exact_seconds": "0"
+        },
+        {
+          "frame_index": 1,
+          "pts": 512,
+          "time_base": "1/12288",
+          "seconds": 0.041666666666666664,
+          "exact_seconds": "1/24"
+        },
+        {
+          "frame_index": 2,
+          "pts": 1024,
+          "time_base": "1/12288",
+          "seconds": 0.08333333333333333,
+          "exact_seconds": "1/12"
+        },
+        {
+          "frame_index": 3,
+          "pts": 1536,
+          "time_base": "1/12288",
+          "seconds": 0.125,
+          "exact_seconds": "1/8"
+        },
+        {
+          "frame_index": 4,
+          "pts": 2048,
+          "time_base": "1/12288",
+          "seconds": 0.16666666666666666,
+          "exact_seconds": "1/6"
+        },
+        {
+          "frame_index": 5,
+          "pts": 2560,
+          "time_base": "1/12288",
+          "seconds": 0.20833333333333334,
+          "exact_seconds": "5/24"
+        },
+        {
+          "frame_index": 6,
+          "pts": 3072,
+          "time_base": "1/12288",
+          "seconds": 0.25,
+          "exact_seconds": "1/4"
+        },
+        {
+          "frame_index": 7,
+          "pts": 3584,
+          "time_base": "1/12288",
+          "seconds": 0.2916666666666667,
+          "exact_seconds": "7/24"
+        },
+        {
+          "frame_index": 8,
+          "pts": 4096,
+          "time_base": "1/12288",
+          "seconds": 0.3333333333333333,
+          "exact_seconds": "1/3"
+        },
+        {
+          "frame_index": 9,
+          "pts": 4608,
+          "time_base": "1/12288",
+          "seconds": 0.375,
+          "exact_seconds": "3/8"
+        },
+        {
+          "frame_index": 10,
+          "pts": 5120,
+          "time_base": "1/12288",
+          "seconds": 0.4166666666666667,
+          "exact_seconds": "5/12"
+        },
+        {
+          "frame_index": 11,
+          "pts": 5632,
+          "time_base": "1/12288",
+          "seconds": 0.4583333333333333,
+          "exact_seconds": "11/24"
+        },
+        {
+          "frame_index": 12,
+          "pts": 6144,
+          "time_base": "1/12288",
+          "seconds": 0.5,
+          "exact_seconds": "1/2"
+        },
+        {
+          "frame_index": 13,
+          "pts": 6656,
+          "time_base": "1/12288",
+          "seconds": 0.5416666666666666,
+          "exact_seconds": "13/24"
+        },
+        {
+          "frame_index": 14,
+          "pts": 7168,
+          "time_base": "1/12288",
+          "seconds": 0.5833333333333334,
+          "exact_seconds": "7/12"
+        },
+        {
+          "frame_index": 15,
+          "pts": 7680,
+          "time_base": "1/12288",
+          "seconds": 0.625,
+          "exact_seconds": "5/8"
+        },
+        {
+          "frame_index": 16,
+          "pts": 8192,
+          "time_base": "1/12288",
+          "seconds": 0.6666666666666666,
+          "exact_seconds": "2/3"
+        },
+        {
+          "frame_index": 17,
+          "pts": 8704,
+          "time_base": "1/12288",
+          "seconds": 0.7083333333333334,
+          "exact_seconds": "17/24"
+        },
+        {
+          "frame_index": 18,
+          "pts": 9216,
+          "time_base": "1/12288",
+          "seconds": 0.75,
+          "exact_seconds": "3/4"
+        },
+        {
+          "frame_index": 19,
+          "pts": 9728,
+          "time_base": "1/12288",
+          "seconds": 0.7916666666666666,
+          "exact_seconds": "19/24"
+        },
+        {
+          "frame_index": 20,
+          "pts": 10240,
+          "time_base": "1/12288",
+          "seconds": 0.8333333333333334,
+          "exact_seconds": "5/6"
+        },
+        {
+          "frame_index": 21,
+          "pts": 10752,
+          "time_base": "1/12288",
+          "seconds": 0.875,
+          "exact_seconds": "7/8"
+        },
+        {
+          "frame_index": 22,
+          "pts": 11264,
+          "time_base": "1/12288",
+          "seconds": 0.9166666666666666,
+          "exact_seconds": "11/12"
+        },
+        {
+          "frame_index": 23,
+          "pts": 11776,
+          "time_base": "1/12288",
+          "seconds": 0.9583333333333334,
+          "exact_seconds": "23/24"
+        },
+        {
+          "frame_index": 24,
+          "pts": 12288,
+          "time_base": "1/12288",
+          "seconds": 1.0,
+          "exact_seconds": "1"
+        },
+        {
+          "frame_index": 25,
+          "pts": 12800,
+          "time_base": "1/12288",
+          "seconds": 1.0416666666666667,
+          "exact_seconds": "25/24"
+        },
+        {
+          "frame_index": 26,
+          "pts": 13312,
+          "time_base": "1/12288",
+          "seconds": 1.0833333333333333,
+          "exact_seconds": "13/12"
+        },
+        {
+          "frame_index": 27,
+          "pts": 13824,
+          "time_base": "1/12288",
+          "seconds": 1.125,
+          "exact_seconds": "9/8"
+        },
+        {
+          "frame_index": 28,
+          "pts": 14336,
+          "time_base": "1/12288",
+          "seconds": 1.1666666666666667,
+          "exact_seconds": "7/6"
+        },
+        {
+          "frame_index": 29,
+          "pts": 14848,
+          "time_base": "1/12288",
+          "seconds": 1.2083333333333333,
+          "exact_seconds": "29/24"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "exact_seconds": "5/4"
+        },
+        {
+          "frame_index": 31,
+          "pts": 15872,
+          "time_base": "1/12288",
+          "seconds": 1.2916666666666667,
+          "exact_seconds": "31/24"
+        },
+        {
+          "frame_index": 32,
+          "pts": 16384,
+          "time_base": "1/12288",
+          "seconds": 1.3333333333333333,
+          "exact_seconds": "4/3"
+        },
+        {
+          "frame_index": 33,
+          "pts": 16896,
+          "time_base": "1/12288",
+          "seconds": 1.375,
+          "exact_seconds": "11/8"
+        },
+        {
+          "frame_index": 34,
+          "pts": 17408,
+          "time_base": "1/12288",
+          "seconds": 1.4166666666666667,
+          "exact_seconds": "17/12"
+        },
+        {
+          "frame_index": 35,
+          "pts": 17920,
+          "time_base": "1/12288",
+          "seconds": 1.4583333333333333,
+          "exact_seconds": "35/24"
+        },
+        {
+          "frame_index": 36,
+          "pts": 18432,
+          "time_base": "1/12288",
+          "seconds": 1.5,
+          "exact_seconds": "3/2"
+        },
+        {
+          "frame_index": 37,
+          "pts": 18944,
+          "time_base": "1/12288",
+          "seconds": 1.5416666666666667,
+          "exact_seconds": "37/24"
+        },
+        {
+          "frame_index": 38,
+          "pts": 19456,
+          "time_base": "1/12288",
+          "seconds": 1.5833333333333333,
+          "exact_seconds": "19/12"
+        },
+        {
+          "frame_index": 39,
+          "pts": 19968,
+          "time_base": "1/12288",
+          "seconds": 1.625,
+          "exact_seconds": "13/8"
+        },
+        {
+          "frame_index": 40,
+          "pts": 20480,
+          "time_base": "1/12288",
+          "seconds": 1.6666666666666667,
+          "exact_seconds": "5/3"
+        },
+        {
+          "frame_index": 41,
+          "pts": 20992,
+          "time_base": "1/12288",
+          "seconds": 1.7083333333333333,
+          "exact_seconds": "41/24"
+        },
+        {
+          "frame_index": 42,
+          "pts": 21504,
+          "time_base": "1/12288",
+          "seconds": 1.75,
+          "exact_seconds": "7/4"
+        },
+        {
+          "frame_index": 43,
+          "pts": 22016,
+          "time_base": "1/12288",
+          "seconds": 1.7916666666666667,
+          "exact_seconds": "43/24"
+        },
+        {
+          "frame_index": 44,
+          "pts": 22528,
+          "time_base": "1/12288",
+          "seconds": 1.8333333333333333,
+          "exact_seconds": "11/6"
+        },
+        {
+          "frame_index": 45,
+          "pts": 23040,
+          "time_base": "1/12288",
+          "seconds": 1.875,
+          "exact_seconds": "15/8"
+        },
+        {
+          "frame_index": 46,
+          "pts": 23552,
+          "time_base": "1/12288",
+          "seconds": 1.9166666666666667,
+          "exact_seconds": "23/12"
+        },
+        {
+          "frame_index": 47,
+          "pts": 24064,
+          "time_base": "1/12288",
+          "seconds": 1.9583333333333333,
+          "exact_seconds": "47/24"
+        },
+        {
+          "frame_index": 48,
+          "pts": 24576,
+          "time_base": "1/12288",
+          "seconds": 2.0,
+          "exact_seconds": "2"
+        },
+        {
+          "frame_index": 49,
+          "pts": 25088,
+          "time_base": "1/12288",
+          "seconds": 2.0416666666666665,
+          "exact_seconds": "49/24"
+        },
+        {
+          "frame_index": 50,
+          "pts": 25600,
+          "time_base": "1/12288",
+          "seconds": 2.0833333333333335,
+          "exact_seconds": "25/12"
+        },
+        {
+          "frame_index": 51,
+          "pts": 26112,
+          "time_base": "1/12288",
+          "seconds": 2.125,
+          "exact_seconds": "17/8"
+        },
+        {
+          "frame_index": 52,
+          "pts": 26624,
+          "time_base": "1/12288",
+          "seconds": 2.1666666666666665,
+          "exact_seconds": "13/6"
+        },
+        {
+          "frame_index": 53,
+          "pts": 27136,
+          "time_base": "1/12288",
+          "seconds": 2.2083333333333335,
+          "exact_seconds": "53/24"
+        },
+        {
+          "frame_index": 54,
+          "pts": 27648,
+          "time_base": "1/12288",
+          "seconds": 2.25,
+          "exact_seconds": "9/4"
+        },
+        {
+          "frame_index": 55,
+          "pts": 28160,
+          "time_base": "1/12288",
+          "seconds": 2.2916666666666665,
+          "exact_seconds": "55/24"
+        },
+        {
+          "frame_index": 56,
+          "pts": 28672,
+          "time_base": "1/12288",
+          "seconds": 2.3333333333333335,
+          "exact_seconds": "7/3"
+        },
+        {
+          "frame_index": 57,
+          "pts": 29184,
+          "time_base": "1/12288",
+          "seconds": 2.375,
+          "exact_seconds": "19/8"
+        },
+        {
+          "frame_index": 58,
+          "pts": 29696,
+          "time_base": "1/12288",
+          "seconds": 2.4166666666666665,
+          "exact_seconds": "29/12"
+        },
+        {
+          "frame_index": 59,
+          "pts": 30208,
+          "time_base": "1/12288",
+          "seconds": 2.4583333333333335,
+          "exact_seconds": "59/24"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "exact_seconds": "5/2"
+        },
+        {
+          "frame_index": 61,
+          "pts": 31232,
+          "time_base": "1/12288",
+          "seconds": 2.5416666666666665,
+          "exact_seconds": "61/24"
+        },
+        {
+          "frame_index": 62,
+          "pts": 31744,
+          "time_base": "1/12288",
+          "seconds": 2.5833333333333335,
+          "exact_seconds": "31/12"
+        },
+        {
+          "frame_index": 63,
+          "pts": 32256,
+          "time_base": "1/12288",
+          "seconds": 2.625,
+          "exact_seconds": "21/8"
+        },
+        {
+          "frame_index": 64,
+          "pts": 32768,
+          "time_base": "1/12288",
+          "seconds": 2.6666666666666665,
+          "exact_seconds": "8/3"
+        },
+        {
+          "frame_index": 65,
+          "pts": 33280,
+          "time_base": "1/12288",
+          "seconds": 2.7083333333333335,
+          "exact_seconds": "65/24"
+        },
+        {
+          "frame_index": 66,
+          "pts": 33792,
+          "time_base": "1/12288",
+          "seconds": 2.75,
+          "exact_seconds": "11/4"
+        },
+        {
+          "frame_index": 67,
+          "pts": 34304,
+          "time_base": "1/12288",
+          "seconds": 2.7916666666666665,
+          "exact_seconds": "67/24"
+        },
+        {
+          "frame_index": 68,
+          "pts": 34816,
+          "time_base": "1/12288",
+          "seconds": 2.8333333333333335,
+          "exact_seconds": "17/6"
+        },
+        {
+          "frame_index": 69,
+          "pts": 35328,
+          "time_base": "1/12288",
+          "seconds": 2.875,
+          "exact_seconds": "23/8"
+        },
+        {
+          "frame_index": 70,
+          "pts": 35840,
+          "time_base": "1/12288",
+          "seconds": 2.9166666666666665,
+          "exact_seconds": "35/12"
+        },
+        {
+          "frame_index": 71,
+          "pts": 36352,
+          "time_base": "1/12288",
+          "seconds": 2.9583333333333335,
+          "exact_seconds": "71/24"
+        },
+        {
+          "frame_index": 72,
+          "pts": 36864,
+          "time_base": "1/12288",
+          "seconds": 3.0,
+          "exact_seconds": "3"
+        },
+        {
+          "frame_index": 73,
+          "pts": 37376,
+          "time_base": "1/12288",
+          "seconds": 3.0416666666666665,
+          "exact_seconds": "73/24"
+        },
+        {
+          "frame_index": 74,
+          "pts": 37888,
+          "time_base": "1/12288",
+          "seconds": 3.0833333333333335,
+          "exact_seconds": "37/12"
+        },
+        {
+          "frame_index": 75,
+          "pts": 38400,
+          "time_base": "1/12288",
+          "seconds": 3.125,
+          "exact_seconds": "25/8"
+        },
+        {
+          "frame_index": 76,
+          "pts": 38912,
+          "time_base": "1/12288",
+          "seconds": 3.1666666666666665,
+          "exact_seconds": "19/6"
+        },
+        {
+          "frame_index": 77,
+          "pts": 39424,
+          "time_base": "1/12288",
+          "seconds": 3.2083333333333335,
+          "exact_seconds": "77/24"
+        },
+        {
+          "frame_index": 78,
+          "pts": 39936,
+          "time_base": "1/12288",
+          "seconds": 3.25,
+          "exact_seconds": "13/4"
+        },
+        {
+          "frame_index": 79,
+          "pts": 40448,
+          "time_base": "1/12288",
+          "seconds": 3.2916666666666665,
+          "exact_seconds": "79/24"
+        },
+        {
+          "frame_index": 80,
+          "pts": 40960,
+          "time_base": "1/12288",
+          "seconds": 3.3333333333333335,
+          "exact_seconds": "10/3"
+        },
+        {
+          "frame_index": 81,
+          "pts": 41472,
+          "time_base": "1/12288",
+          "seconds": 3.375,
+          "exact_seconds": "27/8"
+        },
+        {
+          "frame_index": 82,
+          "pts": 41984,
+          "time_base": "1/12288",
+          "seconds": 3.4166666666666665,
+          "exact_seconds": "41/12"
+        },
+        {
+          "frame_index": 83,
+          "pts": 42496,
+          "time_base": "1/12288",
+          "seconds": 3.4583333333333335,
+          "exact_seconds": "83/24"
+        },
+        {
+          "frame_index": 84,
+          "pts": 43008,
+          "time_base": "1/12288",
+          "seconds": 3.5,
+          "exact_seconds": "7/2"
+        },
+        {
+          "frame_index": 85,
+          "pts": 43520,
+          "time_base": "1/12288",
+          "seconds": 3.5416666666666665,
+          "exact_seconds": "85/24"
+        },
+        {
+          "frame_index": 86,
+          "pts": 44032,
+          "time_base": "1/12288",
+          "seconds": 3.5833333333333335,
+          "exact_seconds": "43/12"
+        },
+        {
+          "frame_index": 87,
+          "pts": 44544,
+          "time_base": "1/12288",
+          "seconds": 3.625,
+          "exact_seconds": "29/8"
+        },
+        {
+          "frame_index": 88,
+          "pts": 45056,
+          "time_base": "1/12288",
+          "seconds": 3.6666666666666665,
+          "exact_seconds": "11/3"
+        },
+        {
+          "frame_index": 89,
+          "pts": 45568,
+          "time_base": "1/12288",
+          "seconds": 3.7083333333333335,
+          "exact_seconds": "89/24"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "exact_seconds": "15/4"
+        },
+        {
+          "frame_index": 91,
+          "pts": 46592,
+          "time_base": "1/12288",
+          "seconds": 3.7916666666666665,
+          "exact_seconds": "91/24"
+        },
+        {
+          "frame_index": 92,
+          "pts": 47104,
+          "time_base": "1/12288",
+          "seconds": 3.8333333333333335,
+          "exact_seconds": "23/6"
+        },
+        {
+          "frame_index": 93,
+          "pts": 47616,
+          "time_base": "1/12288",
+          "seconds": 3.875,
+          "exact_seconds": "31/8"
+        },
+        {
+          "frame_index": 94,
+          "pts": 48128,
+          "time_base": "1/12288",
+          "seconds": 3.9166666666666665,
+          "exact_seconds": "47/12"
+        },
+        {
+          "frame_index": 95,
+          "pts": 48640,
+          "time_base": "1/12288",
+          "seconds": 3.9583333333333335,
+          "exact_seconds": "95/24"
+        },
+        {
+          "frame_index": 96,
+          "pts": 49152,
+          "time_base": "1/12288",
+          "seconds": 4.0,
+          "exact_seconds": "4"
+        },
+        {
+          "frame_index": 97,
+          "pts": 49664,
+          "time_base": "1/12288",
+          "seconds": 4.041666666666667,
+          "exact_seconds": "97/24"
+        },
+        {
+          "frame_index": 98,
+          "pts": 50176,
+          "time_base": "1/12288",
+          "seconds": 4.083333333333333,
+          "exact_seconds": "49/12"
+        },
+        {
+          "frame_index": 99,
+          "pts": 50688,
+          "time_base": "1/12288",
+          "seconds": 4.125,
+          "exact_seconds": "33/8"
+        },
+        {
+          "frame_index": 100,
+          "pts": 51200,
+          "time_base": "1/12288",
+          "seconds": 4.166666666666667,
+          "exact_seconds": "25/6"
+        },
+        {
+          "frame_index": 101,
+          "pts": 51712,
+          "time_base": "1/12288",
+          "seconds": 4.208333333333333,
+          "exact_seconds": "101/24"
+        },
+        {
+          "frame_index": 102,
+          "pts": 52224,
+          "time_base": "1/12288",
+          "seconds": 4.25,
+          "exact_seconds": "17/4"
+        },
+        {
+          "frame_index": 103,
+          "pts": 52736,
+          "time_base": "1/12288",
+          "seconds": 4.291666666666667,
+          "exact_seconds": "103/24"
+        },
+        {
+          "frame_index": 104,
+          "pts": 53248,
+          "time_base": "1/12288",
+          "seconds": 4.333333333333333,
+          "exact_seconds": "13/3"
+        },
+        {
+          "frame_index": 105,
+          "pts": 53760,
+          "time_base": "1/12288",
+          "seconds": 4.375,
+          "exact_seconds": "35/8"
+        },
+        {
+          "frame_index": 106,
+          "pts": 54272,
+          "time_base": "1/12288",
+          "seconds": 4.416666666666667,
+          "exact_seconds": "53/12"
+        },
+        {
+          "frame_index": 107,
+          "pts": 54784,
+          "time_base": "1/12288",
+          "seconds": 4.458333333333333,
+          "exact_seconds": "107/24"
+        },
+        {
+          "frame_index": 108,
+          "pts": 55296,
+          "time_base": "1/12288",
+          "seconds": 4.5,
+          "exact_seconds": "9/2"
+        },
+        {
+          "frame_index": 109,
+          "pts": 55808,
+          "time_base": "1/12288",
+          "seconds": 4.541666666666667,
+          "exact_seconds": "109/24"
+        },
+        {
+          "frame_index": 110,
+          "pts": 56320,
+          "time_base": "1/12288",
+          "seconds": 4.583333333333333,
+          "exact_seconds": "55/12"
+        },
+        {
+          "frame_index": 111,
+          "pts": 56832,
+          "time_base": "1/12288",
+          "seconds": 4.625,
+          "exact_seconds": "37/8"
+        },
+        {
+          "frame_index": 112,
+          "pts": 57344,
+          "time_base": "1/12288",
+          "seconds": 4.666666666666667,
+          "exact_seconds": "14/3"
+        },
+        {
+          "frame_index": 113,
+          "pts": 57856,
+          "time_base": "1/12288",
+          "seconds": 4.708333333333333,
+          "exact_seconds": "113/24"
+        },
+        {
+          "frame_index": 114,
+          "pts": 58368,
+          "time_base": "1/12288",
+          "seconds": 4.75,
+          "exact_seconds": "19/4"
+        },
+        {
+          "frame_index": 115,
+          "pts": 58880,
+          "time_base": "1/12288",
+          "seconds": 4.791666666666667,
+          "exact_seconds": "115/24"
+        },
+        {
+          "frame_index": 116,
+          "pts": 59392,
+          "time_base": "1/12288",
+          "seconds": 4.833333333333333,
+          "exact_seconds": "29/6"
+        },
+        {
+          "frame_index": 117,
+          "pts": 59904,
+          "time_base": "1/12288",
+          "seconds": 4.875,
+          "exact_seconds": "39/8"
+        },
+        {
+          "frame_index": 118,
+          "pts": 60416,
+          "time_base": "1/12288",
+          "seconds": 4.916666666666667,
+          "exact_seconds": "59/12"
+        },
+        {
+          "frame_index": 119,
+          "pts": 60928,
+          "time_base": "1/12288",
+          "seconds": 4.958333333333333,
+          "exact_seconds": "119/24"
+        },
+        {
+          "frame_index": 120,
+          "pts": 61440,
+          "time_base": "1/12288",
+          "seconds": 5.0,
+          "exact_seconds": "5"
+        },
+        {
+          "frame_index": 121,
+          "pts": 61952,
+          "time_base": "1/12288",
+          "seconds": 5.041666666666667,
+          "exact_seconds": "121/24"
+        },
+        {
+          "frame_index": 122,
+          "pts": 62464,
+          "time_base": "1/12288",
+          "seconds": 5.083333333333333,
+          "exact_seconds": "61/12"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "exact_seconds": "41/8"
+        }
+      ],
+      "full_pts_verified": "Every decoded frame has PTS exactly index/24 seconds"
+    },
+    "A8": {
+      "path": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\a_20260913T133502Z_294205bef2e043dc84b41315e544b36d\\a_50step.mp4",
+      "sha256": "1df518c92da95f9f926d1a82284199a6017660a46a502502c08b12219c52c9a8",
+      "bytes": 11934240,
+      "width": 1344,
+      "height": 768,
+      "average_rate": "24",
+      "time_base": "1/12288",
+      "declared_frames": 124,
+      "video_duration_seconds": 5.166666666666667,
+      "has_audio": true,
+      "audio_reviewed": false,
+      "decoded_frame_count": 124,
+      "samples": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "exact_seconds": "0",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\A8_frame_000.png"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "exact_seconds": "5/4",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\A8_frame_030.png"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "exact_seconds": "5/2",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\A8_frame_060.png"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "exact_seconds": "15/4",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\A8_frame_090.png"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "exact_seconds": "41/8",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\A8_frame_123.png"
+        }
+      ],
+      "all_decoded_pts": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "exact_seconds": "0"
+        },
+        {
+          "frame_index": 1,
+          "pts": 512,
+          "time_base": "1/12288",
+          "seconds": 0.041666666666666664,
+          "exact_seconds": "1/24"
+        },
+        {
+          "frame_index": 2,
+          "pts": 1024,
+          "time_base": "1/12288",
+          "seconds": 0.08333333333333333,
+          "exact_seconds": "1/12"
+        },
+        {
+          "frame_index": 3,
+          "pts": 1536,
+          "time_base": "1/12288",
+          "seconds": 0.125,
+          "exact_seconds": "1/8"
+        },
+        {
+          "frame_index": 4,
+          "pts": 2048,
+          "time_base": "1/12288",
+          "seconds": 0.16666666666666666,
+          "exact_seconds": "1/6"
+        },
+        {
+          "frame_index": 5,
+          "pts": 2560,
+          "time_base": "1/12288",
+          "seconds": 0.20833333333333334,
+          "exact_seconds": "5/24"
+        },
+        {
+          "frame_index": 6,
+          "pts": 3072,
+          "time_base": "1/12288",
+          "seconds": 0.25,
+          "exact_seconds": "1/4"
+        },
+        {
+          "frame_index": 7,
+          "pts": 3584,
+          "time_base": "1/12288",
+          "seconds": 0.2916666666666667,
+          "exact_seconds": "7/24"
+        },
+        {
+          "frame_index": 8,
+          "pts": 4096,
+          "time_base": "1/12288",
+          "seconds": 0.3333333333333333,
+          "exact_seconds": "1/3"
+        },
+        {
+          "frame_index": 9,
+          "pts": 4608,
+          "time_base": "1/12288",
+          "seconds": 0.375,
+          "exact_seconds": "3/8"
+        },
+        {
+          "frame_index": 10,
+          "pts": 5120,
+          "time_base": "1/12288",
+          "seconds": 0.4166666666666667,
+          "exact_seconds": "5/12"
+        },
+        {
+          "frame_index": 11,
+          "pts": 5632,
+          "time_base": "1/12288",
+          "seconds": 0.4583333333333333,
+          "exact_seconds": "11/24"
+        },
+        {
+          "frame_index": 12,
+          "pts": 6144,
+          "time_base": "1/12288",
+          "seconds": 0.5,
+          "exact_seconds": "1/2"
+        },
+        {
+          "frame_index": 13,
+          "pts": 6656,
+          "time_base": "1/12288",
+          "seconds": 0.5416666666666666,
+          "exact_seconds": "13/24"
+        },
+        {
+          "frame_index": 14,
+          "pts": 7168,
+          "time_base": "1/12288",
+          "seconds": 0.5833333333333334,
+          "exact_seconds": "7/12"
+        },
+        {
+          "frame_index": 15,
+          "pts": 7680,
+          "time_base": "1/12288",
+          "seconds": 0.625,
+          "exact_seconds": "5/8"
+        },
+        {
+          "frame_index": 16,
+          "pts": 8192,
+          "time_base": "1/12288",
+          "seconds": 0.6666666666666666,
+          "exact_seconds": "2/3"
+        },
+        {
+          "frame_index": 17,
+          "pts": 8704,
+          "time_base": "1/12288",
+          "seconds": 0.7083333333333334,
+          "exact_seconds": "17/24"
+        },
+        {
+          "frame_index": 18,
+          "pts": 9216,
+          "time_base": "1/12288",
+          "seconds": 0.75,
+          "exact_seconds": "3/4"
+        },
+        {
+          "frame_index": 19,
+          "pts": 9728,
+          "time_base": "1/12288",
+          "seconds": 0.7916666666666666,
+          "exact_seconds": "19/24"
+        },
+        {
+          "frame_index": 20,
+          "pts": 10240,
+          "time_base": "1/12288",
+          "seconds": 0.8333333333333334,
+          "exact_seconds": "5/6"
+        },
+        {
+          "frame_index": 21,
+          "pts": 10752,
+          "time_base": "1/12288",
+          "seconds": 0.875,
+          "exact_seconds": "7/8"
+        },
+        {
+          "frame_index": 22,
+          "pts": 11264,
+          "time_base": "1/12288",
+          "seconds": 0.9166666666666666,
+          "exact_seconds": "11/12"
+        },
+        {
+          "frame_index": 23,
+          "pts": 11776,
+          "time_base": "1/12288",
+          "seconds": 0.9583333333333334,
+          "exact_seconds": "23/24"
+        },
+        {
+          "frame_index": 24,
+          "pts": 12288,
+          "time_base": "1/12288",
+          "seconds": 1.0,
+          "exact_seconds": "1"
+        },
+        {
+          "frame_index": 25,
+          "pts": 12800,
+          "time_base": "1/12288",
+          "seconds": 1.0416666666666667,
+          "exact_seconds": "25/24"
+        },
+        {
+          "frame_index": 26,
+          "pts": 13312,
+          "time_base": "1/12288",
+          "seconds": 1.0833333333333333,
+          "exact_seconds": "13/12"
+        },
+        {
+          "frame_index": 27,
+          "pts": 13824,
+          "time_base": "1/12288",
+          "seconds": 1.125,
+          "exact_seconds": "9/8"
+        },
+        {
+          "frame_index": 28,
+          "pts": 14336,
+          "time_base": "1/12288",
+          "seconds": 1.1666666666666667,
+          "exact_seconds": "7/6"
+        },
+        {
+          "frame_index": 29,
+          "pts": 14848,
+          "time_base": "1/12288",
+          "seconds": 1.2083333333333333,
+          "exact_seconds": "29/24"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "exact_seconds": "5/4"
+        },
+        {
+          "frame_index": 31,
+          "pts": 15872,
+          "time_base": "1/12288",
+          "seconds": 1.2916666666666667,
+          "exact_seconds": "31/24"
+        },
+        {
+          "frame_index": 32,
+          "pts": 16384,
+          "time_base": "1/12288",
+          "seconds": 1.3333333333333333,
+          "exact_seconds": "4/3"
+        },
+        {
+          "frame_index": 33,
+          "pts": 16896,
+          "time_base": "1/12288",
+          "seconds": 1.375,
+          "exact_seconds": "11/8"
+        },
+        {
+          "frame_index": 34,
+          "pts": 17408,
+          "time_base": "1/12288",
+          "seconds": 1.4166666666666667,
+          "exact_seconds": "17/12"
+        },
+        {
+          "frame_index": 35,
+          "pts": 17920,
+          "time_base": "1/12288",
+          "seconds": 1.4583333333333333,
+          "exact_seconds": "35/24"
+        },
+        {
+          "frame_index": 36,
+          "pts": 18432,
+          "time_base": "1/12288",
+          "seconds": 1.5,
+          "exact_seconds": "3/2"
+        },
+        {
+          "frame_index": 37,
+          "pts": 18944,
+          "time_base": "1/12288",
+          "seconds": 1.5416666666666667,
+          "exact_seconds": "37/24"
+        },
+        {
+          "frame_index": 38,
+          "pts": 19456,
+          "time_base": "1/12288",
+          "seconds": 1.5833333333333333,
+          "exact_seconds": "19/12"
+        },
+        {
+          "frame_index": 39,
+          "pts": 19968,
+          "time_base": "1/12288",
+          "seconds": 1.625,
+          "exact_seconds": "13/8"
+        },
+        {
+          "frame_index": 40,
+          "pts": 20480,
+          "time_base": "1/12288",
+          "seconds": 1.6666666666666667,
+          "exact_seconds": "5/3"
+        },
+        {
+          "frame_index": 41,
+          "pts": 20992,
+          "time_base": "1/12288",
+          "seconds": 1.7083333333333333,
+          "exact_seconds": "41/24"
+        },
+        {
+          "frame_index": 42,
+          "pts": 21504,
+          "time_base": "1/12288",
+          "seconds": 1.75,
+          "exact_seconds": "7/4"
+        },
+        {
+          "frame_index": 43,
+          "pts": 22016,
+          "time_base": "1/12288",
+          "seconds": 1.7916666666666667,
+          "exact_seconds": "43/24"
+        },
+        {
+          "frame_index": 44,
+          "pts": 22528,
+          "time_base": "1/12288",
+          "seconds": 1.8333333333333333,
+          "exact_seconds": "11/6"
+        },
+        {
+          "frame_index": 45,
+          "pts": 23040,
+          "time_base": "1/12288",
+          "seconds": 1.875,
+          "exact_seconds": "15/8"
+        },
+        {
+          "frame_index": 46,
+          "pts": 23552,
+          "time_base": "1/12288",
+          "seconds": 1.9166666666666667,
+          "exact_seconds": "23/12"
+        },
+        {
+          "frame_index": 47,
+          "pts": 24064,
+          "time_base": "1/12288",
+          "seconds": 1.9583333333333333,
+          "exact_seconds": "47/24"
+        },
+        {
+          "frame_index": 48,
+          "pts": 24576,
+          "time_base": "1/12288",
+          "seconds": 2.0,
+          "exact_seconds": "2"
+        },
+        {
+          "frame_index": 49,
+          "pts": 25088,
+          "time_base": "1/12288",
+          "seconds": 2.0416666666666665,
+          "exact_seconds": "49/24"
+        },
+        {
+          "frame_index": 50,
+          "pts": 25600,
+          "time_base": "1/12288",
+          "seconds": 2.0833333333333335,
+          "exact_seconds": "25/12"
+        },
+        {
+          "frame_index": 51,
+          "pts": 26112,
+          "time_base": "1/12288",
+          "seconds": 2.125,
+          "exact_seconds": "17/8"
+        },
+        {
+          "frame_index": 52,
+          "pts": 26624,
+          "time_base": "1/12288",
+          "seconds": 2.1666666666666665,
+          "exact_seconds": "13/6"
+        },
+        {
+          "frame_index": 53,
+          "pts": 27136,
+          "time_base": "1/12288",
+          "seconds": 2.2083333333333335,
+          "exact_seconds": "53/24"
+        },
+        {
+          "frame_index": 54,
+          "pts": 27648,
+          "time_base": "1/12288",
+          "seconds": 2.25,
+          "exact_seconds": "9/4"
+        },
+        {
+          "frame_index": 55,
+          "pts": 28160,
+          "time_base": "1/12288",
+          "seconds": 2.2916666666666665,
+          "exact_seconds": "55/24"
+        },
+        {
+          "frame_index": 56,
+          "pts": 28672,
+          "time_base": "1/12288",
+          "seconds": 2.3333333333333335,
+          "exact_seconds": "7/3"
+        },
+        {
+          "frame_index": 57,
+          "pts": 29184,
+          "time_base": "1/12288",
+          "seconds": 2.375,
+          "exact_seconds": "19/8"
+        },
+        {
+          "frame_index": 58,
+          "pts": 29696,
+          "time_base": "1/12288",
+          "seconds": 2.4166666666666665,
+          "exact_seconds": "29/12"
+        },
+        {
+          "frame_index": 59,
+          "pts": 30208,
+          "time_base": "1/12288",
+          "seconds": 2.4583333333333335,
+          "exact_seconds": "59/24"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "exact_seconds": "5/2"
+        },
+        {
+          "frame_index": 61,
+          "pts": 31232,
+          "time_base": "1/12288",
+          "seconds": 2.5416666666666665,
+          "exact_seconds": "61/24"
+        },
+        {
+          "frame_index": 62,
+          "pts": 31744,
+          "time_base": "1/12288",
+          "seconds": 2.5833333333333335,
+          "exact_seconds": "31/12"
+        },
+        {
+          "frame_index": 63,
+          "pts": 32256,
+          "time_base": "1/12288",
+          "seconds": 2.625,
+          "exact_seconds": "21/8"
+        },
+        {
+          "frame_index": 64,
+          "pts": 32768,
+          "time_base": "1/12288",
+          "seconds": 2.6666666666666665,
+          "exact_seconds": "8/3"
+        },
+        {
+          "frame_index": 65,
+          "pts": 33280,
+          "time_base": "1/12288",
+          "seconds": 2.7083333333333335,
+          "exact_seconds": "65/24"
+        },
+        {
+          "frame_index": 66,
+          "pts": 33792,
+          "time_base": "1/12288",
+          "seconds": 2.75,
+          "exact_seconds": "11/4"
+        },
+        {
+          "frame_index": 67,
+          "pts": 34304,
+          "time_base": "1/12288",
+          "seconds": 2.7916666666666665,
+          "exact_seconds": "67/24"
+        },
+        {
+          "frame_index": 68,
+          "pts": 34816,
+          "time_base": "1/12288",
+          "seconds": 2.8333333333333335,
+          "exact_seconds": "17/6"
+        },
+        {
+          "frame_index": 69,
+          "pts": 35328,
+          "time_base": "1/12288",
+          "seconds": 2.875,
+          "exact_seconds": "23/8"
+        },
+        {
+          "frame_index": 70,
+          "pts": 35840,
+          "time_base": "1/12288",
+          "seconds": 2.9166666666666665,
+          "exact_seconds": "35/12"
+        },
+        {
+          "frame_index": 71,
+          "pts": 36352,
+          "time_base": "1/12288",
+          "seconds": 2.9583333333333335,
+          "exact_seconds": "71/24"
+        },
+        {
+          "frame_index": 72,
+          "pts": 36864,
+          "time_base": "1/12288",
+          "seconds": 3.0,
+          "exact_seconds": "3"
+        },
+        {
+          "frame_index": 73,
+          "pts": 37376,
+          "time_base": "1/12288",
+          "seconds": 3.0416666666666665,
+          "exact_seconds": "73/24"
+        },
+        {
+          "frame_index": 74,
+          "pts": 37888,
+          "time_base": "1/12288",
+          "seconds": 3.0833333333333335,
+          "exact_seconds": "37/12"
+        },
+        {
+          "frame_index": 75,
+          "pts": 38400,
+          "time_base": "1/12288",
+          "seconds": 3.125,
+          "exact_seconds": "25/8"
+        },
+        {
+          "frame_index": 76,
+          "pts": 38912,
+          "time_base": "1/12288",
+          "seconds": 3.1666666666666665,
+          "exact_seconds": "19/6"
+        },
+        {
+          "frame_index": 77,
+          "pts": 39424,
+          "time_base": "1/12288",
+          "seconds": 3.2083333333333335,
+          "exact_seconds": "77/24"
+        },
+        {
+          "frame_index": 78,
+          "pts": 39936,
+          "time_base": "1/12288",
+          "seconds": 3.25,
+          "exact_seconds": "13/4"
+        },
+        {
+          "frame_index": 79,
+          "pts": 40448,
+          "time_base": "1/12288",
+          "seconds": 3.2916666666666665,
+          "exact_seconds": "79/24"
+        },
+        {
+          "frame_index": 80,
+          "pts": 40960,
+          "time_base": "1/12288",
+          "seconds": 3.3333333333333335,
+          "exact_seconds": "10/3"
+        },
+        {
+          "frame_index": 81,
+          "pts": 41472,
+          "time_base": "1/12288",
+          "seconds": 3.375,
+          "exact_seconds": "27/8"
+        },
+        {
+          "frame_index": 82,
+          "pts": 41984,
+          "time_base": "1/12288",
+          "seconds": 3.4166666666666665,
+          "exact_seconds": "41/12"
+        },
+        {
+          "frame_index": 83,
+          "pts": 42496,
+          "time_base": "1/12288",
+          "seconds": 3.4583333333333335,
+          "exact_seconds": "83/24"
+        },
+        {
+          "frame_index": 84,
+          "pts": 43008,
+          "time_base": "1/12288",
+          "seconds": 3.5,
+          "exact_seconds": "7/2"
+        },
+        {
+          "frame_index": 85,
+          "pts": 43520,
+          "time_base": "1/12288",
+          "seconds": 3.5416666666666665,
+          "exact_seconds": "85/24"
+        },
+        {
+          "frame_index": 86,
+          "pts": 44032,
+          "time_base": "1/12288",
+          "seconds": 3.5833333333333335,
+          "exact_seconds": "43/12"
+        },
+        {
+          "frame_index": 87,
+          "pts": 44544,
+          "time_base": "1/12288",
+          "seconds": 3.625,
+          "exact_seconds": "29/8"
+        },
+        {
+          "frame_index": 88,
+          "pts": 45056,
+          "time_base": "1/12288",
+          "seconds": 3.6666666666666665,
+          "exact_seconds": "11/3"
+        },
+        {
+          "frame_index": 89,
+          "pts": 45568,
+          "time_base": "1/12288",
+          "seconds": 3.7083333333333335,
+          "exact_seconds": "89/24"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "exact_seconds": "15/4"
+        },
+        {
+          "frame_index": 91,
+          "pts": 46592,
+          "time_base": "1/12288",
+          "seconds": 3.7916666666666665,
+          "exact_seconds": "91/24"
+        },
+        {
+          "frame_index": 92,
+          "pts": 47104,
+          "time_base": "1/12288",
+          "seconds": 3.8333333333333335,
+          "exact_seconds": "23/6"
+        },
+        {
+          "frame_index": 93,
+          "pts": 47616,
+          "time_base": "1/12288",
+          "seconds": 3.875,
+          "exact_seconds": "31/8"
+        },
+        {
+          "frame_index": 94,
+          "pts": 48128,
+          "time_base": "1/12288",
+          "seconds": 3.9166666666666665,
+          "exact_seconds": "47/12"
+        },
+        {
+          "frame_index": 95,
+          "pts": 48640,
+          "time_base": "1/12288",
+          "seconds": 3.9583333333333335,
+          "exact_seconds": "95/24"
+        },
+        {
+          "frame_index": 96,
+          "pts": 49152,
+          "time_base": "1/12288",
+          "seconds": 4.0,
+          "exact_seconds": "4"
+        },
+        {
+          "frame_index": 97,
+          "pts": 49664,
+          "time_base": "1/12288",
+          "seconds": 4.041666666666667,
+          "exact_seconds": "97/24"
+        },
+        {
+          "frame_index": 98,
+          "pts": 50176,
+          "time_base": "1/12288",
+          "seconds": 4.083333333333333,
+          "exact_seconds": "49/12"
+        },
+        {
+          "frame_index": 99,
+          "pts": 50688,
+          "time_base": "1/12288",
+          "seconds": 4.125,
+          "exact_seconds": "33/8"
+        },
+        {
+          "frame_index": 100,
+          "pts": 51200,
+          "time_base": "1/12288",
+          "seconds": 4.166666666666667,
+          "exact_seconds": "25/6"
+        },
+        {
+          "frame_index": 101,
+          "pts": 51712,
+          "time_base": "1/12288",
+          "seconds": 4.208333333333333,
+          "exact_seconds": "101/24"
+        },
+        {
+          "frame_index": 102,
+          "pts": 52224,
+          "time_base": "1/12288",
+          "seconds": 4.25,
+          "exact_seconds": "17/4"
+        },
+        {
+          "frame_index": 103,
+          "pts": 52736,
+          "time_base": "1/12288",
+          "seconds": 4.291666666666667,
+          "exact_seconds": "103/24"
+        },
+        {
+          "frame_index": 104,
+          "pts": 53248,
+          "time_base": "1/12288",
+          "seconds": 4.333333333333333,
+          "exact_seconds": "13/3"
+        },
+        {
+          "frame_index": 105,
+          "pts": 53760,
+          "time_base": "1/12288",
+          "seconds": 4.375,
+          "exact_seconds": "35/8"
+        },
+        {
+          "frame_index": 106,
+          "pts": 54272,
+          "time_base": "1/12288",
+          "seconds": 4.416666666666667,
+          "exact_seconds": "53/12"
+        },
+        {
+          "frame_index": 107,
+          "pts": 54784,
+          "time_base": "1/12288",
+          "seconds": 4.458333333333333,
+          "exact_seconds": "107/24"
+        },
+        {
+          "frame_index": 108,
+          "pts": 55296,
+          "time_base": "1/12288",
+          "seconds": 4.5,
+          "exact_seconds": "9/2"
+        },
+        {
+          "frame_index": 109,
+          "pts": 55808,
+          "time_base": "1/12288",
+          "seconds": 4.541666666666667,
+          "exact_seconds": "109/24"
+        },
+        {
+          "frame_index": 110,
+          "pts": 56320,
+          "time_base": "1/12288",
+          "seconds": 4.583333333333333,
+          "exact_seconds": "55/12"
+        },
+        {
+          "frame_index": 111,
+          "pts": 56832,
+          "time_base": "1/12288",
+          "seconds": 4.625,
+          "exact_seconds": "37/8"
+        },
+        {
+          "frame_index": 112,
+          "pts": 57344,
+          "time_base": "1/12288",
+          "seconds": 4.666666666666667,
+          "exact_seconds": "14/3"
+        },
+        {
+          "frame_index": 113,
+          "pts": 57856,
+          "time_base": "1/12288",
+          "seconds": 4.708333333333333,
+          "exact_seconds": "113/24"
+        },
+        {
+          "frame_index": 114,
+          "pts": 58368,
+          "time_base": "1/12288",
+          "seconds": 4.75,
+          "exact_seconds": "19/4"
+        },
+        {
+          "frame_index": 115,
+          "pts": 58880,
+          "time_base": "1/12288",
+          "seconds": 4.791666666666667,
+          "exact_seconds": "115/24"
+        },
+        {
+          "frame_index": 116,
+          "pts": 59392,
+          "time_base": "1/12288",
+          "seconds": 4.833333333333333,
+          "exact_seconds": "29/6"
+        },
+        {
+          "frame_index": 117,
+          "pts": 59904,
+          "time_base": "1/12288",
+          "seconds": 4.875,
+          "exact_seconds": "39/8"
+        },
+        {
+          "frame_index": 118,
+          "pts": 60416,
+          "time_base": "1/12288",
+          "seconds": 4.916666666666667,
+          "exact_seconds": "59/12"
+        },
+        {
+          "frame_index": 119,
+          "pts": 60928,
+          "time_base": "1/12288",
+          "seconds": 4.958333333333333,
+          "exact_seconds": "119/24"
+        },
+        {
+          "frame_index": 120,
+          "pts": 61440,
+          "time_base": "1/12288",
+          "seconds": 5.0,
+          "exact_seconds": "5"
+        },
+        {
+          "frame_index": 121,
+          "pts": 61952,
+          "time_base": "1/12288",
+          "seconds": 5.041666666666667,
+          "exact_seconds": "121/24"
+        },
+        {
+          "frame_index": 122,
+          "pts": 62464,
+          "time_base": "1/12288",
+          "seconds": 5.083333333333333,
+          "exact_seconds": "61/12"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "exact_seconds": "41/8"
+        }
+      ],
+      "full_pts_verified": "Every decoded frame has PTS exactly index/24 seconds"
+    },
+    "B8": {
+      "path": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\b_50step.mp4",
+      "sha256": "ca8aa801cb1c96026b237f4f1dbb93d8e4846071338aae3796ae77c24537d2fa",
+      "bytes": 11740798,
+      "width": 1344,
+      "height": 768,
+      "average_rate": "24",
+      "time_base": "1/12288",
+      "declared_frames": 124,
+      "video_duration_seconds": 5.166666666666667,
+      "has_audio": true,
+      "audio_reviewed": false,
+      "decoded_frame_count": 124,
+      "samples": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "exact_seconds": "0",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\B8_frame_000.png"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "exact_seconds": "5/4",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\B8_frame_030.png"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "exact_seconds": "5/2",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\B8_frame_060.png"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "exact_seconds": "15/4",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\B8_frame_090.png"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "exact_seconds": "41/8",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\B8_frame_123.png"
+        }
+      ],
+      "all_decoded_pts": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "exact_seconds": "0"
+        },
+        {
+          "frame_index": 1,
+          "pts": 512,
+          "time_base": "1/12288",
+          "seconds": 0.041666666666666664,
+          "exact_seconds": "1/24"
+        },
+        {
+          "frame_index": 2,
+          "pts": 1024,
+          "time_base": "1/12288",
+          "seconds": 0.08333333333333333,
+          "exact_seconds": "1/12"
+        },
+        {
+          "frame_index": 3,
+          "pts": 1536,
+          "time_base": "1/12288",
+          "seconds": 0.125,
+          "exact_seconds": "1/8"
+        },
+        {
+          "frame_index": 4,
+          "pts": 2048,
+          "time_base": "1/12288",
+          "seconds": 0.16666666666666666,
+          "exact_seconds": "1/6"
+        },
+        {
+          "frame_index": 5,
+          "pts": 2560,
+          "time_base": "1/12288",
+          "seconds": 0.20833333333333334,
+          "exact_seconds": "5/24"
+        },
+        {
+          "frame_index": 6,
+          "pts": 3072,
+          "time_base": "1/12288",
+          "seconds": 0.25,
+          "exact_seconds": "1/4"
+        },
+        {
+          "frame_index": 7,
+          "pts": 3584,
+          "time_base": "1/12288",
+          "seconds": 0.2916666666666667,
+          "exact_seconds": "7/24"
+        },
+        {
+          "frame_index": 8,
+          "pts": 4096,
+          "time_base": "1/12288",
+          "seconds": 0.3333333333333333,
+          "exact_seconds": "1/3"
+        },
+        {
+          "frame_index": 9,
+          "pts": 4608,
+          "time_base": "1/12288",
+          "seconds": 0.375,
+          "exact_seconds": "3/8"
+        },
+        {
+          "frame_index": 10,
+          "pts": 5120,
+          "time_base": "1/12288",
+          "seconds": 0.4166666666666667,
+          "exact_seconds": "5/12"
+        },
+        {
+          "frame_index": 11,
+          "pts": 5632,
+          "time_base": "1/12288",
+          "seconds": 0.4583333333333333,
+          "exact_seconds": "11/24"
+        },
+        {
+          "frame_index": 12,
+          "pts": 6144,
+          "time_base": "1/12288",
+          "seconds": 0.5,
+          "exact_seconds": "1/2"
+        },
+        {
+          "frame_index": 13,
+          "pts": 6656,
+          "time_base": "1/12288",
+          "seconds": 0.5416666666666666,
+          "exact_seconds": "13/24"
+        },
+        {
+          "frame_index": 14,
+          "pts": 7168,
+          "time_base": "1/12288",
+          "seconds": 0.5833333333333334,
+          "exact_seconds": "7/12"
+        },
+        {
+          "frame_index": 15,
+          "pts": 7680,
+          "time_base": "1/12288",
+          "seconds": 0.625,
+          "exact_seconds": "5/8"
+        },
+        {
+          "frame_index": 16,
+          "pts": 8192,
+          "time_base": "1/12288",
+          "seconds": 0.6666666666666666,
+          "exact_seconds": "2/3"
+        },
+        {
+          "frame_index": 17,
+          "pts": 8704,
+          "time_base": "1/12288",
+          "seconds": 0.7083333333333334,
+          "exact_seconds": "17/24"
+        },
+        {
+          "frame_index": 18,
+          "pts": 9216,
+          "time_base": "1/12288",
+          "seconds": 0.75,
+          "exact_seconds": "3/4"
+        },
+        {
+          "frame_index": 19,
+          "pts": 9728,
+          "time_base": "1/12288",
+          "seconds": 0.7916666666666666,
+          "exact_seconds": "19/24"
+        },
+        {
+          "frame_index": 20,
+          "pts": 10240,
+          "time_base": "1/12288",
+          "seconds": 0.8333333333333334,
+          "exact_seconds": "5/6"
+        },
+        {
+          "frame_index": 21,
+          "pts": 10752,
+          "time_base": "1/12288",
+          "seconds": 0.875,
+          "exact_seconds": "7/8"
+        },
+        {
+          "frame_index": 22,
+          "pts": 11264,
+          "time_base": "1/12288",
+          "seconds": 0.9166666666666666,
+          "exact_seconds": "11/12"
+        },
+        {
+          "frame_index": 23,
+          "pts": 11776,
+          "time_base": "1/12288",
+          "seconds": 0.9583333333333334,
+          "exact_seconds": "23/24"
+        },
+        {
+          "frame_index": 24,
+          "pts": 12288,
+          "time_base": "1/12288",
+          "seconds": 1.0,
+          "exact_seconds": "1"
+        },
+        {
+          "frame_index": 25,
+          "pts": 12800,
+          "time_base": "1/12288",
+          "seconds": 1.0416666666666667,
+          "exact_seconds": "25/24"
+        },
+        {
+          "frame_index": 26,
+          "pts": 13312,
+          "time_base": "1/12288",
+          "seconds": 1.0833333333333333,
+          "exact_seconds": "13/12"
+        },
+        {
+          "frame_index": 27,
+          "pts": 13824,
+          "time_base": "1/12288",
+          "seconds": 1.125,
+          "exact_seconds": "9/8"
+        },
+        {
+          "frame_index": 28,
+          "pts": 14336,
+          "time_base": "1/12288",
+          "seconds": 1.1666666666666667,
+          "exact_seconds": "7/6"
+        },
+        {
+          "frame_index": 29,
+          "pts": 14848,
+          "time_base": "1/12288",
+          "seconds": 1.2083333333333333,
+          "exact_seconds": "29/24"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "exact_seconds": "5/4"
+        },
+        {
+          "frame_index": 31,
+          "pts": 15872,
+          "time_base": "1/12288",
+          "seconds": 1.2916666666666667,
+          "exact_seconds": "31/24"
+        },
+        {
+          "frame_index": 32,
+          "pts": 16384,
+          "time_base": "1/12288",
+          "seconds": 1.3333333333333333,
+          "exact_seconds": "4/3"
+        },
+        {
+          "frame_index": 33,
+          "pts": 16896,
+          "time_base": "1/12288",
+          "seconds": 1.375,
+          "exact_seconds": "11/8"
+        },
+        {
+          "frame_index": 34,
+          "pts": 17408,
+          "time_base": "1/12288",
+          "seconds": 1.4166666666666667,
+          "exact_seconds": "17/12"
+        },
+        {
+          "frame_index": 35,
+          "pts": 17920,
+          "time_base": "1/12288",
+          "seconds": 1.4583333333333333,
+          "exact_seconds": "35/24"
+        },
+        {
+          "frame_index": 36,
+          "pts": 18432,
+          "time_base": "1/12288",
+          "seconds": 1.5,
+          "exact_seconds": "3/2"
+        },
+        {
+          "frame_index": 37,
+          "pts": 18944,
+          "time_base": "1/12288",
+          "seconds": 1.5416666666666667,
+          "exact_seconds": "37/24"
+        },
+        {
+          "frame_index": 38,
+          "pts": 19456,
+          "time_base": "1/12288",
+          "seconds": 1.5833333333333333,
+          "exact_seconds": "19/12"
+        },
+        {
+          "frame_index": 39,
+          "pts": 19968,
+          "time_base": "1/12288",
+          "seconds": 1.625,
+          "exact_seconds": "13/8"
+        },
+        {
+          "frame_index": 40,
+          "pts": 20480,
+          "time_base": "1/12288",
+          "seconds": 1.6666666666666667,
+          "exact_seconds": "5/3"
+        },
+        {
+          "frame_index": 41,
+          "pts": 20992,
+          "time_base": "1/12288",
+          "seconds": 1.7083333333333333,
+          "exact_seconds": "41/24"
+        },
+        {
+          "frame_index": 42,
+          "pts": 21504,
+          "time_base": "1/12288",
+          "seconds": 1.75,
+          "exact_seconds": "7/4"
+        },
+        {
+          "frame_index": 43,
+          "pts": 22016,
+          "time_base": "1/12288",
+          "seconds": 1.7916666666666667,
+          "exact_seconds": "43/24"
+        },
+        {
+          "frame_index": 44,
+          "pts": 22528,
+          "time_base": "1/12288",
+          "seconds": 1.8333333333333333,
+          "exact_seconds": "11/6"
+        },
+        {
+          "frame_index": 45,
+          "pts": 23040,
+          "time_base": "1/12288",
+          "seconds": 1.875,
+          "exact_seconds": "15/8"
+        },
+        {
+          "frame_index": 46,
+          "pts": 23552,
+          "time_base": "1/12288",
+          "seconds": 1.9166666666666667,
+          "exact_seconds": "23/12"
+        },
+        {
+          "frame_index": 47,
+          "pts": 24064,
+          "time_base": "1/12288",
+          "seconds": 1.9583333333333333,
+          "exact_seconds": "47/24"
+        },
+        {
+          "frame_index": 48,
+          "pts": 24576,
+          "time_base": "1/12288",
+          "seconds": 2.0,
+          "exact_seconds": "2"
+        },
+        {
+          "frame_index": 49,
+          "pts": 25088,
+          "time_base": "1/12288",
+          "seconds": 2.0416666666666665,
+          "exact_seconds": "49/24"
+        },
+        {
+          "frame_index": 50,
+          "pts": 25600,
+          "time_base": "1/12288",
+          "seconds": 2.0833333333333335,
+          "exact_seconds": "25/12"
+        },
+        {
+          "frame_index": 51,
+          "pts": 26112,
+          "time_base": "1/12288",
+          "seconds": 2.125,
+          "exact_seconds": "17/8"
+        },
+        {
+          "frame_index": 52,
+          "pts": 26624,
+          "time_base": "1/12288",
+          "seconds": 2.1666666666666665,
+          "exact_seconds": "13/6"
+        },
+        {
+          "frame_index": 53,
+          "pts": 27136,
+          "time_base": "1/12288",
+          "seconds": 2.2083333333333335,
+          "exact_seconds": "53/24"
+        },
+        {
+          "frame_index": 54,
+          "pts": 27648,
+          "time_base": "1/12288",
+          "seconds": 2.25,
+          "exact_seconds": "9/4"
+        },
+        {
+          "frame_index": 55,
+          "pts": 28160,
+          "time_base": "1/12288",
+          "seconds": 2.2916666666666665,
+          "exact_seconds": "55/24"
+        },
+        {
+          "frame_index": 56,
+          "pts": 28672,
+          "time_base": "1/12288",
+          "seconds": 2.3333333333333335,
+          "exact_seconds": "7/3"
+        },
+        {
+          "frame_index": 57,
+          "pts": 29184,
+          "time_base": "1/12288",
+          "seconds": 2.375,
+          "exact_seconds": "19/8"
+        },
+        {
+          "frame_index": 58,
+          "pts": 29696,
+          "time_base": "1/12288",
+          "seconds": 2.4166666666666665,
+          "exact_seconds": "29/12"
+        },
+        {
+          "frame_index": 59,
+          "pts": 30208,
+          "time_base": "1/12288",
+          "seconds": 2.4583333333333335,
+          "exact_seconds": "59/24"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "exact_seconds": "5/2"
+        },
+        {
+          "frame_index": 61,
+          "pts": 31232,
+          "time_base": "1/12288",
+          "seconds": 2.5416666666666665,
+          "exact_seconds": "61/24"
+        },
+        {
+          "frame_index": 62,
+          "pts": 31744,
+          "time_base": "1/12288",
+          "seconds": 2.5833333333333335,
+          "exact_seconds": "31/12"
+        },
+        {
+          "frame_index": 63,
+          "pts": 32256,
+          "time_base": "1/12288",
+          "seconds": 2.625,
+          "exact_seconds": "21/8"
+        },
+        {
+          "frame_index": 64,
+          "pts": 32768,
+          "time_base": "1/12288",
+          "seconds": 2.6666666666666665,
+          "exact_seconds": "8/3"
+        },
+        {
+          "frame_index": 65,
+          "pts": 33280,
+          "time_base": "1/12288",
+          "seconds": 2.7083333333333335,
+          "exact_seconds": "65/24"
+        },
+        {
+          "frame_index": 66,
+          "pts": 33792,
+          "time_base": "1/12288",
+          "seconds": 2.75,
+          "exact_seconds": "11/4"
+        },
+        {
+          "frame_index": 67,
+          "pts": 34304,
+          "time_base": "1/12288",
+          "seconds": 2.7916666666666665,
+          "exact_seconds": "67/24"
+        },
+        {
+          "frame_index": 68,
+          "pts": 34816,
+          "time_base": "1/12288",
+          "seconds": 2.8333333333333335,
+          "exact_seconds": "17/6"
+        },
+        {
+          "frame_index": 69,
+          "pts": 35328,
+          "time_base": "1/12288",
+          "seconds": 2.875,
+          "exact_seconds": "23/8"
+        },
+        {
+          "frame_index": 70,
+          "pts": 35840,
+          "time_base": "1/12288",
+          "seconds": 2.9166666666666665,
+          "exact_seconds": "35/12"
+        },
+        {
+          "frame_index": 71,
+          "pts": 36352,
+          "time_base": "1/12288",
+          "seconds": 2.9583333333333335,
+          "exact_seconds": "71/24"
+        },
+        {
+          "frame_index": 72,
+          "pts": 36864,
+          "time_base": "1/12288",
+          "seconds": 3.0,
+          "exact_seconds": "3"
+        },
+        {
+          "frame_index": 73,
+          "pts": 37376,
+          "time_base": "1/12288",
+          "seconds": 3.0416666666666665,
+          "exact_seconds": "73/24"
+        },
+        {
+          "frame_index": 74,
+          "pts": 37888,
+          "time_base": "1/12288",
+          "seconds": 3.0833333333333335,
+          "exact_seconds": "37/12"
+        },
+        {
+          "frame_index": 75,
+          "pts": 38400,
+          "time_base": "1/12288",
+          "seconds": 3.125,
+          "exact_seconds": "25/8"
+        },
+        {
+          "frame_index": 76,
+          "pts": 38912,
+          "time_base": "1/12288",
+          "seconds": 3.1666666666666665,
+          "exact_seconds": "19/6"
+        },
+        {
+          "frame_index": 77,
+          "pts": 39424,
+          "time_base": "1/12288",
+          "seconds": 3.2083333333333335,
+          "exact_seconds": "77/24"
+        },
+        {
+          "frame_index": 78,
+          "pts": 39936,
+          "time_base": "1/12288",
+          "seconds": 3.25,
+          "exact_seconds": "13/4"
+        },
+        {
+          "frame_index": 79,
+          "pts": 40448,
+          "time_base": "1/12288",
+          "seconds": 3.2916666666666665,
+          "exact_seconds": "79/24"
+        },
+        {
+          "frame_index": 80,
+          "pts": 40960,
+          "time_base": "1/12288",
+          "seconds": 3.3333333333333335,
+          "exact_seconds": "10/3"
+        },
+        {
+          "frame_index": 81,
+          "pts": 41472,
+          "time_base": "1/12288",
+          "seconds": 3.375,
+          "exact_seconds": "27/8"
+        },
+        {
+          "frame_index": 82,
+          "pts": 41984,
+          "time_base": "1/12288",
+          "seconds": 3.4166666666666665,
+          "exact_seconds": "41/12"
+        },
+        {
+          "frame_index": 83,
+          "pts": 42496,
+          "time_base": "1/12288",
+          "seconds": 3.4583333333333335,
+          "exact_seconds": "83/24"
+        },
+        {
+          "frame_index": 84,
+          "pts": 43008,
+          "time_base": "1/12288",
+          "seconds": 3.5,
+          "exact_seconds": "7/2"
+        },
+        {
+          "frame_index": 85,
+          "pts": 43520,
+          "time_base": "1/12288",
+          "seconds": 3.5416666666666665,
+          "exact_seconds": "85/24"
+        },
+        {
+          "frame_index": 86,
+          "pts": 44032,
+          "time_base": "1/12288",
+          "seconds": 3.5833333333333335,
+          "exact_seconds": "43/12"
+        },
+        {
+          "frame_index": 87,
+          "pts": 44544,
+          "time_base": "1/12288",
+          "seconds": 3.625,
+          "exact_seconds": "29/8"
+        },
+        {
+          "frame_index": 88,
+          "pts": 45056,
+          "time_base": "1/12288",
+          "seconds": 3.6666666666666665,
+          "exact_seconds": "11/3"
+        },
+        {
+          "frame_index": 89,
+          "pts": 45568,
+          "time_base": "1/12288",
+          "seconds": 3.7083333333333335,
+          "exact_seconds": "89/24"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "exact_seconds": "15/4"
+        },
+        {
+          "frame_index": 91,
+          "pts": 46592,
+          "time_base": "1/12288",
+          "seconds": 3.7916666666666665,
+          "exact_seconds": "91/24"
+        },
+        {
+          "frame_index": 92,
+          "pts": 47104,
+          "time_base": "1/12288",
+          "seconds": 3.8333333333333335,
+          "exact_seconds": "23/6"
+        },
+        {
+          "frame_index": 93,
+          "pts": 47616,
+          "time_base": "1/12288",
+          "seconds": 3.875,
+          "exact_seconds": "31/8"
+        },
+        {
+          "frame_index": 94,
+          "pts": 48128,
+          "time_base": "1/12288",
+          "seconds": 3.9166666666666665,
+          "exact_seconds": "47/12"
+        },
+        {
+          "frame_index": 95,
+          "pts": 48640,
+          "time_base": "1/12288",
+          "seconds": 3.9583333333333335,
+          "exact_seconds": "95/24"
+        },
+        {
+          "frame_index": 96,
+          "pts": 49152,
+          "time_base": "1/12288",
+          "seconds": 4.0,
+          "exact_seconds": "4"
+        },
+        {
+          "frame_index": 97,
+          "pts": 49664,
+          "time_base": "1/12288",
+          "seconds": 4.041666666666667,
+          "exact_seconds": "97/24"
+        },
+        {
+          "frame_index": 98,
+          "pts": 50176,
+          "time_base": "1/12288",
+          "seconds": 4.083333333333333,
+          "exact_seconds": "49/12"
+        },
+        {
+          "frame_index": 99,
+          "pts": 50688,
+          "time_base": "1/12288",
+          "seconds": 4.125,
+          "exact_seconds": "33/8"
+        },
+        {
+          "frame_index": 100,
+          "pts": 51200,
+          "time_base": "1/12288",
+          "seconds": 4.166666666666667,
+          "exact_seconds": "25/6"
+        },
+        {
+          "frame_index": 101,
+          "pts": 51712,
+          "time_base": "1/12288",
+          "seconds": 4.208333333333333,
+          "exact_seconds": "101/24"
+        },
+        {
+          "frame_index": 102,
+          "pts": 52224,
+          "time_base": "1/12288",
+          "seconds": 4.25,
+          "exact_seconds": "17/4"
+        },
+        {
+          "frame_index": 103,
+          "pts": 52736,
+          "time_base": "1/12288",
+          "seconds": 4.291666666666667,
+          "exact_seconds": "103/24"
+        },
+        {
+          "frame_index": 104,
+          "pts": 53248,
+          "time_base": "1/12288",
+          "seconds": 4.333333333333333,
+          "exact_seconds": "13/3"
+        },
+        {
+          "frame_index": 105,
+          "pts": 53760,
+          "time_base": "1/12288",
+          "seconds": 4.375,
+          "exact_seconds": "35/8"
+        },
+        {
+          "frame_index": 106,
+          "pts": 54272,
+          "time_base": "1/12288",
+          "seconds": 4.416666666666667,
+          "exact_seconds": "53/12"
+        },
+        {
+          "frame_index": 107,
+          "pts": 54784,
+          "time_base": "1/12288",
+          "seconds": 4.458333333333333,
+          "exact_seconds": "107/24"
+        },
+        {
+          "frame_index": 108,
+          "pts": 55296,
+          "time_base": "1/12288",
+          "seconds": 4.5,
+          "exact_seconds": "9/2"
+        },
+        {
+          "frame_index": 109,
+          "pts": 55808,
+          "time_base": "1/12288",
+          "seconds": 4.541666666666667,
+          "exact_seconds": "109/24"
+        },
+        {
+          "frame_index": 110,
+          "pts": 56320,
+          "time_base": "1/12288",
+          "seconds": 4.583333333333333,
+          "exact_seconds": "55/12"
+        },
+        {
+          "frame_index": 111,
+          "pts": 56832,
+          "time_base": "1/12288",
+          "seconds": 4.625,
+          "exact_seconds": "37/8"
+        },
+        {
+          "frame_index": 112,
+          "pts": 57344,
+          "time_base": "1/12288",
+          "seconds": 4.666666666666667,
+          "exact_seconds": "14/3"
+        },
+        {
+          "frame_index": 113,
+          "pts": 57856,
+          "time_base": "1/12288",
+          "seconds": 4.708333333333333,
+          "exact_seconds": "113/24"
+        },
+        {
+          "frame_index": 114,
+          "pts": 58368,
+          "time_base": "1/12288",
+          "seconds": 4.75,
+          "exact_seconds": "19/4"
+        },
+        {
+          "frame_index": 115,
+          "pts": 58880,
+          "time_base": "1/12288",
+          "seconds": 4.791666666666667,
+          "exact_seconds": "115/24"
+        },
+        {
+          "frame_index": 116,
+          "pts": 59392,
+          "time_base": "1/12288",
+          "seconds": 4.833333333333333,
+          "exact_seconds": "29/6"
+        },
+        {
+          "frame_index": 117,
+          "pts": 59904,
+          "time_base": "1/12288",
+          "seconds": 4.875,
+          "exact_seconds": "39/8"
+        },
+        {
+          "frame_index": 118,
+          "pts": 60416,
+          "time_base": "1/12288",
+          "seconds": 4.916666666666667,
+          "exact_seconds": "59/12"
+        },
+        {
+          "frame_index": 119,
+          "pts": 60928,
+          "time_base": "1/12288",
+          "seconds": 4.958333333333333,
+          "exact_seconds": "119/24"
+        },
+        {
+          "frame_index": 120,
+          "pts": 61440,
+          "time_base": "1/12288",
+          "seconds": 5.0,
+          "exact_seconds": "5"
+        },
+        {
+          "frame_index": 121,
+          "pts": 61952,
+          "time_base": "1/12288",
+          "seconds": 5.041666666666667,
+          "exact_seconds": "121/24"
+        },
+        {
+          "frame_index": 122,
+          "pts": 62464,
+          "time_base": "1/12288",
+          "seconds": 5.083333333333333,
+          "exact_seconds": "61/12"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "exact_seconds": "41/8"
+        }
+      ],
+      "full_pts_verified": "Every decoded frame has PTS exactly index/24 seconds"
+    },
+    "C8": {
+      "path": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\c_50step.mp4",
+      "sha256": "014fc5c0da43984e7a903ee6cba199e5a62939d852d04eda07eda0a80356366f",
+      "bytes": 12149617,
+      "width": 1344,
+      "height": 768,
+      "average_rate": "24",
+      "time_base": "1/12288",
+      "declared_frames": 124,
+      "video_duration_seconds": 5.166666666666667,
+      "has_audio": true,
+      "audio_reviewed": false,
+      "decoded_frame_count": 124,
+      "samples": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "exact_seconds": "0",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\C8_frame_000.png"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "exact_seconds": "5/4",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\C8_frame_030.png"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "exact_seconds": "5/2",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\C8_frame_060.png"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "exact_seconds": "15/4",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\C8_frame_090.png"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "exact_seconds": "41/8",
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\C8_frame_123.png"
+        }
+      ],
+      "all_decoded_pts": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "exact_seconds": "0"
+        },
+        {
+          "frame_index": 1,
+          "pts": 512,
+          "time_base": "1/12288",
+          "seconds": 0.041666666666666664,
+          "exact_seconds": "1/24"
+        },
+        {
+          "frame_index": 2,
+          "pts": 1024,
+          "time_base": "1/12288",
+          "seconds": 0.08333333333333333,
+          "exact_seconds": "1/12"
+        },
+        {
+          "frame_index": 3,
+          "pts": 1536,
+          "time_base": "1/12288",
+          "seconds": 0.125,
+          "exact_seconds": "1/8"
+        },
+        {
+          "frame_index": 4,
+          "pts": 2048,
+          "time_base": "1/12288",
+          "seconds": 0.16666666666666666,
+          "exact_seconds": "1/6"
+        },
+        {
+          "frame_index": 5,
+          "pts": 2560,
+          "time_base": "1/12288",
+          "seconds": 0.20833333333333334,
+          "exact_seconds": "5/24"
+        },
+        {
+          "frame_index": 6,
+          "pts": 3072,
+          "time_base": "1/12288",
+          "seconds": 0.25,
+          "exact_seconds": "1/4"
+        },
+        {
+          "frame_index": 7,
+          "pts": 3584,
+          "time_base": "1/12288",
+          "seconds": 0.2916666666666667,
+          "exact_seconds": "7/24"
+        },
+        {
+          "frame_index": 8,
+          "pts": 4096,
+          "time_base": "1/12288",
+          "seconds": 0.3333333333333333,
+          "exact_seconds": "1/3"
+        },
+        {
+          "frame_index": 9,
+          "pts": 4608,
+          "time_base": "1/12288",
+          "seconds": 0.375,
+          "exact_seconds": "3/8"
+        },
+        {
+          "frame_index": 10,
+          "pts": 5120,
+          "time_base": "1/12288",
+          "seconds": 0.4166666666666667,
+          "exact_seconds": "5/12"
+        },
+        {
+          "frame_index": 11,
+          "pts": 5632,
+          "time_base": "1/12288",
+          "seconds": 0.4583333333333333,
+          "exact_seconds": "11/24"
+        },
+        {
+          "frame_index": 12,
+          "pts": 6144,
+          "time_base": "1/12288",
+          "seconds": 0.5,
+          "exact_seconds": "1/2"
+        },
+        {
+          "frame_index": 13,
+          "pts": 6656,
+          "time_base": "1/12288",
+          "seconds": 0.5416666666666666,
+          "exact_seconds": "13/24"
+        },
+        {
+          "frame_index": 14,
+          "pts": 7168,
+          "time_base": "1/12288",
+          "seconds": 0.5833333333333334,
+          "exact_seconds": "7/12"
+        },
+        {
+          "frame_index": 15,
+          "pts": 7680,
+          "time_base": "1/12288",
+          "seconds": 0.625,
+          "exact_seconds": "5/8"
+        },
+        {
+          "frame_index": 16,
+          "pts": 8192,
+          "time_base": "1/12288",
+          "seconds": 0.6666666666666666,
+          "exact_seconds": "2/3"
+        },
+        {
+          "frame_index": 17,
+          "pts": 8704,
+          "time_base": "1/12288",
+          "seconds": 0.7083333333333334,
+          "exact_seconds": "17/24"
+        },
+        {
+          "frame_index": 18,
+          "pts": 9216,
+          "time_base": "1/12288",
+          "seconds": 0.75,
+          "exact_seconds": "3/4"
+        },
+        {
+          "frame_index": 19,
+          "pts": 9728,
+          "time_base": "1/12288",
+          "seconds": 0.7916666666666666,
+          "exact_seconds": "19/24"
+        },
+        {
+          "frame_index": 20,
+          "pts": 10240,
+          "time_base": "1/12288",
+          "seconds": 0.8333333333333334,
+          "exact_seconds": "5/6"
+        },
+        {
+          "frame_index": 21,
+          "pts": 10752,
+          "time_base": "1/12288",
+          "seconds": 0.875,
+          "exact_seconds": "7/8"
+        },
+        {
+          "frame_index": 22,
+          "pts": 11264,
+          "time_base": "1/12288",
+          "seconds": 0.9166666666666666,
+          "exact_seconds": "11/12"
+        },
+        {
+          "frame_index": 23,
+          "pts": 11776,
+          "time_base": "1/12288",
+          "seconds": 0.9583333333333334,
+          "exact_seconds": "23/24"
+        },
+        {
+          "frame_index": 24,
+          "pts": 12288,
+          "time_base": "1/12288",
+          "seconds": 1.0,
+          "exact_seconds": "1"
+        },
+        {
+          "frame_index": 25,
+          "pts": 12800,
+          "time_base": "1/12288",
+          "seconds": 1.0416666666666667,
+          "exact_seconds": "25/24"
+        },
+        {
+          "frame_index": 26,
+          "pts": 13312,
+          "time_base": "1/12288",
+          "seconds": 1.0833333333333333,
+          "exact_seconds": "13/12"
+        },
+        {
+          "frame_index": 27,
+          "pts": 13824,
+          "time_base": "1/12288",
+          "seconds": 1.125,
+          "exact_seconds": "9/8"
+        },
+        {
+          "frame_index": 28,
+          "pts": 14336,
+          "time_base": "1/12288",
+          "seconds": 1.1666666666666667,
+          "exact_seconds": "7/6"
+        },
+        {
+          "frame_index": 29,
+          "pts": 14848,
+          "time_base": "1/12288",
+          "seconds": 1.2083333333333333,
+          "exact_seconds": "29/24"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "exact_seconds": "5/4"
+        },
+        {
+          "frame_index": 31,
+          "pts": 15872,
+          "time_base": "1/12288",
+          "seconds": 1.2916666666666667,
+          "exact_seconds": "31/24"
+        },
+        {
+          "frame_index": 32,
+          "pts": 16384,
+          "time_base": "1/12288",
+          "seconds": 1.3333333333333333,
+          "exact_seconds": "4/3"
+        },
+        {
+          "frame_index": 33,
+          "pts": 16896,
+          "time_base": "1/12288",
+          "seconds": 1.375,
+          "exact_seconds": "11/8"
+        },
+        {
+          "frame_index": 34,
+          "pts": 17408,
+          "time_base": "1/12288",
+          "seconds": 1.4166666666666667,
+          "exact_seconds": "17/12"
+        },
+        {
+          "frame_index": 35,
+          "pts": 17920,
+          "time_base": "1/12288",
+          "seconds": 1.4583333333333333,
+          "exact_seconds": "35/24"
+        },
+        {
+          "frame_index": 36,
+          "pts": 18432,
+          "time_base": "1/12288",
+          "seconds": 1.5,
+          "exact_seconds": "3/2"
+        },
+        {
+          "frame_index": 37,
+          "pts": 18944,
+          "time_base": "1/12288",
+          "seconds": 1.5416666666666667,
+          "exact_seconds": "37/24"
+        },
+        {
+          "frame_index": 38,
+          "pts": 19456,
+          "time_base": "1/12288",
+          "seconds": 1.5833333333333333,
+          "exact_seconds": "19/12"
+        },
+        {
+          "frame_index": 39,
+          "pts": 19968,
+          "time_base": "1/12288",
+          "seconds": 1.625,
+          "exact_seconds": "13/8"
+        },
+        {
+          "frame_index": 40,
+          "pts": 20480,
+          "time_base": "1/12288",
+          "seconds": 1.6666666666666667,
+          "exact_seconds": "5/3"
+        },
+        {
+          "frame_index": 41,
+          "pts": 20992,
+          "time_base": "1/12288",
+          "seconds": 1.7083333333333333,
+          "exact_seconds": "41/24"
+        },
+        {
+          "frame_index": 42,
+          "pts": 21504,
+          "time_base": "1/12288",
+          "seconds": 1.75,
+          "exact_seconds": "7/4"
+        },
+        {
+          "frame_index": 43,
+          "pts": 22016,
+          "time_base": "1/12288",
+          "seconds": 1.7916666666666667,
+          "exact_seconds": "43/24"
+        },
+        {
+          "frame_index": 44,
+          "pts": 22528,
+          "time_base": "1/12288",
+          "seconds": 1.8333333333333333,
+          "exact_seconds": "11/6"
+        },
+        {
+          "frame_index": 45,
+          "pts": 23040,
+          "time_base": "1/12288",
+          "seconds": 1.875,
+          "exact_seconds": "15/8"
+        },
+        {
+          "frame_index": 46,
+          "pts": 23552,
+          "time_base": "1/12288",
+          "seconds": 1.9166666666666667,
+          "exact_seconds": "23/12"
+        },
+        {
+          "frame_index": 47,
+          "pts": 24064,
+          "time_base": "1/12288",
+          "seconds": 1.9583333333333333,
+          "exact_seconds": "47/24"
+        },
+        {
+          "frame_index": 48,
+          "pts": 24576,
+          "time_base": "1/12288",
+          "seconds": 2.0,
+          "exact_seconds": "2"
+        },
+        {
+          "frame_index": 49,
+          "pts": 25088,
+          "time_base": "1/12288",
+          "seconds": 2.0416666666666665,
+          "exact_seconds": "49/24"
+        },
+        {
+          "frame_index": 50,
+          "pts": 25600,
+          "time_base": "1/12288",
+          "seconds": 2.0833333333333335,
+          "exact_seconds": "25/12"
+        },
+        {
+          "frame_index": 51,
+          "pts": 26112,
+          "time_base": "1/12288",
+          "seconds": 2.125,
+          "exact_seconds": "17/8"
+        },
+        {
+          "frame_index": 52,
+          "pts": 26624,
+          "time_base": "1/12288",
+          "seconds": 2.1666666666666665,
+          "exact_seconds": "13/6"
+        },
+        {
+          "frame_index": 53,
+          "pts": 27136,
+          "time_base": "1/12288",
+          "seconds": 2.2083333333333335,
+          "exact_seconds": "53/24"
+        },
+        {
+          "frame_index": 54,
+          "pts": 27648,
+          "time_base": "1/12288",
+          "seconds": 2.25,
+          "exact_seconds": "9/4"
+        },
+        {
+          "frame_index": 55,
+          "pts": 28160,
+          "time_base": "1/12288",
+          "seconds": 2.2916666666666665,
+          "exact_seconds": "55/24"
+        },
+        {
+          "frame_index": 56,
+          "pts": 28672,
+          "time_base": "1/12288",
+          "seconds": 2.3333333333333335,
+          "exact_seconds": "7/3"
+        },
+        {
+          "frame_index": 57,
+          "pts": 29184,
+          "time_base": "1/12288",
+          "seconds": 2.375,
+          "exact_seconds": "19/8"
+        },
+        {
+          "frame_index": 58,
+          "pts": 29696,
+          "time_base": "1/12288",
+          "seconds": 2.4166666666666665,
+          "exact_seconds": "29/12"
+        },
+        {
+          "frame_index": 59,
+          "pts": 30208,
+          "time_base": "1/12288",
+          "seconds": 2.4583333333333335,
+          "exact_seconds": "59/24"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "exact_seconds": "5/2"
+        },
+        {
+          "frame_index": 61,
+          "pts": 31232,
+          "time_base": "1/12288",
+          "seconds": 2.5416666666666665,
+          "exact_seconds": "61/24"
+        },
+        {
+          "frame_index": 62,
+          "pts": 31744,
+          "time_base": "1/12288",
+          "seconds": 2.5833333333333335,
+          "exact_seconds": "31/12"
+        },
+        {
+          "frame_index": 63,
+          "pts": 32256,
+          "time_base": "1/12288",
+          "seconds": 2.625,
+          "exact_seconds": "21/8"
+        },
+        {
+          "frame_index": 64,
+          "pts": 32768,
+          "time_base": "1/12288",
+          "seconds": 2.6666666666666665,
+          "exact_seconds": "8/3"
+        },
+        {
+          "frame_index": 65,
+          "pts": 33280,
+          "time_base": "1/12288",
+          "seconds": 2.7083333333333335,
+          "exact_seconds": "65/24"
+        },
+        {
+          "frame_index": 66,
+          "pts": 33792,
+          "time_base": "1/12288",
+          "seconds": 2.75,
+          "exact_seconds": "11/4"
+        },
+        {
+          "frame_index": 67,
+          "pts": 34304,
+          "time_base": "1/12288",
+          "seconds": 2.7916666666666665,
+          "exact_seconds": "67/24"
+        },
+        {
+          "frame_index": 68,
+          "pts": 34816,
+          "time_base": "1/12288",
+          "seconds": 2.8333333333333335,
+          "exact_seconds": "17/6"
+        },
+        {
+          "frame_index": 69,
+          "pts": 35328,
+          "time_base": "1/12288",
+          "seconds": 2.875,
+          "exact_seconds": "23/8"
+        },
+        {
+          "frame_index": 70,
+          "pts": 35840,
+          "time_base": "1/12288",
+          "seconds": 2.9166666666666665,
+          "exact_seconds": "35/12"
+        },
+        {
+          "frame_index": 71,
+          "pts": 36352,
+          "time_base": "1/12288",
+          "seconds": 2.9583333333333335,
+          "exact_seconds": "71/24"
+        },
+        {
+          "frame_index": 72,
+          "pts": 36864,
+          "time_base": "1/12288",
+          "seconds": 3.0,
+          "exact_seconds": "3"
+        },
+        {
+          "frame_index": 73,
+          "pts": 37376,
+          "time_base": "1/12288",
+          "seconds": 3.0416666666666665,
+          "exact_seconds": "73/24"
+        },
+        {
+          "frame_index": 74,
+          "pts": 37888,
+          "time_base": "1/12288",
+          "seconds": 3.0833333333333335,
+          "exact_seconds": "37/12"
+        },
+        {
+          "frame_index": 75,
+          "pts": 38400,
+          "time_base": "1/12288",
+          "seconds": 3.125,
+          "exact_seconds": "25/8"
+        },
+        {
+          "frame_index": 76,
+          "pts": 38912,
+          "time_base": "1/12288",
+          "seconds": 3.1666666666666665,
+          "exact_seconds": "19/6"
+        },
+        {
+          "frame_index": 77,
+          "pts": 39424,
+          "time_base": "1/12288",
+          "seconds": 3.2083333333333335,
+          "exact_seconds": "77/24"
+        },
+        {
+          "frame_index": 78,
+          "pts": 39936,
+          "time_base": "1/12288",
+          "seconds": 3.25,
+          "exact_seconds": "13/4"
+        },
+        {
+          "frame_index": 79,
+          "pts": 40448,
+          "time_base": "1/12288",
+          "seconds": 3.2916666666666665,
+          "exact_seconds": "79/24"
+        },
+        {
+          "frame_index": 80,
+          "pts": 40960,
+          "time_base": "1/12288",
+          "seconds": 3.3333333333333335,
+          "exact_seconds": "10/3"
+        },
+        {
+          "frame_index": 81,
+          "pts": 41472,
+          "time_base": "1/12288",
+          "seconds": 3.375,
+          "exact_seconds": "27/8"
+        },
+        {
+          "frame_index": 82,
+          "pts": 41984,
+          "time_base": "1/12288",
+          "seconds": 3.4166666666666665,
+          "exact_seconds": "41/12"
+        },
+        {
+          "frame_index": 83,
+          "pts": 42496,
+          "time_base": "1/12288",
+          "seconds": 3.4583333333333335,
+          "exact_seconds": "83/24"
+        },
+        {
+          "frame_index": 84,
+          "pts": 43008,
+          "time_base": "1/12288",
+          "seconds": 3.5,
+          "exact_seconds": "7/2"
+        },
+        {
+          "frame_index": 85,
+          "pts": 43520,
+          "time_base": "1/12288",
+          "seconds": 3.5416666666666665,
+          "exact_seconds": "85/24"
+        },
+        {
+          "frame_index": 86,
+          "pts": 44032,
+          "time_base": "1/12288",
+          "seconds": 3.5833333333333335,
+          "exact_seconds": "43/12"
+        },
+        {
+          "frame_index": 87,
+          "pts": 44544,
+          "time_base": "1/12288",
+          "seconds": 3.625,
+          "exact_seconds": "29/8"
+        },
+        {
+          "frame_index": 88,
+          "pts": 45056,
+          "time_base": "1/12288",
+          "seconds": 3.6666666666666665,
+          "exact_seconds": "11/3"
+        },
+        {
+          "frame_index": 89,
+          "pts": 45568,
+          "time_base": "1/12288",
+          "seconds": 3.7083333333333335,
+          "exact_seconds": "89/24"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "exact_seconds": "15/4"
+        },
+        {
+          "frame_index": 91,
+          "pts": 46592,
+          "time_base": "1/12288",
+          "seconds": 3.7916666666666665,
+          "exact_seconds": "91/24"
+        },
+        {
+          "frame_index": 92,
+          "pts": 47104,
+          "time_base": "1/12288",
+          "seconds": 3.8333333333333335,
+          "exact_seconds": "23/6"
+        },
+        {
+          "frame_index": 93,
+          "pts": 47616,
+          "time_base": "1/12288",
+          "seconds": 3.875,
+          "exact_seconds": "31/8"
+        },
+        {
+          "frame_index": 94,
+          "pts": 48128,
+          "time_base": "1/12288",
+          "seconds": 3.9166666666666665,
+          "exact_seconds": "47/12"
+        },
+        {
+          "frame_index": 95,
+          "pts": 48640,
+          "time_base": "1/12288",
+          "seconds": 3.9583333333333335,
+          "exact_seconds": "95/24"
+        },
+        {
+          "frame_index": 96,
+          "pts": 49152,
+          "time_base": "1/12288",
+          "seconds": 4.0,
+          "exact_seconds": "4"
+        },
+        {
+          "frame_index": 97,
+          "pts": 49664,
+          "time_base": "1/12288",
+          "seconds": 4.041666666666667,
+          "exact_seconds": "97/24"
+        },
+        {
+          "frame_index": 98,
+          "pts": 50176,
+          "time_base": "1/12288",
+          "seconds": 4.083333333333333,
+          "exact_seconds": "49/12"
+        },
+        {
+          "frame_index": 99,
+          "pts": 50688,
+          "time_base": "1/12288",
+          "seconds": 4.125,
+          "exact_seconds": "33/8"
+        },
+        {
+          "frame_index": 100,
+          "pts": 51200,
+          "time_base": "1/12288",
+          "seconds": 4.166666666666667,
+          "exact_seconds": "25/6"
+        },
+        {
+          "frame_index": 101,
+          "pts": 51712,
+          "time_base": "1/12288",
+          "seconds": 4.208333333333333,
+          "exact_seconds": "101/24"
+        },
+        {
+          "frame_index": 102,
+          "pts": 52224,
+          "time_base": "1/12288",
+          "seconds": 4.25,
+          "exact_seconds": "17/4"
+        },
+        {
+          "frame_index": 103,
+          "pts": 52736,
+          "time_base": "1/12288",
+          "seconds": 4.291666666666667,
+          "exact_seconds": "103/24"
+        },
+        {
+          "frame_index": 104,
+          "pts": 53248,
+          "time_base": "1/12288",
+          "seconds": 4.333333333333333,
+          "exact_seconds": "13/3"
+        },
+        {
+          "frame_index": 105,
+          "pts": 53760,
+          "time_base": "1/12288",
+          "seconds": 4.375,
+          "exact_seconds": "35/8"
+        },
+        {
+          "frame_index": 106,
+          "pts": 54272,
+          "time_base": "1/12288",
+          "seconds": 4.416666666666667,
+          "exact_seconds": "53/12"
+        },
+        {
+          "frame_index": 107,
+          "pts": 54784,
+          "time_base": "1/12288",
+          "seconds": 4.458333333333333,
+          "exact_seconds": "107/24"
+        },
+        {
+          "frame_index": 108,
+          "pts": 55296,
+          "time_base": "1/12288",
+          "seconds": 4.5,
+          "exact_seconds": "9/2"
+        },
+        {
+          "frame_index": 109,
+          "pts": 55808,
+          "time_base": "1/12288",
+          "seconds": 4.541666666666667,
+          "exact_seconds": "109/24"
+        },
+        {
+          "frame_index": 110,
+          "pts": 56320,
+          "time_base": "1/12288",
+          "seconds": 4.583333333333333,
+          "exact_seconds": "55/12"
+        },
+        {
+          "frame_index": 111,
+          "pts": 56832,
+          "time_base": "1/12288",
+          "seconds": 4.625,
+          "exact_seconds": "37/8"
+        },
+        {
+          "frame_index": 112,
+          "pts": 57344,
+          "time_base": "1/12288",
+          "seconds": 4.666666666666667,
+          "exact_seconds": "14/3"
+        },
+        {
+          "frame_index": 113,
+          "pts": 57856,
+          "time_base": "1/12288",
+          "seconds": 4.708333333333333,
+          "exact_seconds": "113/24"
+        },
+        {
+          "frame_index": 114,
+          "pts": 58368,
+          "time_base": "1/12288",
+          "seconds": 4.75,
+          "exact_seconds": "19/4"
+        },
+        {
+          "frame_index": 115,
+          "pts": 58880,
+          "time_base": "1/12288",
+          "seconds": 4.791666666666667,
+          "exact_seconds": "115/24"
+        },
+        {
+          "frame_index": 116,
+          "pts": 59392,
+          "time_base": "1/12288",
+          "seconds": 4.833333333333333,
+          "exact_seconds": "29/6"
+        },
+        {
+          "frame_index": 117,
+          "pts": 59904,
+          "time_base": "1/12288",
+          "seconds": 4.875,
+          "exact_seconds": "39/8"
+        },
+        {
+          "frame_index": 118,
+          "pts": 60416,
+          "time_base": "1/12288",
+          "seconds": 4.916666666666667,
+          "exact_seconds": "59/12"
+        },
+        {
+          "frame_index": 119,
+          "pts": 60928,
+          "time_base": "1/12288",
+          "seconds": 4.958333333333333,
+          "exact_seconds": "119/24"
+        },
+        {
+          "frame_index": 120,
+          "pts": 61440,
+          "time_base": "1/12288",
+          "seconds": 5.0,
+          "exact_seconds": "5"
+        },
+        {
+          "frame_index": 121,
+          "pts": 61952,
+          "time_base": "1/12288",
+          "seconds": 5.041666666666667,
+          "exact_seconds": "121/24"
+        },
+        {
+          "frame_index": 122,
+          "pts": 62464,
+          "time_base": "1/12288",
+          "seconds": 5.083333333333333,
+          "exact_seconds": "61/12"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "exact_seconds": "41/8"
+        }
+      ],
+      "full_pts_verified": "Every decoded frame has PTS exactly index/24 seconds"
+    }
+  },
+  "indices": [
+    0,
+    30,
+    60,
+    90,
+    123
+  ],
+  "contact": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\visual_review\\source_A8_B8_C8_contact.jpg",
+  "c_run": "c_20260913T150426Z_19941bde9a10446296621418e68a09bc",
+  "c_result_path": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260913T150426Z_19941bde9a10446296621418e68a09bc\\result.json",
+  "c_result_sha256": "2543c9d44ab96e84727bc85811b149eced9bec348a7a584077036cc6dac1ed68",
+  "c_formal_result": {
+    "completed_at": "2026-09-13T15:32:09.816281+00:00",
+    "requested_steps": 50,
+    "success": true,
+    "http_code": "200",
+    "content_type": "video/mp4",
+    "curl_returncode": 0,
+    "request_end_to_end_seconds": 904.0943806068972,
+    "actual_model_forward_calls": null,
+    "dit_latency_seconds": null,
+    "quality_evidence": false,
+    "output_video": "/cache/zhonghao/h3/c_model_trial/01234567/lake_snow/C/runs/c_20260913T150426Z_19941bde9a10446296621418e68a09bc/output/c_50step.mp4",
+    "output_sha256": "014fc5c0da43984e7a903ee6cba199e5a62939d852d04eda07eda0a80356366f",
+    "ffprobe": {
+      "verified": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1344,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "nb_frames": "124",
+            "nb_read_frames": "124"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "nb_frames": "163",
+            "nb_read_frames": "163"
+          }
+        ],
+        "format": {
+          "duration": "5.207000",
+          "size": "12149617"
+        }
+      },
+      "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+      "checks": {
+        "dimensions": [
+          1344,
+          768
+        ],
+        "fps": 24.0,
+        "frame_count": 124,
+        "container_duration_seconds": 5.207
+      }
+    }
+  },
+  "all_input_sha_verified_before_and_after_decode": true,
+  "native_png_count": 20,
+  "contact_columns": [
+    "source",
+    "A8",
+    "B8",
+    "C8"
+  ],
+  "inputs_modified": false,
+  "remote_operations": false,
+  "new_model_called": false,
+  "quality_evidence": false,
+  "limits": [
+    "Extraction only: observations require a separate visual review.",
+    "Selected frames do not establish absence of inter-frame flicker or exact temporal/camera correspondence.",
+    "No audio review, VLM/perceptual metric, latency/NFE, or memory measurement here."
+  ]
+}

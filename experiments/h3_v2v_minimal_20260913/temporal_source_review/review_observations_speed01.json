@@ -1,0 +1,38 @@
+{
+  "review_date": "2026-09-13",
+  "method": "Direct visual inspection by the assistant of CPU ffmpeg 4-fps contact sheets with exact original PTS; no external VLM endpoint, NPU, separate model job, audio transcription or edited-target generation.",
+  "official_id": "Te_Motion_speed_change_01",
+  "metadata_url": "https://huggingface.co/datasets/OmniEdit-Bench/OmniEdit-Bench/resolve/main/temporal_benchmark.json",
+  "source_url": "https://huggingface.co/datasets/OmniEdit-Bench/OmniEdit-Bench/resolve/main/Temporal/Motion%20Attribute/Motion_speed_change/1_1280x720.mp4",
+  "original_source_local_path": "C:/Users/DZH/OneDrive/Documents/ChatGPT/wm111/experiments/h3_v2v_minimal_20260913/temporal_source_review/speed01_motorcycle/source.mp4",
+  "original_source_remote_path_31731": "/cache/zhonghao/temporal_source_review_20260913/speed01_motorcycle/source.mp4",
+  "original_source_sha256": "d89e30f3f1ea5e7c3053c5ecbc3af1898dea85dfc04b1ec0f733fd22906b4131",
+  "original_source_bytes": 3081389,
+  "source_video_frames": 153,
+  "source_video_fps": "24/1",
+  "source_video_duration_seconds": 6.375,
+  "container_duration_seconds": 6.379,
+  "audio": "AAC audio present, not listened to or transcribed; visual temporal edit does not require a speech inference.",
+  "official_instruction_summary_zh": "让骑摩托车的男子减速，更慢地从相机前经过。",
+  "is_source_dependent_temporal_router_case": false,
+  "visible_events": [
+    {"source_pts_seconds": [0.0, 0.5], "observation": "Empty nearby road; very distant rider not confidently distinguishable at contact-sheet resolution."},
+    {"source_pts_seconds": [0.75, 3.75], "observation": "Motorcycle rider visibly approaches from the distant right-hand bend."},
+    {"source_pts_seconds": [4.0, 5.5], "observation": "Rider passes through the foreground, exiting to the left around the end of this interval."},
+    {"source_pts_seconds": [5.75, 6.25], "observation": "Rider no longer visible; camera continues a slight follow-pan showing road and guardrail."}
+  ],
+  "optional_124_frame_derivation_not_created": {
+    "start_frame_inclusive": 29,
+    "end_frame_exclusive": 153,
+    "start_seconds": 1.2083333333333333,
+    "derived_video_duration_seconds": 5.166666666666667,
+    "rationale": "Preserves visible approach, foreground pass and departure; removes earliest distant entrance. Do not take first 124 frames because that cuts off the pass.",
+    "status": "Suggestion only. No derived source or ground-truth target was created by this reviewer. Root already selected couple04 for immediate ABC; this is a later official-command backup."
+  },
+  "cautions": [
+    "The official slow-down instruction makes the temporal-edit type explicit; this cannot demonstrate the need for video-aware routing.",
+    "A constant shorter output duration cannot both uniformly slow the entire full action and retain all original endpoints without adjusting the extent of motion or retiming nonuniformly; do not silently invent an exact speed factor.",
+    "The source is not a ground-truth edited target; no official balanced same-prompt/different-source routing pair was established.",
+    "Camera follow-pan late in the source is a potential preservation confound for object-only slowdown."
+  ]
+}

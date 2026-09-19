@@ -1,0 +1,922 @@
+{
+  "case": "B",
+  "sample_id": "lake_snow",
+  "group": "01234567",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "run_id": "6362ce1811da4db69d335b3b3ca5d1a4",
+  "started_at": "2026-09-13T14:03:00.786028+00:00",
+  "supervisor_pid": 4692,
+  "supervisor_proc_identity": {
+    "pid": 4692,
+    "state": "R",
+    "pgrp": 4263,
+    "session": 4263,
+    "start_ticks": 124486422
+  },
+  "allocated_physical_npu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "port": 19099,
+  "parallelism": {
+    "num_gpus": 8,
+    "usp": 8,
+    "ring": 1,
+    "dit_tensor_parallel_size": 1,
+    "text_encoder_tp_size": 8,
+    "layerwise_offload": true,
+    "vae_use_tiling": true,
+    "vae_parallel_mode": "tile",
+    "vae_patch_parallel_size": 8,
+    "attention_backend": "FLASH_ATTN",
+    "listen_host": "127.0.0.1",
+    "listen_port": 19099,
+    "dtype_cli_override": null,
+    "hccl_internal_ports": "Unchanged original vLLM automatic allocation"
+  },
+  "requested_generation": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "duration_seconds": 5.0,
+    "seed": 4101,
+    "num_inference_steps": 50,
+    "flow_shift": 12.0,
+    "audio_flow_shift": 3.0
+  },
+  "formal_request_attempts": 1,
+  "formal_50step_started": true,
+  "formal_50step_completed": true,
+  "quality_evidence": false,
+  "actual_model_forward_calls": null,
+  "new_acceleration_results": null,
+  "startup_timeouts": {
+    "init": 2400,
+    "stage_init": 2400,
+    "health": 2700
+  },
+  "request_timeout_seconds": 3600,
+  "stage_b_checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+  "attention_policy": "B original linear + local softmax; source globally visible; no C corresponding-frame restriction",
+  "timeout_policy": "3600 seconds is only a waiting ceiling, never a speedup measurement",
+  "run_directory": "/cache/zhonghao/h3/b_model_trial/01234567/lake_snow/B/runs/b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4",
+  "phase": "formal_completed_review_required",
+  "updated_at": "2026-09-13T14:30:50.856962+00:00",
+  "resource_snapshot": {
+    "selected_physical_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_busy_cards": []
+  },
+  "card_health_memory": {
+    "health": {
+      "0": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "1": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "2": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "3": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "4": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "5": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "6": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "7": {
+        "model": "910B3",
+        "health": "OK"
+      }
+    },
+    "hbm": {
+      "0": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "1": {
+        "used_mib": 3411,
+        "total_mib": 65536,
+        "free_mib": 62125
+      },
+      "2": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "3": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "4": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "5": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "6": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "7": {
+        "used_mib": 3408,
+        "total_mib": 65536,
+        "free_mib": 62128
+      }
+    }
+  },
+  "host_memory": {
+    "host_mem_available_bytes": 1608043921408,
+    "cgroup_limit_bytes": 1520999997440,
+    "cgroup_used_bytes": 782934016,
+    "effective_available_bytes": 1520217063424,
+    "required_available_bytes": 644245094400,
+    "cgroup_files": [
+      "/sys/fs/cgroup/memory/memory.limit_in_bytes",
+      "/sys/fs/cgroup/memory/memory.usage_in_bytes"
+    ]
+  },
+  "frozen_evidence_sha256": "b5cc09505061f978c52dcd6d9fc370fdda0e4d50c97aa980dce1d12ddb1b3585",
+  "source_video": "/cache/zhonghao/h3/data/minimax_h3_t2va_50step.mp4",
+  "edit_prompt": "Transform the reference lake video into a photorealistic winter snow scene. Preserve the original camera movement, framing, shot timing, lake shoreline, mountains, and overall composition. Cover the landscape with fresh snow, freeze parts of the lake, add gentle falling snow, and keep synchronized natural winter ambience.",
+  "note": "Stage-B original linear branch + global source only; no C. Edit quality, NFE and acceleration remain unreviewed.",
+  "server_pid": 4708,
+  "server_started_at": "2026-09-13T14:03:04.618746+00:00",
+  "server_proc_identity": {
+    "pid": 4708,
+    "state": "R",
+    "pgrp": 4708,
+    "session": 4708,
+    "start_ticks": 124486821
+  },
+  "server_ready_at": "2026-09-13T14:11:16.875463+00:00",
+  "smoke_2step": {
+    "completed_at": "2026-09-13T14:14:24.945541+00:00",
+    "requested_steps": 2,
+    "success": true,
+    "http_code": "200",
+    "content_type": "video/mp4",
+    "curl_returncode": 0,
+    "request_end_to_end_seconds": 188.0282188479323,
+    "actual_model_forward_calls": null,
+    "dit_latency_seconds": null,
+    "quality_evidence": false,
+    "output_video": "/cache/zhonghao/h3/b_model_trial/01234567/lake_snow/B/runs/b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4/output/smoke_2step.mp4",
+    "output_sha256": "5b6f3941c31bd0a21658dcb45bb83c1c6dd5db4bc54f68e6d10e27e7cc217fa6",
+    "ffprobe": {
+      "verified": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1344,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "nb_frames": "124",
+            "nb_read_frames": "124"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "nb_frames": "163",
+            "nb_read_frames": "163"
+          }
+        ],
+        "format": {
+          "duration": "5.207000",
+          "size": "15338561"
+        }
+      },
+      "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+      "checks": {
+        "dimensions": [
+          1344,
+          768
+        ],
+        "fps": 24.0,
+        "frame_count": 124,
+        "container_duration_seconds": 5.207
+      }
+    }
+  },
+  "formal_smoke_gate_passed": true,
+  "formal_smoke_gate": {
+    "status": "passed",
+    "host": {
+      "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+      "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+      "machine": "aarch64"
+    },
+    "run_id": "6362ce1811da4db69d335b3b3ca5d1a4",
+    "group": "01234567",
+    "smoke_result": {
+      "path": "/cache/zhonghao/h3/b_model_trial/01234567/lake_snow/B/runs/b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4/smoke_2step/result.json",
+      "sha256": "afe7abf6f44a8720d1bd774d37695bc8aab5adabf5cbb1c7e500e80019be6a8a",
+      "size_bytes": 1514
+    },
+    "smoke_request": {
+      "path": "/cache/zhonghao/h3/b_model_trial/01234567/lake_snow/B/runs/b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4/smoke_2step/request.json",
+      "sha256": "173c19c74bb321854fbb44ad2ae22b1981d371add1a08b353385a1132ac3002a",
+      "size_bytes": 1285
+    },
+    "server_identity": {
+      "pid": 4708,
+      "state": "S",
+      "pgrp": 4708,
+      "session": 4708,
+      "start_ticks": 124486821
+    },
+    "worker_identities_by_card": {
+      "0": {
+        "pid": 5207,
+        "state": "S",
+        "pgrp": 4708,
+        "session": 4708,
+        "start_ticks": 124491924
+      },
+      "1": {
+        "pid": 5208,
+        "state": "S",
+        "pgrp": 4708,
+        "session": 4708,
+        "start_ticks": 124491924
+      },
+      "2": {
+        "pid": 5209,
+        "state": "S",
+        "pgrp": 4708,
+        "session": 4708,
+        "start_ticks": 124491924
+      },
+      "3": {
+        "pid": 5210,
+        "state": "S",
+        "pgrp": 4708,
+        "session": 4708,
+        "start_ticks": 124491924
+      },
+      "4": {
+        "pid": 5211,
+        "state": "S",
+        "pgrp": 4708,
+        "session": 4708,
+        "start_ticks": 124491924
+      },
+      "5": {
+        "pid": 5212,
+        "state": "S",
+        "pgrp": 4708,
+        "session": 4708,
+        "start_ticks": 124491924
+      },
+      "6": {
+        "pid": 5213,
+        "state": "S",
+        "pgrp": 4708,
+        "session": 4708,
+        "start_ticks": 124491924
+      },
+      "7": {
+        "pid": 5214,
+        "state": "S",
+        "pgrp": 4708,
+        "session": 4708,
+        "start_ticks": 124491925
+      }
+    },
+    "health": {
+      "health": {
+        "0": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "1": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "2": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "3": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "4": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "5": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "6": {
+          "model": "910B3",
+          "health": "OK"
+        },
+        "7": {
+          "model": "910B3",
+          "health": "OK"
+        }
+      },
+      "hbm": {
+        "0": {
+          "used_mib": 34823,
+          "total_mib": 65536,
+          "free_mib": 30713
+        },
+        "1": {
+          "used_mib": 34784,
+          "total_mib": 65536,
+          "free_mib": 30752
+        },
+        "2": {
+          "used_mib": 34783,
+          "total_mib": 65536,
+          "free_mib": 30753
+        },
+        "3": {
+          "used_mib": 34785,
+          "total_mib": 65536,
+          "free_mib": 30751
+        },
+        "4": {
+          "used_mib": 34786,
+          "total_mib": 65536,
+          "free_mib": 30750
+        },
+        "5": {
+          "used_mib": 34789,
+          "total_mib": 65536,
+          "free_mib": 30747
+        },
+        "6": {
+          "used_mib": 34787,
+          "total_mib": 65536,
+          "free_mib": 30749
+        },
+        "7": {
+          "used_mib": 34786,
+          "total_mib": 65536,
+          "free_mib": 30750
+        }
+      }
+    },
+    "sample_id": "lake_snow",
+    "loaded_records_by_pid": {
+      "5212": {
+        "load": {
+          "base_partition": "ref2va",
+          "base_tensor_count": 535,
+          "branch": {
+            "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+            "size_bytes": 4279428112,
+            "tensor_count": 800
+          },
+          "branch_tensor_count": 800,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "load_and_merge_seconds": 85.4764202570077,
+          "lora": {
+            "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+            "size_bytes": 334026912,
+            "tensor_count": 416
+          },
+          "lora_alpha": 64,
+          "lora_pairs_merged": 208,
+          "lora_rank": 64,
+          "lora_scale": 1.0,
+          "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+          "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+          "phase_seconds": {
+            "base": 119.82581496587954,
+            "branch": 16.3994733360596,
+            "lora": 69.04717227001674
+          },
+          "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+        },
+        "cpu_loading": {
+          "interop_after": 192,
+          "interop_before": 192,
+          "interop_loading": 192,
+          "intraop_after": 192,
+          "intraop_before": 192,
+          "intraop_loading": 4,
+          "phase_seconds": {
+            "base": 119.82581496587954,
+            "branch": 16.3994733360596,
+            "lora": 69.04717227001674
+          },
+          "requested_loading_intraop": 4,
+          "scope_seconds": 205.51351008284837,
+          "status": "completed"
+        }
+      },
+      "5210": {
+        "load": {
+          "base_partition": "ref2va",
+          "base_tensor_count": 535,
+          "branch": {
+            "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+            "size_bytes": 4279428112,
+            "tensor_count": 800
+          },
+          "branch_tensor_count": 800,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "load_and_merge_seconds": 92.18825998599641,
+          "lora": {
+            "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+            "size_bytes": 334026912,
+            "tensor_count": 416
+          },
+          "lora_alpha": 64,
+          "lora_pairs_merged": 208,
+          "lora_rank": 64,
+          "lora_scale": 1.0,
+          "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+          "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+          "phase_seconds": {
+            "base": 119.43352047493681,
+            "branch": 14.655632382025942,
+            "lora": 77.5021918809507
+          },
+          "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+        },
+        "cpu_loading": {
+          "interop_after": 192,
+          "interop_before": 192,
+          "interop_loading": 192,
+          "intraop_after": 192,
+          "intraop_before": 192,
+          "intraop_loading": 4,
+          "phase_seconds": {
+            "base": 119.43352047493681,
+            "branch": 14.655632382025942,
+            "lora": 77.5021918809507
+          },
+          "requested_loading_intraop": 4,
+          "scope_seconds": 212.30695302481763,
+          "status": "completed"
+        }
+      },
+      "5214": {
+        "load": {
+          "base_partition": "ref2va",
+          "base_tensor_count": 535,
+          "branch": {
+            "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+            "size_bytes": 4279428112,
+            "tensor_count": 800
+          },
+          "branch_tensor_count": 800,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "load_and_merge_seconds": 92.71547198202461,
+          "lora": {
+            "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+            "size_bytes": 334026912,
+            "tensor_count": 416
+          },
+          "lora_alpha": 64,
+          "lora_pairs_merged": 208,
+          "lora_rank": 64,
+          "lora_scale": 1.0,
+          "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+          "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+          "phase_seconds": {
+            "base": 126.59456643997692,
+            "branch": 16.079969079000875,
+            "lora": 76.60424828506075
+          },
+          "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+        },
+        "cpu_loading": {
+          "interop_after": 192,
+          "interop_before": 192,
+          "interop_loading": 192,
+          "intraop_after": 192,
+          "intraop_before": 192,
+          "intraop_loading": 4,
+          "phase_seconds": {
+            "base": 126.59456643997692,
+            "branch": 16.079969079000875,
+            "lora": 76.60424828506075
+          },
+          "requested_loading_intraop": 4,
+          "scope_seconds": 219.7795224939473,
+          "status": "completed"
+        }
+      },
+      "5211": {
+        "load": {
+          "base_partition": "ref2va",
+          "base_tensor_count": 535,
+          "branch": {
+            "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+            "size_bytes": 4279428112,
+            "tensor_count": 800
+          },
+          "branch_tensor_count": 800,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "load_and_merge_seconds": 94.52691204682924,
+          "lora": {
+            "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+            "size_bytes": 334026912,
+            "tensor_count": 416
+          },
+          "lora_alpha": 64,
+          "lora_pairs_merged": 208,
+          "lora_rank": 64,
+          "lora_scale": 1.0,
+          "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+          "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+          "phase_seconds": {
+            "base": 129.50886960490607,
+            "branch": 15.758709294022992,
+            "lora": 78.73806428094395
+          },
+          "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+        },
+        "cpu_loading": {
+          "interop_after": 192,
+          "interop_before": 192,
+          "interop_loading": 192,
+          "intraop_after": 192,
+          "intraop_before": 192,
+          "intraop_loading": 4,
+          "phase_seconds": {
+            "base": 129.50886960490607,
+            "branch": 15.758709294022992,
+            "lora": 78.73806428094395
+          },
+          "requested_loading_intraop": 4,
+          "scope_seconds": 224.38021917804144,
+          "status": "completed"
+        }
+      },
+      "5208": {
+        "load": {
+          "base_partition": "ref2va",
+          "base_tensor_count": 535,
+          "branch": {
+            "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+            "size_bytes": 4279428112,
+            "tensor_count": 800
+          },
+          "branch_tensor_count": 800,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "load_and_merge_seconds": 92.89366660406813,
+          "lora": {
+            "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+            "size_bytes": 334026912,
+            "tensor_count": 416
+          },
+          "lora_alpha": 64,
+          "lora_pairs_merged": 208,
+          "lora_rank": 64,
+          "lora_scale": 1.0,
+          "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+          "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+          "phase_seconds": {
+            "base": 131.5324924790766,
+            "branch": 16.57253685197793,
+            "lora": 76.29043270694092
+          },
+          "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+        },
+        "cpu_loading": {
+          "interop_after": 192,
+          "interop_before": 192,
+          "interop_loading": 192,
+          "intraop_after": 192,
+          "intraop_before": 192,
+          "intraop_loading": 4,
+          "phase_seconds": {
+            "base": 131.5324924790766,
+            "branch": 16.57253685197793,
+            "lora": 76.29043270694092
+          },
+          "requested_loading_intraop": 4,
+          "scope_seconds": 224.7528392150998,
+          "status": "completed"
+        }
+      },
+      "5207": {
+        "load": {
+          "base_partition": "ref2va",
+          "base_tensor_count": 535,
+          "branch": {
+            "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+            "size_bytes": 4279428112,
+            "tensor_count": 800
+          },
+          "branch_tensor_count": 800,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "load_and_merge_seconds": 110.3729356478434,
+          "lora": {
+            "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+            "size_bytes": 334026912,
+            "tensor_count": 416
+          },
+          "lora_alpha": 64,
+          "lora_pairs_merged": 208,
+          "lora_rank": 64,
+          "lora_scale": 1.0,
+          "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+          "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+          "phase_seconds": {
+            "base": 127.81328648794442,
+            "branch": 16.40433224919252,
+            "lora": 93.93844046583399
+          },
+          "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+        },
+        "cpu_loading": {
+          "interop_after": 192,
+          "interop_before": 192,
+          "interop_loading": 192,
+          "intraop_after": 192,
+          "intraop_before": 192,
+          "intraop_loading": 4,
+          "phase_seconds": {
+            "base": 127.81328648794442,
+            "branch": 16.40433224919252,
+            "lora": 93.93844046583399
+          },
+          "requested_loading_intraop": 4,
+          "scope_seconds": 238.54936176887713,
+          "status": "completed"
+        }
+      },
+      "5213": {
+        "load": {
+          "base_partition": "ref2va",
+          "base_tensor_count": 535,
+          "branch": {
+            "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+            "size_bytes": 4279428112,
+            "tensor_count": 800
+          },
+          "branch_tensor_count": 800,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "load_and_merge_seconds": 95.4468983549159,
+          "lora": {
+            "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+            "size_bytes": 334026912,
+            "tensor_count": 416
+          },
+          "lora_alpha": 64,
+          "lora_pairs_merged": 208,
+          "lora_rank": 64,
+          "lora_scale": 1.0,
+          "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+          "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+          "phase_seconds": {
+            "base": 127.26133557409048,
+            "branch": 16.14174732682295,
+            "lora": 79.27594363107346
+          },
+          "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+        },
+        "cpu_loading": {
+          "interop_after": 192,
+          "interop_before": 192,
+          "interop_loading": 192,
+          "intraop_after": 192,
+          "intraop_before": 192,
+          "intraop_loading": 4,
+          "phase_seconds": {
+            "base": 127.26133557409048,
+            "branch": 16.14174732682295,
+            "lora": 79.27594363107346
+          },
+          "requested_loading_intraop": 4,
+          "scope_seconds": 223.05663911416195,
+          "status": "completed"
+        }
+      },
+      "5209": {
+        "load": {
+          "base_partition": "ref2va",
+          "base_tensor_count": 535,
+          "branch": {
+            "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+            "size_bytes": 4279428112,
+            "tensor_count": 800
+          },
+          "branch_tensor_count": 800,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "load_and_merge_seconds": 97.39218092313968,
+          "lora": {
+            "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+            "metadata": {},
+            "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+            "size_bytes": 334026912,
+            "tensor_count": 416
+          },
+          "lora_alpha": 64,
+          "lora_pairs_merged": 208,
+          "lora_rank": 64,
+          "lora_scale": 1.0,
+          "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+          "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+          "phase_seconds": {
+            "base": 130.2968792009633,
+            "branch": 16.479474605061114,
+            "lora": 80.88273812597618
+          },
+          "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+        },
+        "cpu_loading": {
+          "interop_after": 192,
+          "interop_before": 192,
+          "interop_loading": 192,
+          "intraop_after": 192,
+          "intraop_before": 192,
+          "intraop_loading": 4,
+          "phase_seconds": {
+            "base": 130.2968792009633,
+            "branch": 16.479474605061114,
+            "lora": 80.88273812597618
+          },
+          "requested_loading_intraop": 4,
+          "scope_seconds": 227.94441998307593,
+          "status": "completed"
+        }
+      }
+    },
+    "server_log_prefix_bytes": 136844,
+    "server_log_prefix_sha256": "0fed69fe1f508b48f4e3fbab4649273beb2cbd9b37b5c654f5eb9de1ce9a442b",
+    "note": "Connectivity/metadata only, not edit-quality evidence."
+  },
+  "formal_request_started_at": "2026-09-13T14:14:29.025970+00:00",
+  "b_50step": {
+    "completed_at": "2026-09-13T14:30:17.163422+00:00",
+    "requested_steps": 50,
+    "success": true,
+    "http_code": "200",
+    "content_type": "video/mp4",
+    "curl_returncode": 0,
+    "request_end_to_end_seconds": 948.1026493189856,
+    "actual_model_forward_calls": null,
+    "dit_latency_seconds": null,
+    "quality_evidence": false,
+    "output_video": "/cache/zhonghao/h3/b_model_trial/01234567/lake_snow/B/runs/b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4/output/b_50step.mp4",
+    "output_sha256": "ca8aa801cb1c96026b237f4f1dbb93d8e4846071338aae3796ae77c24537d2fa",
+    "ffprobe": {
+      "verified": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1344,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "nb_frames": "124",
+            "nb_read_frames": "124"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "nb_frames": "163",
+            "nb_read_frames": "163"
+          }
+        ],
+        "format": {
+          "duration": "5.207000",
+          "size": "11740798"
+        }
+      },
+      "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+      "checks": {
+        "dimensions": [
+          1344,
+          768
+        ],
+        "fps": 24.0,
+        "frame_count": 124,
+        "container_duration_seconds": 5.207
+      }
+    }
+  },
+  "review_required": true,
+  "remaining_owned_process_groups": {},
+  "cleanup_completed": true,
+  "needs_attention": false,
+  "resource_release_check": {
+    "selected_physical_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_busy_cards": []
+  },
+  "selected_cards_verified_idle_after_cleanup": true,
+  "error": null,
+  "finished_at": "2026-09-13T14:30:50.856930+00:00"
+}

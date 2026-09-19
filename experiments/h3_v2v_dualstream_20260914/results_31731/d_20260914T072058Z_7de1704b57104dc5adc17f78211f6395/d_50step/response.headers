@@ -1,0 +1,13 @@
+HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+date: Mon, 14 Sep 2026 07:33:24 GMT
+server: uvicorn
+x-request-id: video_sync-bf13e45654ccb426
+x-model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+x-inference-time-s: 971.814
+x-stage-durations: {"queue_wait_ms":0.6355829536914825,"stage_0_gen_ms":956994.2576885223}
+x-peak-memory-mb: 29416.000
+content-length: 4448282
+content-type: video/mp4
+

@@ -1,0 +1,116 @@
+{
+  "case": "B",
+  "run_id": "0f7855c0008943dab8cde2a6b5663d84",
+  "supervisor_pid": 27628,
+  "supervisor_proc_identity": {
+    "pid": 27628,
+    "state": "R",
+    "pgrp": 27628,
+    "session": 27628,
+    "start_ticks": 259717495
+  },
+  "started_at": "2026-09-13T10:54:48.452536+00:00",
+  "allocated_physical_npu_ids": [
+    2,
+    3,
+    6,
+    7
+  ],
+  "port": 19098,
+  "actual_model_forward_calls": null,
+  "new_acceleration_results": null,
+  "mode": "full_model_two_step_smoke_only",
+  "stage_b_checkpoint": "/cache/yunfeng/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+  "validation_result": "/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c/npu_wrapper.json",
+  "formal_50step_started": false,
+  "quality_evidence": false,
+  "run_directory": "/cache/zhonghao/h3_v2v_minimal_20260913/b_model/runs/b_20260913T105448_452965Z",
+  "phase": "cleaning_up_own_processes",
+  "updated_at": "2026-09-13T11:06:24.194027+00:00",
+  "resource_snapshot": {
+    "selected_physical_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "other_busy_cards": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  "resource_health": {
+    "2": {
+      "model": "910B3",
+      "health": "OK"
+    },
+    "3": {
+      "model": "910B3",
+      "health": "OK"
+    },
+    "6": {
+      "model": "910B3",
+      "health": "OK"
+    },
+    "7": {
+      "model": "910B3",
+      "health": "OK"
+    }
+  },
+  "validation_gate": {
+    "result_path": "/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c/npu_wrapper.json",
+    "result_sha256": "59418f2a037920fa0f3d575c44eec902e1a28dc23468ef42772f6afcdffb92f1",
+    "source_sha256": {
+      "upstream/openvdn_npu.py": "bb06d4183e79dc5837d19a68ebaf1abdb520098dc50b05b6e22d34e9259cb43c",
+      "patched/openvdn_npu.py": "4808ef3017343904d8b52cda9cfebc94798f4d609f8ec19e63c59b92abf3381f",
+      "patched/minimax_h3_transformer.py": "c1b6b89a1be2a0cac3a2bf3add15ed73d19340086ede91e4a085a218581a0c83"
+    },
+    "vendor_candidate_sha256": {
+      "minimax_h3_transformer.py": "c1b6b89a1be2a0cac3a2bf3add15ed73d19340086ede91e4a085a218581a0c83",
+      "openvdn_npu.py": "4808ef3017343904d8b52cda9cfebc94798f4d609f8ec19e63c59b92abf3381f",
+      "openvdn_checkpoint.py": "e34c45deabb3def3019879d7ffef36e3aeabf69d824281433a7182804360adfc",
+      "pipeline_minimax_h3.py": "db230e8975e4c2b754e02197c5854afe552f1054b9dc6b6673ed4879e603f7be"
+    },
+    "rank_results": {
+      "0": {
+        "path": "/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c/npu_wrapper.rank0.json",
+        "sha256": "d38608015fa5998df47b609b8a159857ebce5936613a9bc2927158745b3e31c2"
+      },
+      "1": {
+        "path": "/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c/npu_wrapper.rank1.json",
+        "sha256": "204907f244b627ed8a9b7573d77ad591389cbc6eb470070f9003c6a414264583"
+      },
+      "2": {
+        "path": "/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c/npu_wrapper.rank2.json",
+        "sha256": "0153e304f5e9c9d417db26bdc387bb98c6f3a2723dfc89e36d80e98d28cc3516"
+      },
+      "3": {
+        "path": "/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c/npu_wrapper.rank3.json",
+        "sha256": "4e30440723e6c3a620f48f455b314ec8ddc53be7525c088e5c3c96d7fa1e66b6"
+      }
+    },
+    "note": "Tiny NPU correctness passed; full weights/offload/layout/quality remain to be checked."
+  },
+  "matched_a_config": {
+    "path": "/cache/zhonghao/h3_v2v_minimal_20260913/runs/a_20260913T095139_917734Z/experiment.json",
+    "sha256": "ad2849f4a31a20d11bfcbb45385e5ae06d899896f17012a5771ce248f5b09593"
+  },
+  "server_pid": 27814,
+  "server_started_at": "2026-09-13T10:54:49.566198+00:00",
+  "server_proc_identity": {
+    "pid": 27814,
+    "state": "R",
+    "pgrp": 27814,
+    "session": 27814,
+    "start_ticks": 259717672
+  },
+  "error": "RuntimeError: B server exited during startup: 1; see server.log"
+}

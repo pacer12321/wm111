@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Private H3 media executable only; system ffmpeg and model code are untouched.
+set -euo pipefail
+exec /cache/zhonghao/h3/env/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-aarch64-v7.0.2 "$@"

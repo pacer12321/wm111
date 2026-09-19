@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "reviewer": "root",
+  "run_id": "b52c1cc39548462f9a6b1f6124fef1ea",
+  "sample_id": "shirt_red_couple_124",
+  "review_type": "limited_nine_point_visual_inspection_and_native_frame_spot_checks",
+  "inspected_frame_indices": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    123
+  ],
+  "inspected_contact_sheets": [
+    "source_B_color_part_1.jpg",
+    "source_B_color_part_2.jpg",
+    "source_B_color_part_3.jpg"
+  ],
+  "native_B_frames_viewed": [
+    60,
+    123
+  ],
+  "comparison_frame_viewed": 60,
+  "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+  "output_sha256": "3fbab6d81d65bb40a0d86e889f7348eb37d2b3107d02cc5e87ea45875f5fd950",
+  "findings": [
+    "Man's pale shirt is red in the nine sampled B frames; woman's blouse remains white without broad red spill.",
+    "Coarse original sequence is retained: approach, kiss near frame30, separation near45, then chest embrace at60 through123.",
+    "People, broad green-field background and framing remain recognizable.",
+    "Cloth folds, some body/arm/hand contours and pose details are redrawn; not proof that only shirt color changed at pixel level.",
+    "No black frame or gross scene collapse in sampled points."
+  ],
+  "limits": {
+    "continuous_playback_reviewed": false,
+    "audio_reviewed": false,
+    "full_flicker_or_artifact_audit": false,
+    "exact_action_timing_preservation_verified": false,
+    "equal_quality_with_A_established": false,
+    "quantitative_edit_quality_metrics": false
+  },
+  "comparison": {
+    "file": "source_vs_B_synchronized.mp4",
+    "sha256": "da57465bfb5f284636ae7b712532b8232ec9fa39606f134ee4f2e98b1a60eeee",
+    "left": "original source",
+    "right": "B output",
+    "frames": 124,
+    "fps": 24,
+    "silent": true,
+    "source_and_output_files_unmodified": true,
+    "alignment": "same decoded frame index and PTS; aspect preserving resize; no reversal, retiming, or crop",
+    "record": "side_by_side_record.json"
+  },
+  "timing": {
+    "A_request_end_to_end_seconds": 855.1022686900105,
+    "B_request_end_to_end_seconds": 956.1085797089618,
+    "B_slower_than_A_seconds": 101.00631101895124,
+    "B_slower_than_A_percent": 11.812190742247664,
+    "scope": "Single formal request wall-clock latency, not pure DiT or NFE; VLM/startup excluded and separately recorded. Does not establish equal-quality or robust speedup."
+  },
+  "independent_review": "independent_observations.json"
+}

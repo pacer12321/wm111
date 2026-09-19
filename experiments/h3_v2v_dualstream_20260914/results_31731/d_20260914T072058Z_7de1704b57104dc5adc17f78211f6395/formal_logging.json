@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "disable_existing_loggers": false,
+  "formatters": {
+    "h3d": {
+      "format": "H3D pid=%(process)d %(asctime)s %(levelname)s %(name)s %(message)s"
+    }
+  },
+  "handlers": {
+    "h3d": {
+      "class": "logging.StreamHandler",
+      "formatter": "h3d",
+      "stream": "ext://sys.stderr"
+    }
+  },
+  "loggers": {
+    "vllm": {
+      "handlers": [
+        "h3d"
+      ],
+      "level": "INFO",
+      "propagate": false
+    },
+    "vllm_omni": {
+      "handlers": [
+        "h3d"
+      ],
+      "level": "INFO",
+      "propagate": false
+    }
+  }
+}

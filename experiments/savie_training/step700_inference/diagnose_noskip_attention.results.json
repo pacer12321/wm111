@@ -1,0 +1,513 @@
+[
+  {
+    "kind": "contract",
+    "scope": "production softmax only; synthetic QKV; no selector or token skip; no weight loading",
+    "torch": "2.11.0+cu130",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "heads_per_rank": 28,
+    "qkv_shape": [
+      81024,
+      28,
+      128
+    ],
+    "used": 81001,
+    "text": 6159,
+    "source_tokens": 37296,
+    "target_tokens": 37296,
+    "interleaved_world": 2,
+    "window_bounds": [
+      [
+        -5,
+        9
+      ],
+      [
+        -5,
+        9
+      ],
+      [
+        -5,
+        9
+      ],
+      [
+        -5,
+        9
+      ],
+      [
+        -5,
+        9
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        0,
+        14
+      ],
+      [
+        5,
+        19
+      ],
+      [
+        5,
+        19
+      ],
+      [
+        5,
+        19
+      ],
+      [
+        5,
+        19
+      ],
+      [
+        5,
+        19
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        10,
+        24
+      ],
+      [
+        15,
+        29
+      ],
+      [
+        15,
+        29
+      ],
+      [
+        15,
+        29
+      ],
+      [
+        15,
+        29
+      ],
+      [
+        15,
+        29
+      ],
+      [
+        20,
+        34
+      ],
+      [
+        20,
+        34
+      ],
+      [
+        20,
+        34
+      ],
+      [
+        20,
+        34
+      ],
+      [
+        20,
+        34
+      ],
+      [
+        25,
+        39
+      ],
+      [
+        25,
+        39
+      ],
+      [
+        25,
+        39
+      ],
+      [
+        25,
+        39
+      ],
+      [
+        25,
+        39
+      ],
+      [
+        30,
+        44
+      ],
+      [
+        30,
+        44
+      ]
+    ],
+    "source_geometry": [
+      37,
+      24,
+      42
+    ],
+    "groups_per_call": 4
+  },
+  {
+    "kind": "baseline_plan",
+    "dense_q": 45721,
+    "group_sizes": [
+      [
+        4032,
+        54793
+      ],
+      [
+        5040,
+        59833
+      ],
+      [
+        5040,
+        60841
+      ],
+      [
+        5040,
+        60841
+      ],
+      [
+        5040,
+        60841
+      ],
+      [
+        5040,
+        60841
+      ],
+      [
+        5040,
+        56809
+      ],
+      [
+        1008,
+        51769
+      ]
+    ],
+    "allowed_pairs": 5790985489,
+    "allowed_fraction": 0.8826158366638995
+  },
+  {
+    "kind": "timing",
+    "name": "B_DMD8_FA_varlen_no_skip",
+    "median_wall_ms": 421.6509386897087,
+    "median_device_ms": 421.5971984863281,
+    "wall_samples_ms": [
+      421.19427770376205,
+      421.37250304222107,
+      421.88259214162827,
+      422.52297699451447,
+      421.6509386897087
+    ],
+    "device_samples_ms": [
+      421.032958984375,
+      421.20806884765625,
+      421.749755859375,
+      422.44915771484375,
+      421.5971984863281
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "profile",
+    "name": "B_DMD8_FA_varlen_no_skip",
+    "top_ops": [
+      {
+        "op": "_vllm_fa2_C::varlen_fwd",
+        "count": 3,
+        "self_device_ms": 398.56122600000003,
+        "cpu_ms": 0.04812799999999879
+      },
+      {
+        "op": "aten::gather",
+        "count": 45,
+        "self_device_ms": 10.58095100000022,
+        "cpu_ms": 0.41446999999999096
+      },
+      {
+        "op": "aten::cat",
+        "count": 8,
+        "self_device_ms": 8.138433000000077,
+        "cpu_ms": 0.07209200000000328
+      },
+      {
+        "op": "aten::index_copy_",
+        "count": 3,
+        "self_device_ms": 1.630073000000033,
+        "cpu_ms": 0.036932999999999994
+      },
+      {
+        "op": "aten::fill_",
+        "count": 1,
+        "self_device_ms": 0.28614300000000004,
+        "cpu_ms": 0.00955500000000029
+      },
+      {
+        "op": "Activity Buffer Request",
+        "count": 1,
+        "self_device_ms": 0.011935999999999695,
+        "cpu_ms": 1.4864120000000003
+      },
+      {
+        "op": "aten::arange",
+        "count": 2,
+        "self_device_ms": 0.0030080000000002657,
+        "cpu_ms": 0.02210199999999986
+      }
+    ],
+    "total_self_device_ms": 419.21177000000034
+  },
+  {
+    "kind": "compile_and_mask_once",
+    "seconds": 6.354765258729458
+  },
+  {
+    "kind": "block_mask",
+    "name": "SAViE_current_interleaved",
+    "shape": [
+      1,
+      1,
+      81024,
+      81024
+    ],
+    "partial_blocks": 13459,
+    "full_blocks": 117690,
+    "visited_blocks": 131149,
+    "visited_fraction": 0.32730871074574047,
+    "partial_of_visited": 0.10262373331096691
+  },
+  {
+    "kind": "timing",
+    "name": "SAViE_current_Flex_no_skip",
+    "median_wall_ms": 467.43130683898926,
+    "median_device_ms": 467.2351989746094,
+    "wall_samples_ms": [
+      467.30197221040726,
+      467.52994507551193,
+      467.52866357564926,
+      467.20293909311295,
+      467.43130683898926
+    ],
+    "device_samples_ms": [
+      467.0948181152344,
+      467.3730163574219,
+      467.4281921386719,
+      467.06353759765625,
+      467.2351989746094
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "profile",
+    "name": "SAViE_current_Flex_no_skip",
+    "top_ops": [
+      {
+        "op": "triton_tem_fused_flex_attention_0",
+        "count": 1,
+        "self_device_ms": 466.997363,
+        "cpu_ms": 0.04664300000000003
+      },
+      {
+        "op": "aten::all",
+        "count": 1,
+        "self_device_ms": 0.014432000000000016,
+        "cpu_ms": 0.027916999999999918
+      },
+      {
+        "op": "aten::arange",
+        "count": 2,
+        "self_device_ms": 0.0030720000000001163,
+        "cpu_ms": 0.07874400000000015
+      },
+      {
+        "op": "Activity Buffer Request",
+        "count": 1,
+        "self_device_ms": 0.0030720000000001163,
+        "cpu_ms": 1.4569100000000001
+      },
+      {
+        "op": "aten::equal",
+        "count": 1,
+        "self_device_ms": 0.003008000000000038,
+        "cpu_ms": 0.05084000000000015
+      },
+      {
+        "op": "aten::_local_scalar_dense",
+        "count": 2,
+        "self_device_ms": 0.0022710000000001856,
+        "cpu_ms": 0.0147800000000002
+      }
+    ],
+    "total_self_device_ms": 467.023218
+  },
+  {
+    "kind": "block_mask",
+    "name": "SAViE_logical_order",
+    "shape": [
+      1,
+      1,
+      81024,
+      81024
+    ],
+    "partial_blocks": 6686,
+    "full_blocks": 121008,
+    "visited_blocks": 127694,
+    "visited_fraction": 0.3186860632560415,
+    "partial_of_visited": 0.05235954704214763
+  },
+  {
+    "kind": "timing",
+    "name": "SAViE_logical_order_kernel_only",
+    "median_wall_ms": 259.56884771585464,
+    "median_device_ms": 259.5027160644531,
+    "wall_samples_ms": [
+      259.8177641630173,
+      259.5187574625015,
+      259.4749256968498,
+      259.9722370505333,
+      259.56884771585464
+    ],
+    "device_samples_ms": [
+      259.6579895019531,
+      259.47369384765625,
+      259.3990173339844,
+      259.87109375,
+      259.5027160644531
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "same_math_layout_check",
+    "max_abs": 0.00048828125,
+    "relative_l2": 0.0012837030226364732
+  },
+  {
+    "kind": "timing",
+    "name": "SAViE_logical_order_including_reorder",
+    "median_wall_ms": 262.1188312768936,
+    "median_device_ms": 261.9969787597656,
+    "wall_samples_ms": [
+      262.2743993997574,
+      262.10010051727295,
+      262.1188312768936,
+      262.1939703822136,
+      261.99110597372055
+    ],
+    "device_samples_ms": [
+      262.0946350097656,
+      261.9953308105469,
+      261.9969787597656,
+      262.0671691894531,
+      261.9503479003906
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "profile",
+    "name": "SAViE_logical_order_including_reorder",
+    "top_ops": [
+      {
+        "op": "triton_tem_fused_flex_attention_0",
+        "count": 1,
+        "self_device_ms": 259.166186,
+        "cpu_ms": 0.04833100000000059
+      },
+      {
+        "op": "aten::gather",
+        "count": 4,
+        "self_device_ms": 2.82744800000003,
+        "cpu_ms": 0.09272399999999971
+      },
+      {
+        "op": "Activity Buffer Request",
+        "count": 1,
+        "self_device_ms": 0.702238,
+        "cpu_ms": 1.450901
+      }
+    ],
+    "total_self_device_ms": 262.695872
+  },
+  {
+    "kind": "block_mask",
+    "name": "SAViE_same_physical_order_arithmetic_mask",
+    "shape": [
+      1,
+      1,
+      81024,
+      81024
+    ],
+    "partial_blocks": 13459,
+    "full_blocks": 117690,
+    "visited_blocks": 131149,
+    "visited_fraction": 0.32730871074574047,
+    "partial_of_visited": 0.10262373331096691
+  },
+  {
+    "kind": "timing",
+    "name": "SAViE_same_physical_order_arithmetic_mask",
+    "median_wall_ms": 326.1725381016731,
+    "median_device_ms": 326.05926513671875,
+    "wall_samples_ms": [
+      326.1725381016731,
+      325.9287551045418,
+      326.21631771326065,
+      325.85545629262924,
+      326.3641893863678
+    ],
+    "device_samples_ms": [
+      326.05926513671875,
+      325.8811340332031,
+      326.140380859375,
+      325.7710266113281,
+      326.20440673828125
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "same_math_arithmetic_check",
+    "max_abs": 0.0,
+    "relative_l2": 0.0
+  },
+  {
+    "kind": "profile",
+    "name": "SAViE_same_physical_order_arithmetic_mask",
+    "top_ops": [
+      {
+        "op": "triton_tem_fused_flex_attention_0",
+        "count": 1,
+        "self_device_ms": 325.617106,
+        "cpu_ms": 0.06056200000000035
+      }
+    ],
+    "total_self_device_ms": 325.617106
+  },
+  {
+    "kind": "complete",
+    "peak_memory_gib": 13.899653911590576
+  }
+]

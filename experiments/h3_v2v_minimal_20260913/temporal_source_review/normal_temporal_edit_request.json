@@ -1,0 +1,38 @@
+{
+  "recorded_date": "2026-09-14",
+  "user_scope": "不要倒放，就正常改变时序的edit即可",
+  "status": "normal_temporal_edit_selected_not_started",
+  "edit_type": "natural_action_order_change_not_backward_playback",
+  "selected_by_assistant": true,
+  "source": {
+    "local_path": "C:/Users/DZH/OneDrive/Documents/ChatGPT/wm111/experiments/h3_v2v_minimal_20260913/results_31731/a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd/source.mp4",
+    "remote_existing_path": "/cache/zhonghao/h3/data/explicit_reverse_couple_124/source.mp4",
+    "sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+    "frames": 124,
+    "fps": 24,
+    "video_duration_seconds": 5.166666666666667,
+    "has_audio": false,
+    "preparation": "Existing unreversed source; original clip frames [104,228), no new trimming, speed change or segment swapping this turn.",
+    "source_path_name_is_historical_not_an_instruction": true
+  },
+  "observed_source_order": [
+    "face-to-face contact and gentle kiss",
+    "close chest embrace"
+  ],
+  "requested_order": [
+    "close chest embrace",
+    "ease slightly apart and gentle kiss"
+  ],
+  "edit_prompt": "Edit the reference video so that the couple first share a close chest-to-chest embrace, with the woman resting her head against the man's chest. They then ease apart slightly and share a gentle kiss. Both actions should unfold with natural forward motion and a smooth transition. Preserve the same two people, their clothing, lighting, camera viewpoint, framing, and field background.",
+  "prompt_status": "self_authored_natural_reordering_prompt_not_yet_sent_to_H3",
+  "sampling_and_hardware": "Keep the previous matched 31731 single-node eight-card/1344x768/24fps/duration5/seed4101/50-requested-step settings when executing a newly validated sample profile.",
+  "model_definitions_unchanged": {
+    "A": "Original H3 Ref2VA dense",
+    "B": "Released VDN Stage-B original linear plus local Softmax; source global in Softmax",
+    "C": "B with direct target-query to visual-source Softmax connections restricted to same ordinal latent frame; no VLM, correspondence discovery, simplified linear or new training"
+  },
+  "execution_gate": "First run A for this normal edit and inspect whether both events are preserved and occur in the requested order. Do not use whole-clip reversal failure as evidence that A cannot perform normal reordering. B/C are meaningful comparisons after establishing the baseline result.",
+  "implementation_status": "No new sample profile deployed, no inference request sent, no remote files or frozen gate pins changed, no automation resumed this turn. Existing production sample allowlist still contains lake and old explicit_reverse only; a distinct reviewed profile/request identity is required before execution, never silently replace the prompt in old runs.",
+  "historical_results_policy": "Retain the six completed runs as history. The three whole-clip reversal outputs do not count as results for this new normal reordering task. No file deletion.",
+  "review_limits": "Source order supported by previously decoded/PTS-verified source and visual contact/native frame reviews. No claim that H3 can already execute the new prompt, and no VLM benefit demonstrated."
+}

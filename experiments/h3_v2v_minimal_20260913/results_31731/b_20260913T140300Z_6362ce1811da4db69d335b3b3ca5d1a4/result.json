@@ -1,0 +1,56 @@
+{
+  "completed_at": "2026-09-13T14:30:17.163422+00:00",
+  "requested_steps": 50,
+  "success": true,
+  "http_code": "200",
+  "content_type": "video/mp4",
+  "curl_returncode": 0,
+  "request_end_to_end_seconds": 948.1026493189856,
+  "actual_model_forward_calls": null,
+  "dit_latency_seconds": null,
+  "quality_evidence": false,
+  "output_video": "/cache/zhonghao/h3/b_model_trial/01234567/lake_snow/B/runs/b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4/output/b_50step.mp4",
+  "output_sha256": "ca8aa801cb1c96026b237f4f1dbb93d8e4846071338aae3796ae77c24537d2fa",
+  "ffprobe": {
+    "verified": true,
+    "metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1344,
+          "height": 768,
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1",
+          "nb_frames": "124",
+          "nb_read_frames": "124"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "nb_frames": "163",
+          "nb_read_frames": "163"
+        }
+      ],
+      "format": {
+        "duration": "5.207000",
+        "size": "11740798"
+      }
+    },
+    "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+    "checks": {
+      "dimensions": [
+        1344,
+        768
+      ],
+      "fps": 24.0,
+      "frame_count": 124,
+      "container_duration_seconds": 5.207
+    }
+  }
+}

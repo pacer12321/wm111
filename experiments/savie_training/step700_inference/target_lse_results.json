@@ -1,0 +1,230 @@
+[
+  {
+    "real_shape": false,
+    "mode": "full",
+    "group_size": 4,
+    "relative_l2": 0.0028243979904800653,
+    "old_packed_key_rows": 1304,
+    "new_packed_key_rows": 586,
+    "scope": "Target attention with pack/scatter/compiled LSE merge; no whole-model speed or quality claim"
+  },
+  {
+    "real_shape": false,
+    "mode": "skip",
+    "group_size": 4,
+    "relative_l2": 0.0027974650729447603,
+    "old_packed_key_rows": 1304,
+    "new_packed_key_rows": 586,
+    "scope": "Target attention with pack/scatter/compiled LSE merge; no whole-model speed or quality claim"
+  },
+  {
+    "real_shape": true,
+    "mode": "full",
+    "group_size": 2,
+    "relative_l2": 0.0028642797842621803,
+    "old_packed_key_rows": 890317,
+    "new_packed_key_rows": 292906,
+    "scope": "Target attention with pack/scatter/compiled LSE merge; no whole-model speed or quality claim",
+    "median_ms": {
+      "joint_flash": 83.18156814575195,
+      "shared_kv_lse": 75.3064956665039
+    },
+    "samples": {
+      "joint_flash": [
+        83.0719985961914,
+        83.38944244384766,
+        83.056640625,
+        83.3617935180664,
+        83.60447692871094,
+        82.95116424560547,
+        83.2911376953125,
+        82.61325073242188
+      ],
+      "shared_kv_lse": [
+        75.38380432128906,
+        75.21075439453125,
+        75.22918701171875,
+        75.49235534667969,
+        75.85587310791016,
+        75.40326690673828,
+        75.16671752929688,
+        75.0540771484375
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "mode": "full",
+    "group_size": 4,
+    "relative_l2": 0.0028642797842621803,
+    "old_packed_key_rows": 890317,
+    "new_packed_key_rows": 292906,
+    "scope": "Target attention with pack/scatter/compiled LSE merge; no whole-model speed or quality claim",
+    "median_ms": {
+      "joint_flash": 83.3623046875,
+      "shared_kv_lse": 74.0761604309082
+    },
+    "samples": {
+      "joint_flash": [
+        82.65523529052734,
+        83.84614562988281,
+        83.82669067382812,
+        82.64396667480469,
+        83.5409927368164,
+        83.1836166381836,
+        83.0013427734375,
+        83.66284942626953
+      ],
+      "shared_kv_lse": [
+        74.46527862548828,
+        72.78899383544922,
+        74.15090942382812,
+        74.5902099609375,
+        73.73004913330078,
+        74.27174377441406,
+        73.63788604736328,
+        74.00141143798828
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "mode": "full",
+    "group_size": 8,
+    "relative_l2": 0.0028642797842621803,
+    "old_packed_key_rows": 890317,
+    "new_packed_key_rows": 292906,
+    "scope": "Target attention with pack/scatter/compiled LSE merge; no whole-model speed or quality claim",
+    "median_ms": {
+      "joint_flash": 83.59475326538086,
+      "shared_kv_lse": 72.62002944946289
+    },
+    "samples": {
+      "joint_flash": [
+        83.78163146972656,
+        83.94956970214844,
+        83.03308868408203,
+        83.40787506103516,
+        83.93523406982422,
+        84.37554931640625,
+        83.16006469726562,
+        83.12319946289062
+      ],
+      "shared_kv_lse": [
+        72.36812591552734,
+        72.90573120117188,
+        72.774658203125,
+        73.17810821533203,
+        72.40089416503906,
+        72.46745300292969,
+        72.25958251953125,
+        72.7726058959961
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "mode": "skip",
+    "group_size": 2,
+    "relative_l2": 0.002863592468202114,
+    "old_packed_key_rows": 890317,
+    "new_packed_key_rows": 292906,
+    "scope": "Target attention with pack/scatter/compiled LSE merge; no whole-model speed or quality claim",
+    "median_ms": {
+      "joint_flash": 65.9051513671875,
+      "shared_kv_lse": 55.36819076538086
+    },
+    "samples": {
+      "joint_flash": [
+        65.93843078613281,
+        65.70086669921875,
+        66.65625762939453,
+        65.47968292236328,
+        66.77094268798828,
+        65.85651397705078,
+        65.939453125,
+        65.87187194824219
+      ],
+      "shared_kv_lse": [
+        55.71072006225586,
+        55.15264129638672,
+        55.53152084350586,
+        55.147518157958984,
+        55.52742385864258,
+        55.28371047973633,
+        55.45267105102539,
+        55.07583999633789
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "mode": "skip",
+    "group_size": 4,
+    "relative_l2": 0.002863592468202114,
+    "old_packed_key_rows": 890317,
+    "new_packed_key_rows": 292906,
+    "scope": "Target attention with pack/scatter/compiled LSE merge; no whole-model speed or quality claim",
+    "median_ms": {
+      "joint_flash": 66.29427337646484,
+      "shared_kv_lse": 54.19980812072754
+    },
+    "samples": {
+      "joint_flash": [
+        66.31731414794922,
+        66.54156494140625,
+        66.30400085449219,
+        66.2845458984375,
+        65.80735778808594,
+        66.25791931152344,
+        66.07462310791016,
+        66.90303802490234
+      ],
+      "shared_kv_lse": [
+        54.41126251220703,
+        54.22489547729492,
+        54.349822998046875,
+        53.55622482299805,
+        54.395904541015625,
+        54.174720764160156,
+        53.775360107421875,
+        54.04364776611328
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "mode": "skip",
+    "group_size": 8,
+    "relative_l2": 0.002863592468202114,
+    "old_packed_key_rows": 890317,
+    "new_packed_key_rows": 292906,
+    "scope": "Target attention with pack/scatter/compiled LSE merge; no whole-model speed or quality claim",
+    "median_ms": {
+      "joint_flash": 66.7985954284668,
+      "shared_kv_lse": 53.20140838623047
+    },
+    "samples": {
+      "joint_flash": [
+        66.75865936279297,
+        67.16108703613281,
+        66.39411163330078,
+        66.90099334716797,
+        66.74022674560547,
+        66.83853149414062,
+        66.09101104736328,
+        67.28089904785156
+      ],
+      "shared_kv_lse": [
+        53.11385726928711,
+        53.30739212036133,
+        52.88652801513672,
+        53.317630767822266,
+        53.25823974609375,
+        52.92851257324219,
+        53.345279693603516,
+        53.14457702636719
+      ]
+    }
+  }
+]

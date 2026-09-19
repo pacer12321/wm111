@@ -1,0 +1,391 @@
+{
+  "records_by_pid": {
+    "211794": [
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      },
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      }
+    ],
+    "211795": [
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      },
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      }
+    ],
+    "211796": [
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      },
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      }
+    ],
+    "211797": [
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      },
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      }
+    ],
+    "211798": [
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      },
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      }
+    ],
+    "211799": [
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      },
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      }
+    ],
+    "211800": [
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      },
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      }
+    ],
+    "211801": [
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      },
+      {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6167,
+        "source_audio_t": 209,
+        "target_audio_t": 207
+      }
+    ]
+  },
+  "request_count_per_pid": 2,
+  "evidence_source": "Actual pipeline make_metadata from VAE/ref blocks, logged once per diffuse request.",
+  "limitation": "Not a per-layer mask/tensor-coordinate trace. Successful requests plus pinned C source and own C tiny establish the strict infer/layout path."
+}

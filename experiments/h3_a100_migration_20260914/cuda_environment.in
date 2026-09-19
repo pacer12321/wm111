@@ -1,0 +1,4 @@
+-r /cache/zhonghao/h3/frozen/src/vllm-omni/requirements/common.txt
+vllm==0.26.0
+pytest
+requests

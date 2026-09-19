@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "mode": "D_source_hybrid_same_frame_v1",
+  "review_status": "approved_for_inference",
+  "scope": "synthetic_validation_only",
+  "attention": {
+    "endpoint_policy": "vdn_anchors",
+    "auxiliary_policy": "preserve_existing",
+    "source_linear_text": "text",
+    "target_linear_text": "text",
+    "chunk_frames": 5,
+    "chunk_radius": 1,
+    "share_parameters": true,
+    "independent_stream_states": true
+  }
+}

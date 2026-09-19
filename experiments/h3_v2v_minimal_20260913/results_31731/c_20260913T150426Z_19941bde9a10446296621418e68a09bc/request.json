@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-09-13T15:17:05.715143+00:00",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "group": "01234567",
+  "run_id": "19941bde9a10446296621418e68a09bc",
+  "sample_id": "lake_snow",
+  "fields": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "flow_shift": 12.0,
+    "seed": 4101,
+    "prompt": "Transform the reference lake video into a photorealistic winter snow scene. Preserve the original camera movement, framing, shot timing, lake shoreline, mountains, and overall composition. Cover the landscape with fresh snow, freeze parts of the lake, add gentle falling snow, and keep synchronized natural winter ambience.",
+    "num_inference_steps": 50,
+    "extra_params": "{\"task\": \"ref2va\", \"duration\": 5.0, \"audio_flow_shift\": 3.0}"
+  },
+  "source_video": "/cache/zhonghao/h3/data/minimax_h3_t2va_50step.mp4",
+  "source_sha256": "e02b3df481f66d0968ab65eac1d56ded8493da952c0bfb21b70ecd5715f87cf9",
+  "requested_steps": 50,
+  "actual_model_forward_calls": null,
+  "quality_evidence": false,
+  "server_proc_identity": {
+    "pid": 211371,
+    "state": "S",
+    "pgrp": 211371,
+    "session": 211371,
+    "start_ticks": 124855681
+  }
+}

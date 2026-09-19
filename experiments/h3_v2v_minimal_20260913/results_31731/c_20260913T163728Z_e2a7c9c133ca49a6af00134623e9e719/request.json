@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-09-13T16:48:30.819341+00:00",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "group": "01234567",
+  "run_id": "e2a7c9c133ca49a6af00134623e9e719",
+  "sample_id": "explicit_reverse_couple_124",
+  "fields": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "flow_shift": 12.0,
+    "seed": 4101,
+    "prompt": "Reverse the temporal order of the entire reference clip: play all of its actions backward in time. Keep the same two people, their appearance, lighting, camera framing, and background.",
+    "num_inference_steps": 50,
+    "extra_params": "{\"task\": \"ref2va\", \"duration\": 5.0, \"audio_flow_shift\": 3.0}"
+  },
+  "source_video": "/cache/zhonghao/h3/data/explicit_reverse_couple_124/source.mp4",
+  "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+  "requested_steps": 50,
+  "actual_model_forward_calls": null,
+  "quality_evidence": false,
+  "server_proc_identity": {
+    "pid": 537293,
+    "state": "S",
+    "pgrp": 537293,
+    "session": 537293,
+    "start_ticks": 125413847
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "case": "D_tiny_SP8",
+  "mode": "D_source_hybrid_same_frame_v1",
+  "candidate": {
+    "openvdn_npu.py": "4808ef3017343904d8b52cda9cfebc94798f4d609f8ec19e63c59b92abf3381f",
+    "openvdn_checkpoint.py": "fbe011bae524bea16f54a14032e61e82f2c68aa4da6d426b98a13e097fb8f19f",
+    "minimax_h3_transformer.py": "a3dc6a0189fdd8f3a9e2aaeddf9544df1503a2f74af287b74b7e975dd7ce717c",
+    "pipeline_minimax_h3.py": "98da3d83984850cc8df47a6a122b93d662c361baccf90f29f24e120e5c05f4dd",
+    "strict_source_layout.py": "adedca2bbc4e390c3fc3d2bc5059f99f34a530e06d5fee02cb6af447e733364d",
+    "strict_source_attention.py": "b96d20631f4cf9b5a06ea562e63c127c3e1e7c22fef0eb234aac9b1929941158",
+    "dual_stream_attention.py": "347dfccf572f750ad72686b27f2861cd6283ebde297ea12fb81bedc1701b82db",
+    "dual_stream_adapter.py": "182e742138ad35435279668d93bf77b08db1b8da4a060dfca05bfefe87326864"
+  },
+  "validation": {
+    "d_profiles.py": "12c3d694c7afdc3c0e97eb039321b31faa5f25ba05c745608370e6439b5be885",
+    "d_cases.py": "9834bd8560cfbd0c9460aa1a7861bf48ef02c2c7544dd721bc82a31f14ffa32f",
+    "d_cpu_regression.py": "ff6d84ca48e3d51f909672d213d16aec672c535127ac4c9f2b7ac5c86b371107",
+    "d_npu_regression.py": "b47c1ffd10c4ee7eee348d37b9ee4e506881093f8926f9b18dd0c578e64e2979",
+    "run_d_validation.py": "58ec625a36cf52c96cb1a7a5bcf032e2a42c3bf38810734bf55de35f622ef2d6",
+    "launch_d_validation.sh": "b4d9c4fe87b7fb6d66733bc8c9f8a4207774a234eaef8bc9d64cd86b170ee06a",
+    "d_validation_verifier.py": "720a5506df1853b320c6aea62ffff64d604926fd45eae728c850f40954e9cfda"
+  }
+}

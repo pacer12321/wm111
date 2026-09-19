@@ -1,0 +1,32 @@
+{
+  "input_rows": 25000,
+  "selected_nontemporal_candidates": 21882,
+  "excluded": 3118,
+  "split_rows": {
+    "train": 20788,
+    "validation": 547,
+    "test": 547
+  },
+  "split_source_groups": {
+    "train": 20788,
+    "validation": 547,
+    "test": 547
+  },
+  "categories": {
+    "local": 7512,
+    "global_freeform2": 5943,
+    "global_style2": 1684,
+    "global_freeform1": 4496,
+    "global_style1": 2247
+  },
+  "archive_members": {
+    "global_freeform1": 4496,
+    "global_freeform2": 5943,
+    "global_style1": 2247,
+    "global_style2": 1684,
+    "local": 14892,
+    "source": 14370
+  },
+  "source_disjoint": true,
+  "note": "Heuristic first pass; ffprobe and temporal-alignment QC still required."
+}

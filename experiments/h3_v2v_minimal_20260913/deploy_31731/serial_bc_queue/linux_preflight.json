@@ -1,0 +1,31 @@
+{
+  "host": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+  "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+  "ssh_port": 31731,
+  "runtime_root": "/cache/zhonghao/h3/serial_bc_queue_code",
+  "production_sha256": {
+    "serial_bc_queue.py": "67b5b867711af1a1e235290cd602713e677743ff43db96afcafd3b4c1b054a8f",
+    "bootstrap_bc.sh": "d8ca943a9543f612646ad31ddca230675a4b3e694eb139f15277b196334c53cb"
+  },
+  "test_sha256": "2290d4f92bc26b93e0df007e05815e3fb25525d1d9e12129bf4ce88727cd217c",
+  "real_linux_tests_run": 27,
+  "real_linux_tests_passed": 27,
+  "real_linux_tests_skipped": 0,
+  "unittest_wall_seconds": 0.431,
+  "ssh_exit_code": 0,
+  "bash_syntax_passed": true,
+  "production_manifest_records": 23,
+  "C_vendor_completed_manifest_verified": true,
+  "B_bound_run": "6362ce1811da4db69d335b3b3ca5d1a4",
+  "B_formal_artifacts_cleanup_and_exit_independently_verified": true,
+  "B_seconds": 948.1026493189856,
+  "actual_executable_resolution": {
+    "npu-smi": "/usr/local/sbin/npu-smi",
+    "python": "/cache/zhonghao/h3/env/bin/python",
+    "ffmpeg": "/cache/zhonghao/h3/bin/ffmpeg",
+    "bash": "/usr/bin/bash"
+  },
+  "queue_ledger_created_by_this_preflight": false,
+  "strict_evidence_review": "Actual C parser checks smoke log-prefix SHA, same-service eight workers, one smoke plus one formal metadata set, and exact persisted JSON equivalence. Independent malformed JSON repro rejected.",
+  "note": "This file records CPU/read-only preflight, not a queue/C launch result. Check live queue_status.json for actual submission and progress."
+}

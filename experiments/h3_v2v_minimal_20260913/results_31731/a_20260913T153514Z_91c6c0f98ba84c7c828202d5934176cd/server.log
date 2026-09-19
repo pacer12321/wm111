@@ -1,0 +1,1415 @@
+A sample=explicit_reverse_couple_124 group=01234567 cards=0,1,2,3,4,5,6,7 port=19098 run=91c6c0f98ba84c7c828202d5934176cd
+INFO 09-13 23:35:47 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-13 23:35:47 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-13 23:35:47 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-13 23:35:48 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-13 23:35:48 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+INFO 09-13 23:36:04 [patch.py:252] NVFP4 W4A4 weight_scale NaN-clamp: installed.
+INFO 09-13 23:36:04 [patch.py:481] [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+INFO 09-13 23:36:08 [main.py:54] Delegating entrypoint handling to vllm-omni
+2026-09-13 23:36:09,068 - 322752 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+INFO 09-13 23:36:09 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 09-13 23:36:09 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+INFO 09-13 23:36:09 [serve.py:175] Detected diffusion model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+INFO 09-13 23:36:09 [logo.py:52]        [97m█     █     █▄   ▄█[0m    [34m   ▄▀▀[38;5;208m▀▀▄ [0m[97m█▄   ▄█ █▄    █ ▀█▀ [0m
+INFO 09-13 23:36:09 [logo.py:52]  [38;5;208m▄▄[0m [34m▄█[0m [97m█     █     █ ▀▄▀ █[0m[97m  ▄▄▄ [0m[34m █    [38;5;208m█ [0m[97m█ ▀▄▀ █ █ ▀▄  █  █  [0m
+INFO 09-13 23:36:09 [logo.py:52]   [38;5;208m█[0m[34m▄█▀[0m [97m█     █     █     █[0m[97m      [0m[34m █    [38;5;208m█ [0m[97m█     █ █   ▀▄█  █  [0m
+INFO 09-13 23:36:09 [logo.py:52]    [34m▀▀[0m  [97m▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀[0m      [35m  ▀▀▀▀  [0m[97m▀     ▀ ▀     ▀ ▀▀▀ [0m
+INFO 09-13 23:36:09 [logo.py:52] 
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:36:09 [api_utils.py:345] vLLM server version 0.26.0, serving model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:36:09 [api_utils.py:273] non-default args: {'model_tag': '/cache/zhonghao/h3/models/MiniMax-H3/Ref2VA', 'host': '127.0.0.1', 'port': 19098, 'model': '/cache/zhonghao/h3/models/MiniMax-H3/Ref2VA', 'trust_remote_code': True}
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:36:09 [omni_base.py:172] [AsyncOmni] Initializing with model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:36:09 [async_omni_engine.py:175] [AsyncOmniEngine] Initializing with model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:36:09 [async_omni_engine.py:274] [AsyncOmniEngine] Launching Orchestrator thread with 1 stages
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:36:09 [stage_utils.py:167] Stage 0 logical-to-physical device mapping: 0->0, 1->1, 2->2, 3->3, 4->4, 5->5, 6->6, 7->7
+[0;36m(APIServer pid=322752)[0;0m WARNING 09-13 23:36:09 [ring_globals.py:73] FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:36:10 [multiproc_executor.py:254] Starting server...
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:36:19[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:36:20[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:36:34[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 23:36:34[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 23:36:34[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 23:36:34[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 23:36:34[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 23:36:34[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 23:36:35[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+2026-09-13 23:36:37,807 - 323631 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 23:36:37[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 23:36:37[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[diffusion_worker.py:819][0m Worker 0 created result MessageQueue
+2026-09-13 23:36:38,075 - 323636 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+2026-09-13 23:36:38,273 - 323638 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[diffusion_worker.py:819][0m Worker 5 created result MessageQueue
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[diffusion_worker.py:819][0m Worker 7 created result MessageQueue
+2026-09-13 23:36:38,691 - 323634 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+2026-09-13 23:36:38,734 - 323632 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[diffusion_worker.py:819][0m Worker 3 created result MessageQueue
+2026-09-13 23:36:38,920 - 323633 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[diffusion_worker.py:819][0m Worker 1 created result MessageQueue
+[32mINFO[0m [90m09-13 23:36:38[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+2026-09-13 23:36:39,009 - 323637 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[diffusion_worker.py:819][0m Worker 2 created result MessageQueue
+2026-09-13 23:36:39,134 - 323635 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[diffusion_worker.py:819][0m Worker 6 created result MessageQueue
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[diffusion_worker.py:819][0m Worker 4 created result MessageQueue
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 23:36:39[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 23:36:39[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 23:36:39[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 23:36:40[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 23:36:40[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 23:36:40[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 23:36:40[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 23:36:40[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 23:36:40[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:315][0m Worker 0: Initialized device and distributed environment.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:315][0m Worker 5: Initialized device and distributed environment.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:676][0m SP group details for rank 0: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[0]
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:676][0m SP group details for rank 5: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[5]
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:315][0m Worker 4: Initialized device and distributed environment.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:315][0m Worker 1: Initialized device and distributed environment.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:676][0m SP group details for rank 4: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[4]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:315][0m Worker 2: Initialized device and distributed environment.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:315][0m Worker 6: Initialized device and distributed environment.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:315][0m Worker 7: Initialized device and distributed environment.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[diffusion_worker.py:315][0m Worker 3: Initialized device and distributed environment.
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:676][0m SP group details for rank 1: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[1]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:676][0m SP group details for rank 7: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[7]
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:676][0m SP group details for rank 6: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[6]
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:676][0m SP group details for rank 2: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[2]
+[32mINFO[0m [90m09-13 23:36:40[0m [90m[parallel_state.py:676][0m SP group details for rank 3: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[3]
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[33mWARNING[0m [90m09-13 23:36:41[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[33mWARNING[0m [90m09-13 23:36:41[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[33mWARNING[0m [90m09-13 23:36:41[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[33mWARNING[0m [90m09-13 23:36:41[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[33mWARNING[0m [90m09-13 23:36:41[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[33mWARNING[0m [90m09-13 23:36:41[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[32mINFO[0m [90m09-13 23:36:41[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[32mINFO[0m [90m09-13 23:36:41[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[32mINFO[0m [90m09-13 23:36:41[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[32mINFO[0m [90m09-13 23:36:41[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[32mINFO[0m [90m09-13 23:36:41[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[32mINFO[0m [90m09-13 23:36:41[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[33mWARNING[0m [90m09-13 23:36:41[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[33mWARNING[0m [90m09-13 23:36:41[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[32mINFO[0m [90m09-13 23:36:41[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[32mINFO[0m [90m09-13 23:36:41[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[32mINFO[0m [90m09-13 23:37:21[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+[32mINFO[0m [90m09-13 23:37:21[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+[32mINFO[0m [90m09-13 23:37:21[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+[32mINFO[0m [90m09-13 23:37:21[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+[32mINFO[0m [90m09-13 23:37:21[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+[32mINFO[0m [90m09-13 23:37:21[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+[32mINFO[0m [90m09-13 23:37:21[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+[32mINFO[0m [90m09-13 23:37:21[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+The config attributes {'vae_ratio': 16, 'vae_ratio_t': 4} were passed to AutoencoderKLLegacy, but are not expected and will be ignored. Please verify your config.json configuration file.
+[32mINFO[0m [90m09-13 23:38:28[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+[32mINFO[0m [90m09-13 23:38:31[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+[32mINFO[0m [90m09-13 23:38:31[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+[32mINFO[0m [90m09-13 23:38:31[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+[32mINFO[0m [90m09-13 23:38:32[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+Multi-thread loading shards:   0% Completed | 0/13 [00:00<?, ?it/s]
+Multi-thread loading shards:   8% Completed | 1/13 [00:01<00:13,  1.09s/it]
+Multi-thread loading shards:  15% Completed | 2/13 [00:03<00:20,  1.83s/it]
+Multi-thread loading shards:  23% Completed | 3/13 [00:04<00:15,  1.54s/it]
+Multi-thread loading shards:  31% Completed | 4/13 [00:06<00:16,  1.83s/it]
+Multi-thread loading shards:  38% Completed | 5/13 [00:10<00:21,  2.64s/it]
+Multi-thread loading shards:  46% Completed | 6/13 [00:13<00:17,  2.44s/it]
+Multi-thread loading shards:  54% Completed | 7/13 [00:17<00:18,  3.16s/it]
+Multi-thread loading shards:  62% Completed | 8/13 [00:21<00:16,  3.37s/it]
+Multi-thread loading shards:  69% Completed | 9/13 [00:22<00:10,  2.71s/it]
+Multi-thread loading shards:  77% Completed | 10/13 [00:25<00:08,  2.84s/it]
+Multi-thread loading shards:  85% Completed | 11/13 [00:26<00:04,  2.17s/it]
+Multi-thread loading shards:  92% Completed | 12/13 [00:27<00:01,  1.77s/it]
+[32mINFO[0m [90m09-13 23:39:00[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+[32mINFO[0m [90m09-13 23:39:00[0m [90m[diffusion_model_runner.py:242][0m Model loading took 10.2852 GiB and 139.646373 seconds
+[32mINFO[0m [90m09-13 23:39:00[0m [90m[diffusion_model_runner.py:247][0m Model runner: Model loaded successfully.
+Multi-thread loading shards: 100% Completed | 13/13 [00:28<00:00,  1.45s/it]
+Multi-thread loading shards: 100% Completed | 13/13 [00:28<00:00,  2.16s/it]
+
+[32mINFO[0m [90m09-13 23:39:00[0m [90m[diffusion_model_runner.py:268][0m  Enabling offloader backend: LayerWiseOffloadBackend
+[32mINFO[0m [90m09-13 23:39:00[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+[32mINFO[0m [90m09-13 23:39:00[0m [90m[diffusion_model_runner.py:242][0m Model loading took 10.2852 GiB and 139.813674 seconds
+[32mINFO[0m [90m09-13 23:39:00[0m [90m[diffusion_model_runner.py:247][0m Model runner: Model loaded successfully.
+[32mINFO[0m [90m09-13 23:39:00[0m [90m[diffusion_model_runner.py:268][0m  Enabling offloader backend: LayerWiseOffloadBackend
+[32mINFO[0m [90m09-13 23:39:00[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+[32mINFO[0m [90m09-13 23:39:01[0m [90m[diffusers_loader.py:506][0m Loading weights took 28.54 seconds
+[32mINFO[0m [90m09-13 23:39:01[0m [90m[diffusion_model_runner.py:242][0m Model loading took 10.2852 GiB and 140.694724 seconds
+[32mINFO[0m [90m09-13 23:39:01[0m [90m[diffusion_model_runner.py:247][0m Model runner: Model loaded successfully.
+[32mINFO[0m [90m09-13 23:39:01[0m [90m[diffusion_model_runner.py:268][0m  Enabling offloader backend: LayerWiseOffloadBackend
+[32mINFO[0m [90m09-13 23:39:01[0m [90m[diffusion_model_runner.py:242][0m Model loading took 10.2852 GiB and 140.720142 seconds
+[32mINFO[0m [90m09-13 23:39:01[0m [90m[diffusion_model_runner.py:247][0m Model runner: Model loaded successfully.
+[32mINFO[0m [90m09-13 23:39:01[0m [90m[diffusion_model_runner.py:268][0m  Enabling offloader backend: LayerWiseOffloadBackend
+[32mINFO[0m [90m09-13 23:39:02[0m [90m[diffusion_model_runner.py:242][0m Model loading took 10.2852 GiB and 141.818483 seconds
+[32mINFO[0m [90m09-13 23:39:02[0m [90m[diffusion_model_runner.py:247][0m Model runner: Model loaded successfully.
+[32mINFO[0m [90m09-13 23:39:02[0m [90m[diffusion_model_runner.py:268][0m  Enabling offloader backend: LayerWiseOffloadBackend
+[32mINFO[0m [90m09-13 23:39:03[0m [90m[layerwise_backend.py:315][0m Applying layer-wise offloading on ['transformer']
+[32mINFO[0m [90m09-13 23:39:03[0m [90m[layerwise_backend.py:321][0m Applying hooks on transformer (MiniMaxH3DiTModel)
+[32mINFO[0m [90m09-13 23:39:04[0m [90m[layerwise_backend.py:315][0m Applying layer-wise offloading on ['transformer']
+[32mINFO[0m [90m09-13 23:39:04[0m [90m[layerwise_backend.py:321][0m Applying hooks on transformer (MiniMaxH3DiTModel)
+[32mINFO[0m [90m09-13 23:39:05[0m [90m[layerwise_backend.py:315][0m Applying layer-wise offloading on ['transformer']
+[32mINFO[0m [90m09-13 23:39:05[0m [90m[layerwise_backend.py:321][0m Applying hooks on transformer (MiniMaxH3DiTModel)
+[32mINFO[0m [90m09-13 23:39:05[0m [90m[layerwise_backend.py:315][0m Applying layer-wise offloading on ['transformer']
+[32mINFO[0m [90m09-13 23:39:05[0m [90m[layerwise_backend.py:321][0m Applying hooks on transformer (MiniMaxH3DiTModel)
+[32mINFO[0m [90m09-13 23:39:07[0m [90m[layerwise_backend.py:315][0m Applying layer-wise offloading on ['transformer']
+[32mINFO[0m [90m09-13 23:39:07[0m [90m[layerwise_backend.py:321][0m Applying hooks on transformer (MiniMaxH3DiTModel)
+[32mINFO[0m [90m09-13 23:39:08[0m [90m[layerwise_backend.py:393][0m Layer-wise offloading enabled on 50 layers (blocks)
+[33mWARNING[0m [90m09-13 23:39:08[0m [90m[diffusion_model_runner.py:286][0m Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+[32mINFO[0m [90m09-13 23:39:08[0m [90m[diffusion_model_runner.py:321][0m Model runner: Initialization complete.
+[33mWARNING[0m [90m09-13 23:39:09[0m [90m[gpu_memory_utils.py:88][0m NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+[32mINFO[0m [90m09-13 23:39:09[0m [90m[manager.py:96][0m Initializing DiffusionLoRAManager: device=npu:7, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+[32mINFO[0m [90m09-13 23:39:09[0m [90m[diffusion_worker.py:258][0m Worker 7: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:09[0m [90m[diffusion_worker.py:1185][0m Worker 7: Scheduler loop started.
+[32mINFO[0m [90m09-13 23:39:09[0m [90m[diffusion_worker.py:1031][0m Worker 7 ready to receive requests via shared memory
+[32mINFO[0m [90m09-13 23:39:12[0m [90m[layerwise_backend.py:393][0m Layer-wise offloading enabled on 50 layers (blocks)
+[33mWARNING[0m [90m09-13 23:39:12[0m [90m[diffusion_model_runner.py:286][0m Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+[32mINFO[0m [90m09-13 23:39:12[0m [90m[diffusion_model_runner.py:321][0m Model runner: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[layerwise_backend.py:393][0m Layer-wise offloading enabled on 50 layers (blocks)
+[33mWARNING[0m [90m09-13 23:39:13[0m [90m[diffusion_model_runner.py:286][0m Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[diffusion_model_runner.py:321][0m Model runner: Initialization complete.
+[33mWARNING[0m [90m09-13 23:39:13[0m [90m[gpu_memory_utils.py:88][0m NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[manager.py:96][0m Initializing DiffusionLoRAManager: device=npu:1, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[diffusion_worker.py:258][0m Worker 1: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[diffusion_worker.py:1185][0m Worker 1: Scheduler loop started.
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[diffusion_worker.py:1031][0m Worker 1 ready to receive requests via shared memory
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[layerwise_backend.py:393][0m Layer-wise offloading enabled on 50 layers (blocks)
+[33mWARNING[0m [90m09-13 23:39:13[0m [90m[diffusion_model_runner.py:286][0m Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[diffusion_model_runner.py:321][0m Model runner: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[layerwise_backend.py:393][0m Layer-wise offloading enabled on 50 layers (blocks)
+[33mWARNING[0m [90m09-13 23:39:13[0m [90m[diffusion_model_runner.py:286][0m Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[diffusion_model_runner.py:321][0m Model runner: Initialization complete.
+[33mWARNING[0m [90m09-13 23:39:13[0m [90m[gpu_memory_utils.py:88][0m NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[manager.py:96][0m Initializing DiffusionLoRAManager: device=npu:0, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[diffusion_worker.py:258][0m Worker 0: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[diffusion_worker.py:1185][0m Worker 0: Scheduler loop started.
+[32mINFO[0m [90m09-13 23:39:13[0m [90m[diffusion_worker.py:1031][0m Worker 0 ready to receive requests via shared memory
+[33mWARNING[0m [90m09-13 23:39:14[0m [90m[gpu_memory_utils.py:88][0m NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[manager.py:96][0m Initializing DiffusionLoRAManager: device=npu:2, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_worker.py:258][0m Worker 2: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_worker.py:1185][0m Worker 2: Scheduler loop started.
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_worker.py:1031][0m Worker 2 ready to receive requests via shared memory
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_model_runner.py:242][0m Model loading took 10.2852 GiB and 153.355653 seconds
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_model_runner.py:247][0m Model runner: Model loaded successfully.
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_model_runner.py:268][0m  Enabling offloader backend: LayerWiseOffloadBackend
+[33mWARNING[0m [90m09-13 23:39:14[0m [90m[gpu_memory_utils.py:88][0m NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[manager.py:96][0m Initializing DiffusionLoRAManager: device=npu:5, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_worker.py:258][0m Worker 5: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_worker.py:1185][0m Worker 5: Scheduler loop started.
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_worker.py:1031][0m Worker 5 ready to receive requests via shared memory
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_model_runner.py:242][0m Model loading took 10.2852 GiB and 153.929804 seconds
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_model_runner.py:247][0m Model runner: Model loaded successfully.
+[32mINFO[0m [90m09-13 23:39:14[0m [90m[diffusion_model_runner.py:268][0m  Enabling offloader backend: LayerWiseOffloadBackend
+[32mINFO[0m [90m09-13 23:39:15[0m [90m[diffusion_model_runner.py:242][0m Model loading took 10.2852 GiB and 154.766527 seconds
+[32mINFO[0m [90m09-13 23:39:15[0m [90m[diffusion_model_runner.py:247][0m Model runner: Model loaded successfully.
+[32mINFO[0m [90m09-13 23:39:15[0m [90m[diffusion_model_runner.py:268][0m  Enabling offloader backend: LayerWiseOffloadBackend
+[32mINFO[0m [90m09-13 23:39:18[0m [90m[layerwise_backend.py:315][0m Applying layer-wise offloading on ['transformer']
+[32mINFO[0m [90m09-13 23:39:18[0m [90m[layerwise_backend.py:321][0m Applying hooks on transformer (MiniMaxH3DiTModel)
+[32mINFO[0m [90m09-13 23:39:19[0m [90m[layerwise_backend.py:315][0m Applying layer-wise offloading on ['transformer']
+[32mINFO[0m [90m09-13 23:39:19[0m [90m[layerwise_backend.py:321][0m Applying hooks on transformer (MiniMaxH3DiTModel)
+[32mINFO[0m [90m09-13 23:39:19[0m [90m[layerwise_backend.py:315][0m Applying layer-wise offloading on ['transformer']
+[32mINFO[0m [90m09-13 23:39:19[0m [90m[layerwise_backend.py:321][0m Applying hooks on transformer (MiniMaxH3DiTModel)
+[32mINFO[0m [90m09-13 23:39:23[0m [90m[layerwise_backend.py:393][0m Layer-wise offloading enabled on 50 layers (blocks)
+[33mWARNING[0m [90m09-13 23:39:23[0m [90m[diffusion_model_runner.py:286][0m Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+[32mINFO[0m [90m09-13 23:39:23[0m [90m[diffusion_model_runner.py:321][0m Model runner: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:23[0m [90m[layerwise_backend.py:393][0m Layer-wise offloading enabled on 50 layers (blocks)
+[33mWARNING[0m [90m09-13 23:39:23[0m [90m[diffusion_model_runner.py:286][0m Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+[32mINFO[0m [90m09-13 23:39:23[0m [90m[diffusion_model_runner.py:321][0m Model runner: Initialization complete.
+[33mWARNING[0m [90m09-13 23:39:24[0m [90m[gpu_memory_utils.py:88][0m NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+[32mINFO[0m [90m09-13 23:39:24[0m [90m[manager.py:96][0m Initializing DiffusionLoRAManager: device=npu:4, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+[32mINFO[0m [90m09-13 23:39:24[0m [90m[diffusion_worker.py:258][0m Worker 4: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:24[0m [90m[diffusion_worker.py:1185][0m Worker 4: Scheduler loop started.
+[32mINFO[0m [90m09-13 23:39:24[0m [90m[diffusion_worker.py:1031][0m Worker 4 ready to receive requests via shared memory
+[33mWARNING[0m [90m09-13 23:39:25[0m [90m[gpu_memory_utils.py:88][0m NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+[32mINFO[0m [90m09-13 23:39:25[0m [90m[manager.py:96][0m Initializing DiffusionLoRAManager: device=npu:6, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+[32mINFO[0m [90m09-13 23:39:25[0m [90m[diffusion_worker.py:258][0m Worker 6: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:25[0m [90m[diffusion_worker.py:1185][0m Worker 6: Scheduler loop started.
+[32mINFO[0m [90m09-13 23:39:25[0m [90m[diffusion_worker.py:1031][0m Worker 6 ready to receive requests via shared memory
+[32mINFO[0m [90m09-13 23:39:25[0m [90m[layerwise_backend.py:393][0m Layer-wise offloading enabled on 50 layers (blocks)
+[33mWARNING[0m [90m09-13 23:39:25[0m [90m[diffusion_model_runner.py:286][0m Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+[32mINFO[0m [90m09-13 23:39:25[0m [90m[diffusion_model_runner.py:321][0m Model runner: Initialization complete.
+[33mWARNING[0m [90m09-13 23:39:26[0m [90m[gpu_memory_utils.py:88][0m NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+[32mINFO[0m [90m09-13 23:39:26[0m [90m[manager.py:96][0m Initializing DiffusionLoRAManager: device=npu:3, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+[32mINFO[0m [90m09-13 23:39:26[0m [90m[diffusion_worker.py:258][0m Worker 3: Initialization complete.
+[32mINFO[0m [90m09-13 23:39:26[0m [90m[diffusion_worker.py:1185][0m Worker 3: Scheduler loop started.
+[32mINFO[0m [90m09-13 23:39:26[0m [90m[diffusion_worker.py:1031][0m Worker 3 ready to receive requests via shared memory
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:26 [multiproc_executor.py:689] Async result pump started
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:26 [diffusion_engine.py:279] [RequestBatch] engine init max_num_seqs=1 max_wait_ms=0.0
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:26 [diffusion_engine.py:865] Skipping dummy warmup run (num_frames=0)
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:26 [inline_stage_diffusion_client.py:72] [InlineStageDiffusionClient] stage-0 [rep-0] initialized inline (batch_size=1)
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:26 [stage_runtime.py:662] [StageRuntime] Stage 0 replica 0 initialized (diffusion, batch_size=1)
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:26 [orchestrator.py:507] [Orchestrator] Starting event loop
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:26 [async_omni_engine.py:306] [AsyncOmniEngine] Orchestrator ready with 1 stages
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:26 [omni_base.py:190] [AsyncOmni] AsyncOmniEngine initialized in 197.25 seconds
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:26 [omni_base.py:210] [AsyncOmni] Initialized with 1 stages for model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [api_server.py:734] Detected pure diffusion mode (single diffusion stage)
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [speaker_cache.py:242] Speaker cache ready (max_bytes=536870912)
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [serving_speech.py:350] Speaker storage: dir=/home/ma-user/.cache/vllm-omni/speakers, max_speakers=1000, restored=0
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [serving.py:91] Robot OpenPI serving disabled for model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [api_server.py:807] Pure diffusion API server initialized for model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [api_server.py:534] Starting vLLM API server (pure diffusion mode) on http://127.0.0.1:19098
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:37] Available routes are:
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /docs, Methods: GET, HEAD
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /redoc, Methods: GET, HEAD
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /load, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /version, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /health, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /metrics, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /tokenize, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /detokenize, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /ping, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /ping, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /invocations, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/responses, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/completions, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/messages, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /generative_scoring, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/chat/completions/derender, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/completions/derender, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/audio/speech, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/audio/speech/batch, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/audio/generate, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/audio/voices, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/audio/voices, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/audio/voices/{name}, Methods: DELETE
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /health, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/models, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/images/generations, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/images/edits, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/videos, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/videos/sync, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/videos, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/videos/{video_id}, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/videos/{video_id}, Methods: DELETE
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/videos/{video_id}/content, Methods: GET
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/omni/sleep, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/omni/wakeup, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:57] Route: /v1/audio/speech/stream, Endpoint: streaming_speech
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:57] Route: /v1/video/chat/stream, Endpoint: streaming_video_chat
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:57] Route: /v1/realtime/video, Endpoint: streaming_video_output
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:57] Route: /v1/realtime, Endpoint: realtime_websocket
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:57] Route: /v1/realtime/robot/openpi, Endpoint: realtime_robot_openpi
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:27 [launcher.py:57] Route: /v1/duplex, Endpoint: duplex_websocket
+[0;36m(APIServer pid=322752)[0;0m INFO:     Started server process [322752]
+[0;36m(APIServer pid=322752)[0;0m INFO:     Waiting for application startup.
+[0;36m(APIServer pid=322752)[0;0m INFO:     Application startup complete.
+[0;36m(APIServer pid=322752)[0;0m INFO:     127.0.0.1:38624 - "GET /health HTTP/1.1" 200 OK
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:29 [api_server.py:3084] Video generation handler: OmniOpenAIServingVideo
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:29 [serving_video.py:184] Boundary ratio parse: request=None gen_params=None
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:29 [serving_video.py:221] Applied extra_params: {'task': 'ref2va', 'duration': 5.0, 'audio_flow_shift': 3.0}
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:39:29 [serving_video.py:225] Video sampling params: steps=2 guidance=None guidance_2=None seed=4101
+[32mINFO[0m [90m09-13 23:39:34[0m [90m[pipeline_minimax_h3.py:536][0m MiniMax H3 ref2va Qwen presentation: 6138 tokens, 1 reference videos
+/cache/zhonghao/h3/env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:34<00:00, 34.76s/it]100%|██████████| 1/1 [00:34<00:00, 34.76s/it]
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 23:40:40[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+........................[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] 
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] [Overall Summary]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] +-----------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] | Field                       |       Value |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] +-----------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] | e2e_requests                |           1 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] | e2e_wall_time_ms            | 120,334.095 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] | e2e_avg_time_per_request_ms | 120,334.095 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] | e2e_stage_0_wall_time_ms    | 120,333.944 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:765] +-----------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:791] 
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:791] [RequestE2EStats [request_id=video_sync-939728ce6026cb05-9bd74209]]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:791] +--------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:791] | Field        |       Value |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:791] +--------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:791] | e2e_total_ms | 120,333.944 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:791] +--------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:832] [OmniTiming] req=video_sync-939728ce6026cb05-9bd74209 total=120.33s engine=120.33s stages=[0:120.33s]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] 
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] [StageRequestStats [request_id=video_sync-939728ce6026cb05-9bd74209]]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] +---------------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | Field                           |           0 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] +---------------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | audio_duration_s                |       5.175 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | audio_generated_frames          |     165,600 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | audio_sample_rate               |      32,000 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | batch_id                        |           1 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | batch_size                      |           1 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | denoise_step_latency_ms         |  60,166.423 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | image_pixels                    |     499,968 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | inter_output_latencies_ms       |             |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | output_unit_count               |           1 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | output_unit_type                |       image |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | serving_time_to_first_output_ms | 120,333.152 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | stage_gen_time_ms               | 120,332.845 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] | vllm_itls_ms                    |             |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:29 [stats.py:874] +---------------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:39 [serving_video.py:347] Video response encoding (MP4 bytes): 9687.70 ms
+[0;36m(APIServer pid=322752)[0;0m INFO:     127.0.0.1:38626 - "POST /v1/videos/sync HTTP/1.1" 200 OK
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:43 [api_server.py:3084] Video generation handler: OmniOpenAIServingVideo
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:43 [serving_video.py:184] Boundary ratio parse: request=None gen_params=None
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:43 [serving_video.py:221] Applied extra_params: {'task': 'ref2va', 'duration': 5.0, 'audio_flow_shift': 3.0}
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:41:43 [serving_video.py:225] Video sampling params: steps=50 guidance=None guidance_2=None seed=4101
+[32mINFO[0m [90m09-13 23:41:48[0m [90m[pipeline_minimax_h3.py:536][0m MiniMax H3 ref2va Qwen presentation: 6138 tokens, 1 reference videos
+/cache/zhonghao/h3/env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+  0%|          | 0/49 [00:00<?, ?it/s]  2%|▏         | 1/49 [00:16<13:16, 16.59s/it]  4%|▍         | 2/49 [00:33<12:55, 16.50s/it]  6%|▌         | 3/49 [00:49<12:37, 16.47s/it]  8%|▊         | 4/49 [01:05<12:21, 16.47s/it] 10%|█         | 5/49 [01:22<12:05, 16.49s/it] 12%|█▏        | 6/49 [01:38<11:47, 16.46s/it] 14%|█▍        | 7/49 [01:55<11:31, 16.45s/it] 16%|█▋        | 8/49 [02:11<11:13, 16.44s/it] 18%|█▊        | 9/49 [02:28<10:58, 16.45s/it] 20%|██        | 10/49 [02:44<10:42, 16.46s/it] 22%|██▏       | 11/49 [03:01<10:25, 16.46s/it] 24%|██▍       | 12/49 [03:17<10:08, 16.45s/it] 27%|██▋       | 13/49 [03:34<09:52, 16.46s/it] 29%|██▊       | 14/49 [03:50<09:35, 16.45s/it] 31%|███       | 15/49 [04:06<09:19, 16.46s/it] 33%|███▎      | 16/49 [04:23<09:02, 16.45s/it] 35%|███▍      | 17/49 [04:39<08:46, 16.46s/it] 37%|███▋      | 18/49 [04:56<08:30, 16.45s/it] 39%|███▉      | 19/49 [05:12<08:13, 16.46s/it] 41%|████      | 20/49 [05:29<07:57, 16.46s/it] 43%|████▎     | 21/49 [05:45<07:40, 16.46s/it] 45%|████▍     | 22/49 [06:02<07:24, 16.46s/it] 47%|████▋     | 23/49 [06:18<07:08, 16.46s/it] 49%|████▉     | 24/49 [06:35<06:51, 16.46s/it] 51%|█████     | 25/49 [06:51<06:35, 16.46s/it] 53%|█████▎    | 26/49 [07:07<06:18, 16.46s/it] 55%|█████▌    | 27/49 [07:24<06:02, 16.47s/it] 57%|█████▋    | 28/49 [07:40<05:45, 16.46s/it] 59%|█████▉    | 29/49 [07:57<05:29, 16.46s/it] 61%|██████    | 30/49 [08:13<05:12, 16.46s/it] 63%|██████▎   | 31/49 [08:30<04:56, 16.45s/it] 65%|██████▌   | 32/49 [08:46<04:39, 16.45s/it] 67%|██████▋   | 33/49 [09:03<04:23, 16.46s/it] 69%|██████▉   | 34/49 [09:19<04:07, 16.47s/it] 71%|███████▏  | 35/49 [09:36<03:50, 16.47s/it] 73%|███████▎  | 36/49 [09:52<03:34, 16.47s/it] 76%|███████▌  | 37/49 [10:09<03:17, 16.47s/it] 78%|███████▊  | 38/49 [10:25<03:01, 16.46s/it] 80%|███████▉  | 39/49 [10:41<02:44, 16.46s/it] 82%|████████▏ | 40/49 [10:58<02:28, 16.47s/it] 84%|████████▎ | 41/49 [11:14<02:11, 16.47s/it] 86%|████████▌ | 42/49 [11:31<01:55, 16.51s/it] 88%|████████▊ | 43/49 [11:48<01:39, 16.53s/it] 90%|████████▉ | 44/49 [12:04<01:22, 16.51s/it] 92%|█████████▏| 45/49 [12:21<01:05, 16.50s/it] 94%|█████████▍| 46/49 [12:37<00:49, 16.50s/it] 96%|█████████▌| 47/49 [12:54<00:32, 16.49s/it] 98%|█████████▊| 48/49 [13:10<00:16, 16.48s/it]100%|██████████| 49/49 [13:26<00:00, 16.49s/it]100%|██████████| 49/49 [13:26<00:00, 16.47s/it]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] 
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] [Overall Summary]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] +-----------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] | Field                       |       Value |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] +-----------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] | e2e_requests                |           1 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] | e2e_wall_time_ms            | 833,358.241 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] | e2e_avg_time_per_request_ms | 833,358.241 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] | e2e_stage_0_wall_time_ms    | 833,358.028 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:765] +-----------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:791] 
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:791] [RequestE2EStats [request_id=video_sync-abeff347c0be9870-a22fad64]]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:791] +--------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:791] | Field        |       Value |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:791] +--------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:791] | e2e_total_ms | 833,358.028 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:791] +--------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:832] [OmniTiming] req=video_sync-abeff347c0be9870-a22fad64 total=833.36s engine=833.36s stages=[0:833.36s]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] 
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] [StageRequestStats [request_id=video_sync-abeff347c0be9870-a22fad64]]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] +---------------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | Field                           |           0 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] +---------------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | audio_duration_s                |       5.175 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | audio_generated_frames          |     165,600 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | audio_sample_rate               |      32,000 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | batch_id                        |           2 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | batch_size                      |           1 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | denoise_step_latency_ms         |  16,667.140 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | image_pixels                    |     499,968 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | inter_output_latencies_ms       |             |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | output_unit_count               |           1 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | output_unit_type                |       image |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | serving_time_to_first_output_ms | 833,357.422 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | stage_gen_time_ms               | 833,356.993 |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] | vllm_itls_ms                    |             |
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:36 [stats.py:874] +---------------------------------+-------------+
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:48 [serving_video.py:347] Video response encoding (MP4 bytes): 11896.55 ms
+[0;36m(APIServer pid=322752)[0;0m INFO:     127.0.0.1:35934 - "POST /v1/videos/sync HTTP/1.1" 200 OK
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:51 [launcher.py:100] [shutdown] API server: shutdown triggered
+[32mINFO[0m [90m09-13 23:55:51[0m [90m[diffusion_worker.py:1194][0m Worker 5: Shutdown signal received, starting cleanup.
+[32mINFO[0m [90m09-13 23:55:51[0m [90m[diffusion_worker.py:1194][0m Worker 2: Shutdown signal received, starting cleanup.
+[32mINFO[0m [90m09-13 23:55:51[0m [90m[diffusion_worker.py:1194][0m Worker 7: Shutdown signal received, starting cleanup.
+[32mINFO[0m [90m09-13 23:55:51[0m [90m[diffusion_worker.py:1194][0m Worker 1: Shutdown signal received, starting cleanup.
+[32mINFO[0m [90m09-13 23:55:51[0m [90m[diffusion_worker.py:1194][0m Worker 6: Shutdown signal received, starting cleanup.
+[32mINFO[0m [90m09-13 23:55:51[0m [90m[diffusion_worker.py:1194][0m Worker 3: Shutdown signal received, starting cleanup.
+[32mINFO[0m [90m09-13 23:55:51[0m [90m[diffusion_worker.py:1194][0m Worker 0: Shutdown signal received, starting cleanup.
+[32mINFO[0m [90m09-13 23:55:51[0m [90m[diffusion_worker.py:1194][0m Worker 4: Shutdown signal received, starting cleanup.
+[0;36m(APIServer pid=322752)[0;0m INFO:     Shutting down
+[0;36m(APIServer pid=322752)[0;0m INFO:     Waiting for application shutdown.
+[0;36m(APIServer pid=322752)[0;0m INFO:     Application shutdown complete.
+[0;36m(APIServer pid=322752)[0;0m INFO:     Finished server process [322752]
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:51 [omni_base.py:630] [AsyncOmni] Shutting down
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:51 [async_omni_engine.py:1827] [AsyncOmniEngine] Shutting down Orchestrator
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:51 [orchestrator.py:612] [Orchestrator] Received shutdown signal
+[0;36m(APIServer pid=322752)[0;0m INFO 09-13 23:55:51 [orchestrator.py:2258] [Orchestrator] Shutting down all 1 client(s)
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+    kind, result = conn.recv()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    raise EOFError
+EOFError
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+Exception in thread Thread-1:
+           ^^^^^^^^^^^^^^^^^
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "<string>", line 2, in get
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+    self.run()
+          ^^^^^^^^^^^^^^^^^^
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+    buf = self._recv(4)
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    item = self.task_q.get()
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    raise EOFError
+EOFError
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+    raise EOFError
+EOFError
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SystemExit: 143
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+During handling of the above exception, another exception occurred:
+
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+SystemExit: 143
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+[0;36m(APIServer pid=322752)[0;0m WARNING 09-13 23:55:56 [multiproc_executor.py:60] Terminating diffusion worker DiffusionWorker-0 after timeout
+[0;36m(APIServer pid=322752)[0;0m WARNING 09-13 23:56:06 [multiproc_executor.py:60] Terminating diffusion worker DiffusionWorker-1 after timeout
+[0;36m(APIServer pid=322752)[0;0m WARNING 09-13 23:56:16 [multiproc_executor.py:60] Terminating diffusion worker DiffusionWorker-2 after timeout

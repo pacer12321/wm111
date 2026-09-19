@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "sample_id": "omni_temporal_reordering_08_first124",
+  "created_at": "2026-09-15T10:00:00Z",
+  "source_video": "/cache/zhonghao/h3/data/temporal_reordering_08_124/source.mp4",
+  "source_sha256": "e7025fe9d11109c24af0a3114c4dc99b27dd81c20c6194b1d49466ea241a3bb9",
+  "source_metadata": {
+    "width": 1280,
+    "height": 720,
+    "frames": 124,
+    "fps": 24,
+    "duration_seconds": 5.166667,
+    "has_audio": false
+  },
+  "edit_prompt": "Let the girl on the right in the video do the dancing action first, then the girl on the left follows, reflecting the relationship of the girl on the right teaching the girl on the left to dance.",
+  "requested_generation": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "duration_seconds": 5.0,
+    "seed": 4101,
+    "num_inference_steps": 50,
+    "flow_shift": 12.0,
+    "audio_flow_shift": 3.0
+  },
+  "provenance": {
+    "dataset": "OmniEdit-Bench",
+    "official_source_id": "Te_Temporal_reordering_08",
+    "source_url": "https://huggingface.co/datasets/OmniEdit-Bench/OmniEdit-Bench/resolve/main/Temporal/Temporal%20Composition/Temporal_reordering/8_1280x720.mp4",
+    "source_operation": "first 124 frames, H.264 CRF18 re-encode for the common H3 shape",
+    "official_instruction": true,
+    "official_paired_target_available": false,
+    "license": "CC-BY-NC-4.0 (dataset card; research use)"
+  },
+  "router_control": {
+    "temporal_change_required": true,
+    "text_only_should_identify_temporal_edit": true,
+    "vlm_necessity_evidence": false,
+    "expected_policy": "Selector may reuse stable background tokens; active action tokens retain full source visibility. No strict same-frame attention mask."
+  }
+}

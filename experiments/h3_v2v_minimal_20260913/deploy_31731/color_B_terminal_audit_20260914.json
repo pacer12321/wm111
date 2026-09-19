@@ -1,0 +1,2375 @@
+{
+  "schema_version": 1,
+  "audit_status": "passed",
+  "assessment_type": "independent_B_terminal_audit_with_transparent_audit_helper_corrections",
+  "author_agent": "/root/h3_b_smoke_result_audit",
+  "run_id": "b52c1cc39548462f9a6b1f6124fef1ea",
+  "run_directory": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea",
+  "observation_interval_utc": {
+    "start": "2026-09-14T05:20:59.743574+00:00",
+    "end": "2026-09-14T05:22:12.141261+00:00"
+  },
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "assessment": {
+    "blocker_found": false,
+    "explanation": "All requested B dependency/load/request/media/exit/resource checks passed in the actual read-only observations. Two audit-helper assumptions caused early exits; these were reviewed explicitly, not silently treated as model failures or ignored. The final supplemental log read resolves the only outstanding log-order check.",
+    "dependencies": {
+      "current_equals_frozen": true,
+      "different_top_keys": [],
+      "seconds": 1.483673521084711,
+      "source_code_records": 29,
+      "ref2va_records": 81,
+      "stage_b_records": 4,
+      "logging_matches_expected": true,
+      "vlm_run_id": "4cfa7803ddc3482a8906b91184743384",
+      "vlm_classification": "preserve"
+    },
+    "release": {
+      "record": {
+        "path": "/cache/zhonghao/h3/color_trial_v1/release_sha256.json",
+        "size_bytes": 1963,
+        "sha256": "a70c2cea17e254a7fb2857ea0e5f98816be50fe5e42756eaa60b8df95d659878"
+      },
+      "file_count": 19,
+      "mismatches": []
+    },
+    "attention_policy": "B original linear + local softmax; source globally visible; no C corresponding-frame restriction",
+    "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+    "generation": {
+      "width": 1344,
+      "height": 768,
+      "fps": 24,
+      "duration_seconds": 5,
+      "seed": 4101,
+      "num_inference_steps": 50,
+      "flow_shift": 12,
+      "audio_flow_shift": 3
+    },
+    "parallelism": {
+      "num_gpus": 8,
+      "usp": 8,
+      "ring": 1,
+      "dit_tensor_parallel_size": 1,
+      "text_encoder_tp_size": 8,
+      "layerwise_offload": true,
+      "vae_use_tiling": true,
+      "vae_parallel_mode": "tile",
+      "vae_patch_parallel_size": 8,
+      "attention_backend": "FLASH_ATTN",
+      "listen_host": "127.0.0.1",
+      "listen_port": 19099,
+      "dtype_cli_override": null,
+      "hccl_internal_ports": "Unchanged original vLLM automatic allocation"
+    },
+    "source": {
+      "path": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+      "sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+      "size_bytes": 1527004
+    },
+    "loaded_worker_pids": [
+      870084,
+      870085,
+      870086,
+      870087,
+      870088,
+      870089,
+      870090,
+      870091
+    ],
+    "base_tensors_per_pid": 535,
+    "branch_tensors_per_pid": 800,
+    "lora_pairs_per_pid": 208,
+    "load_parser": "Actual frozen color_trial_v1/b/b_trial_gates.py parse_full_load_evidence, applied to both smoke prefix and entire completed server.log.",
+    "load_prefix_bytes": 138441,
+    "load_prefix_sha256": "0b9f01b220d8d0973d775389669817b97542c2b81cf2935939801711f0382a92",
+    "restored_intraop_threads_per_pid": 192,
+    "restored_interop_threads_per_pid": 192,
+    "original_ten_identities_exited": true,
+    "owned_B_group_empty": true,
+    "request_results": [
+      {
+        "name": "smoke_2step",
+        "result": {
+          "completed_at": "2026-09-14T05:01:36.429155+00:00",
+          "success": true,
+          "http_code": "200",
+          "curl_returncode": 0,
+          "request_end_to_end_seconds": 149.01836418709718,
+          "requested_steps": 2,
+          "output_video": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/output/smoke_2step.mp4",
+          "output_sha256": "9897446c7b0888b8080668287405ce81ac36a563691613780ef48bf37be849f4"
+        },
+        "media": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/output/smoke_2step.mp4",
+          "size_bytes": 5358182,
+          "sha256": "9897446c7b0888b8080668287405ce81ac36a563691613780ef48bf37be849f4"
+        },
+        "fresh_ffprobe_checks": {
+          "dimensions": [
+            1344,
+            768
+          ],
+          "fps": 24,
+          "frame_count": 124,
+          "container_duration_seconds": 5.207
+        }
+      },
+      {
+        "name": "b_50step",
+        "result": {
+          "completed_at": "2026-09-14T05:17:36.383188+00:00",
+          "success": true,
+          "http_code": "200",
+          "curl_returncode": 0,
+          "request_end_to_end_seconds": 956.1085797089618,
+          "requested_steps": 50,
+          "output_video": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/output/b_50step.mp4",
+          "output_sha256": "3fbab6d81d65bb40a0d86e889f7348eb37d2b3107d02cc5e87ea45875f5fd950"
+        },
+        "media": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/output/b_50step.mp4",
+          "size_bytes": 4897397,
+          "sha256": "3fbab6d81d65bb40a0d86e889f7348eb37d2b3107d02cc5e87ea45875f5fd950"
+        },
+        "fresh_ffprobe_checks": {
+          "dimensions": [
+            1344,
+            768
+          ],
+          "fps": 24,
+          "frame_count": 124,
+          "container_duration_seconds": 5.207
+        }
+      }
+    ],
+    "fresh_resource": {
+      "observed_at_utc": "2026-09-14T05:21:34.732295+00:00",
+      "all_eight_idle": true,
+      "health": {
+        "health": {
+          "0": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "1": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "2": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "3": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "4": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "5": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "6": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "7": {
+            "model": "910B3",
+            "health": "OK"
+          }
+        },
+        "hbm": {
+          "0": {
+            "used_mib": 3410,
+            "total_mib": 65536,
+            "free_mib": 62126
+          },
+          "1": {
+            "used_mib": 3411,
+            "total_mib": 65536,
+            "free_mib": 62125
+          },
+          "2": {
+            "used_mib": 3410,
+            "total_mib": 65536,
+            "free_mib": 62126
+          },
+          "3": {
+            "used_mib": 3410,
+            "total_mib": 65536,
+            "free_mib": 62126
+          },
+          "4": {
+            "used_mib": 3410,
+            "total_mib": 65536,
+            "free_mib": 62126
+          },
+          "5": {
+            "used_mib": 3410,
+            "total_mib": 65536,
+            "free_mib": 62126
+          },
+          "6": {
+            "used_mib": 3410,
+            "total_mib": 65536,
+            "free_mib": 62126
+          },
+          "7": {
+            "used_mib": 3409,
+            "total_mib": 65536,
+            "free_mib": 62127
+          }
+        }
+      },
+      "limitation": "A point-in-time read at the stated timestamp. This is not a claim that cards remain idle after the root starts C."
+    },
+    "historical_cleanup": {
+      "owned_group_members": [],
+      "historical_idle": {
+        "selected_physical_cards": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "explicitly_idle_cards": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "other_busy_cards": []
+      },
+      "historical_idle_matches_status": true,
+      "finished_at": "2026-09-14T05:18:10.225627+00:00"
+    },
+    "log_order": {
+      "formal_completed_at_utc": "2026-09-14T05:17:36.383188+00:00",
+      "first_shutdown_line": 1048,
+      "first_shutdown_raw": "(APIServer pid=869394) H3B pid=869394 2026-09-14 13:17:38,643 INFO vllm_omni.entrypoints.omni_base [AsyncOmni] Shutting down",
+      "first_shutdown_utc": "2026-09-14T05:17:38.643+00:00",
+      "first_named_cleanup_error_line": 1266,
+      "named_cleanup_error_count": 19,
+      "all_named_cleanup_errors_after_shutdown": true,
+      "shutdown_after_formal_result_completed_at": true,
+      "log_http_access_200_lines_present": false,
+      "note": "B's custom log contains a Route registration, not HTTP access 200 records. HTTP success is independently supported by both actual response.headers, curl.stdout, curl returncode/result/status and media. Log warnings are later than the explicitly timestamped shutdown, which follows formal result completion.",
+      "finished_at_utc": "2026-09-14T05:18:10.225627+00:00",
+      "matched_error_scope": "ConnectionRefusedError:, SystemExit: 143, and Terminating diffusion worker ... after timeout. Not an exhaustive semantic classification of all warnings."
+    }
+  },
+  "audit_helper_corrections": [
+    {
+      "attempt_chunk": "393b55",
+      "reported_error": "RuntimeError: historical before-formal health",
+      "cause": "A parsed saved JSON health object has string dictionary keys; selected_health_memory returns integer card keys. Direct equality compared different Python representations.",
+      "correction": "Applied normalize = json.loads(json.dumps(...)) to the newly read health object before comparison.",
+      "production_changes": false,
+      "verification": "The corrected comparison passed in the second read, which proceeded through both media and process-exit checks."
+    },
+    {
+      "attempt_chunk": "b2161a",
+      "reported_error": "RuntimeError: cleanup errors before formal HTTP200 or wrong HTTP count",
+      "cause": "The helper incorrectly required exactly two HTTP200 access lines in B server.log, copying an A-style logging assumption. B's custom logger did not emit these access lines.",
+      "correction": "Used the already verified raw response headers/curl/results for HTTP success, and an independent supplemental log read for timestamped shutdown and all named cleanup-error positions.",
+      "production_changes": false,
+      "verification": "Supplemental read returned the identical full-log SHA, shutdown at line1048 / 13:17:38.643+08, first matching cleanup error at1266 and 19 total. Formal result completed at05:17:36.383188Z."
+    }
+  ],
+  "actual_read_only_commands": {
+    "transport": "ssh -F C:/Users/DZH/.ssh/config-vdn-h3-30213 -p 31731 -T -o BatchMode=yes -o ConnectTimeout=15 vdn-h3-ascend-30213 $taskRemote",
+    "interpreter": "/cache/zhonghao/h3/env/bin/python -B",
+    "payload_transport": "UTF-8 Base64 passed to Python -c; no remote program file.",
+    "first_python_source": "import datetime,hashlib,json,os,re,sys,subprocess,time\nfrom pathlib import Path\nstart=datetime.datetime.now(datetime.timezone.utc).isoformat()\nr=Path('/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea'); root=Path('/cache/zhonghao/h3/color_trial_v1'); rid='b52c1cc39548462f9a6b1f6124fef1ea'\nreport={'schema_version':1,'audit_status':'started','observed_start_utc':start,'run_id':rid,'run_directory':str(r),'remote_writes':False,'model_execution':False}\ndef need(ok,label):\n if not ok: raise RuntimeError(label)\ndef record(p):\n need(p.is_file() and not p.is_symlink() and p.resolve()==p,'regular private path: '+str(p))\n raw=p.read_bytes()\n return {'path':str(p),'size_bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()}\ndef read(p): return json.loads(p.read_text())\ndef normalize(v): return json.loads(json.dumps(v))\ntry:\n need(r.is_dir() and r.resolve()==r,'fixed run')\n s=read(r/'b_status.json'); f=read(r/'frozen_evidence.json'); gate=read(r/'formal_smoke_gate.json')\n report['terminal_records']={n:record(r/n) for n in ('b_status.json','frozen_evidence.json','formal_smoke_gate.json','formal_logging.json','host_identity.json','npu_before_formal.txt','npu_after.txt')}\n need(report['terminal_records']['b_status.json']['sha256']=='da0d807dcc0c3da67ebf2fa5462ee38fd44874d5e88fbf6ad37a23cb3c5f91e6','status SHA')\n need(report['terminal_records']['frozen_evidence.json']['sha256']=='f67ef6473716c853e3e94cc6c694330317ce1b13c5a9853658eae1d33f26954e','frozen SHA')\n need(s['frozen_evidence_sha256']==report['terminal_records']['frozen_evidence.json']['sha256'],'status frozen binding')\n rel=record(root/'release_sha256.json')\n need(rel['sha256']=='a70c2cea17e254a7fb2857ea0e5f98816be50fe5e42756eaa60b8df95d659878','release SHA')\n files=read(root/'release_sha256.json')['files']; bad=[n for n,sha in files.items() if record(root/n)['sha256']!=sha]\n need(len(files)==19 and not bad,'release file hashes')\n report['release']={'record':rel,'file_count':len(files),'mismatches':bad}\n class NoModel:\n  def find_spec(self,fullname,path=None,target=None):\n   if fullname.split('.')[0] in {'torch','torch_npu','transformers','vllm','vllm_omni','vllm_ascend'}: raise RuntimeError('blocked model import '+fullname)\n sys.meta_path.insert(0,NoModel())\n original_run=subprocess.run; commands=[]\n def readonly_run(command,*args,**kwargs):\n  need(isinstance(command,list) and Path(command[0]).name in ('ffprobe','npu-smi'),'blocked subprocess')\n  if Path(command[0]).name=='npu-smi': need(command[1:]==['info'],'npu-smi read only')\n  commands.append(command); return original_run(command,*args,**kwargs)\n subprocess.run=readonly_run\n sys.path.insert(0,str(root/'b'))\n import run_b_trial as b\n need(Path(b.__file__).resolve()==root/'b/run_b_trial.py','B module path')\n def no_write(*args,**kwargs): raise RuntimeError('blocked write')\n b.base.atomic_json=no_write\n host=b.profiles.require_host(s['host'])\n need(host==f['host']==read(r/'host_identity.json'),'host boot')\n need(s['case']=='B' and s['run_id']==f['run_id']==rid and s['run_directory']==str(r) and s['group']=='01234567' and s['sample_id']=='shirt_red_couple_124','case run')\n need(s['phase']=='formal_completed_review_required' and s['formal_request_attempts']==1 and s['formal_50step_started'] is True and s['formal_50step_completed'] is True and s['cleanup_completed'] is True and s['selected_cards_verified_idle_after_cleanup'] is True and s['needs_attention'] is False and s['error'] is None and s['remaining_owned_process_groups']=={},'terminal flags')\n report['host']=host\n resource_time=datetime.datetime.now(datetime.timezone.utc).isoformat()\n resource=subprocess.run(['/usr/local/sbin/npu-smi','info'],capture_output=True,text=True,timeout=30,check=False)\n report['fresh_resource']={'observed_at_utc':resource_time,'returncode':resource.returncode,'stdout':resource.stdout,'stderr':resource.stderr}\n need(resource.returncode==0,'fresh npu-smi failed')\n try:\n  report['fresh_resource']['idle']=b.base.selected_idle(resource.stdout,tuple(range(8))); report['fresh_resource']['all_eight_idle']=True\n except RuntimeError as exc:\n  report['fresh_resource']['all_eight_idle']=False; report['fresh_resource']['idle_error']=str(exc)\n report['fresh_resource']['health']=b.base.selected_health_memory(resource.stdout,tuple(range(8)),0)\n obj=object.__new__(b.BTrialSupervisor); obj.host=host; obj.run_id=rid; obj.sample=b.gates.sample_profile(s['sample_id']); obj.selected=b.gates.selected_profile(s['group'],s['sample_id']); obj.run_dir=r\n before=time.monotonic(); current=obj.evidence_snapshot()\n report['dependency']={'current_equals_frozen':current==f,'different_top_keys':[k for k in set(current)|set(f) if current.get(k)!=f.get(k)],'seconds':time.monotonic()-before,'source_code_records':len(current['sources']),'ref2va_records':len(current['weights']['ref2va']['files']),'stage_b_records':len(current['weights']['stage_b']['files']),'logging_matches_expected':read(r/'formal_logging.json')==b.gates.logging_configuration(),'vlm_run_id':current['sample']['vlm']['evidence']['status']['run_id'],'vlm_classification':current['sample']['vlm']['evidence']['result']['classification']['classification']}\n need(current==f and report['dependency']['logging_matches_expected'],'dependency/logging')\n expected_generation={'width':1344,'height':768,'fps':24,'duration_seconds':5.0,'seed':4101,'num_inference_steps':50,'flow_shift':12.0,'audio_flow_shift':3.0}\n need(s['requested_generation']==f['generation']==expected_generation and s['parallelism']==f['parallelism'],'generation/parallelism')\n need(s['stage_b_checkpoint']==str(b.gates.CHECKPOINT) and s['attention_policy']=='B original linear + local softmax; source globally visible; no C corresponding-frame restriction','B policy')\n report['attention_policy']=s['attention_policy']; report['generation']=f['generation']; report['parallelism']=f['parallelism']; report['source']=current['sample']['source']; report['checkpoint']=s['stage_b_checkpoint']\n need(gate==s['formal_smoke_gate'] and gate['status']=='passed' and gate['host']==host and gate['run_id']==rid and gate['group']=='01234567' and gate['sample_id']=='shirt_red_couple_124','smoke gate')\n server=s['server_proc_identity']; ik=('pid','start_ticks','pgrp','session')\n need({k:server[k] for k in ik}=={'pid':869394,'start_ticks':129815269,'pgrp':869394,'session':869394} and s['server_pid']==869394,'server identity')\n need(all(gate['server_identity'][k]==server[k] for k in ik),'gate server')\n need(s['supervisor_pid']==868715 and s['supervisor_proc_identity']['pid']==868715 and s['supervisor_proc_identity']['start_ticks']==129812623,'supervisor identity')\n workers=gate['worker_identities_by_card']; need(set(workers)==set(map(str,range(8))),'8 worker cards')\n for card in range(8):\n  w=workers[str(card)]; need({k:w[k] for k in ik}=={'pid':870084+card,'start_ticks':129820402,'pgrp':869394,'session':869394},'worker identity '+str(card))\n log=(r/'server.log').read_bytes(); n=gate['server_log_prefix_bytes']\n need(type(n) is int and 0<n<=len(log),'prefix length'); prefix=log[:n]\n need(hashlib.sha256(prefix).hexdigest()==gate['server_log_prefix_sha256'],'prefix sha')\n loads=b.gates.parse_full_load_evidence(prefix.decode('utf-8',errors='replace'),f['weights'])\n need(normalize(loads)==gate['loaded_records_by_pid'] and set(loads)==set(range(870084,870092)),'8 prefix loads binding')\n full_loads=b.gates.parse_full_load_evidence(log.decode('utf-8',errors='replace'),f['weights'])\n need(full_loads==loads,'full log load drift/duplicates')\n for pid,row in loads.items():\n  cpu=row['cpu_loading']; need(cpu['intraop_before']==cpu['intraop_after']==192 and cpu['interop_before']==cpu['interop_after']==192,'restored 192 threads '+str(pid))\n report['loads']={'prefix_bytes':n,'prefix_sha256':gate['server_log_prefix_sha256'],'full_log_record':record(r/'server.log'),'loaded_records_by_pid':loads,'eight_pids_match_actual_cards':True,'full_log_equals_prefix_loads':True,'cpu_intraop_and_interop_restored_192':True}\n pre=(r/'npu_before_formal.txt').read_text()\n need(b.selected_workers(pre,tuple(range(8)))=={i:870084+i for i in range(8)},'historical before-formal card PID mapping')\n need(b.base.selected_health_memory(pre,tuple(range(8)),0)==gate['health'],'historical before-formal health')\n report['requests']=[]\n for name,steps in [('smoke_2step',2),('b_50step',50)]:\n  d=r/name; req=read(d/'request.json'); result=read(d/'result.json'); gen=f['generation']\n  fields={k:gen[k] for k in ('width','height','fps','flow_shift','seed')}; fields.update(prompt=obj.sample.prompt,num_inference_steps=steps,extra_params=json.dumps({'task':'ref2va','duration':gen['duration_seconds'],'audio_flow_shift':gen['audio_flow_shift']}))\n  need(req['host']==host and req['run_id']==rid and req['group']=='01234567' and req['sample_id']==obj.sample.sample_id and req['source_video']==str(obj.sample.source) and req['source_sha256']==f['sample']['source']['sha256'] and req['fields']==fields and req['requested_steps']==steps,'request binding '+name)\n  need(all(req['server_proc_identity'][k]==server[k] for k in ik),'request server '+name)\n  need(result==s[name] and result['success'] is True and result['requested_steps']==steps and result['curl_returncode']==0 and result['http_code']=='200' and result['content_type'].split(';')[0]=='video/mp4','result/status '+name)\n  h=(d/'response.headers').read_text(); out=(d/'curl.stdout').read_text(); err=(d/'curl.stderr').read_text()\n  need(re.findall(r'^HTTP/\\S+\\s+(\\d{3})\\b',h,re.M)[-1]=='200' and out.strip()=='200' and err=='','headers/stdout/stderr '+name)\n  need(re.findall(r'^content-type:\\s*([^\\r\\n]+)',h,re.I|re.M)[-1].strip().lower().split(';')[0]=='video/mp4','header mime '+name)\n  media=r/'output'/(name+'.mp4'); mr=record(media)\n  need(result['output_video']==str(media) and result['output_sha256']==mr['sha256'],'actual media SHA '+name)\n  probe=b.gates.video_probe(media,target=True); need(probe==read(d/'ffprobe.json')==result['ffprobe'],'actual decoded media '+name)\n  length=int(re.findall(r'^content-length:\\s*(\\d+)',h,re.I|re.M)[-1]); need(length==mr['size_bytes'],'HTTP content length '+name)\n  if steps==2: need(gate['smoke_request']==record(d/'request.json') and gate['smoke_result']==record(d/'result.json'),'smoke proof file SHA')\n  else: need(mr['sha256']=='3fbab6d81d65bb40a0d86e889f7348eb37d2b3107d02cc5e87ea45875f5fd950' and mr['size_bytes']==4897397 and result['request_end_to_end_seconds']==956.1085797089618,'formal expected media/result')\n  report['requests'].append({'name':name,'request':req,'result_summary':{k:result.get(k) for k in ('completed_at','success','http_code','curl_returncode','request_end_to_end_seconds','requested_steps','output_video','output_sha256')},'records':{n:record(d/n) for n in ('request.json','result.json','response.headers','curl.stdout','curl.stderr','ffprobe.json')},'media':mr,'fresh_ffprobe':probe,'response_headers':h,'curl_stdout':out,'curl_stderr':err,'passed':True})\n times=[report['requests'][0]['request']['started_at'],report['requests'][0]['result_summary']['completed_at'],report['requests'][1]['request']['started_at'],report['requests'][1]['result_summary']['completed_at'],s['finished_at']]\n need(all(datetime.datetime.fromisoformat(x)<=datetime.datetime.fromisoformat(y) for x,y in zip(times,times[1:])),'event time order')\n identities=[('supervisor',s['supervisor_proc_identity']),('server',server)]+[(k,v) for k,v in workers.items()]\n report['original_identities']=[]\n for label,ident in identities:\n  now=b.base.proc_identity(ident['pid']); alive=now is not None and now['start_ticks']==ident['start_ticks']\n  report['original_identities'].append({'label':label,'recorded':ident,'current':now,'original_alive':alive})\n  need(not alive,'original identity still exists '+label)\n owned=obj.owned_group_members(server['pid']); need(not owned,'owned B process group not empty')\n historical=b.base.selected_idle((r/'npu_after.txt').read_text(),tuple(range(8)))\n need(historical==s['resource_release_check'],'historical idle/status')\n report['cleanup']={'owned_group_members':owned,'historical_idle':historical,'historical_idle_matches_status':True,'finished_at':s['finished_at']}\n lines=log.decode('utf-8',errors='replace').splitlines(); http=[i for i,x in enumerate(lines) if '/v1/videos/sync' in x and '200 OK' in x]; errors=[i for i,x in enumerate(lines) if 'ConnectionRefusedError:' in x or 'SystemExit: 143' in x or ('Terminating diffusion worker' in x and 'after timeout' in x)]\n need(len(http)==2 and all(i>http[-1] for i in errors),'cleanup errors before formal HTTP200 or wrong HTTP count')\n report['log_order']={'http_200':[(i+1,lines[i]) for i in http],'cleanup_error_count':len(errors),'all_named_cleanup_errors_after_formal_http200':True,'first_error_line':errors[0]+1 if errors else None,'lifecycle':[(i+1,x) for i,x in enumerate(lines) if any(t in x for t in ('Shutting down','Application shutdown','Finished server process','after timeout'))]}\n report['terminal_summary']={k:s.get(k) for k in ('phase','finished_at','formal_request_attempts','formal_50step_completed','cleanup_completed','selected_cards_verified_idle_after_cleanup','error','needs_attention')}\n report['readonly_subprocesses']=commands; report['torch_imported']='torch' in sys.modules\n report['audit_status']='passed'\nexcept Exception as exc:\n report['audit_status']='failed'; report['error']=type(exc).__name__+': '+str(exc)\nreport['observed_end_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat()\nprint(json.dumps(report,ensure_ascii=False))\nsys.exit(0 if report['audit_status']=='passed' else 1)\n",
+    "second_python_source": "import datetime,hashlib,json,os,re,sys,subprocess,time\nfrom pathlib import Path\nstart=datetime.datetime.now(datetime.timezone.utc).isoformat()\nr=Path('/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea'); root=Path('/cache/zhonghao/h3/color_trial_v1'); rid='b52c1cc39548462f9a6b1f6124fef1ea'\nreport={'schema_version':1,'audit_status':'started','observed_start_utc':start,'run_id':rid,'run_directory':str(r),'remote_writes':False,'model_execution':False}\ndef need(ok,label):\n if not ok: raise RuntimeError(label)\ndef record(p):\n need(p.is_file() and not p.is_symlink() and p.resolve()==p,'regular private path: '+str(p))\n raw=p.read_bytes()\n return {'path':str(p),'size_bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()}\ndef read(p): return json.loads(p.read_text())\ndef normalize(v): return json.loads(json.dumps(v))\ntry:\n need(r.is_dir() and r.resolve()==r,'fixed run')\n s=read(r/'b_status.json'); f=read(r/'frozen_evidence.json'); gate=read(r/'formal_smoke_gate.json')\n report['terminal_records']={n:record(r/n) for n in ('b_status.json','frozen_evidence.json','formal_smoke_gate.json','formal_logging.json','host_identity.json','npu_before_formal.txt','npu_after.txt')}\n need(report['terminal_records']['b_status.json']['sha256']=='da0d807dcc0c3da67ebf2fa5462ee38fd44874d5e88fbf6ad37a23cb3c5f91e6','status SHA')\n need(report['terminal_records']['frozen_evidence.json']['sha256']=='f67ef6473716c853e3e94cc6c694330317ce1b13c5a9853658eae1d33f26954e','frozen SHA')\n need(s['frozen_evidence_sha256']==report['terminal_records']['frozen_evidence.json']['sha256'],'status frozen binding')\n rel=record(root/'release_sha256.json')\n need(rel['sha256']=='a70c2cea17e254a7fb2857ea0e5f98816be50fe5e42756eaa60b8df95d659878','release SHA')\n files=read(root/'release_sha256.json')['files']; bad=[n for n,sha in files.items() if record(root/n)['sha256']!=sha]\n need(len(files)==19 and not bad,'release file hashes')\n report['release']={'record':rel,'file_count':len(files),'mismatches':bad}\n class NoModel:\n  def find_spec(self,fullname,path=None,target=None):\n   if fullname.split('.')[0] in {'torch','torch_npu','transformers','vllm','vllm_omni','vllm_ascend'}: raise RuntimeError('blocked model import '+fullname)\n sys.meta_path.insert(0,NoModel())\n original_run=subprocess.run; commands=[]\n def readonly_run(command,*args,**kwargs):\n  need(isinstance(command,list) and Path(command[0]).name in ('ffprobe','npu-smi'),'blocked subprocess')\n  if Path(command[0]).name=='npu-smi': need(command[1:]==['info'],'npu-smi read only')\n  commands.append(command); return original_run(command,*args,**kwargs)\n subprocess.run=readonly_run\n sys.path.insert(0,str(root/'b'))\n import run_b_trial as b\n need(Path(b.__file__).resolve()==root/'b/run_b_trial.py','B module path')\n def no_write(*args,**kwargs): raise RuntimeError('blocked write')\n b.base.atomic_json=no_write\n host=b.profiles.require_host(s['host'])\n need(host==f['host']==read(r/'host_identity.json'),'host boot')\n need(s['case']=='B' and s['run_id']==f['run_id']==rid and s['run_directory']==str(r) and s['group']=='01234567' and s['sample_id']=='shirt_red_couple_124','case run')\n need(s['phase']=='formal_completed_review_required' and s['formal_request_attempts']==1 and s['formal_50step_started'] is True and s['formal_50step_completed'] is True and s['cleanup_completed'] is True and s['selected_cards_verified_idle_after_cleanup'] is True and s['needs_attention'] is False and s['error'] is None and s['remaining_owned_process_groups']=={},'terminal flags')\n report['host']=host\n resource_time=datetime.datetime.now(datetime.timezone.utc).isoformat()\n resource=subprocess.run(['/usr/local/sbin/npu-smi','info'],capture_output=True,text=True,timeout=30,check=False)\n report['fresh_resource']={'observed_at_utc':resource_time,'returncode':resource.returncode,'stdout':resource.stdout,'stderr':resource.stderr}\n need(resource.returncode==0,'fresh npu-smi failed')\n try:\n  report['fresh_resource']['idle']=b.base.selected_idle(resource.stdout,tuple(range(8))); report['fresh_resource']['all_eight_idle']=True\n except RuntimeError as exc:\n  report['fresh_resource']['all_eight_idle']=False; report['fresh_resource']['idle_error']=str(exc)\n report['fresh_resource']['health']=b.base.selected_health_memory(resource.stdout,tuple(range(8)),0)\n obj=object.__new__(b.BTrialSupervisor); obj.host=host; obj.run_id=rid; obj.sample=b.gates.sample_profile(s['sample_id']); obj.selected=b.gates.selected_profile(s['group'],s['sample_id']); obj.run_dir=r\n before=time.monotonic(); current=obj.evidence_snapshot()\n report['dependency']={'current_equals_frozen':current==f,'different_top_keys':[k for k in set(current)|set(f) if current.get(k)!=f.get(k)],'seconds':time.monotonic()-before,'source_code_records':len(current['sources']),'ref2va_records':len(current['weights']['ref2va']['files']),'stage_b_records':len(current['weights']['stage_b']['files']),'logging_matches_expected':read(r/'formal_logging.json')==b.gates.logging_configuration(),'vlm_run_id':current['sample']['vlm']['evidence']['status']['run_id'],'vlm_classification':current['sample']['vlm']['evidence']['result']['classification']['classification']}\n need(current==f and report['dependency']['logging_matches_expected'],'dependency/logging')\n expected_generation={'width':1344,'height':768,'fps':24,'duration_seconds':5.0,'seed':4101,'num_inference_steps':50,'flow_shift':12.0,'audio_flow_shift':3.0}\n need(s['requested_generation']==f['generation']==expected_generation and s['parallelism']==f['parallelism'],'generation/parallelism')\n need(s['stage_b_checkpoint']==str(b.gates.CHECKPOINT) and s['attention_policy']=='B original linear + local softmax; source globally visible; no C corresponding-frame restriction','B policy')\n report['attention_policy']=s['attention_policy']; report['generation']=f['generation']; report['parallelism']=f['parallelism']; report['source']=current['sample']['source']; report['checkpoint']=s['stage_b_checkpoint']\n need(gate==s['formal_smoke_gate'] and gate['status']=='passed' and gate['host']==host and gate['run_id']==rid and gate['group']=='01234567' and gate['sample_id']=='shirt_red_couple_124','smoke gate')\n server=s['server_proc_identity']; ik=('pid','start_ticks','pgrp','session')\n need({k:server[k] for k in ik}=={'pid':869394,'start_ticks':129815269,'pgrp':869394,'session':869394} and s['server_pid']==869394,'server identity')\n need(all(gate['server_identity'][k]==server[k] for k in ik),'gate server')\n need(s['supervisor_pid']==868715 and s['supervisor_proc_identity']['pid']==868715 and s['supervisor_proc_identity']['start_ticks']==129812623,'supervisor identity')\n workers=gate['worker_identities_by_card']; need(set(workers)==set(map(str,range(8))),'8 worker cards')\n for card in range(8):\n  w=workers[str(card)]; need({k:w[k] for k in ik}=={'pid':870084+card,'start_ticks':129820402,'pgrp':869394,'session':869394},'worker identity '+str(card))\n log=(r/'server.log').read_bytes(); n=gate['server_log_prefix_bytes']\n need(type(n) is int and 0<n<=len(log),'prefix length'); prefix=log[:n]\n need(hashlib.sha256(prefix).hexdigest()==gate['server_log_prefix_sha256'],'prefix sha')\n loads=b.gates.parse_full_load_evidence(prefix.decode('utf-8',errors='replace'),f['weights'])\n need(normalize(loads)==gate['loaded_records_by_pid'] and set(loads)==set(range(870084,870092)),'8 prefix loads binding')\n full_loads=b.gates.parse_full_load_evidence(log.decode('utf-8',errors='replace'),f['weights'])\n need(full_loads==loads,'full log load drift/duplicates')\n for pid,row in loads.items():\n  cpu=row['cpu_loading']; need(cpu['intraop_before']==cpu['intraop_after']==192 and cpu['interop_before']==cpu['interop_after']==192,'restored 192 threads '+str(pid))\n report['loads']={'prefix_bytes':n,'prefix_sha256':gate['server_log_prefix_sha256'],'full_log_record':record(r/'server.log'),'loaded_records_by_pid':loads,'eight_pids_match_actual_cards':True,'full_log_equals_prefix_loads':True,'cpu_intraop_and_interop_restored_192':True}\n pre=(r/'npu_before_formal.txt').read_text()\n need(b.selected_workers(pre,tuple(range(8)))=={i:870084+i for i in range(8)},'historical before-formal card PID mapping')\n need(normalize(b.base.selected_health_memory(pre,tuple(range(8)),0))==gate['health'],'historical before-formal health')\n report['requests']=[]\n for name,steps in [('smoke_2step',2),('b_50step',50)]:\n  d=r/name; req=read(d/'request.json'); result=read(d/'result.json'); gen=f['generation']\n  fields={k:gen[k] for k in ('width','height','fps','flow_shift','seed')}; fields.update(prompt=obj.sample.prompt,num_inference_steps=steps,extra_params=json.dumps({'task':'ref2va','duration':gen['duration_seconds'],'audio_flow_shift':gen['audio_flow_shift']}))\n  need(req['host']==host and req['run_id']==rid and req['group']=='01234567' and req['sample_id']==obj.sample.sample_id and req['source_video']==str(obj.sample.source) and req['source_sha256']==f['sample']['source']['sha256'] and req['fields']==fields and req['requested_steps']==steps,'request binding '+name)\n  need(all(req['server_proc_identity'][k]==server[k] for k in ik),'request server '+name)\n  need(result==s[name] and result['success'] is True and result['requested_steps']==steps and result['curl_returncode']==0 and result['http_code']=='200' and result['content_type'].split(';')[0]=='video/mp4','result/status '+name)\n  h=(d/'response.headers').read_text(); out=(d/'curl.stdout').read_text(); err=(d/'curl.stderr').read_text()\n  need(re.findall(r'^HTTP/\\S+\\s+(\\d{3})\\b',h,re.M)[-1]=='200' and out.strip()=='200' and err=='','headers/stdout/stderr '+name)\n  need(re.findall(r'^content-type:\\s*([^\\r\\n]+)',h,re.I|re.M)[-1].strip().lower().split(';')[0]=='video/mp4','header mime '+name)\n  media=r/'output'/(name+'.mp4'); mr=record(media)\n  need(result['output_video']==str(media) and result['output_sha256']==mr['sha256'],'actual media SHA '+name)\n  probe=b.gates.video_probe(media,target=True); need(probe==read(d/'ffprobe.json')==result['ffprobe'],'actual decoded media '+name)\n  length=int(re.findall(r'^content-length:\\s*(\\d+)',h,re.I|re.M)[-1]); need(length==mr['size_bytes'],'HTTP content length '+name)\n  if steps==2: need(gate['smoke_request']==record(d/'request.json') and gate['smoke_result']==record(d/'result.json'),'smoke proof file SHA')\n  else: need(mr['sha256']=='3fbab6d81d65bb40a0d86e889f7348eb37d2b3107d02cc5e87ea45875f5fd950' and mr['size_bytes']==4897397 and result['request_end_to_end_seconds']==956.1085797089618,'formal expected media/result')\n  report['requests'].append({'name':name,'request':req,'result_summary':{k:result.get(k) for k in ('completed_at','success','http_code','curl_returncode','request_end_to_end_seconds','requested_steps','output_video','output_sha256')},'records':{n:record(d/n) for n in ('request.json','result.json','response.headers','curl.stdout','curl.stderr','ffprobe.json')},'media':mr,'fresh_ffprobe':probe,'response_headers':h,'curl_stdout':out,'curl_stderr':err,'passed':True})\n times=[report['requests'][0]['request']['started_at'],report['requests'][0]['result_summary']['completed_at'],report['requests'][1]['request']['started_at'],report['requests'][1]['result_summary']['completed_at'],s['finished_at']]\n need(all(datetime.datetime.fromisoformat(x)<=datetime.datetime.fromisoformat(y) for x,y in zip(times,times[1:])),'event time order')\n identities=[('supervisor',s['supervisor_proc_identity']),('server',server)]+[(k,v) for k,v in workers.items()]\n report['original_identities']=[]\n for label,ident in identities:\n  now=b.base.proc_identity(ident['pid']); alive=now is not None and now['start_ticks']==ident['start_ticks']\n  report['original_identities'].append({'label':label,'recorded':ident,'current':now,'original_alive':alive})\n  need(not alive,'original identity still exists '+label)\n owned=obj.owned_group_members(server['pid']); need(not owned,'owned B process group not empty')\n historical=b.base.selected_idle((r/'npu_after.txt').read_text(),tuple(range(8)))\n need(historical==s['resource_release_check'],'historical idle/status')\n report['cleanup']={'owned_group_members':owned,'historical_idle':historical,'historical_idle_matches_status':True,'finished_at':s['finished_at']}\n lines=log.decode('utf-8',errors='replace').splitlines(); http=[i for i,x in enumerate(lines) if '/v1/videos/sync' in x and '200 OK' in x]; errors=[i for i,x in enumerate(lines) if 'ConnectionRefusedError:' in x or 'SystemExit: 143' in x or ('Terminating diffusion worker' in x and 'after timeout' in x)]\n need(len(http)==2 and all(i>http[-1] for i in errors),'cleanup errors before formal HTTP200 or wrong HTTP count')\n report['log_order']={'http_200':[(i+1,lines[i]) for i in http],'cleanup_error_count':len(errors),'all_named_cleanup_errors_after_formal_http200':True,'first_error_line':errors[0]+1 if errors else None,'lifecycle':[(i+1,x) for i,x in enumerate(lines) if any(t in x for t in ('Shutting down','Application shutdown','Finished server process','after timeout'))]}\n report['terminal_summary']={k:s.get(k) for k in ('phase','finished_at','formal_request_attempts','formal_50step_completed','cleanup_completed','selected_cards_verified_idle_after_cleanup','error','needs_attention')}\n report['readonly_subprocesses']=commands; report['torch_imported']='torch' in sys.modules\n report['audit_status']='passed'\nexcept Exception as exc:\n report['audit_status']='failed'; report['error']=type(exc).__name__+': '+str(exc)\nreport['observed_end_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat()\nprint(json.dumps(report,ensure_ascii=False))\nsys.exit(0 if report['audit_status']=='passed' else 1)\n",
+    "supplemental_log_python_source": "import datetime,hashlib,json,re\nfrom pathlib import Path\nr=Path('/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea')\nraw=(r/'server.log').read_bytes(); lines=raw.decode('utf-8',errors='replace').splitlines()\nhttp=[i for i,x in enumerate(lines) if '/v1/videos/sync' in x or '200 OK' in x]\nerrors=[i for i,x in enumerate(lines) if 'ConnectionRefusedError:' in x or 'SystemExit: 143' in x or ('Terminating diffusion worker' in x and 'after timeout' in x)]\nmarkers=[i for i,x in enumerate(lines) if any(t in x for t in ('Shutting down','Application shutdown','Finished server process','after timeout','Request finished','request finished','completed','Video saved','Encoded','encoded','generation complete'))]\nnear=set()\nif errors:\n for i in range(max(0,errors[0]-12),min(len(lines),errors[0]+2)):near.add(i)\nfor i in markers[-25:]:near.add(i)\ns=json.loads((r/'b_status.json').read_text()); result=json.loads((r/'b_50step/result.json').read_text())\nprint(json.dumps({'observed_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'log_sha256':hashlib.sha256(raw).hexdigest(),'bytes':len(raw),'http_lines':[(i+1,lines[i]) for i in http],'error_count':len(errors),'first_error_line':errors[0]+1 if errors else None,'last_error_line':errors[-1]+1 if errors else None,'selected_lines':[(i+1,lines[i]) for i in sorted(near)],'tail_before_shutdown':[(i+1,lines[i]) for i in range(max(0,(errors[0] if errors else len(lines))-65),max(0,(errors[0] if errors else len(lines))-12))],'formal_completed_at':result['completed_at'],'finished_at':s['finished_at']}))\n",
+    "safeguards": "Production imports were SHA-checked first. Full-read helpers blocked torch/torch_npu/transformers/vllm/vllm_omni/vllm_ascend imports, allowed subprocess.run only for npu-smi info or ffprobe, and blocked atomic_json writes. No model or new experiment was launched."
+  },
+  "raw_observations": [
+    {
+      "tool_chunk": "393b55",
+      "exit_code": 1,
+      "wall_time_seconds": 8.602777,
+      "stdout_json": {
+        "schema_version": 1,
+        "audit_status": "failed",
+        "observed_start_utc": "2026-09-14T05:20:59.743574+00:00",
+        "run_id": "b52c1cc39548462f9a6b1f6124fef1ea",
+        "run_directory": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea",
+        "remote_writes": false,
+        "model_execution": false,
+        "terminal_records": {
+          "b_status.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/b_status.json",
+            "size_bytes": 29815,
+            "sha256": "da0d807dcc0c3da67ebf2fa5462ee38fd44874d5e88fbf6ad37a23cb3c5f91e6"
+          },
+          "frozen_evidence.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/frozen_evidence.json",
+            "size_bytes": 11662340,
+            "sha256": "f67ef6473716c853e3e94cc6c694330317ce1b13c5a9853658eae1d33f26954e"
+          },
+          "formal_smoke_gate.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/formal_smoke_gate.json",
+            "size_bytes": 19500,
+            "sha256": "bcc91004dffa759b4d9e1a1a614e3a1ec11687a63ad225d53a6dd9dde21405dd"
+          },
+          "formal_logging.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/formal_logging.json",
+            "size_bytes": 572,
+            "sha256": "95f0a91e706b6d22fe7c0254c4fce3777c86743e9ae6a613828eab7b686fa173"
+          },
+          "host_identity.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/host_identity.json",
+            "size_bytes": 150,
+            "sha256": "a24db86b950306b850a7ff14f2f3814a769d8be7bd0c75ed50e65b87fc04bddc"
+          },
+          "npu_before_formal.txt": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/npu_before_formal.txt",
+            "size_bytes": 4852,
+            "sha256": "475feb45df2d8c4d3e95e20e35af8589a8cbc4fdfd0cd327d93d01cc8d08b2e5"
+          },
+          "npu_after.txt": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/npu_after.txt",
+            "size_bytes": 4852,
+            "sha256": "0185a8e82546679240a38943c0c8721c45cde1e23e8d4faedc40b1b9a8d1172e"
+          }
+        },
+        "release": {
+          "record": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/release_sha256.json",
+            "size_bytes": 1963,
+            "sha256": "a70c2cea17e254a7fb2857ea0e5f98816be50fe5e42756eaa60b8df95d659878"
+          },
+          "file_count": 19,
+          "mismatches": []
+        },
+        "host": {
+          "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+          "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+          "machine": "aarch64"
+        },
+        "fresh_resource": {
+          "observed_at_utc": "2026-09-14T05:21:00.058766+00:00",
+          "returncode": 0,
+          "stdout": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.5.1                   Version: 25.5.1                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 0     910B3               | OK            | 100.3       48                0    / 0             |\n| 0                         | 0000:C1:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 1     910B3               | OK            | 95.4        51                0    / 0             |\n| 0                         | 0000:01:00.0  | 0           0    / 0          3411 / 65536         |\n+===========================+===============+====================================================+\n| 2     910B3               | OK            | 99.2        50                0    / 0             |\n| 0                         | 0000:C2:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 3     910B3               | OK            | 97.4        50                0    / 0             |\n| 0                         | 0000:02:00.0  | 0           0    / 0          3411 / 65536         |\n+===========================+===============+====================================================+\n| 4     910B3               | OK            | 98.0        49                0    / 0             |\n| 0                         | 0000:81:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 5     910B3               | OK            | 102.6       51                0    / 0             |\n| 0                         | 0000:41:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 6     910B3               | OK            | 100.4       51                0    / 0             |\n| 0                         | 0000:82:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 7     910B3               | OK            | 93.3        50                0    / 0             |\n| 0                         | 0000:42:00.0  | 0           0    / 0          3409 / 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| No running processes found in NPU 0                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 1                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 2                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 3                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 4                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 5                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 6                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 7                                                            |\n+===========================+===============+====================================================+\n",
+          "stderr": "",
+          "idle": {
+            "selected_physical_cards": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "explicitly_idle_cards": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "other_busy_cards": []
+          },
+          "all_eight_idle": true,
+          "health": {
+            "health": {
+              "0": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "1": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "2": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "3": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "4": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "5": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "6": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "7": {
+                "model": "910B3",
+                "health": "OK"
+              }
+            },
+            "hbm": {
+              "0": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "1": {
+                "used_mib": 3411,
+                "total_mib": 65536,
+                "free_mib": 62125
+              },
+              "2": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "3": {
+                "used_mib": 3411,
+                "total_mib": 65536,
+                "free_mib": 62125
+              },
+              "4": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "5": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "6": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "7": {
+                "used_mib": 3409,
+                "total_mib": 65536,
+                "free_mib": 62127
+              }
+            }
+          }
+        },
+        "dependency": {
+          "current_equals_frozen": true,
+          "different_top_keys": [],
+          "seconds": 1.5891588979866356,
+          "source_code_records": 29,
+          "ref2va_records": 81,
+          "stage_b_records": 4,
+          "logging_matches_expected": true,
+          "vlm_run_id": "4cfa7803ddc3482a8906b91184743384",
+          "vlm_classification": "preserve"
+        },
+        "attention_policy": "B original linear + local softmax; source globally visible; no C corresponding-frame restriction",
+        "generation": {
+          "width": 1344,
+          "height": 768,
+          "fps": 24,
+          "duration_seconds": 5,
+          "seed": 4101,
+          "num_inference_steps": 50,
+          "flow_shift": 12,
+          "audio_flow_shift": 3
+        },
+        "parallelism": {
+          "num_gpus": 8,
+          "usp": 8,
+          "ring": 1,
+          "dit_tensor_parallel_size": 1,
+          "text_encoder_tp_size": 8,
+          "layerwise_offload": true,
+          "vae_use_tiling": true,
+          "vae_parallel_mode": "tile",
+          "vae_patch_parallel_size": 8,
+          "attention_backend": "FLASH_ATTN",
+          "listen_host": "127.0.0.1",
+          "listen_port": 19099,
+          "dtype_cli_override": null,
+          "hccl_internal_ports": "Unchanged original vLLM automatic allocation"
+        },
+        "source": {
+          "path": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+          "sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+          "size_bytes": 1527004
+        },
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "loads": {
+          "prefix_bytes": 138441,
+          "prefix_sha256": "0b9f01b220d8d0973d775389669817b97542c2b81cf2935939801711f0382a92",
+          "full_log_record": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/server.log",
+            "size_bytes": 191170,
+            "sha256": "e13942acb26b30e5901081a07a9b1526dcabace53cf7fd76184acefe415a1f66"
+          },
+          "loaded_records_by_pid": {
+            "870084": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 83.47447253810242,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 129.69999766303226,
+                  "branch": 16.46767247398384,
+                  "lora": 66.97562449797988
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 129.69999766303226,
+                  "branch": 16.46767247398384,
+                  "lora": 66.97562449797988
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 213.5288232830353,
+                "status": "completed"
+              }
+            },
+            "870085": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 91.93683958984911,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 127.88840090599842,
+                  "branch": 16.232006234116852,
+                  "lora": 75.67437709402293
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 127.88840090599842,
+                  "branch": 16.232006234116852,
+                  "lora": 75.67437709402293
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 220.2064799349755,
+                "status": "completed"
+              }
+            },
+            "870086": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 88.35150851681828,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 128.04689388209954,
+                  "branch": 16.405102991964668,
+                  "lora": 71.91751230997033
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 128.04689388209954,
+                  "branch": 16.405102991964668,
+                  "lora": 71.91751230997033
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 216.72744413395412,
+                "status": "completed"
+              }
+            },
+            "870087": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 85.5718806120567,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 128.8825402399525,
+                  "branch": 17.151608274085447,
+                  "lora": 68.39018609700724
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 128.8825402399525,
+                  "branch": 17.151608274085447,
+                  "lora": 68.39018609700724
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 214.88119113189168,
+                "status": "completed"
+              }
+            },
+            "870088": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 87.82190155703574,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 128.52833799901418,
+                  "branch": 16.953543449984863,
+                  "lora": 70.83774114400148
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 128.52833799901418,
+                  "branch": 16.953543449984863,
+                  "lora": 70.83774114400148
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 216.58058423013426,
+                "status": "completed"
+              }
+            },
+            "870089": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 86.44941086508334,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 123.63291246513836,
+                  "branch": 15.88926454493776,
+                  "lora": 70.53116977401078
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 123.63291246513836,
+                  "branch": 15.88926454493776,
+                  "lora": 70.53116977401078
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 210.5287259221077,
+                "status": "completed"
+              }
+            },
+            "870090": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 87.83487562695518,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 129.82448253408074,
+                  "branch": 16.118839336093515,
+                  "lora": 71.68664373317733
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 129.82448253408074,
+                  "branch": 16.118839336093515,
+                  "lora": 71.68664373317733
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 217.97678384091705,
+                "status": "completed"
+              }
+            },
+            "870091": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 89.41018432495184,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 123.00581361609511,
+                  "branch": 16.132934361929074,
+                  "lora": 73.24624037789181
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 123.00581361609511,
+                  "branch": 16.132934361929074,
+                  "lora": 73.24624037789181
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 212.7873006130103,
+                "status": "completed"
+              }
+            }
+          },
+          "eight_pids_match_actual_cards": true,
+          "full_log_equals_prefix_loads": true,
+          "cpu_intraop_and_interop_restored_192": true
+        },
+        "error": "RuntimeError: historical before-formal health",
+        "observed_end_utc": "2026-09-14T05:21:02.818522+00:00"
+      }
+    },
+    {
+      "tool_chunk": "b2161a",
+      "exit_code": 1,
+      "wall_time_seconds": 9.1770246,
+      "stdout_json": {
+        "schema_version": 1,
+        "audit_status": "failed",
+        "observed_start_utc": "2026-09-14T05:21:34.450363+00:00",
+        "run_id": "b52c1cc39548462f9a6b1f6124fef1ea",
+        "run_directory": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea",
+        "remote_writes": false,
+        "model_execution": false,
+        "terminal_records": {
+          "b_status.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/b_status.json",
+            "size_bytes": 29815,
+            "sha256": "da0d807dcc0c3da67ebf2fa5462ee38fd44874d5e88fbf6ad37a23cb3c5f91e6"
+          },
+          "frozen_evidence.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/frozen_evidence.json",
+            "size_bytes": 11662340,
+            "sha256": "f67ef6473716c853e3e94cc6c694330317ce1b13c5a9853658eae1d33f26954e"
+          },
+          "formal_smoke_gate.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/formal_smoke_gate.json",
+            "size_bytes": 19500,
+            "sha256": "bcc91004dffa759b4d9e1a1a614e3a1ec11687a63ad225d53a6dd9dde21405dd"
+          },
+          "formal_logging.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/formal_logging.json",
+            "size_bytes": 572,
+            "sha256": "95f0a91e706b6d22fe7c0254c4fce3777c86743e9ae6a613828eab7b686fa173"
+          },
+          "host_identity.json": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/host_identity.json",
+            "size_bytes": 150,
+            "sha256": "a24db86b950306b850a7ff14f2f3814a769d8be7bd0c75ed50e65b87fc04bddc"
+          },
+          "npu_before_formal.txt": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/npu_before_formal.txt",
+            "size_bytes": 4852,
+            "sha256": "475feb45df2d8c4d3e95e20e35af8589a8cbc4fdfd0cd327d93d01cc8d08b2e5"
+          },
+          "npu_after.txt": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/npu_after.txt",
+            "size_bytes": 4852,
+            "sha256": "0185a8e82546679240a38943c0c8721c45cde1e23e8d4faedc40b1b9a8d1172e"
+          }
+        },
+        "release": {
+          "record": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/release_sha256.json",
+            "size_bytes": 1963,
+            "sha256": "a70c2cea17e254a7fb2857ea0e5f98816be50fe5e42756eaa60b8df95d659878"
+          },
+          "file_count": 19,
+          "mismatches": []
+        },
+        "host": {
+          "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+          "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+          "machine": "aarch64"
+        },
+        "fresh_resource": {
+          "observed_at_utc": "2026-09-14T05:21:34.732295+00:00",
+          "returncode": 0,
+          "stdout": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.5.1                   Version: 25.5.1                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 0     910B3               | OK            | 100.2       47                0    / 0             |\n| 0                         | 0000:C1:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 1     910B3               | OK            | 95.4        51                0    / 0             |\n| 0                         | 0000:01:00.0  | 0           0    / 0          3411 / 65536         |\n+===========================+===============+====================================================+\n| 2     910B3               | OK            | 99.1        50                0    / 0             |\n| 0                         | 0000:C2:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 3     910B3               | OK            | 97.1        50                0    / 0             |\n| 0                         | 0000:02:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 4     910B3               | OK            | 98.0        49                0    / 0             |\n| 0                         | 0000:81:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 5     910B3               | OK            | 102.7       51                0    / 0             |\n| 0                         | 0000:41:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 6     910B3               | OK            | 100.5       51                0    / 0             |\n| 0                         | 0000:82:00.0  | 0           0    / 0          3410 / 65536         |\n+===========================+===============+====================================================+\n| 7     910B3               | OK            | 93.3        50                0    / 0             |\n| 0                         | 0000:42:00.0  | 0           0    / 0          3409 / 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| No running processes found in NPU 0                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 1                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 2                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 3                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 4                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 5                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 6                                                            |\n+===========================+===============+====================================================+\n| No running processes found in NPU 7                                                            |\n+===========================+===============+====================================================+\n",
+          "stderr": "",
+          "idle": {
+            "selected_physical_cards": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "explicitly_idle_cards": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "other_busy_cards": []
+          },
+          "all_eight_idle": true,
+          "health": {
+            "health": {
+              "0": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "1": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "2": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "3": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "4": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "5": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "6": {
+                "model": "910B3",
+                "health": "OK"
+              },
+              "7": {
+                "model": "910B3",
+                "health": "OK"
+              }
+            },
+            "hbm": {
+              "0": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "1": {
+                "used_mib": 3411,
+                "total_mib": 65536,
+                "free_mib": 62125
+              },
+              "2": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "3": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "4": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "5": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "6": {
+                "used_mib": 3410,
+                "total_mib": 65536,
+                "free_mib": 62126
+              },
+              "7": {
+                "used_mib": 3409,
+                "total_mib": 65536,
+                "free_mib": 62127
+              }
+            }
+          }
+        },
+        "dependency": {
+          "current_equals_frozen": true,
+          "different_top_keys": [],
+          "seconds": 1.483673521084711,
+          "source_code_records": 29,
+          "ref2va_records": 81,
+          "stage_b_records": 4,
+          "logging_matches_expected": true,
+          "vlm_run_id": "4cfa7803ddc3482a8906b91184743384",
+          "vlm_classification": "preserve"
+        },
+        "attention_policy": "B original linear + local softmax; source globally visible; no C corresponding-frame restriction",
+        "generation": {
+          "width": 1344,
+          "height": 768,
+          "fps": 24,
+          "duration_seconds": 5,
+          "seed": 4101,
+          "num_inference_steps": 50,
+          "flow_shift": 12,
+          "audio_flow_shift": 3
+        },
+        "parallelism": {
+          "num_gpus": 8,
+          "usp": 8,
+          "ring": 1,
+          "dit_tensor_parallel_size": 1,
+          "text_encoder_tp_size": 8,
+          "layerwise_offload": true,
+          "vae_use_tiling": true,
+          "vae_parallel_mode": "tile",
+          "vae_patch_parallel_size": 8,
+          "attention_backend": "FLASH_ATTN",
+          "listen_host": "127.0.0.1",
+          "listen_port": 19099,
+          "dtype_cli_override": null,
+          "hccl_internal_ports": "Unchanged original vLLM automatic allocation"
+        },
+        "source": {
+          "path": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+          "sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+          "size_bytes": 1527004
+        },
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "loads": {
+          "prefix_bytes": 138441,
+          "prefix_sha256": "0b9f01b220d8d0973d775389669817b97542c2b81cf2935939801711f0382a92",
+          "full_log_record": {
+            "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/server.log",
+            "size_bytes": 191170,
+            "sha256": "e13942acb26b30e5901081a07a9b1526dcabace53cf7fd76184acefe415a1f66"
+          },
+          "loaded_records_by_pid": {
+            "870084": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 83.47447253810242,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 129.69999766303226,
+                  "branch": 16.46767247398384,
+                  "lora": 66.97562449797988
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 129.69999766303226,
+                  "branch": 16.46767247398384,
+                  "lora": 66.97562449797988
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 213.5288232830353,
+                "status": "completed"
+              }
+            },
+            "870085": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 91.93683958984911,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 127.88840090599842,
+                  "branch": 16.232006234116852,
+                  "lora": 75.67437709402293
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 127.88840090599842,
+                  "branch": 16.232006234116852,
+                  "lora": 75.67437709402293
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 220.2064799349755,
+                "status": "completed"
+              }
+            },
+            "870086": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 88.35150851681828,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 128.04689388209954,
+                  "branch": 16.405102991964668,
+                  "lora": 71.91751230997033
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 128.04689388209954,
+                  "branch": 16.405102991964668,
+                  "lora": 71.91751230997033
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 216.72744413395412,
+                "status": "completed"
+              }
+            },
+            "870087": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 85.5718806120567,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 128.8825402399525,
+                  "branch": 17.151608274085447,
+                  "lora": 68.39018609700724
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 128.8825402399525,
+                  "branch": 17.151608274085447,
+                  "lora": 68.39018609700724
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 214.88119113189168,
+                "status": "completed"
+              }
+            },
+            "870088": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 87.82190155703574,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 128.52833799901418,
+                  "branch": 16.953543449984863,
+                  "lora": 70.83774114400148
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 128.52833799901418,
+                  "branch": 16.953543449984863,
+                  "lora": 70.83774114400148
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 216.58058423013426,
+                "status": "completed"
+              }
+            },
+            "870089": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 86.44941086508334,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 123.63291246513836,
+                  "branch": 15.88926454493776,
+                  "lora": 70.53116977401078
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 123.63291246513836,
+                  "branch": 15.88926454493776,
+                  "lora": 70.53116977401078
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 210.5287259221077,
+                "status": "completed"
+              }
+            },
+            "870090": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 87.83487562695518,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 129.82448253408074,
+                  "branch": 16.118839336093515,
+                  "lora": 71.68664373317733
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 129.82448253408074,
+                  "branch": 16.118839336093515,
+                  "lora": 71.68664373317733
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 217.97678384091705,
+                "status": "completed"
+              }
+            },
+            "870091": {
+              "load": {
+                "base_partition": "ref2va",
+                "base_tensor_count": 535,
+                "branch": {
+                  "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+                  "size_bytes": 4279428112,
+                  "tensor_count": 800
+                },
+                "branch_tensor_count": 800,
+                "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+                "load_and_merge_seconds": 89.41018432495184,
+                "lora": {
+                  "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+                  "metadata": {},
+                  "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+                  "size_bytes": 334026912,
+                  "tensor_count": 416
+                },
+                "lora_alpha": 64,
+                "lora_pairs_merged": 208,
+                "lora_rank": 64,
+                "lora_scale": 1,
+                "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+                "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+                "phase_seconds": {
+                  "base": 123.00581361609511,
+                  "branch": 16.132934361929074,
+                  "lora": 73.24624037789181
+                },
+                "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+              },
+              "cpu_loading": {
+                "interop_after": 192,
+                "interop_before": 192,
+                "interop_loading": 192,
+                "intraop_after": 192,
+                "intraop_before": 192,
+                "intraop_loading": 4,
+                "phase_seconds": {
+                  "base": 123.00581361609511,
+                  "branch": 16.132934361929074,
+                  "lora": 73.24624037789181
+                },
+                "requested_loading_intraop": 4,
+                "scope_seconds": 212.7873006130103,
+                "status": "completed"
+              }
+            }
+          },
+          "eight_pids_match_actual_cards": true,
+          "full_log_equals_prefix_loads": true,
+          "cpu_intraop_and_interop_restored_192": true
+        },
+        "requests": [
+          {
+            "name": "smoke_2step",
+            "request": {
+              "started_at": "2026-09-14T04:59:07.407824+00:00",
+              "host": {
+                "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+                "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+                "machine": "aarch64"
+              },
+              "group": "01234567",
+              "run_id": "b52c1cc39548462f9a6b1f6124fef1ea",
+              "sample_id": "shirt_red_couple_124",
+              "fields": {
+                "width": 1344,
+                "height": 768,
+                "fps": 24,
+                "flow_shift": 12,
+                "seed": 4101,
+                "prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+                "num_inference_steps": 2,
+                "extra_params": "{\"task\": \"ref2va\", \"duration\": 5.0, \"audio_flow_shift\": 3.0}"
+              },
+              "source_video": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+              "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+              "requested_steps": 2,
+              "actual_model_forward_calls": null,
+              "quality_evidence": false,
+              "server_proc_identity": {
+                "pid": 869394,
+                "state": "S",
+                "pgrp": 869394,
+                "session": 869394,
+                "start_ticks": 129815269
+              }
+            },
+            "result_summary": {
+              "completed_at": "2026-09-14T05:01:36.429155+00:00",
+              "success": true,
+              "http_code": "200",
+              "curl_returncode": 0,
+              "request_end_to_end_seconds": 149.01836418709718,
+              "requested_steps": 2,
+              "output_video": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/output/smoke_2step.mp4",
+              "output_sha256": "9897446c7b0888b8080668287405ce81ac36a563691613780ef48bf37be849f4"
+            },
+            "records": {
+              "request.json": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/smoke_2step/request.json",
+                "size_bytes": 1259,
+                "sha256": "6f7ba4b40db2b0ca3ebd3e00ccd9a63117c84ad07869142fb4b06872d4c0b72a"
+              },
+              "result.json": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/smoke_2step/result.json",
+                "size_bytes": 1534,
+                "sha256": "66db5eab10fc68526e801b9dc3ddadc3d12ff4831cefb82a27450fd40f880df4"
+              },
+              "response.headers": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/smoke_2step/response.headers",
+                "size_bytes": 396,
+                "sha256": "129c00e2f4bae9d3f5a72c8c3da4c8bd5657854ed8c67f03c8510671e952e68a"
+              },
+              "curl.stdout": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/smoke_2step/curl.stdout",
+                "size_bytes": 3,
+                "sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
+              },
+              "curl.stderr": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/smoke_2step/curl.stderr",
+                "size_bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              },
+              "ffprobe.json": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/smoke_2step/ffprobe.json",
+                "size_bytes": 849,
+                "sha256": "877714da88d9f44becac190abbe02fb7bb1da4180d21371ca9dfdda5015d09d8"
+              }
+            },
+            "media": {
+              "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/output/smoke_2step.mp4",
+              "size_bytes": 5358182,
+              "sha256": "9897446c7b0888b8080668287405ce81ac36a563691613780ef48bf37be849f4"
+            },
+            "fresh_ffprobe": {
+              "verified": true,
+              "metadata": {
+                "programs": [],
+                "streams": [
+                  {
+                    "index": 0,
+                    "codec_name": "h264",
+                    "codec_type": "video",
+                    "width": 1344,
+                    "height": 768,
+                    "r_frame_rate": "24/1",
+                    "avg_frame_rate": "24/1",
+                    "nb_frames": "124",
+                    "nb_read_frames": "124"
+                  },
+                  {
+                    "index": 1,
+                    "codec_name": "aac",
+                    "codec_type": "audio",
+                    "r_frame_rate": "0/0",
+                    "avg_frame_rate": "0/0",
+                    "nb_frames": "163",
+                    "nb_read_frames": "163"
+                  }
+                ],
+                "format": {
+                  "duration": "5.207000",
+                  "size": "5358182"
+                }
+              },
+              "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+              "checks": {
+                "dimensions": [
+                  1344,
+                  768
+                ],
+                "fps": 24,
+                "frame_count": 124,
+                "container_duration_seconds": 5.207
+              }
+            },
+            "response_headers": "HTTP/1.1 100 Continue\n\nHTTP/1.1 200 OK\ndate: Mon, 14 Sep 2026 04:59:06 GMT\nserver: uvicorn\nx-request-id: video_sync-85a1bf597602811d\nx-model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA\nx-inference-time-s: 148.893\nx-stage-durations: {\"queue_wait_ms\":0.2979419659823179,\"stage_0_gen_ms\":136199.97239112854}\nx-peak-memory-mb: 28664.000\ncontent-length: 5358182\ncontent-type: video/mp4\n\n",
+            "curl_stdout": "200",
+            "curl_stderr": "",
+            "passed": true
+          },
+          {
+            "name": "b_50step",
+            "request": {
+              "started_at": "2026-09-14T05:01:40.268735+00:00",
+              "host": {
+                "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+                "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+                "machine": "aarch64"
+              },
+              "group": "01234567",
+              "run_id": "b52c1cc39548462f9a6b1f6124fef1ea",
+              "sample_id": "shirt_red_couple_124",
+              "fields": {
+                "width": 1344,
+                "height": 768,
+                "fps": 24,
+                "flow_shift": 12,
+                "seed": 4101,
+                "prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+                "num_inference_steps": 50,
+                "extra_params": "{\"task\": \"ref2va\", \"duration\": 5.0, \"audio_flow_shift\": 3.0}"
+              },
+              "source_video": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+              "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+              "requested_steps": 50,
+              "actual_model_forward_calls": null,
+              "quality_evidence": false,
+              "server_proc_identity": {
+                "pid": 869394,
+                "state": "S",
+                "pgrp": 869394,
+                "session": 869394,
+                "start_ticks": 129815269
+              }
+            },
+            "result_summary": {
+              "completed_at": "2026-09-14T05:17:36.383188+00:00",
+              "success": true,
+              "http_code": "200",
+              "curl_returncode": 0,
+              "request_end_to_end_seconds": 956.1085797089618,
+              "requested_steps": 50,
+              "output_video": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/output/b_50step.mp4",
+              "output_sha256": "3fbab6d81d65bb40a0d86e889f7348eb37d2b3107d02cc5e87ea45875f5fd950"
+            },
+            "records": {
+              "request.json": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/b_50step/request.json",
+                "size_bytes": 1261,
+                "sha256": "456cc5ae889866260c49f3e87b5bd335dbf2eb055381b9393421c5b4c19e6964"
+              },
+              "result.json": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/b_50step/result.json",
+                "size_bytes": 1531,
+                "sha256": "ce6763504d6054aa08852059ae3a691e9628295be1d25bc5802d1882689e33fd"
+              },
+              "response.headers": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/b_50step/response.headers",
+                "size_bytes": 395,
+                "sha256": "020da934300c10cfdceb631d423aef8d3a3d97f9809aa13ece4cd61b335e1116"
+              },
+              "curl.stdout": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/b_50step/curl.stdout",
+                "size_bytes": 3,
+                "sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
+              },
+              "curl.stderr": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/b_50step/curl.stderr",
+                "size_bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              },
+              "ffprobe.json": {
+                "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/b_50step/ffprobe.json",
+                "size_bytes": 849,
+                "sha256": "af5c05aa5ad5f35a83c8c67fe751b6036f5fe4934342388ceb7550edd9410737"
+              }
+            },
+            "media": {
+              "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/B/runs/b_20260914T045104Z_b52c1cc39548462f9a6b1f6124fef1ea/output/b_50step.mp4",
+              "size_bytes": 4897397,
+              "sha256": "3fbab6d81d65bb40a0d86e889f7348eb37d2b3107d02cc5e87ea45875f5fd950"
+            },
+            "fresh_ffprobe": {
+              "verified": true,
+              "metadata": {
+                "programs": [],
+                "streams": [
+                  {
+                    "index": 0,
+                    "codec_name": "h264",
+                    "codec_type": "video",
+                    "width": 1344,
+                    "height": 768,
+                    "r_frame_rate": "24/1",
+                    "avg_frame_rate": "24/1",
+                    "nb_frames": "124",
+                    "nb_read_frames": "124"
+                  },
+                  {
+                    "index": 1,
+                    "codec_name": "aac",
+                    "codec_type": "audio",
+                    "r_frame_rate": "0/0",
+                    "avg_frame_rate": "0/0",
+                    "nb_frames": "163",
+                    "nb_read_frames": "163"
+                  }
+                ],
+                "format": {
+                  "duration": "5.207000",
+                  "size": "4897397"
+                }
+              },
+              "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+              "checks": {
+                "dimensions": [
+                  1344,
+                  768
+                ],
+                "fps": 24,
+                "frame_count": 124,
+                "container_duration_seconds": 5.207
+              }
+            },
+            "response_headers": "HTTP/1.1 100 Continue\n\nHTTP/1.1 200 OK\ndate: Mon, 14 Sep 2026 05:01:39 GMT\nserver: uvicorn\nx-request-id: video_sync-b22269de6aacda9b\nx-model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA\nx-inference-time-s: 955.818\nx-stage-durations: {\"queue_wait_ms\":0.5339628551155329,\"stage_0_gen_ms\":946827.3680210114}\nx-peak-memory-mb: 29412.000\ncontent-length: 4897397\ncontent-type: video/mp4\n\n",
+            "curl_stdout": "200",
+            "curl_stderr": "",
+            "passed": true
+          }
+        ],
+        "original_identities": [
+          {
+            "label": "supervisor",
+            "recorded": {
+              "pid": 868715,
+              "state": "R",
+              "pgrp": 868715,
+              "session": 868715,
+              "start_ticks": 129812623
+            },
+            "current": null,
+            "original_alive": false
+          },
+          {
+            "label": "server",
+            "recorded": {
+              "pid": 869394,
+              "state": "R",
+              "pgrp": 869394,
+              "session": 869394,
+              "start_ticks": 129815269
+            },
+            "current": null,
+            "original_alive": false
+          },
+          {
+            "label": "0",
+            "recorded": {
+              "pid": 870084,
+              "state": "S",
+              "pgrp": 869394,
+              "session": 869394,
+              "start_ticks": 129820402
+            },
+            "current": null,
+            "original_alive": false
+          },
+          {
+            "label": "1",
+            "recorded": {
+              "pid": 870085,
+              "state": "S",
+              "pgrp": 869394,
+              "session": 869394,
+              "start_ticks": 129820402
+            },
+            "current": null,
+            "original_alive": false
+          },
+          {
+            "label": "2",
+            "recorded": {
+              "pid": 870086,
+              "state": "S",
+              "pgrp": 869394,
+              "session": 869394,
+              "start_ticks": 129820402
+            },
+            "current": null,
+            "original_alive": false
+          },
+          {
+            "label": "3",
+            "recorded": {
+              "pid": 870087,
+              "state": "S",
+              "pgrp": 869394,
+              "session": 869394,
+              "start_ticks": 129820402
+            },
+            "current": null,
+            "original_alive": false
+          },
+          {
+            "label": "4",
+            "recorded": {
+              "pid": 870088,
+              "state": "S",
+              "pgrp": 869394,
+              "session": 869394,
+              "start_ticks": 129820402
+            },
+            "current": null,
+            "original_alive": false
+          },
+          {
+            "label": "5",
+            "recorded": {
+              "pid": 870089,
+              "state": "S",
+              "pgrp": 869394,
+              "session": 869394,
+              "start_ticks": 129820402
+            },
+            "current": null,
+            "original_alive": false
+          },
+          {
+            "label": "6",
+            "recorded": {
+              "pid": 870090,
+              "state": "S",
+              "pgrp": 869394,
+              "session": 869394,
+              "start_ticks": 129820402
+            },
+            "current": null,
+            "original_alive": false
+          },
+          {
+            "label": "7",
+            "recorded": {
+              "pid": 870091,
+              "state": "S",
+              "pgrp": 869394,
+              "session": 869394,
+              "start_ticks": 129820402
+            },
+            "current": null,
+            "original_alive": false
+          }
+        ],
+        "cleanup": {
+          "owned_group_members": [],
+          "historical_idle": {
+            "selected_physical_cards": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "explicitly_idle_cards": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "other_busy_cards": []
+          },
+          "historical_idle_matches_status": true,
+          "finished_at": "2026-09-14T05:18:10.225627+00:00"
+        },
+        "error": "RuntimeError: cleanup errors before formal HTTP200 or wrong HTTP count",
+        "observed_end_utc": "2026-09-14T05:21:38.290787+00:00"
+      }
+    },
+    {
+      "tool_chunk": "53fe1b",
+      "exit_code": 0,
+      "wall_time_seconds": 4.447105,
+      "stdout_json": {
+        "observed_at_utc": "2026-09-14T05:22:12.141261+00:00",
+        "log_sha256": "e13942acb26b30e5901081a07a9b1526dcabace53cf7fd76184acefe415a1f66",
+        "bytes": 191170,
+        "http_lines": [
+          [
+            805,
+            "(APIServer pid=869394) H3B pid=869394 2026-09-14 12:59:04,977 INFO vllm.entrypoints.launcher Route: /v1/videos/sync, Methods: POST"
+          ]
+        ],
+        "error_count": 19,
+        "first_error_line": 1266,
+        "last_error_line": 1790,
+        "selected_lines": [
+          [
+            604,
+            "H3B pid=870084 2026-09-14 12:58:20,911 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {\"interop_after\": 192, \"interop_before\": 192, \"interop_loading\": 192, \"intraop_after\": 192, \"intraop_before\": 192, \"intraop_loading\": 4, \"phase_seconds\": {\"base\": 129.69999766303226, \"branch\": 16.46767247398384, \"lora\": 66.97562449797988}, \"requested_loading_intraop\": 4, \"scope_seconds\": 213.5288232830353, \"status\": \"completed\"}"
+          ],
+          [
+            610,
+            "H3B pid=870087 2026-09-14 12:58:21,604 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {\"interop_after\": 192, \"interop_before\": 192, \"interop_loading\": 192, \"intraop_after\": 192, \"intraop_before\": 192, \"intraop_loading\": 4, \"phase_seconds\": {\"base\": 128.8825402399525, \"branch\": 17.151608274085447, \"lora\": 68.39018609700724}, \"requested_loading_intraop\": 4, \"scope_seconds\": 214.88119113189168, \"status\": \"completed\"}"
+          ],
+          [
+            624,
+            "H3B pid=870088 2026-09-14 12:58:23,859 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {\"interop_after\": 192, \"interop_before\": 192, \"interop_loading\": 192, \"intraop_after\": 192, \"intraop_before\": 192, \"intraop_loading\": 4, \"phase_seconds\": {\"base\": 128.52833799901418, \"branch\": 16.953543449984863, \"lora\": 70.83774114400148}, \"requested_loading_intraop\": 4, \"scope_seconds\": 216.58058423013426, \"status\": \"completed\"}"
+          ],
+          [
+            632,
+            "H3B pid=870090 2026-09-14 12:58:25,306 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {\"interop_after\": 192, \"interop_before\": 192, \"interop_loading\": 192, \"intraop_after\": 192, \"intraop_before\": 192, \"intraop_loading\": 4, \"phase_seconds\": {\"base\": 129.82448253408074, \"branch\": 16.118839336093515, \"lora\": 71.68664373317733}, \"requested_loading_intraop\": 4, \"scope_seconds\": 217.97678384091705, \"status\": \"completed\"}"
+          ],
+          [
+            659,
+            "H3B pid=870089 2026-09-14 12:58:36,096 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {\"interop_after\": 192, \"interop_before\": 192, \"interop_loading\": 192, \"intraop_after\": 192, \"intraop_before\": 192, \"intraop_loading\": 4, \"phase_seconds\": {\"base\": 123.63291246513836, \"branch\": 15.88926454493776, \"lora\": 70.53116977401078}, \"requested_loading_intraop\": 4, \"scope_seconds\": 210.5287259221077, \"status\": \"completed\"}"
+          ],
+          [
+            675,
+            "H3B pid=870091 2026-09-14 12:58:39,172 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {\"interop_after\": 192, \"interop_before\": 192, \"interop_loading\": 192, \"intraop_after\": 192, \"intraop_before\": 192, \"intraop_loading\": 4, \"phase_seconds\": {\"base\": 123.00581361609511, \"branch\": 16.132934361929074, \"lora\": 73.24624037789181}, \"requested_loading_intraop\": 4, \"scope_seconds\": 212.7873006130103, \"status\": \"completed\"}"
+          ],
+          [
+            700,
+            "H3B pid=870086 2026-09-14 12:58:43,023 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {\"interop_after\": 192, \"interop_before\": 192, \"interop_loading\": 192, \"intraop_after\": 192, \"intraop_before\": 192, \"intraop_loading\": 4, \"phase_seconds\": {\"base\": 128.04689388209954, \"branch\": 16.405102991964668, \"lora\": 71.91751230997033}, \"requested_loading_intraop\": 4, \"scope_seconds\": 216.72744413395412, \"status\": \"completed\"}"
+          ],
+          [
+            710,
+            "H3B pid=870085 2026-09-14 12:58:46,860 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {\"interop_after\": 192, \"interop_before\": 192, \"interop_loading\": 192, \"intraop_after\": 192, \"intraop_before\": 192, \"intraop_loading\": 4, \"phase_seconds\": {\"base\": 127.88840090599842, \"branch\": 16.232006234116852, \"lora\": 75.67437709402293}, \"requested_loading_intraop\": 4, \"scope_seconds\": 220.2064799349755, \"status\": \"completed\"}"
+          ],
+          [
+            1048,
+            "(APIServer pid=869394) H3B pid=869394 2026-09-14 13:17:38,643 INFO vllm_omni.entrypoints.omni_base [AsyncOmni] Shutting down"
+          ],
+          [
+            1049,
+            "(APIServer pid=869394) H3B pid=869394 2026-09-14 13:17:38,645 INFO vllm_omni.engine.async_omni_engine [AsyncOmniEngine] Shutting down Orchestrator"
+          ],
+          [
+            1051,
+            "(APIServer pid=869394) H3B pid=869394 2026-09-14 13:17:38,654 INFO vllm_omni.engine.orchestrator [Orchestrator] Shutting down all 1 client(s)"
+          ],
+          [
+            1254,
+            "  File \"/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py\", line 1036, in _worker_busy_loop"
+          ],
+          [
+            1255,
+            "    msg = self.mq.dequeue(timeout=1.0)"
+          ],
+          [
+            1256,
+            "          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+          ],
+          [
+            1257,
+            "  File \"/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py\", line 1159, in signal_handler"
+          ],
+          [
+            1258,
+            "    raise SystemExit(128 + signum)"
+          ],
+          [
+            1259,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py\", line 314, in _bootstrap"
+          ],
+          [
+            1260,
+            "    self.run()"
+          ],
+          [
+            1261,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py\", line 108, in run"
+          ],
+          [
+            1262,
+            "    self._target(*self._args, **self._kwargs)"
+          ],
+          [
+            1263,
+            "  File \"/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py\", line 779, in dequeue"
+          ],
+          [
+            1264,
+            "    with self.acquire_read(timeout, indefinite) as buf:"
+          ],
+          [
+            1265,
+            "         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+          ],
+          [
+            1266,
+            "SystemExit: 143"
+          ],
+          [
+            1267,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/contextlib.py\", line 137, in __enter__"
+          ],
+          [
+            1788,
+            "(APIServer pid=869394) H3B pid=869394 2026-09-14 13:17:43,671 WARNING vllm_omni.diffusion.executor.multiproc_executor Terminating diffusion worker DiffusionWorker-0 after timeout"
+          ],
+          [
+            1789,
+            "(APIServer pid=869394) H3B pid=869394 2026-09-14 13:17:53,679 WARNING vllm_omni.diffusion.executor.multiproc_executor Terminating diffusion worker DiffusionWorker-1 after timeout"
+          ],
+          [
+            1790,
+            "(APIServer pid=869394) H3B pid=869394 2026-09-14 13:18:03,687 WARNING vllm_omni.diffusion.executor.multiproc_executor Terminating diffusion worker DiffusionWorker-2 after timeout"
+          ]
+        ],
+        "tail_before_shutdown": [
+          [
+            1201,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py\", line 250, in recv"
+          ],
+          [
+            1202,
+            "    raise EOFError"
+          ],
+          [
+            1203,
+            "    buf = self._recv_bytes()"
+          ],
+          [
+            1204,
+            "EOFError"
+          ],
+          [
+            1205,
+            "          ^^^^^^^^^^^^^^^^^^"
+          ],
+          [
+            1206,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py\", line 430, in _recv_bytes"
+          ],
+          [
+            1207,
+            "    buf = self._recv(4)"
+          ],
+          [
+            1208,
+            "          ^^^^^^^^^^^^^"
+          ],
+          [
+            1209,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py\", line 399, in _recv"
+          ],
+          [
+            1210,
+            "    raise EOFError"
+          ],
+          [
+            1211,
+            "EOFError"
+          ],
+          [
+            1212,
+            "Traceback (most recent call last):"
+          ],
+          [
+            1213,
+            "Traceback (most recent call last):"
+          ],
+          [
+            1214,
+            "Traceback (most recent call last):"
+          ],
+          [
+            1215,
+            "Traceback (most recent call last):"
+          ],
+          [
+            1216,
+            "Traceback (most recent call last):"
+          ],
+          [
+            1217,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py\", line 314, in _bootstrap"
+          ],
+          [
+            1218,
+            "    self.run()"
+          ],
+          [
+            1219,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py\", line 108, in run"
+          ],
+          [
+            1220,
+            "    self._target(*self._args, **self._kwargs)"
+          ],
+          [
+            1221,
+            "  File \"/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py\", line 1192, in worker_main"
+          ],
+          [
+            1222,
+            "    worker_proc._worker_busy_loop()"
+          ],
+          [
+            1223,
+            "  File \"/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py\", line 1036, in _worker_busy_loop"
+          ],
+          [
+            1224,
+            "    msg = self.mq.dequeue(timeout=1.0)"
+          ],
+          [
+            1225,
+            "          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+          ],
+          [
+            1226,
+            "  File \"/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py\", line 779, in dequeue"
+          ],
+          [
+            1227,
+            "    with self.acquire_read(timeout, indefinite) as buf:"
+          ],
+          [
+            1228,
+            "         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+          ],
+          [
+            1229,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/contextlib.py\", line 137, in __enter__"
+          ],
+          [
+            1230,
+            "    return next(self.gen)"
+          ],
+          [
+            1231,
+            "           ^^^^^^^^^^^^^^"
+          ],
+          [
+            1232,
+            "  File \"/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py\", line 67, in acquire_read"
+          ],
+          [
+            1233,
+            "    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())"
+          ],
+          [
+            1234,
+            "  File \"/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py\", line 198, in wait"
+          ],
+          [
+            1235,
+            "    events = dict(self.poller.poll(timeout=timeout_ms))"
+          ],
+          [
+            1236,
+            "                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+          ],
+          [
+            1237,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py\", line 314, in _bootstrap"
+          ],
+          [
+            1238,
+            "    self.run()"
+          ],
+          [
+            1239,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py\", line 106, in poll"
+          ],
+          [
+            1240,
+            "    return zmq_poll(self.sockets, timeout=timeout)"
+          ],
+          [
+            1241,
+            "           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+          ],
+          [
+            1242,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py\", line 108, in run"
+          ],
+          [
+            1243,
+            "    self._target(*self._args, **self._kwargs)"
+          ],
+          [
+            1244,
+            "  File \"zmq/backend/cython/_zmq.py\", line 1680, in zmq.backend.cython._zmq.zmq_poll"
+          ],
+          [
+            1245,
+            "    _check_rc(rc)"
+          ],
+          [
+            1246,
+            "    ^^^^^^^^^^^"
+          ],
+          [
+            1247,
+            "  File \"/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py\", line 1192, in worker_main"
+          ],
+          [
+            1248,
+            "    worker_proc._worker_busy_loop()"
+          ],
+          [
+            1249,
+            "  File \"zmq/backend/cython/_zmq.py\", line 179, in zmq.backend.cython._zmq._check_rc"
+          ],
+          [
+            1250,
+            "    PyErr_CheckSignals()"
+          ],
+          [
+            1251,
+            "    ^^^^^^^^^^^"
+          ],
+          [
+            1252,
+            "  File \"/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py\", line 314, in _bootstrap"
+          ],
+          [
+            1253,
+            "    self.run()"
+          ]
+        ],
+        "formal_completed_at": "2026-09-14T05:17:36.383188+00:00",
+        "finished_at": "2026-09-14T05:18:10.225627+00:00"
+      }
+    }
+  ],
+  "checks_completed": [
+    "Actual fixed status SHA and frozen SHA match expected; status references frozen SHA.",
+    "Release SHA and all19 declared file hashes/canonical paths match.",
+    "Actual object.__new__(BTrialSupervisor) with host/run/sample/selected/run_dir evidence_snapshot equals frozen exactly; formal_logging JSON and record match.",
+    "Host/boot, B case/sample/group/run, exactly-one-formal completion flags, no error/needs_attention and cleanup flags match.",
+    "Ref2VA81 plus Stage-B4 file records checked with original snapshot contract; no full large-weight payload hash.",
+    "Actual VLM admission/source/tiny/runtime/transfer chain still matches frozen.",
+    "B retains original linear branch and globally visible source; same Stage-B checkpoint.",
+    "Smoke prefix byte count/SHA is valid and unchanged; eight complete load and CPU_END records match actual card worker identities.",
+    "Full-log and prefix load records identical, complete535 base /800 branch /208 LoRA pairs; original192 intraop/inter-op threads restored for every PID.",
+    "Historical before-formal card/PID and health records match saved smoke gate after JSON normalization.",
+    "Both actual requests match source path/SHA, host/run/sample/group, exact prompt, fixed1344x768/24fps/seed4101/flow12/audioflow3/duration5/ref2va and2/50steps.",
+    "Both actual requests and smoke proof reference original server PID/start/pgrp/session.",
+    "Both actual results equal status; success,HTTP200,curl0,video/mp4; raw headers/curlstdout and empty stderr independently checked.",
+    "Request/result/headers/curlstdout/curlstderr/savedffprobe file hashes retained. Smoke request/result file hashes equal saved formal_smoke_gate references.",
+    "Both actual media files freshly hashed and freshly ffprobe counted124frames24fps1344x768; HTTPcontent-length matches actual file size.",
+    "Formal media SHA3fbab6d81d65bb40a0d86e889f7348eb37d2b3107d02cc5e87ea45875f5fd950 and4897397bytes match expected; measured recorded elapsed956.1085797089618s.",
+    "Smoke start/completion, formal start/completion and cleanup-finish timestamps ordered correctly.",
+    "All ten original PID/start identities no longer exist; B-owned group membership empty.",
+    "Historical npu_after parses as8idle and equals status; independent fresh npu-smi also8idle withallhealthOK at05:21:00 and05:21:34UTC.",
+    "Supplemental log ordering resolves cleanup warnings as occurring after timestamped shutdown following formal success."
+  ],
+  "limitations": [
+    "No visual or perceptual inspection by this subagent; media format/hash success is not edit-quality success.",
+    "No full large-model payload rehash; current stat identities, headers/small configs and previous transfer SHA are the weight-integrity scope.",
+    "No new model forward-call/NFE measurement and no independent DiT-only latency measurement; header/result timings retain their original scope.",
+    "No persistent resource monitor; fresh idle is valid only at recorded timestamps and may change when root starts C.",
+    "The first two audit helper runs exited1 due to the documented comparison/logging assumptions; raw failed outputs are preserved, not mislabeled as exit0.",
+    "No remote files, production code, proofs, weights, C launch state or30213 assets were modified."
+  ]
+}

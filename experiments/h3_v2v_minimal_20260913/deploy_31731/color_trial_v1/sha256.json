@@ -1,0 +1,16 @@
+{
+  "scope": "HISTORICAL initial pre-VLM nine-file snapshot. Not the deployable current version. Real VLM gate integration changed these files; use release_sha256.json when finalized. Old production outside color_trial_v1 remains unchanged.",
+  "files": {
+    "a/trial_gates.py": "9e1130014ee7a214ff5a98ea573a858a9cfd81e47a027709c686394dc9fbae88",
+    "a/run_a_trial.py": "2afe8d793ed7c2cd9a16746f7fb1e918b41f92fae0e87224b0dea11a970f3bc7",
+    "a/launch_a_trial.sh": "a5dae774cbbda7d8f016b5c13cfc1908a1d1d020468175d8c0fba593facc32d4",
+    "b/b_trial_gates.py": "fbd8f3c5643cec81461081cac1ac335cd6db778c717e2d1eac5ed9ccd3238483",
+    "b/run_b_trial.py": "9dc51899363b56fe5e7a4b5ced42738902f14406a0d0dda473060dd1ed354081",
+    "b/launch_b_trial.sh": "f24c4333b10a661f6e976a8b88b70704f3a931ea64588dc1723bdc218fb599c2",
+    "c/c_trial_gates.py": "b4f6cba29936bf06e0870a1efdda00c8116048b319a5b7034873be0dd5aba14c",
+    "c/run_c_trial.py": "95eed8b294dca789327fdec6639ef7134f4b97745239518fbce88a54960ac172",
+    "c/launch_c_trial.sh": "6e40da846fbf20d3daa7dcc8916c92c14326d379163827fc42b6dcdef1dccf4f",
+    "test_color_trial_cpu.py": "2364e9df74717ffd4acfa720f746381c23f489626caa4713dcfc40aa65ba47b5",
+    "README.md": "c59d75f280cf02c726243f40bdcc190c047b43724c3fdf6e83123743f831234d"
+  }
+}

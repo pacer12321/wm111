@@ -1,0 +1,1719 @@
+B sample=explicit_reverse_couple_124 group=01234567 cards=0,1,2,3,4,5,6,7 port=19099 run=642e2c4f790d4505a5fd0940bcfc43a2 source_policy=global
+H3B pid=428131 2026-09-14 00:02:57,545 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=428131 2026-09-14 00:02:57,545 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=428131 2026-09-14 00:02:57,546 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=428131 2026-09-14 00:02:57,631 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=428131 2026-09-14 00:02:57,674 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=428131 2026-09-14 00:03:13,890 INFO vllm_omni.patch NVFP4 W4A4 weight_scale NaN-clamp: installed.
+H3B pid=428131 2026-09-14 00:03:13,945 INFO vllm_omni.patch [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+H3B pid=428131 2026-09-14 00:03:18,255 INFO vllm.entrypoints.cli.main Delegating entrypoint handling to vllm-omni
+2026-09-14 00:03:18,330 - 428131 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+H3B pid=428131 2026-09-14 00:03:18,398 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+H3B pid=428131 2026-09-14 00:03:18,415 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+H3B pid=428131 2026-09-14 00:03:18,652 INFO vllm_omni.entrypoints.cli.serve Detected diffusion model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+H3B pid=428131 2026-09-14 00:03:18,653 INFO vllm_omni.entrypoints.cli.logo        █     █     █▄   ▄█       ▄▀▀▀▀▄ █▄   ▄█ █▄    █ ▀█▀ 
+ ▄▄ ▄█ █     █     █ ▀▄▀ █  ▄▄▄  █    █ █ ▀▄▀ █ █ ▀▄  █  █  
+  █▄█▀ █     █     █     █       █    █ █     █ █   ▀▄█  █  
+   ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀        ▀▀▀▀  ▀     ▀ ▀     ▀ ▀▀▀ 
+
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:03:18,656 INFO vllm.entrypoints.openai.api_server vLLM server version 0.26.0, serving model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:03:18,669 INFO vllm.entrypoints.serve.utils.api_utils non-default args: {'model_tag': '/cache/zhonghao/h3/models/MiniMax-H3/Ref2VA', 'host': '127.0.0.1', 'port': 19099, 'model': '/cache/zhonghao/h3/models/MiniMax-H3/Ref2VA', 'trust_remote_code': True}
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:03:18,670 INFO vllm_omni.entrypoints.omni_base [AsyncOmni] Initializing with model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:03:18,670 INFO vllm_omni.engine.async_omni_engine [AsyncOmniEngine] Initializing with model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:03:18,691 INFO vllm_omni.engine.async_omni_engine [AsyncOmniEngine] Launching Orchestrator thread with 1 stages
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:03:18,729 INFO vllm_omni.entrypoints.stage_utils Stage 0 logical-to-physical device mapping: 0->0, 1->1, 2->2, 3->3, 4->4, 5->5, 6->6, 7->7
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:03:19,046 WARNING vllm_omni.diffusion.attention.backends.ring.ring_globals FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:03:19,335 INFO vllm_omni.diffusion.executor.multiproc_executor Starting server...
+H3B pid=428757 2026-09-14 00:03:28,405 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=428757 2026-09-14 00:03:28,405 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=428757 2026-09-14 00:03:28,405 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=428757 2026-09-14 00:03:28,491 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=428757 2026-09-14 00:03:28,533 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=428762 2026-09-14 00:03:28,628 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=428762 2026-09-14 00:03:28,629 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=428762 2026-09-14 00:03:28,629 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=428762 2026-09-14 00:03:28,714 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=428762 2026-09-14 00:03:28,756 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=428764 2026-09-14 00:03:28,813 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=428764 2026-09-14 00:03:28,813 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=428764 2026-09-14 00:03:28,814 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=428758 2026-09-14 00:03:28,876 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=428758 2026-09-14 00:03:28,877 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=428758 2026-09-14 00:03:28,877 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=428759 2026-09-14 00:03:28,894 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=428759 2026-09-14 00:03:28,894 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=428759 2026-09-14 00:03:28,894 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=428764 2026-09-14 00:03:28,900 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=428764 2026-09-14 00:03:28,942 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=428758 2026-09-14 00:03:28,963 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=428759 2026-09-14 00:03:28,980 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=428763 2026-09-14 00:03:28,984 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=428763 2026-09-14 00:03:28,985 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=428763 2026-09-14 00:03:28,985 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=428758 2026-09-14 00:03:29,004 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=428759 2026-09-14 00:03:29,021 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=428763 2026-09-14 00:03:29,071 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=428763 2026-09-14 00:03:29,113 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=428760 2026-09-14 00:03:29,120 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=428760 2026-09-14 00:03:29,120 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=428760 2026-09-14 00:03:29,120 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=428761 2026-09-14 00:03:29,124 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=428761 2026-09-14 00:03:29,124 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=428761 2026-09-14 00:03:29,124 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=428760 2026-09-14 00:03:29,207 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=428761 2026-09-14 00:03:29,211 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=428760 2026-09-14 00:03:29,249 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=428761 2026-09-14 00:03:29,253 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=428757 2026-09-14 00:03:43,662 INFO vllm_omni.patch NVFP4 W4A4 weight_scale NaN-clamp: installed.
+H3B pid=428757 2026-09-14 00:03:43,716 INFO vllm_omni.patch [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+H3B pid=428762 2026-09-14 00:03:43,902 INFO vllm_omni.patch NVFP4 W4A4 weight_scale NaN-clamp: installed.
+H3B pid=428762 2026-09-14 00:03:43,957 INFO vllm_omni.patch [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+H3B pid=428764 2026-09-14 00:03:44,094 INFO vllm_omni.patch NVFP4 W4A4 weight_scale NaN-clamp: installed.
+H3B pid=428764 2026-09-14 00:03:44,148 INFO vllm_omni.patch [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+H3B pid=428758 2026-09-14 00:03:44,200 INFO vllm_omni.patch NVFP4 W4A4 weight_scale NaN-clamp: installed.
+H3B pid=428759 2026-09-14 00:03:44,244 INFO vllm_omni.patch NVFP4 W4A4 weight_scale NaN-clamp: installed.
+H3B pid=428758 2026-09-14 00:03:44,253 INFO vllm_omni.patch [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+H3B pid=428759 2026-09-14 00:03:44,298 INFO vllm_omni.patch [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+H3B pid=428763 2026-09-14 00:03:44,541 INFO vllm_omni.patch NVFP4 W4A4 weight_scale NaN-clamp: installed.
+H3B pid=428761 2026-09-14 00:03:44,545 INFO vllm_omni.patch NVFP4 W4A4 weight_scale NaN-clamp: installed.
+H3B pid=428763 2026-09-14 00:03:44,594 INFO vllm_omni.patch [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+H3B pid=428761 2026-09-14 00:03:44,599 INFO vllm_omni.patch [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+H3B pid=428760 2026-09-14 00:03:44,737 INFO vllm_omni.patch NVFP4 W4A4 weight_scale NaN-clamp: installed.
+H3B pid=428760 2026-09-14 00:03:44,791 INFO vllm_omni.patch [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+2026-09-14 00:03:47,204 - 428757 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+H3B pid=428757 2026-09-14 00:03:47,267 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+H3B pid=428757 2026-09-14 00:03:47,301 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+H3B pid=428757 2026-09-14 00:03:47,399 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 0 created result MessageQueue
+2026-09-14 00:03:47,523 - 428762 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+H3B pid=428762 2026-09-14 00:03:47,588 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+H3B pid=428762 2026-09-14 00:03:47,622 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+H3B pid=428762 2026-09-14 00:03:47,721 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 5 created result MessageQueue
+2026-09-14 00:03:47,728 - 428764 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+2026-09-14 00:03:47,742 - 428758 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+H3B pid=428764 2026-09-14 00:03:47,791 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+H3B pid=428758 2026-09-14 00:03:47,804 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+H3B pid=428764 2026-09-14 00:03:47,826 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+H3B pid=428758 2026-09-14 00:03:47,839 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+2026-09-14 00:03:47,864 - 428759 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+H3B pid=428764 2026-09-14 00:03:47,927 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 7 created result MessageQueue
+H3B pid=428759 2026-09-14 00:03:47,928 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+H3B pid=428758 2026-09-14 00:03:47,937 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 1 created result MessageQueue
+H3B pid=428759 2026-09-14 00:03:47,963 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+H3B pid=428759 2026-09-14 00:03:48,063 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 2 created result MessageQueue
+2026-09-14 00:03:48,071 - 428763 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+H3B pid=428763 2026-09-14 00:03:48,135 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+2026-09-14 00:03:48,162 - 428761 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+H3B pid=428763 2026-09-14 00:03:48,169 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+H3B pid=428761 2026-09-14 00:03:48,226 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+H3B pid=428761 2026-09-14 00:03:48,260 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+H3B pid=428763 2026-09-14 00:03:48,265 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 6 created result MessageQueue
+H3B pid=428761 2026-09-14 00:03:48,361 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 4 created result MessageQueue
+2026-09-14 00:03:48,367 - 428760 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+H3B pid=428760 2026-09-14 00:03:48,431 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+H3B pid=428760 2026-09-14 00:03:48,465 INFO vllm.model_executor.model_loader Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+H3B pid=428760 2026-09-14 00:03:48,563 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 3 created result MessageQueue
+H3B pid=428757 2026-09-14 00:03:49,214 INFO vllm.config.scheduler Chunked prefill is enabled with max_num_batched_tokens=2048.
+H3B pid=428757 2026-09-14 00:03:49,215 INFO vllm.config.vllm Asynchronous scheduling is enabled.
+H3B pid=428757 2026-09-14 00:03:49,215 INFO vllm.config.kernel Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428757 2026-09-14 00:03:49,217 WARNING vllm.logger Model config is missing. Skipping Ascend-specific config updates.
+H3B pid=428757 2026-09-14 00:03:49,218 INFO vllm.config.compilation Enabled custom fusions: norm_quant, act_quant
+H3B pid=428757 2026-09-14 00:03:49,218 INFO vllm_omni.diffusion.worker.diffusion_worker Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428757 2026-09-14 00:03:49,218 INFO vllm.logger Dynamic EPLB is False
+H3B pid=428757 2026-09-14 00:03:49,218 INFO vllm.logger The number of redundant experts is 0
+H3B pid=428762 2026-09-14 00:03:49,280 INFO vllm.config.scheduler Chunked prefill is enabled with max_num_batched_tokens=2048.
+H3B pid=428762 2026-09-14 00:03:49,281 INFO vllm.config.vllm Asynchronous scheduling is enabled.
+H3B pid=428762 2026-09-14 00:03:49,281 INFO vllm.config.kernel Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428762 2026-09-14 00:03:49,283 WARNING vllm.logger Model config is missing. Skipping Ascend-specific config updates.
+H3B pid=428762 2026-09-14 00:03:49,284 INFO vllm.config.compilation Enabled custom fusions: norm_quant, act_quant
+H3B pid=428762 2026-09-14 00:03:49,284 INFO vllm_omni.diffusion.worker.diffusion_worker Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428762 2026-09-14 00:03:49,284 INFO vllm.logger Dynamic EPLB is False
+H3B pid=428762 2026-09-14 00:03:49,284 INFO vllm.logger The number of redundant experts is 0
+H3B pid=428764 2026-09-14 00:03:49,357 INFO vllm.config.scheduler Chunked prefill is enabled with max_num_batched_tokens=2048.
+H3B pid=428764 2026-09-14 00:03:49,357 INFO vllm.config.vllm Asynchronous scheduling is enabled.
+H3B pid=428764 2026-09-14 00:03:49,358 INFO vllm.config.kernel Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428764 2026-09-14 00:03:49,360 WARNING vllm.logger Model config is missing. Skipping Ascend-specific config updates.
+H3B pid=428764 2026-09-14 00:03:49,360 INFO vllm.config.compilation Enabled custom fusions: norm_quant, act_quant
+H3B pid=428764 2026-09-14 00:03:49,360 INFO vllm_omni.diffusion.worker.diffusion_worker Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428764 2026-09-14 00:03:49,360 INFO vllm.logger Dynamic EPLB is False
+H3B pid=428764 2026-09-14 00:03:49,361 INFO vllm.logger The number of redundant experts is 0
+H3B pid=428758 2026-09-14 00:03:49,506 INFO vllm.config.scheduler Chunked prefill is enabled with max_num_batched_tokens=2048.
+H3B pid=428758 2026-09-14 00:03:49,507 INFO vllm.config.vllm Asynchronous scheduling is enabled.
+H3B pid=428758 2026-09-14 00:03:49,508 INFO vllm.config.kernel Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428758 2026-09-14 00:03:49,510 WARNING vllm.logger Model config is missing. Skipping Ascend-specific config updates.
+H3B pid=428758 2026-09-14 00:03:49,510 INFO vllm.config.compilation Enabled custom fusions: norm_quant, act_quant
+H3B pid=428758 2026-09-14 00:03:49,511 INFO vllm_omni.diffusion.worker.diffusion_worker Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428758 2026-09-14 00:03:49,511 INFO vllm.logger Dynamic EPLB is False
+H3B pid=428758 2026-09-14 00:03:49,511 INFO vllm.logger The number of redundant experts is 0
+H3B pid=428759 2026-09-14 00:03:49,646 INFO vllm.config.scheduler Chunked prefill is enabled with max_num_batched_tokens=2048.
+H3B pid=428759 2026-09-14 00:03:49,646 INFO vllm.config.vllm Asynchronous scheduling is enabled.
+H3B pid=428759 2026-09-14 00:03:49,647 INFO vllm.config.kernel Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428759 2026-09-14 00:03:49,649 WARNING vllm.logger Model config is missing. Skipping Ascend-specific config updates.
+H3B pid=428759 2026-09-14 00:03:49,649 INFO vllm.config.compilation Enabled custom fusions: norm_quant, act_quant
+H3B pid=428759 2026-09-14 00:03:49,649 INFO vllm_omni.diffusion.worker.diffusion_worker Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428759 2026-09-14 00:03:49,650 INFO vllm.logger Dynamic EPLB is False
+H3B pid=428759 2026-09-14 00:03:49,650 INFO vllm.logger The number of redundant experts is 0
+H3B pid=428763 2026-09-14 00:03:49,848 INFO vllm.config.scheduler Chunked prefill is enabled with max_num_batched_tokens=2048.
+H3B pid=428763 2026-09-14 00:03:49,849 INFO vllm.config.vllm Asynchronous scheduling is enabled.
+H3B pid=428763 2026-09-14 00:03:49,849 INFO vllm.config.kernel Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428763 2026-09-14 00:03:49,851 WARNING vllm.logger Model config is missing. Skipping Ascend-specific config updates.
+H3B pid=428763 2026-09-14 00:03:49,852 INFO vllm.config.compilation Enabled custom fusions: norm_quant, act_quant
+H3B pid=428763 2026-09-14 00:03:49,852 INFO vllm_omni.diffusion.worker.diffusion_worker Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428763 2026-09-14 00:03:49,852 INFO vllm.logger Dynamic EPLB is False
+H3B pid=428763 2026-09-14 00:03:49,852 INFO vllm.logger The number of redundant experts is 0
+H3B pid=428761 2026-09-14 00:03:49,959 INFO vllm.config.scheduler Chunked prefill is enabled with max_num_batched_tokens=2048.
+H3B pid=428761 2026-09-14 00:03:49,960 INFO vllm.config.vllm Asynchronous scheduling is enabled.
+H3B pid=428761 2026-09-14 00:03:49,960 INFO vllm.config.kernel Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428761 2026-09-14 00:03:49,962 WARNING vllm.logger Model config is missing. Skipping Ascend-specific config updates.
+H3B pid=428761 2026-09-14 00:03:49,963 INFO vllm.config.compilation Enabled custom fusions: norm_quant, act_quant
+H3B pid=428761 2026-09-14 00:03:49,963 INFO vllm_omni.diffusion.worker.diffusion_worker Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428761 2026-09-14 00:03:49,963 INFO vllm.logger Dynamic EPLB is False
+H3B pid=428761 2026-09-14 00:03:49,963 INFO vllm.logger The number of redundant experts is 0
+H3B pid=428760 2026-09-14 00:03:50,141 INFO vllm.config.scheduler Chunked prefill is enabled with max_num_batched_tokens=2048.
+H3B pid=428760 2026-09-14 00:03:50,142 INFO vllm.config.vllm Asynchronous scheduling is enabled.
+H3B pid=428760 2026-09-14 00:03:50,142 INFO vllm.config.kernel Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428760 2026-09-14 00:03:50,144 WARNING vllm.logger Model config is missing. Skipping Ascend-specific config updates.
+H3B pid=428760 2026-09-14 00:03:50,144 INFO vllm.config.compilation Enabled custom fusions: norm_quant, act_quant
+H3B pid=428760 2026-09-14 00:03:50,145 INFO vllm_omni.diffusion.worker.diffusion_worker Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+H3B pid=428760 2026-09-14 00:03:50,145 INFO vllm.logger Dynamic EPLB is False
+H3B pid=428760 2026-09-14 00:03:50,145 INFO vllm.logger The number of redundant experts is 0
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+H3B pid=428762 2026-09-14 00:03:50,163 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 5: Initialized device and distributed environment.
+H3B pid=428757 2026-09-14 00:03:50,163 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 0: Initialized device and distributed environment.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428762 2026-09-14 00:03:50,172 INFO vllm_omni.diffusion.distributed.parallel_state Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+H3B pid=428762 2026-09-14 00:03:50,173 INFO vllm_omni.diffusion.distributed.parallel_state SP group details for rank 5: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[5]
+H3B pid=428757 2026-09-14 00:03:50,173 INFO vllm_omni.diffusion.distributed.parallel_state Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+H3B pid=428757 2026-09-14 00:03:50,175 INFO vllm_omni.diffusion.distributed.parallel_state SP group details for rank 0: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[0]
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+H3B pid=428760 2026-09-14 00:03:50,243 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 3: Initialized device and distributed environment.
+H3B pid=428758 2026-09-14 00:03:50,243 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 1: Initialized device and distributed environment.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428764 2026-09-14 00:03:50,247 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 7: Initialized device and distributed environment.
+H3B pid=428763 2026-09-14 00:03:50,247 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 6: Initialized device and distributed environment.
+H3B pid=428761 2026-09-14 00:03:50,247 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 4: Initialized device and distributed environment.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428760 2026-09-14 00:03:50,250 INFO vllm_omni.diffusion.distributed.parallel_state Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+H3B pid=428759 2026-09-14 00:03:50,251 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 2: Initialized device and distributed environment.
+H3B pid=428760 2026-09-14 00:03:50,251 INFO vllm_omni.diffusion.distributed.parallel_state SP group details for rank 3: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[3]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428758 2026-09-14 00:03:50,252 INFO vllm_omni.diffusion.distributed.parallel_state Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428758 2026-09-14 00:03:50,253 INFO vllm_omni.diffusion.distributed.parallel_state SP group details for rank 1: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[1]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428763 2026-09-14 00:03:50,255 INFO vllm_omni.diffusion.distributed.parallel_state Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+H3B pid=428764 2026-09-14 00:03:50,255 INFO vllm_omni.diffusion.distributed.parallel_state Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428763 2026-09-14 00:03:50,256 INFO vllm_omni.diffusion.distributed.parallel_state SP group details for rank 6: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[6]
+H3B pid=428764 2026-09-14 00:03:50,256 INFO vllm_omni.diffusion.distributed.parallel_state SP group details for rank 7: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[7]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428759 2026-09-14 00:03:50,259 INFO vllm_omni.diffusion.distributed.parallel_state Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+H3B pid=428759 2026-09-14 00:03:50,260 INFO vllm_omni.diffusion.distributed.parallel_state SP group details for rank 2: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[2]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428761 2026-09-14 00:03:50,262 INFO vllm_omni.diffusion.distributed.parallel_state Building SP subgroups from explicit sp_group_ranks (sp_size=8, ulysses=8, ring=1, use_ulysses_low=True).
+H3B pid=428761 2026-09-14 00:03:50,264 INFO vllm_omni.diffusion.distributed.parallel_state SP group details for rank 4: sp_group=[0, 1, 2, 3, 4, 5, 6, 7], ulysses_group=[0, 1, 2, 3, 4, 5, 6, 7], ring_group=[4]
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+H3B pid=428760 2026-09-14 00:03:50,902 WARNING vllm_omni.diffusion.attention.backends.ring.ring_globals FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+H3B pid=428764 2026-09-14 00:03:50,904 WARNING vllm_omni.diffusion.attention.backends.ring.ring_globals FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+H3B pid=428762 2026-09-14 00:03:50,906 WARNING vllm_omni.diffusion.attention.backends.ring.ring_globals FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+H3B pid=428761 2026-09-14 00:03:50,920 WARNING vllm_omni.diffusion.attention.backends.ring.ring_globals FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+H3B pid=428763 2026-09-14 00:03:50,944 WARNING vllm_omni.diffusion.attention.backends.ring.ring_globals FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+H3B pid=428757 2026-09-14 00:03:50,944 WARNING vllm_omni.diffusion.attention.backends.ring.ring_globals FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+H3B pid=428758 2026-09-14 00:03:50,960 WARNING vllm_omni.diffusion.attention.backends.ring.ring_globals FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+H3B pid=428760 2026-09-14 00:03:50,970 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CONFIG checkpoint=/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+H3B pid=428764 2026-09-14 00:03:50,972 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CONFIG checkpoint=/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+H3B pid=428762 2026-09-14 00:03:50,974 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CONFIG checkpoint=/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+H3B pid=428764 2026-09-14 00:03:50,983 INFO vllm_omni.diffusion.attention.selector Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+H3B pid=428760 2026-09-14 00:03:50,983 INFO vllm_omni.diffusion.attention.selector Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+H3B pid=428762 2026-09-14 00:03:50,986 INFO vllm_omni.diffusion.attention.selector Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+H3B pid=428761 2026-09-14 00:03:50,988 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CONFIG checkpoint=/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+H3B pid=428761 2026-09-14 00:03:50,999 INFO vllm_omni.diffusion.attention.selector Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+H3B pid=428763 2026-09-14 00:03:51,010 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CONFIG checkpoint=/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+H3B pid=428757 2026-09-14 00:03:51,012 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CONFIG checkpoint=/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+H3B pid=428763 2026-09-14 00:03:51,022 INFO vllm_omni.diffusion.attention.selector Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+H3B pid=428757 2026-09-14 00:03:51,024 INFO vllm_omni.diffusion.attention.selector Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+H3B pid=428758 2026-09-14 00:03:51,027 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CONFIG checkpoint=/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+H3B pid=428758 2026-09-14 00:03:51,038 INFO vllm_omni.diffusion.attention.selector Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+H3B pid=428759 2026-09-14 00:03:51,322 WARNING vllm_omni.diffusion.attention.backends.ring.ring_globals FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+H3B pid=428759 2026-09-14 00:03:51,396 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CONFIG checkpoint=/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+H3B pid=428759 2026-09-14 00:03:51,410 INFO vllm_omni.diffusion.attention.selector Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+H3B pid=428764 2026-09-14 00:05:01,112 INFO vllm_omni.diffusion.models.minimax_h3.encoder MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+H3B pid=428763 2026-09-14 00:05:01,435 INFO vllm_omni.diffusion.models.minimax_h3.encoder MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+H3B pid=428758 2026-09-14 00:05:01,435 INFO vllm_omni.diffusion.models.minimax_h3.encoder MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+H3B pid=428760 2026-09-14 00:05:01,435 INFO vllm_omni.diffusion.models.minimax_h3.encoder MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+H3B pid=428757 2026-09-14 00:05:01,435 INFO vllm_omni.diffusion.models.minimax_h3.encoder MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+H3B pid=428762 2026-09-14 00:05:01,435 INFO vllm_omni.diffusion.models.minimax_h3.encoder MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+H3B pid=428759 2026-09-14 00:05:01,435 INFO vllm_omni.diffusion.models.minimax_h3.encoder MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+H3B pid=428761 2026-09-14 00:05:01,435 INFO vllm_omni.diffusion.models.minimax_h3.encoder MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=8, vision replicated
+The config attributes {'vae_ratio': 16, 'vae_ratio_t': 4} were passed to AutoencoderKLLegacy, but are not expected and will be ignored. Please verify your config.json configuration file.
+H3B pid=428760 2026-09-14 00:06:08,175 INFO vllm_omni.diffusion.registry Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+H3B pid=428760 2026-09-14 00:06:08,236 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_BEGIN {"interop_before": 192, "interop_loading": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {}, "requested_loading_intraop": 4, "status": "loading"}
+H3B pid=428758 2026-09-14 00:06:09,753 INFO vllm_omni.diffusion.registry Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+H3B pid=428762 2026-09-14 00:06:09,786 INFO vllm_omni.diffusion.registry Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+H3B pid=428758 2026-09-14 00:06:09,821 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_BEGIN {"interop_before": 192, "interop_loading": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {}, "requested_loading_intraop": 4, "status": "loading"}
+H3B pid=428762 2026-09-14 00:06:09,854 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_BEGIN {"interop_before": 192, "interop_loading": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {}, "requested_loading_intraop": 4, "status": "loading"}
+H3B pid=428757 2026-09-14 00:06:10,009 INFO vllm_omni.diffusion.registry Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+H3B pid=428757 2026-09-14 00:06:10,065 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_BEGIN {"interop_before": 192, "interop_loading": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {}, "requested_loading_intraop": 4, "status": "loading"}
+Multi-thread loading shards:   0% Completed | 0/13 [00:00<?, ?it/s]
+H3B pid=428764 2026-09-14 00:06:10,119 INFO vllm_omni.diffusion.registry Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+H3B pid=428764 2026-09-14 00:06:10,171 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_BEGIN {"interop_before": 192, "interop_loading": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {}, "requested_loading_intraop": 4, "status": "loading"}
+Multi-thread loading shards:   8% Completed | 1/13 [00:11<02:17, 11.45s/it]
+H3B pid=428760 2026-09-14 00:06:21,897 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=50/535
+H3B pid=428758 2026-09-14 00:06:24,313 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=50/535
+H3B pid=428757 2026-09-14 00:06:24,332 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=50/535
+H3B pid=428762 2026-09-14 00:06:24,346 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=50/535
+H3B pid=428764 2026-09-14 00:06:24,813 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=50/535
+H3B pid=428761 2026-09-14 00:06:26,914 INFO vllm_omni.diffusion.registry Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+H3B pid=428761 2026-09-14 00:06:26,966 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_BEGIN {"interop_before": 192, "interop_loading": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {}, "requested_loading_intraop": 4, "status": "loading"}
+H3B pid=428759 2026-09-14 00:06:27,377 INFO vllm_omni.diffusion.registry Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+H3B pid=428763 2026-09-14 00:06:27,382 INFO vllm_omni.diffusion.registry Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=8, mode=ulysses, ulysses=8, ring=1)
+H3B pid=428759 2026-09-14 00:06:27,430 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_BEGIN {"interop_before": 192, "interop_loading": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {}, "requested_loading_intraop": 4, "status": "loading"}
+H3B pid=428763 2026-09-14 00:06:27,433 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_BEGIN {"interop_before": 192, "interop_loading": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {}, "requested_loading_intraop": 4, "status": "loading"}
+Multi-thread loading shards:  15% Completed | 2/13 [00:20<01:48,  9.84s/it]
+H3B pid=428760 2026-09-14 00:06:34,624 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=100/535
+H3B pid=428757 2026-09-14 00:06:35,667 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=100/535
+H3B pid=428762 2026-09-14 00:06:36,869 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=100/535
+H3B pid=428758 2026-09-14 00:06:37,467 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=100/535
+H3B pid=428764 2026-09-14 00:06:37,820 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=100/535
+H3B pid=428759 2026-09-14 00:06:39,400 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=50/535
+H3B pid=428761 2026-09-14 00:06:39,562 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=50/535
+H3B pid=428763 2026-09-14 00:06:39,950 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=50/535
+Multi-thread loading shards:  23% Completed | 3/13 [00:30<01:41, 10.17s/it]
+H3B pid=428760 2026-09-14 00:06:44,889 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=150/535
+H3B pid=428757 2026-09-14 00:06:46,410 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=150/535
+H3B pid=428762 2026-09-14 00:06:47,198 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=150/535
+H3B pid=428758 2026-09-14 00:06:47,935 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=150/535
+H3B pid=428764 2026-09-14 00:06:48,500 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=150/535
+H3B pid=428759 2026-09-14 00:06:49,367 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=100/535
+H3B pid=428761 2026-09-14 00:06:50,833 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=100/535
+H3B pid=428763 2026-09-14 00:06:51,200 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=100/535
+Multi-thread loading shards:  31% Completed | 4/13 [00:41<01:33, 10.35s/it]
+H3B pid=428760 2026-09-14 00:06:56,444 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=200/535
+H3B pid=428759 2026-09-14 00:06:57,863 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=150/535
+H3B pid=428762 2026-09-14 00:06:58,727 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=200/535
+H3B pid=428757 2026-09-14 00:06:58,877 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=200/535
+H3B pid=428758 2026-09-14 00:06:59,915 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=200/535
+H3B pid=428764 2026-09-14 00:07:00,556 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=200/535
+H3B pid=428761 2026-09-14 00:07:01,403 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=150/535
+H3B pid=428763 2026-09-14 00:07:01,458 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=150/535
+Multi-thread loading shards:  38% Completed | 5/13 [00:52<01:23, 10.48s/it]
+H3B pid=428759 2026-09-14 00:07:06,067 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=200/535
+H3B pid=428760 2026-09-14 00:07:09,000 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=250/535
+H3B pid=428757 2026-09-14 00:07:09,291 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=250/535
+Multi-thread loading shards:  46% Completed | 6/13 [00:59<01:06,  9.55s/it]
+H3B pid=428762 2026-09-14 00:07:11,256 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=250/535
+H3B pid=428758 2026-09-14 00:07:12,783 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=250/535
+H3B pid=428764 2026-09-14 00:07:12,846 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=250/535
+H3B pid=428761 2026-09-14 00:07:13,077 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=200/535
+H3B pid=428763 2026-09-14 00:07:13,285 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=200/535
+H3B pid=428759 2026-09-14 00:07:17,574 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=250/535
+Multi-thread loading shards:  54% Completed | 7/13 [01:07<00:53,  9.00s/it]
+H3B pid=428757 2026-09-14 00:07:19,507 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=300/535
+H3B pid=428760 2026-09-14 00:07:22,265 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=300/535
+H3B pid=428762 2026-09-14 00:07:23,750 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=300/535
+H3B pid=428761 2026-09-14 00:07:25,372 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=250/535
+H3B pid=428764 2026-09-14 00:07:25,604 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=300/535
+H3B pid=428763 2026-09-14 00:07:25,940 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=250/535
+H3B pid=428758 2026-09-14 00:07:26,128 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=300/535
+Multi-thread loading shards:  62% Completed | 8/13 [01:17<00:45,  9.14s/it]
+H3B pid=428759 2026-09-14 00:07:29,831 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=300/535
+H3B pid=428757 2026-09-14 00:07:31,598 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=350/535
+H3B pid=428760 2026-09-14 00:07:36,328 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=350/535
+H3B pid=428762 2026-09-14 00:07:36,384 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=350/535
+Multi-thread loading shards:  69% Completed | 9/13 [01:26<00:37,  9.34s/it]
+H3B pid=428761 2026-09-14 00:07:37,427 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=300/535
+H3B pid=428764 2026-09-14 00:07:37,703 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=350/535
+H3B pid=428763 2026-09-14 00:07:38,569 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=300/535
+H3B pid=428758 2026-09-14 00:07:38,746 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=350/535
+H3B pid=428759 2026-09-14 00:07:41,369 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=350/535
+H3B pid=428757 2026-09-14 00:07:43,852 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=400/535
+Multi-thread loading shards:  77% Completed | 10/13 [01:36<00:28,  9.57s/it]
+H3B pid=428761 2026-09-14 00:07:47,220 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=350/535
+H3B pid=428760 2026-09-14 00:07:48,608 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=400/535
+H3B pid=428762 2026-09-14 00:07:48,801 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=400/535
+H3B pid=428763 2026-09-14 00:07:49,528 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=350/535
+H3B pid=428764 2026-09-14 00:07:49,950 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=400/535
+H3B pid=428758 2026-09-14 00:07:50,803 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=400/535
+H3B pid=428759 2026-09-14 00:07:52,370 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=400/535
+H3B pid=428757 2026-09-14 00:07:55,810 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=450/535
+Multi-thread loading shards:  85% Completed | 11/13 [01:46<00:19,  9.56s/it]
+H3B pid=428761 2026-09-14 00:07:59,354 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=400/535
+H3B pid=428764 2026-09-14 00:07:59,740 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=450/535
+H3B pid=428763 2026-09-14 00:07:59,895 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=400/535
+H3B pid=428760 2026-09-14 00:08:00,963 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=450/535
+H3B pid=428762 2026-09-14 00:08:01,141 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=450/535
+H3B pid=428758 2026-09-14 00:08:02,776 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=450/535
+H3B pid=428759 2026-09-14 00:08:03,471 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=450/535
+Multi-thread loading shards:  92% Completed | 12/13 [01:56<00:09,  9.61s/it]
+H3B pid=428757 2026-09-14 00:08:06,843 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=500/535
+H3B pid=428764 2026-09-14 00:08:10,860 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=500/535
+H3B pid=428761 2026-09-14 00:08:11,613 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=450/535
+H3B pid=428759 2026-09-14 00:08:11,641 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=500/535
+H3B pid=428760 2026-09-14 00:08:11,976 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=500/535
+H3B pid=428762 2026-09-14 00:08:12,060 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=500/535
+H3B pid=428763 2026-09-14 00:08:12,078 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=450/535
+H3B pid=428758 2026-09-14 00:08:13,591 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=500/535
+Multi-thread loading shards: 100% Completed | 13/13 [02:04<00:00,  9.23s/it]
+Multi-thread loading shards: 100% Completed | 13/13 [02:04<00:00,  9.59s/it]
+
+H3B pid=428757 2026-09-14 00:08:14,716 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=535 seconds=124.628
+H3B pid=428757 2026-09-14 00:08:14,897 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 OPENVDN_B_PHASE_COMPLETE phase=base seconds=124.831
+H3B pid=428764 2026-09-14 00:08:16,543 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=535 seconds=126.349
+H3B pid=428757 2026-09-14 00:08:16,566 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=80/800
+H3B pid=428764 2026-09-14 00:08:16,931 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 OPENVDN_B_PHASE_COMPLETE phase=base seconds=126.759
+H3B pid=428757 2026-09-14 00:08:18,195 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=160/800
+H3B pid=428764 2026-09-14 00:08:18,465 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=80/800
+H3B pid=428759 2026-09-14 00:08:19,120 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=535 seconds=111.668
+H3B pid=428759 2026-09-14 00:08:19,404 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 OPENVDN_B_PHASE_COMPLETE phase=base seconds=111.974
+H3B pid=428760 2026-09-14 00:08:19,699 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=535 seconds=131.441
+H3B pid=428762 2026-09-14 00:08:19,725 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=535 seconds=129.848
+H3B pid=428757 2026-09-14 00:08:19,823 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=240/800
+H3B pid=428764 2026-09-14 00:08:19,891 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=160/800
+H3B pid=428760 2026-09-14 00:08:19,965 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 OPENVDN_B_PHASE_COMPLETE phase=base seconds=131.729
+H3B pid=428762 2026-09-14 00:08:20,051 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 OPENVDN_B_PHASE_COMPLETE phase=base seconds=130.197
+H3B pid=428759 2026-09-14 00:08:20,990 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=80/800
+H3B pid=428758 2026-09-14 00:08:21,186 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=535 seconds=131.342
+H3B pid=428764 2026-09-14 00:08:21,317 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=240/800
+H3B pid=428757 2026-09-14 00:08:21,438 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=320/800
+H3B pid=428758 2026-09-14 00:08:21,485 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 OPENVDN_B_PHASE_COMPLETE phase=base seconds=131.663
+H3B pid=428760 2026-09-14 00:08:21,611 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=80/800
+H3B pid=428762 2026-09-14 00:08:21,648 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=80/800
+H3B pid=428759 2026-09-14 00:08:22,522 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=160/800
+H3B pid=428761 2026-09-14 00:08:22,542 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=500/535
+H3B pid=428764 2026-09-14 00:08:22,742 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=320/800
+H3B pid=428757 2026-09-14 00:08:23,060 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=400/800
+H3B pid=428758 2026-09-14 00:08:23,077 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=80/800
+H3B pid=428760 2026-09-14 00:08:23,181 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=160/800
+H3B pid=428762 2026-09-14 00:08:23,222 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=160/800
+H3B pid=428763 2026-09-14 00:08:23,291 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=500/535
+H3B pid=428759 2026-09-14 00:08:24,078 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=240/800
+H3B pid=428764 2026-09-14 00:08:24,164 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=400/800
+H3B pid=428758 2026-09-14 00:08:24,622 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=160/800
+H3B pid=428757 2026-09-14 00:08:24,687 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=480/800
+H3B pid=428760 2026-09-14 00:08:24,757 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=240/800
+H3B pid=428762 2026-09-14 00:08:24,791 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=240/800
+H3B pid=428764 2026-09-14 00:08:25,589 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=480/800
+H3B pid=428759 2026-09-14 00:08:25,664 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=320/800
+H3B pid=428758 2026-09-14 00:08:26,163 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=240/800
+H3B pid=428757 2026-09-14 00:08:26,316 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=560/800
+H3B pid=428760 2026-09-14 00:08:26,326 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=320/800
+H3B pid=428762 2026-09-14 00:08:26,367 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=320/800
+H3B pid=428764 2026-09-14 00:08:27,016 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=560/800
+H3B pid=428759 2026-09-14 00:08:27,243 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=400/800
+H3B pid=428758 2026-09-14 00:08:27,714 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=320/800
+H3B pid=428760 2026-09-14 00:08:27,895 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=400/800
+H3B pid=428762 2026-09-14 00:08:27,937 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=400/800
+H3B pid=428757 2026-09-14 00:08:27,947 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=640/800
+H3B pid=428764 2026-09-14 00:08:28,443 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=640/800
+H3B pid=428759 2026-09-14 00:08:28,798 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=480/800
+H3B pid=428758 2026-09-14 00:08:29,262 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=400/800
+H3B pid=428760 2026-09-14 00:08:29,469 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=480/800
+H3B pid=428762 2026-09-14 00:08:29,516 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=480/800
+H3B pid=428757 2026-09-14 00:08:29,579 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=720/800
+H3B pid=428764 2026-09-14 00:08:29,871 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=720/800
+H3B pid=428761 2026-09-14 00:08:30,262 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=535 seconds=123.275
+H3B pid=428759 2026-09-14 00:08:30,342 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=560/800
+H3B pid=428761 2026-09-14 00:08:30,530 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 OPENVDN_B_PHASE_COMPLETE phase=base seconds=123.563
+H3B pid=428758 2026-09-14 00:08:30,799 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=480/800
+H3B pid=428763 2026-09-14 00:08:30,923 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BASE_VALIDATED tensors=535 seconds=123.468
+H3B pid=428760 2026-09-14 00:08:31,056 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=560/800
+H3B pid=428762 2026-09-14 00:08:31,093 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=560/800
+H3B pid=428757 2026-09-14 00:08:31,200 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=800/800
+H3B pid=428757 2026-09-14 00:08:31,201 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=branch seconds=16.272
+H3B pid=428763 2026-09-14 00:08:31,228 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 OPENVDN_B_PHASE_COMPLETE phase=base seconds=123.794
+H3B pid=428764 2026-09-14 00:08:31,300 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=800/800
+H3B pid=428764 2026-09-14 00:08:31,301 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=branch seconds=14.289
+H3B pid=428759 2026-09-14 00:08:31,881 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=640/800
+H3B pid=428761 2026-09-14 00:08:32,140 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=80/800
+H3B pid=428758 2026-09-14 00:08:32,339 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=560/800
+H3B pid=428760 2026-09-14 00:08:32,644 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=640/800
+H3B pid=428762 2026-09-14 00:08:32,684 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=640/800
+H3B pid=428763 2026-09-14 00:08:32,840 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=80/800
+H3B pid=428759 2026-09-14 00:08:33,427 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=720/800
+H3B pid=428761 2026-09-14 00:08:33,712 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=160/800
+H3B pid=428758 2026-09-14 00:08:33,880 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=640/800
+H3B pid=428760 2026-09-14 00:08:34,224 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=720/800
+H3B pid=428762 2026-09-14 00:08:34,262 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=720/800
+H3B pid=428763 2026-09-14 00:08:34,413 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=160/800
+H3B pid=428759 2026-09-14 00:08:34,967 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=800/800
+H3B pid=428759 2026-09-14 00:08:34,968 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=branch seconds=15.532
+H3B pid=428761 2026-09-14 00:08:35,282 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=240/800
+H3B pid=428758 2026-09-14 00:08:35,420 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=720/800
+H3B pid=428760 2026-09-14 00:08:35,803 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=800/800
+H3B pid=428760 2026-09-14 00:08:35,803 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=branch seconds=15.808
+H3B pid=428762 2026-09-14 00:08:35,841 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=800/800
+H3B pid=428762 2026-09-14 00:08:35,842 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=branch seconds=15.760
+H3B pid=428763 2026-09-14 00:08:35,994 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=240/800
+H3B pid=428761 2026-09-14 00:08:36,856 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=320/800
+H3B pid=428758 2026-09-14 00:08:36,965 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=800/800
+H3B pid=428758 2026-09-14 00:08:36,965 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=branch seconds=15.450
+H3B pid=428763 2026-09-14 00:08:37,575 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=320/800
+H3B pid=428764 2026-09-14 00:08:37,940 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=20/208
+H3B pid=428757 2026-09-14 00:08:37,975 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=20/208
+H3B pid=428761 2026-09-14 00:08:38,428 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=400/800
+H3B pid=428763 2026-09-14 00:08:39,157 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=400/800
+H3B pid=428761 2026-09-14 00:08:40,009 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=480/800
+H3B pid=428763 2026-09-14 00:08:40,731 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=480/800
+H3B pid=428761 2026-09-14 00:08:41,586 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=560/800
+H3B pid=428759 2026-09-14 00:08:41,907 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=20/208
+H3B pid=428763 2026-09-14 00:08:42,309 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=560/800
+H3B pid=428760 2026-09-14 00:08:42,359 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=20/208
+H3B pid=428762 2026-09-14 00:08:42,422 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=20/208
+H3B pid=428761 2026-09-14 00:08:43,177 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=640/800
+H3B pid=428758 2026-09-14 00:08:43,379 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=20/208
+H3B pid=428763 2026-09-14 00:08:43,898 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=640/800
+H3B pid=428764 2026-09-14 00:08:44,412 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=40/208
+H3B pid=428757 2026-09-14 00:08:44,745 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=40/208
+H3B pid=428761 2026-09-14 00:08:44,757 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=720/800
+H3B pid=428763 2026-09-14 00:08:45,511 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=720/800
+H3B pid=428761 2026-09-14 00:08:46,335 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=800/800
+H3B pid=428761 2026-09-14 00:08:46,336 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=branch seconds=15.775
+H3B pid=428763 2026-09-14 00:08:47,125 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_BRANCH_LOADED tensors=800/800
+H3B pid=428763 2026-09-14 00:08:47,126 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=branch seconds=15.867
+H3B pid=428760 2026-09-14 00:08:48,802 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=40/208
+H3B pid=428762 2026-09-14 00:08:49,521 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=40/208
+H3B pid=428759 2026-09-14 00:08:50,280 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=40/208
+H3B pid=428758 2026-09-14 00:08:50,597 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=40/208
+H3B pid=428764 2026-09-14 00:08:50,953 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=60/208
+H3B pid=428757 2026-09-14 00:08:51,318 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=60/208
+H3B pid=428761 2026-09-14 00:08:52,938 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=20/208
+H3B pid=428763 2026-09-14 00:08:53,656 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=20/208
+H3B pid=428760 2026-09-14 00:08:55,254 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=60/208
+H3B pid=428762 2026-09-14 00:08:56,712 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=60/208
+H3B pid=428759 2026-09-14 00:08:56,854 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=60/208
+H3B pid=428758 2026-09-14 00:08:57,185 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=60/208
+H3B pid=428764 2026-09-14 00:08:57,422 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=80/208
+H3B pid=428757 2026-09-14 00:08:57,857 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=80/208
+H3B pid=428761 2026-09-14 00:08:59,522 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=40/208
+H3B pid=428763 2026-09-14 00:09:00,077 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=40/208
+H3B pid=428760 2026-09-14 00:09:01,711 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=80/208
+H3B pid=428762 2026-09-14 00:09:03,331 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=80/208
+H3B pid=428759 2026-09-14 00:09:03,422 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=80/208
+H3B pid=428758 2026-09-14 00:09:03,685 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=80/208
+H3B pid=428764 2026-09-14 00:09:03,937 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=100/208
+H3B pid=428757 2026-09-14 00:09:04,471 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=100/208
+H3B pid=428761 2026-09-14 00:09:06,071 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=60/208
+H3B pid=428763 2026-09-14 00:09:06,459 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=60/208
+H3B pid=428760 2026-09-14 00:09:08,187 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=100/208
+H3B pid=428759 2026-09-14 00:09:09,917 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=100/208
+H3B pid=428762 2026-09-14 00:09:09,953 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=100/208
+H3B pid=428758 2026-09-14 00:09:10,197 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=100/208
+H3B pid=428764 2026-09-14 00:09:10,484 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=120/208
+H3B pid=428757 2026-09-14 00:09:10,918 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=120/208
+H3B pid=428761 2026-09-14 00:09:12,490 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=80/208
+H3B pid=428763 2026-09-14 00:09:12,882 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=80/208
+H3B pid=428760 2026-09-14 00:09:14,916 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=120/208
+H3B pid=428759 2026-09-14 00:09:16,386 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=120/208
+H3B pid=428762 2026-09-14 00:09:16,526 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=120/208
+H3B pid=428758 2026-09-14 00:09:16,583 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=120/208
+H3B pid=428764 2026-09-14 00:09:16,983 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=140/208
+H3B pid=428757 2026-09-14 00:09:17,312 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=140/208
+H3B pid=428761 2026-09-14 00:09:18,929 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=100/208
+H3B pid=428763 2026-09-14 00:09:19,375 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=100/208
+H3B pid=428760 2026-09-14 00:09:21,401 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=140/208
+H3B pid=428759 2026-09-14 00:09:22,875 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=140/208
+H3B pid=428758 2026-09-14 00:09:23,053 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=140/208
+H3B pid=428762 2026-09-14 00:09:23,263 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=140/208
+H3B pid=428764 2026-09-14 00:09:23,482 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=160/208
+H3B pid=428757 2026-09-14 00:09:23,638 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=160/208
+H3B pid=428761 2026-09-14 00:09:25,359 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=120/208
+H3B pid=428763 2026-09-14 00:09:25,664 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=120/208
+H3B pid=428760 2026-09-14 00:09:27,971 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=160/208
+H3B pid=428759 2026-09-14 00:09:29,363 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=160/208
+H3B pid=428758 2026-09-14 00:09:29,512 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=160/208
+H3B pid=428762 2026-09-14 00:09:29,864 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=160/208
+H3B pid=428764 2026-09-14 00:09:29,948 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=180/208
+H3B pid=428757 2026-09-14 00:09:30,003 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=180/208
+H3B pid=428761 2026-09-14 00:09:31,885 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=140/208
+H3B pid=428763 2026-09-14 00:09:32,038 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=140/208
+H3B pid=428760 2026-09-14 00:09:34,489 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=180/208
+H3B pid=428759 2026-09-14 00:09:35,859 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=180/208
+H3B pid=428758 2026-09-14 00:09:36,097 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=180/208
+H3B pid=428762 2026-09-14 00:09:36,347 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=180/208
+H3B pid=428764 2026-09-14 00:09:36,476 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=200/208
+H3B pid=428757 2026-09-14 00:09:36,514 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=200/208
+H3B pid=428761 2026-09-14 00:09:38,386 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=160/208
+H3B pid=428763 2026-09-14 00:09:38,403 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=160/208
+H3B pid=428757 2026-09-14 00:09:39,089 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=208/208
+H3B pid=428757 2026-09-14 00:09:39,089 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=lora seconds=67.888
+H3B pid=428757 2026-09-14 00:09:39,090 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LOAD_RECORD {"base_partition": "ref2va", "base_tensor_count": 535, "branch": {"header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors", "size_bytes": 4279428112, "tensor_count": 800}, "branch_tensor_count": 800, "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000", "load_and_merge_seconds": 84.1913394080475, "lora": {"header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors", "size_bytes": 334026912, "tensor_count": 416}, "lora_alpha": 64, "lora_pairs_merged": 208, "lora_rank": 64, "lora_scale": 1.0, "merge_dtype": "FP32 delta, cast to parameter dtype, then add", "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09", "phase_seconds": {"base": 124.83108684793115, "branch": 16.272005419945344, "lora": 67.88830951391719}, "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"}
+H3B pid=428764 2026-09-14 00:09:39,183 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=208/208
+H3B pid=428764 2026-09-14 00:09:39,183 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=lora seconds=67.882
+H3B pid=428764 2026-09-14 00:09:39,183 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LOAD_RECORD {"base_partition": "ref2va", "base_tensor_count": 535, "branch": {"header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors", "size_bytes": 4279428112, "tensor_count": 800}, "branch_tensor_count": 800, "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000", "load_and_merge_seconds": 82.25053177285008, "lora": {"header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors", "size_bytes": 334026912, "tensor_count": 416}, "lora_alpha": 64, "lora_pairs_merged": 208, "lora_rank": 64, "lora_scale": 1.0, "merge_dtype": "FP32 delta, cast to parameter dtype, then add", "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09", "phase_seconds": {"base": 126.75944910407998, "branch": 14.289241209859028, "lora": 67.88208983489312}, "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"}
+H3B pid=428757 2026-09-14 00:09:39,301 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {"interop_after": 192, "interop_before": 192, "interop_loading": 192, "intraop_after": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {"base": 124.83108684793115, "branch": 16.272005419945344, "lora": 67.88830951391719}, "requested_loading_intraop": 4, "scope_seconds": 209.23588318005204, "status": "completed"}
+H3B pid=428757 2026-09-14 00:09:39,301 INFO vllm_omni.diffusion.model_loader.diffusers_loader Loading weights took 209.20 seconds
+H3B pid=428764 2026-09-14 00:09:39,611 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {"interop_after": 192, "interop_before": 192, "interop_loading": 192, "intraop_after": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {"base": 126.75944910407998, "branch": 14.289241209859028, "lora": 67.88208983489312}, "requested_loading_intraop": 4, "scope_seconds": 209.44009863003157, "status": "completed"}
+H3B pid=428757 2026-09-14 00:09:40,585 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model loading took 10.2852 GiB and 350.278328 seconds
+H3B pid=428757 2026-09-14 00:09:40,585 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Model loaded successfully.
+H3B pid=428757 2026-09-14 00:09:40,595 INFO vllm_omni.diffusion.worker.diffusion_model_runner  Enabling offloader backend: LayerWiseOffloadBackend
+H3B pid=428764 2026-09-14 00:09:40,897 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model loading took 10.2852 GiB and 350.595217 seconds
+H3B pid=428764 2026-09-14 00:09:40,897 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Model loaded successfully.
+H3B pid=428764 2026-09-14 00:09:40,908 INFO vllm_omni.diffusion.worker.diffusion_model_runner  Enabling offloader backend: LayerWiseOffloadBackend
+H3B pid=428760 2026-09-14 00:09:40,994 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=200/208
+H3B pid=428758 2026-09-14 00:09:42,606 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=200/208
+H3B pid=428762 2026-09-14 00:09:42,945 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=200/208
+H3B pid=428759 2026-09-14 00:09:43,259 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=200/208
+H3B pid=428760 2026-09-14 00:09:43,589 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=208/208
+H3B pid=428760 2026-09-14 00:09:43,589 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=lora seconds=67.786
+H3B pid=428760 2026-09-14 00:09:43,590 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LOAD_RECORD {"base_partition": "ref2va", "base_tensor_count": 535, "branch": {"header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors", "size_bytes": 4279428112, "tensor_count": 800}, "branch_tensor_count": 800, "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000", "load_and_merge_seconds": 83.6230667529162, "lora": {"header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors", "size_bytes": 334026912, "tensor_count": 416}, "lora_alpha": 64, "lora_pairs_merged": 208, "lora_rank": 64, "lora_scale": 1.0, "merge_dtype": "FP32 delta, cast to parameter dtype, then add", "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09", "phase_seconds": {"base": 131.72872841497883, "branch": 15.807609967887402, "lora": 67.78598768799566}, "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"}
+H3B pid=428760 2026-09-14 00:09:43,944 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {"interop_after": 192, "interop_before": 192, "interop_loading": 192, "intraop_after": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {"base": 131.72872841497883, "branch": 15.807609967887402, "lora": 67.78598768799566}, "requested_loading_intraop": 4, "scope_seconds": 215.70841091684997, "status": "completed"}
+H3B pid=428757 2026-09-14 00:09:44,542 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying layer-wise offloading on ['transformer']
+H3B pid=428757 2026-09-14 00:09:44,542 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying hooks on transformer (MiniMaxH3DiTModel)
+H3B pid=428763 2026-09-14 00:09:44,760 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=180/208
+H3B pid=428764 2026-09-14 00:09:44,934 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying layer-wise offloading on ['transformer']
+H3B pid=428764 2026-09-14 00:09:44,935 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying hooks on transformer (MiniMaxH3DiTModel)
+H3B pid=428761 2026-09-14 00:09:44,989 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=180/208
+H3B pid=428760 2026-09-14 00:09:45,278 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model loading took 10.2852 GiB and 354.975985 seconds
+H3B pid=428760 2026-09-14 00:09:45,279 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Model loaded successfully.
+H3B pid=428760 2026-09-14 00:09:45,297 INFO vllm_omni.diffusion.worker.diffusion_model_runner  Enabling offloader backend: LayerWiseOffloadBackend
+H3B pid=428758 2026-09-14 00:09:45,537 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=208/208
+H3B pid=428758 2026-09-14 00:09:45,539 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=lora seconds=68.573
+H3B pid=428758 2026-09-14 00:09:45,539 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LOAD_RECORD {"base_partition": "ref2va", "base_tensor_count": 535, "branch": {"header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors", "size_bytes": 4279428112, "tensor_count": 800}, "branch_tensor_count": 800, "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000", "load_and_merge_seconds": 84.05279736290686, "lora": {"header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors", "size_bytes": 334026912, "tensor_count": 416}, "lora_alpha": 64, "lora_pairs_merged": 208, "lora_rank": 64, "lora_scale": 1.0, "merge_dtype": "FP32 delta, cast to parameter dtype, then add", "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09", "phase_seconds": {"base": 131.6634780250024, "branch": 15.44987067207694, "lora": 68.57293352088891}, "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"}
+H3B pid=428758 2026-09-14 00:09:46,014 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {"interop_after": 192, "interop_before": 192, "interop_loading": 192, "intraop_after": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {"base": 131.6634780250024, "branch": 15.44987067207694, "lora": 68.57293352088891}, "requested_loading_intraop": 4, "scope_seconds": 216.19399112300016, "status": "completed"}
+H3B pid=428762 2026-09-14 00:09:46,496 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=208/208
+H3B pid=428762 2026-09-14 00:09:46,497 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=lora seconds=70.655
+H3B pid=428762 2026-09-14 00:09:46,498 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LOAD_RECORD {"base_partition": "ref2va", "base_tensor_count": 535, "branch": {"header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors", "size_bytes": 4279428112, "tensor_count": 800}, "branch_tensor_count": 800, "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000", "load_and_merge_seconds": 86.44498653011397, "lora": {"header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors", "size_bytes": 334026912, "tensor_count": 416}, "lora_alpha": 64, "lora_pairs_merged": 208, "lora_rank": 64, "lora_scale": 1.0, "merge_dtype": "FP32 delta, cast to parameter dtype, then add", "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09", "phase_seconds": {"base": 130.19664095714688, "branch": 15.759697475004941, "lora": 70.65525260497816}, "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"}
+H3B pid=428762 2026-09-14 00:09:47,027 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {"interop_after": 192, "interop_before": 192, "interop_loading": 192, "intraop_after": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {"base": 130.19664095714688, "branch": 15.759697475004941, "lora": 70.65525260497816}, "requested_loading_intraop": 4, "scope_seconds": 217.17362723196857, "status": "completed"}
+H3B pid=428759 2026-09-14 00:09:47,417 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=208/208
+H3B pid=428759 2026-09-14 00:09:47,417 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=lora seconds=72.450
+H3B pid=428759 2026-09-14 00:09:47,418 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LOAD_RECORD {"base_partition": "ref2va", "base_tensor_count": 535, "branch": {"header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors", "size_bytes": 4279428112, "tensor_count": 800}, "branch_tensor_count": 800, "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000", "load_and_merge_seconds": 88.01205651392229, "lora": {"header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors", "size_bytes": 334026912, "tensor_count": 416}, "lora_alpha": 64, "lora_pairs_merged": 208, "lora_rank": 64, "lora_scale": 1.0, "merge_dtype": "FP32 delta, cast to parameter dtype, then add", "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09", "phase_seconds": {"base": 111.97365831607021, "branch": 15.531920744804665, "lora": 72.44966776785441}, "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"}
+H3B pid=428758 2026-09-14 00:09:47,466 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model loading took 10.2852 GiB and 357.161568 seconds
+H3B pid=428758 2026-09-14 00:09:47,466 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Model loaded successfully.
+H3B pid=428758 2026-09-14 00:09:47,487 INFO vllm_omni.diffusion.worker.diffusion_model_runner  Enabling offloader backend: LayerWiseOffloadBackend
+H3B pid=428759 2026-09-14 00:09:47,976 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {"interop_after": 192, "interop_before": 192, "interop_loading": 192, "intraop_after": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {"base": 111.97365831607021, "branch": 15.531920744804665, "lora": 72.44966776785441}, "requested_loading_intraop": 4, "scope_seconds": 200.5460955989547, "status": "completed"}
+H3B pid=428762 2026-09-14 00:09:48,421 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model loading took 10.2852 GiB and 358.116541 seconds
+H3B pid=428762 2026-09-14 00:09:48,421 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Model loaded successfully.
+H3B pid=428762 2026-09-14 00:09:48,436 INFO vllm_omni.diffusion.worker.diffusion_model_runner  Enabling offloader backend: LayerWiseOffloadBackend
+H3B pid=428759 2026-09-14 00:09:49,603 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model loading took 10.2852 GiB and 359.300135 seconds
+H3B pid=428759 2026-09-14 00:09:49,603 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Model loaded successfully.
+H3B pid=428759 2026-09-14 00:09:49,627 INFO vllm_omni.diffusion.worker.diffusion_model_runner  Enabling offloader backend: LayerWiseOffloadBackend
+H3B pid=428760 2026-09-14 00:09:51,703 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying layer-wise offloading on ['transformer']
+H3B pid=428760 2026-09-14 00:09:51,704 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying hooks on transformer (MiniMaxH3DiTModel)
+H3B pid=428757 2026-09-14 00:09:52,353 INFO vllm_omni.diffusion.offloader.layerwise_backend Layer-wise offloading enabled on 50 layers (blocks)
+H3B pid=428757 2026-09-14 00:09:52,353 WARNING vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+H3B pid=428757 2026-09-14 00:09:52,355 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Initialization complete.
+H3B pid=428758 2026-09-14 00:09:52,877 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying layer-wise offloading on ['transformer']
+H3B pid=428758 2026-09-14 00:09:52,878 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying hooks on transformer (MiniMaxH3DiTModel)
+H3B pid=428757 2026-09-14 00:09:53,196 WARNING vllm_omni.worker.gpu_memory_utils NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+H3B pid=428757 2026-09-14 00:09:53,274 INFO vllm_omni.diffusion.lora.manager Initializing DiffusionLoRAManager: device=npu:0, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+H3B pid=428757 2026-09-14 00:09:53,275 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 0: Initialization complete.
+H3B pid=428757 2026-09-14 00:09:53,278 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 0: Scheduler loop started.
+H3B pid=428757 2026-09-14 00:09:53,279 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 0 ready to receive requests via shared memory
+H3B pid=428764 2026-09-14 00:09:53,429 INFO vllm_omni.diffusion.offloader.layerwise_backend Layer-wise offloading enabled on 50 layers (blocks)
+H3B pid=428764 2026-09-14 00:09:53,429 WARNING vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+H3B pid=428764 2026-09-14 00:09:53,431 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Initialization complete.
+H3B pid=428763 2026-09-14 00:09:53,447 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=200/208
+H3B pid=428764 2026-09-14 00:09:54,137 WARNING vllm_omni.worker.gpu_memory_utils NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+H3B pid=428764 2026-09-14 00:09:54,206 INFO vllm_omni.diffusion.lora.manager Initializing DiffusionLoRAManager: device=npu:7, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+H3B pid=428764 2026-09-14 00:09:54,206 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 7: Initialization complete.
+H3B pid=428764 2026-09-14 00:09:54,208 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 7: Scheduler loop started.
+H3B pid=428764 2026-09-14 00:09:54,208 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 7 ready to receive requests via shared memory
+H3B pid=428762 2026-09-14 00:09:54,247 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying layer-wise offloading on ['transformer']
+H3B pid=428762 2026-09-14 00:09:54,249 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying hooks on transformer (MiniMaxH3DiTModel)
+H3B pid=428759 2026-09-14 00:09:55,435 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying layer-wise offloading on ['transformer']
+H3B pid=428759 2026-09-14 00:09:55,436 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying hooks on transformer (MiniMaxH3DiTModel)
+H3B pid=428761 2026-09-14 00:09:56,376 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=200/208
+H3B pid=428763 2026-09-14 00:09:57,051 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=208/208
+H3B pid=428763 2026-09-14 00:09:57,051 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=lora seconds=69.925
+H3B pid=428763 2026-09-14 00:09:57,051 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LOAD_RECORD {"base_partition": "ref2va", "base_tensor_count": 535, "branch": {"header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors", "size_bytes": 4279428112, "tensor_count": 800}, "branch_tensor_count": 800, "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000", "load_and_merge_seconds": 85.82173856790178, "lora": {"header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors", "size_bytes": 334026912, "tensor_count": 416}, "lora_alpha": 64, "lora_pairs_merged": 208, "lora_rank": 64, "lora_scale": 1.0, "merge_dtype": "FP32 delta, cast to parameter dtype, then add", "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09", "phase_seconds": {"base": 123.79428239306435, "branch": 15.867252915166318, "lora": 69.92536660702899}, "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"}
+H3B pid=428763 2026-09-14 00:09:57,394 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {"interop_after": 192, "interop_before": 192, "interop_loading": 192, "intraop_after": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {"base": 123.79428239306435, "branch": 15.867252915166318, "lora": 69.92536660702899}, "requested_loading_intraop": 4, "scope_seconds": 209.9604701739736, "status": "completed"}
+H3B pid=428763 2026-09-14 00:09:58,827 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model loading took 10.2852 GiB and 368.524675 seconds
+H3B pid=428763 2026-09-14 00:09:58,827 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Model loaded successfully.
+H3B pid=428763 2026-09-14 00:09:58,845 INFO vllm_omni.diffusion.worker.diffusion_model_runner  Enabling offloader backend: LayerWiseOffloadBackend
+H3B pid=428761 2026-09-14 00:10:00,795 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LORA_MERGED pairs=208/208
+H3B pid=428761 2026-09-14 00:10:00,796 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_PHASE_COMPLETE phase=lora seconds=74.460
+H3B pid=428761 2026-09-14 00:10:00,797 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_LOAD_RECORD {"base_partition": "ref2va", "base_tensor_count": 535, "branch": {"header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors", "size_bytes": 4279428112, "tensor_count": 800}, "branch_tensor_count": 800, "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000", "load_and_merge_seconds": 90.26559550501406, "lora": {"header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b", "metadata": {}, "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors", "size_bytes": 334026912, "tensor_count": 416}, "lora_alpha": 64, "lora_pairs_merged": 208, "lora_rank": 64, "lora_scale": 1.0, "merge_dtype": "FP32 delta, cast to parameter dtype, then add", "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09", "phase_seconds": {"base": 123.56330067897215, "branch": 15.775349396979436, "lora": 74.46042408794165}, "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"}
+H3B pid=428761 2026-09-14 00:10:01,163 INFO vllm_omni.diffusion.models.minimax_h3.openvdn_checkpoint OPENVDN_B_CPU_LOADING_END {"interop_after": 192, "interop_before": 192, "interop_loading": 192, "intraop_after": 192, "intraop_before": 192, "intraop_loading": 4, "phase_seconds": {"base": 123.56330067897215, "branch": 15.775349396979436, "lora": 74.46042408794165}, "requested_loading_intraop": 4, "scope_seconds": 214.1977444018703, "status": "completed"}
+H3B pid=428760 2026-09-14 00:10:02,027 INFO vllm_omni.diffusion.offloader.layerwise_backend Layer-wise offloading enabled on 50 layers (blocks)
+H3B pid=428760 2026-09-14 00:10:02,028 WARNING vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+H3B pid=428760 2026-09-14 00:10:02,030 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Initialization complete.
+H3B pid=428761 2026-09-14 00:10:02,534 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model loading took 10.2852 GiB and 372.232617 seconds
+H3B pid=428761 2026-09-14 00:10:02,534 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Model loaded successfully.
+H3B pid=428761 2026-09-14 00:10:02,545 INFO vllm_omni.diffusion.worker.diffusion_model_runner  Enabling offloader backend: LayerWiseOffloadBackend
+H3B pid=428760 2026-09-14 00:10:02,728 WARNING vllm_omni.worker.gpu_memory_utils NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+H3B pid=428760 2026-09-14 00:10:02,789 INFO vllm_omni.diffusion.lora.manager Initializing DiffusionLoRAManager: device=npu:3, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+H3B pid=428760 2026-09-14 00:10:02,789 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 3: Initialization complete.
+H3B pid=428760 2026-09-14 00:10:02,795 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 3: Scheduler loop started.
+H3B pid=428760 2026-09-14 00:10:02,797 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 3 ready to receive requests via shared memory
+H3B pid=428758 2026-09-14 00:10:03,694 INFO vllm_omni.diffusion.offloader.layerwise_backend Layer-wise offloading enabled on 50 layers (blocks)
+H3B pid=428758 2026-09-14 00:10:03,695 WARNING vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+H3B pid=428758 2026-09-14 00:10:03,695 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Initialization complete.
+H3B pid=428758 2026-09-14 00:10:04,345 WARNING vllm_omni.worker.gpu_memory_utils NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+H3B pid=428758 2026-09-14 00:10:04,408 INFO vllm_omni.diffusion.lora.manager Initializing DiffusionLoRAManager: device=npu:1, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+H3B pid=428758 2026-09-14 00:10:04,408 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 1: Initialization complete.
+H3B pid=428758 2026-09-14 00:10:04,412 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 1: Scheduler loop started.
+H3B pid=428758 2026-09-14 00:10:04,412 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 1 ready to receive requests via shared memory
+H3B pid=428763 2026-09-14 00:10:05,035 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying layer-wise offloading on ['transformer']
+H3B pid=428763 2026-09-14 00:10:05,036 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying hooks on transformer (MiniMaxH3DiTModel)
+H3B pid=428762 2026-09-14 00:10:05,091 INFO vllm_omni.diffusion.offloader.layerwise_backend Layer-wise offloading enabled on 50 layers (blocks)
+H3B pid=428762 2026-09-14 00:10:05,091 WARNING vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+H3B pid=428762 2026-09-14 00:10:05,092 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Initialization complete.
+H3B pid=428762 2026-09-14 00:10:05,812 WARNING vllm_omni.worker.gpu_memory_utils NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+H3B pid=428762 2026-09-14 00:10:05,872 INFO vllm_omni.diffusion.lora.manager Initializing DiffusionLoRAManager: device=npu:5, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+H3B pid=428762 2026-09-14 00:10:05,873 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 5: Initialization complete.
+H3B pid=428762 2026-09-14 00:10:05,874 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 5: Scheduler loop started.
+H3B pid=428762 2026-09-14 00:10:05,875 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 5 ready to receive requests via shared memory
+H3B pid=428759 2026-09-14 00:10:06,405 INFO vllm_omni.diffusion.offloader.layerwise_backend Layer-wise offloading enabled on 50 layers (blocks)
+H3B pid=428759 2026-09-14 00:10:06,405 WARNING vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+H3B pid=428759 2026-09-14 00:10:06,406 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Initialization complete.
+H3B pid=428759 2026-09-14 00:10:07,049 WARNING vllm_omni.worker.gpu_memory_utils NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+H3B pid=428759 2026-09-14 00:10:07,112 INFO vllm_omni.diffusion.lora.manager Initializing DiffusionLoRAManager: device=npu:2, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+H3B pid=428759 2026-09-14 00:10:07,113 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 2: Initialization complete.
+H3B pid=428759 2026-09-14 00:10:07,119 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 2: Scheduler loop started.
+H3B pid=428759 2026-09-14 00:10:07,120 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 2 ready to receive requests via shared memory
+H3B pid=428761 2026-09-14 00:10:09,422 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying layer-wise offloading on ['transformer']
+H3B pid=428761 2026-09-14 00:10:09,424 INFO vllm_omni.diffusion.offloader.layerwise_backend Applying hooks on transformer (MiniMaxH3DiTModel)
+H3B pid=428763 2026-09-14 00:10:14,606 INFO vllm_omni.diffusion.offloader.layerwise_backend Layer-wise offloading enabled on 50 layers (blocks)
+H3B pid=428763 2026-09-14 00:10:14,606 WARNING vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+H3B pid=428763 2026-09-14 00:10:14,607 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Initialization complete.
+H3B pid=428763 2026-09-14 00:10:15,281 WARNING vllm_omni.worker.gpu_memory_utils NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+H3B pid=428763 2026-09-14 00:10:15,340 INFO vllm_omni.diffusion.lora.manager Initializing DiffusionLoRAManager: device=npu:6, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+H3B pid=428763 2026-09-14 00:10:15,340 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 6: Initialization complete.
+H3B pid=428763 2026-09-14 00:10:15,342 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 6: Scheduler loop started.
+H3B pid=428763 2026-09-14 00:10:15,342 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 6 ready to receive requests via shared memory
+H3B pid=428761 2026-09-14 00:10:19,074 INFO vllm_omni.diffusion.offloader.layerwise_backend Layer-wise offloading enabled on 50 layers (blocks)
+H3B pid=428761 2026-09-14 00:10:19,075 WARNING vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Platform npu does not support torch inductor, skipping torch.compile.
+H3B pid=428761 2026-09-14 00:10:19,075 INFO vllm_omni.diffusion.worker.diffusion_model_runner Model runner: Initialization complete.
+H3B pid=428761 2026-09-14 00:10:19,657 WARNING vllm_omni.worker.gpu_memory_utils NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+H3B pid=428761 2026-09-14 00:10:19,712 INFO vllm_omni.diffusion.lora.manager Initializing DiffusionLoRAManager: device=npu:4, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+H3B pid=428761 2026-09-14 00:10:19,712 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 4: Initialization complete.
+H3B pid=428761 2026-09-14 00:10:19,714 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 4: Scheduler loop started.
+H3B pid=428761 2026-09-14 00:10:19,714 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 4 ready to receive requests via shared memory
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:19,720 INFO vllm_omni.diffusion.executor.multiproc_executor Async result pump started
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:19,743 INFO vllm_omni.diffusion.diffusion_engine [RequestBatch] engine init max_num_seqs=1 max_wait_ms=0.0
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:19,770 INFO vllm_omni.diffusion.diffusion_engine Skipping dummy warmup run (num_frames=0)
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:19,771 INFO vllm_omni.diffusion.inline_stage_diffusion_client [InlineStageDiffusionClient] stage-0 [rep-0] initialized inline (batch_size=1)
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:19,771 INFO vllm_omni.engine.stage_runtime [StageRuntime] Stage 0 replica 0 initialized (diffusion, batch_size=1)
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:19,773 INFO vllm_omni.engine.orchestrator [Orchestrator] Starting event loop
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:19,779 INFO vllm_omni.engine.async_omni_engine [AsyncOmniEngine] Orchestrator ready with 1 stages
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:19,780 INFO vllm_omni.entrypoints.omni_base [AsyncOmni] AsyncOmniEngine initialized in 421.11 seconds
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:19,785 INFO vllm_omni.entrypoints.omni_base [AsyncOmni] Initialized with 1 stages for model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,006 INFO vllm_omni.entrypoints.openai.api_server Detected pure diffusion mode (single diffusion stage)
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,011 INFO vllm_omni.utils.speaker_cache Speaker cache ready (max_bytes=536870912)
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,012 INFO vllm_omni.entrypoints.openai.serving_speech Speaker storage: dir=/home/ma-user/.cache/vllm-omni/speakers, max_speakers=1000, restored=0
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,012 INFO vllm_omni.entrypoints.openpi.serving Robot OpenPI serving disabled for model /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,012 INFO vllm_omni.entrypoints.openai.api_server Pure diffusion API server initialized for model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,013 INFO vllm_omni.entrypoints.openai.api_server Starting vLLM API server (pure diffusion mode) on http://127.0.0.1:19099
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Available routes are:
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /openapi.json, Methods: HEAD, GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /docs, Methods: HEAD, GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /docs/oauth2-redirect, Methods: HEAD, GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /redoc, Methods: HEAD, GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /load, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /version, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /health, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /metrics, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /tokenize, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /detokenize, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /ping, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,014 INFO vllm.entrypoints.launcher Route: /ping, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /invocations, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/responses, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/completions, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/messages, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /generative_scoring, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/chat/completions/render, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/completions/render, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/chat/completions/derender, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/completions/derender, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /inference/v1/generate, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/chat/completions, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/audio/speech, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,015 INFO vllm.entrypoints.launcher Route: /v1/audio/speech/batch, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/audio/generate, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/audio/voices, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/audio/voices, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/audio/voices/{name}, Methods: DELETE
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /health, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/models, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/images/generations, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/images/edits, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/videos, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/videos/sync, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/videos, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/videos/{video_id}, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/videos/{video_id}, Methods: DELETE
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/videos/{video_id}/content, Methods: GET
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/omni/sleep, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/omni/wakeup, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,016 INFO vllm.entrypoints.launcher Route: /v1/audio/speech/stream, Endpoint: streaming_speech
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,017 INFO vllm.entrypoints.launcher Route: /v1/video/chat/stream, Endpoint: streaming_video_chat
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,017 INFO vllm.entrypoints.launcher Route: /v1/realtime/video, Endpoint: streaming_video_output
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,017 INFO vllm.entrypoints.launcher Route: /v1/realtime, Endpoint: realtime_websocket
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,017 INFO vllm.entrypoints.launcher Route: /v1/realtime/robot/openpi, Endpoint: realtime_robot_openpi
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:21,017 INFO vllm.entrypoints.launcher Route: /v1/duplex, Endpoint: duplex_websocket
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:22,224 INFO vllm_omni.entrypoints.openai.api_server Video generation handler: OmniOpenAIServingVideo
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:22,228 INFO vllm_omni.entrypoints.openai.serving_video Boundary ratio parse: request=None gen_params=None
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:22,229 INFO vllm_omni.entrypoints.openai.serving_video Applied extra_params: {'task': 'ref2va', 'duration': 5.0, 'audio_flow_shift': 3.0}
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:10:22,229 INFO vllm_omni.entrypoints.openai.serving_video Video sampling params: steps=2 guidance=None guidance_2=None seed=4101
+H3B pid=428757 2026-09-14 00:10:28,258 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 MiniMax H3 ref2va Qwen presentation: 6138 tokens, 1 reference videos
+/cache/zhonghao/h3/env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+  0%|          | 0/1 [00:00<?, ?it/s]H3B pid=452280 2026-09-14 00:11:13,942 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=452280 2026-09-14 00:11:13,943 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=452280 2026-09-14 00:11:13,943 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=452282 2026-09-14 00:11:14,020 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=452282 2026-09-14 00:11:14,020 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=452282 2026-09-14 00:11:14,020 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=452280 2026-09-14 00:11:14,029 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=452280 2026-09-14 00:11:14,072 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=452282 2026-09-14 00:11:14,107 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=452278 2026-09-14 00:11:14,129 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=452278 2026-09-14 00:11:14,130 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=452278 2026-09-14 00:11:14,130 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=452282 2026-09-14 00:11:14,149 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=452279 2026-09-14 00:11:14,195 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=452279 2026-09-14 00:11:14,196 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=452279 2026-09-14 00:11:14,196 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=452278 2026-09-14 00:11:14,216 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=452278 2026-09-14 00:11:14,258 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=452279 2026-09-14 00:11:14,286 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=452279 2026-09-14 00:11:14,330 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=452277 2026-09-14 00:11:14,337 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=452277 2026-09-14 00:11:14,337 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=452277 2026-09-14 00:11:14,338 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=452284 2026-09-14 00:11:14,386 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=452284 2026-09-14 00:11:14,387 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=452284 2026-09-14 00:11:14,387 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=452283 2026-09-14 00:11:14,391 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=452283 2026-09-14 00:11:14,392 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=452283 2026-09-14 00:11:14,392 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=452277 2026-09-14 00:11:14,429 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=452277 2026-09-14 00:11:14,473 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=452284 2026-09-14 00:11:14,476 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=452283 2026-09-14 00:11:14,483 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=452281 2026-09-14 00:11:14,517 INFO vllm.plugins Available plugins for group vllm.platform_plugins:
+H3B pid=452281 2026-09-14 00:11:14,518 INFO vllm.plugins - ascend -> vllm_ascend:register
+H3B pid=452281 2026-09-14 00:11:14,518 INFO vllm.plugins All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+H3B pid=452284 2026-09-14 00:11:14,519 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=452283 2026-09-14 00:11:14,527 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+H3B pid=452281 2026-09-14 00:11:14,614 INFO vllm.platforms Platform plugin ascend is activated
+H3B pid=452281 2026-09-14 00:11:14,661 INFO vllm.logger Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:97: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+/cache/zhonghao/h3/env/Ascend/cann-9.0.1/opp/built-in/op_impl/ai_core/tbe/impl/ops_legacy/dynamic/gelu_grad_v2.py:157: SyntaxWarning: invalid escape sequence '\h'
+  gelu_grad_erf = erfc(-\hat{x}) / 2 + (1 /sqrt(Pi)) * (\hat{x}) * exp(-\hat{x}^2)
+100%|██████████| 1/1 [01:00<00:00, 60.85s/it]100%|██████████| 1/1 [01:00<00:00, 60.85s/it]
+/cache/zhonghao/h3/env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+................................(APIServer pid=428131) H3B pid=428131 2026-09-14 00:12:24,949 INFO vllm_omni.metrics.stats 
+(APIServer pid=428131) [Overall Summary]
+(APIServer pid=428131) +-----------------------------+-------------+
+(APIServer pid=428131) | Field                       |       Value |
+(APIServer pid=428131) +-----------------------------+-------------+
+(APIServer pid=428131) | e2e_requests                |           1 |
+(APIServer pid=428131) | e2e_wall_time_ms            | 122,692.889 |
+(APIServer pid=428131) | e2e_avg_time_per_request_ms | 122,692.889 |
+(APIServer pid=428131) | e2e_stage_0_wall_time_ms    | 122,692.740 |
+(APIServer pid=428131) +-----------------------------+-------------+
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:12:24,950 INFO vllm_omni.metrics.stats 
+(APIServer pid=428131) [RequestE2EStats [request_id=video_sync-bff67256f35d58f8-80e6e6d6]]
+(APIServer pid=428131) +--------------+-------------+
+(APIServer pid=428131) | Field        |       Value |
+(APIServer pid=428131) +--------------+-------------+
+(APIServer pid=428131) | e2e_total_ms | 122,692.740 |
+(APIServer pid=428131) +--------------+-------------+
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:12:24,950 INFO vllm_omni.metrics.stats [OmniTiming] req=video_sync-bff67256f35d58f8-80e6e6d6 total=122.69s engine=122.69s stages=[0:122.69s]
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:12:24,951 INFO vllm_omni.metrics.stats 
+(APIServer pid=428131) [StageRequestStats [request_id=video_sync-bff67256f35d58f8-80e6e6d6]]
+(APIServer pid=428131) +---------------------------------+-------------+
+(APIServer pid=428131) | Field                           |           0 |
+(APIServer pid=428131) +---------------------------------+-------------+
+(APIServer pid=428131) | audio_duration_s                |       5.175 |
+(APIServer pid=428131) | audio_generated_frames          |     165,600 |
+(APIServer pid=428131) | audio_sample_rate               |      32,000 |
+(APIServer pid=428131) | batch_id                        |           1 |
+(APIServer pid=428131) | batch_size                      |           1 |
+(APIServer pid=428131) | denoise_step_latency_ms         |  61,345.842 |
+(APIServer pid=428131) | image_pixels                    |     499,968 |
+(APIServer pid=428131) | inter_output_latencies_ms       |             |
+(APIServer pid=428131) | output_unit_count               |           1 |
+(APIServer pid=428131) | output_unit_type                |       image |
+(APIServer pid=428131) | serving_time_to_first_output_ms | 122,691.961 |
+(APIServer pid=428131) | stage_gen_time_ms               | 122,691.683 |
+(APIServer pid=428131) | vllm_itls_ms                    |             |
+(APIServer pid=428131) +---------------------------------+-------------+
+...(APIServer pid=428131) H3B pid=428131 2026-09-14 00:12:37,633 INFO vllm_omni.entrypoints.openai.serving_video Video response encoding (MP4 bytes): 12681.65 ms
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:12:41,611 INFO vllm_omni.entrypoints.openai.api_server Video generation handler: OmniOpenAIServingVideo
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:12:41,617 INFO vllm_omni.entrypoints.openai.serving_video Boundary ratio parse: request=None gen_params=None
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:12:41,618 INFO vllm_omni.entrypoints.openai.serving_video Applied extra_params: {'task': 'ref2va', 'duration': 5.0, 'audio_flow_shift': 3.0}
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:12:41,618 INFO vllm_omni.entrypoints.openai.serving_video Video sampling params: steps=50 guidance=None guidance_2=None seed=4101
+H3B pid=428757 2026-09-14 00:12:46,488 INFO vllm_omni.diffusion.models.minimax_h3.pipeline_minimax_h3 MiniMax H3 ref2va Qwen presentation: 6138 tokens, 1 reference videos
+/cache/zhonghao/h3/env/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+  0%|          | 0/49 [00:00<?, ?it/s]  2%|▏         | 1/49 [00:17<14:18, 17.90s/it]  4%|▍         | 2/49 [00:35<14:00, 17.88s/it]  6%|▌         | 3/49 [00:53<13:43, 17.90s/it]  8%|▊         | 4/49 [01:11<13:27, 17.94s/it] 10%|█         | 5/49 [01:29<13:12, 18.01s/it] 12%|█▏        | 6/49 [01:47<12:52, 17.97s/it] 14%|█▍        | 7/49 [02:05<12:34, 17.96s/it] 16%|█▋        | 8/49 [02:23<12:15, 17.94s/it] 18%|█▊        | 9/49 [02:41<11:57, 17.94s/it] 20%|██        | 10/49 [02:59<11:41, 17.98s/it] 22%|██▏       | 11/49 [03:17<11:24, 18.02s/it] 24%|██▍       | 12/49 [03:35<11:05, 17.99s/it] 27%|██▋       | 13/49 [03:53<10:48, 18.01s/it] 29%|██▊       | 14/49 [04:11<10:30, 18.01s/it] 31%|███       | 15/49 [04:29<10:13, 18.05s/it] 33%|███▎      | 16/49 [04:47<09:54, 18.01s/it] 35%|███▍      | 17/49 [05:05<09:36, 18.01s/it] 37%|███▋      | 18/49 [05:23<09:17, 17.98s/it] 39%|███▉      | 19/49 [05:41<08:59, 17.99s/it] 41%|████      | 20/49 [05:59<08:40, 17.96s/it] 43%|████▎     | 21/49 [06:17<08:23, 17.98s/it] 45%|████▍     | 22/49 [06:35<08:05, 17.98s/it] 47%|████▋     | 23/49 [06:53<07:47, 17.97s/it] 49%|████▉     | 24/49 [07:11<07:30, 18.01s/it] 51%|█████     | 25/49 [07:29<07:13, 18.06s/it] 53%|█████▎    | 26/49 [07:47<06:54, 18.03s/it] 55%|█████▌    | 27/49 [08:05<06:36, 18.01s/it] 57%|█████▋    | 28/49 [08:23<06:17, 17.98s/it] 59%|█████▉    | 29/49 [08:41<06:00, 18.00s/it] 61%|██████    | 30/49 [08:59<05:41, 17.99s/it] 63%|██████▎   | 31/49 [09:17<05:24, 18.01s/it] 65%|██████▌   | 32/49 [09:35<05:06, 18.03s/it] 67%|██████▋   | 33/49 [09:53<04:48, 18.00s/it] 69%|██████▉   | 34/49 [10:11<04:29, 17.99s/it] 71%|███████▏  | 35/49 [10:29<04:12, 18.03s/it] 73%|███████▎  | 36/49 [10:47<03:54, 18.02s/it] 76%|███████▌  | 37/49 [11:05<03:35, 18.00s/it] 78%|███████▊  | 38/49 [11:23<03:17, 17.97s/it] 80%|███████▉  | 39/49 [11:41<03:00, 18.01s/it] 82%|████████▏ | 40/49 [11:59<02:41, 17.98s/it] 84%|████████▎ | 41/49 [12:17<02:23, 17.97s/it] 86%|████████▌ | 42/49 [12:35<02:05, 17.95s/it] 88%|████████▊ | 43/49 [12:53<01:47, 17.97s/it] 90%|████████▉ | 44/49 [13:11<01:29, 17.96s/it] 92%|█████████▏| 45/49 [13:29<01:12, 18.00s/it] 94%|█████████▍| 46/49 [13:47<00:53, 18.00s/it] 96%|█████████▌| 47/49 [14:05<00:36, 18.03s/it] 98%|█████████▊| 48/49 [14:23<00:17, 17.99s/it]100%|██████████| 49/49 [14:41<00:00, 18.00s/it]100%|██████████| 49/49 [14:41<00:00, 17.99s/it]
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:27:49,053 INFO vllm_omni.metrics.stats 
+(APIServer pid=428131) [Overall Summary]
+(APIServer pid=428131) +-----------------------------+-------------+
+(APIServer pid=428131) | Field                       |       Value |
+(APIServer pid=428131) +-----------------------------+-------------+
+(APIServer pid=428131) | e2e_requests                |           1 |
+(APIServer pid=428131) | e2e_wall_time_ms            | 907,432.636 |
+(APIServer pid=428131) | e2e_avg_time_per_request_ms | 907,432.636 |
+(APIServer pid=428131) | e2e_stage_0_wall_time_ms    | 907,432.224 |
+(APIServer pid=428131) +-----------------------------+-------------+
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:27:49,054 INFO vllm_omni.metrics.stats 
+(APIServer pid=428131) [RequestE2EStats [request_id=video_sync-a2f945af0bd3c261-ab0dc2a7]]
+(APIServer pid=428131) +--------------+-------------+
+(APIServer pid=428131) | Field        |       Value |
+(APIServer pid=428131) +--------------+-------------+
+(APIServer pid=428131) | e2e_total_ms | 907,432.224 |
+(APIServer pid=428131) +--------------+-------------+
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:27:49,054 INFO vllm_omni.metrics.stats [OmniTiming] req=video_sync-a2f945af0bd3c261-ab0dc2a7 total=907.43s engine=907.43s stages=[0:907.43s]
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:27:49,055 INFO vllm_omni.metrics.stats 
+(APIServer pid=428131) [StageRequestStats [request_id=video_sync-a2f945af0bd3c261-ab0dc2a7]]
+(APIServer pid=428131) +---------------------------------+-------------+
+(APIServer pid=428131) | Field                           |           0 |
+(APIServer pid=428131) +---------------------------------+-------------+
+(APIServer pid=428131) | audio_duration_s                |       5.175 |
+(APIServer pid=428131) | audio_generated_frames          |     165,600 |
+(APIServer pid=428131) | audio_sample_rate               |      32,000 |
+(APIServer pid=428131) | batch_id                        |           2 |
+(APIServer pid=428131) | batch_size                      |           1 |
+(APIServer pid=428131) | denoise_step_latency_ms         |  18,148.602 |
+(APIServer pid=428131) | image_pixels                    |     499,968 |
+(APIServer pid=428131) | inter_output_latencies_ms       |             |
+(APIServer pid=428131) | output_unit_count               |           1 |
+(APIServer pid=428131) | output_unit_type                |       image |
+(APIServer pid=428131) | serving_time_to_first_output_ms | 907,430.331 |
+(APIServer pid=428131) | stage_gen_time_ms               | 907,430.078 |
+(APIServer pid=428131) | vllm_itls_ms                    |             |
+(APIServer pid=428131) +---------------------------------+-------------+
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:28:03,616 INFO vllm_omni.entrypoints.openai.serving_video Video response encoding (MP4 bytes): 14560.02 ms
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:28:06,391 INFO vllm.entrypoints.launcher [shutdown] API server: shutdown triggered
+H3B pid=428762 2026-09-14 00:28:06,402 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 5: Shutdown signal received, starting cleanup.
+H3B pid=428759 2026-09-14 00:28:06,402 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 2: Shutdown signal received, starting cleanup.
+H3B pid=428757 2026-09-14 00:28:06,402 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 0: Shutdown signal received, starting cleanup.
+H3B pid=428763 2026-09-14 00:28:06,413 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 6: Shutdown signal received, starting cleanup.
+H3B pid=428761 2026-09-14 00:28:06,416 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 4: Shutdown signal received, starting cleanup.
+H3B pid=428764 2026-09-14 00:28:06,419 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 7: Shutdown signal received, starting cleanup.
+H3B pid=428760 2026-09-14 00:28:06,422 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 3: Shutdown signal received, starting cleanup.
+H3B pid=428758 2026-09-14 00:28:06,434 INFO vllm_omni.diffusion.worker.diffusion_worker Worker 1: Shutdown signal received, starting cleanup.
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:28:06,592 INFO vllm_omni.entrypoints.omni_base [AsyncOmni] Shutting down
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:28:06,592 INFO vllm_omni.engine.async_omni_engine [AsyncOmniEngine] Shutting down Orchestrator
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:28:06,593 INFO vllm_omni.engine.orchestrator [Orchestrator] Received shutdown signal
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:28:06,593 INFO vllm_omni.engine.orchestrator [Orchestrator] Shutting down all 1 client(s)
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+Exception in thread Thread-1:
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+    item = self.task_q.get()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    raise EOFError
+EOFError
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+    self.run()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/utils/multiprocess_util.py", line 68, in run
+    item = self.task_q.get()
+           ^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 828, in _callmethod
+    kind, result = conn.recv()
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+    kind, result = conn.recv()
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+                   ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+          ^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    buf = self._recv(4)
+    raise EOFError
+          ^^^^^^^^^^^^^
+EOFError
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionRefusedError: [Errno 111] Connection refused
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+SystemExit: 143
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+SystemExit: 143
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+
+During handling of the above exception, another exception occurred:
+
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SystemExit: 143
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+
+During handling of the above exception, another exception occurred:
+
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+ConnectionRefusedError: [Errno 111] Connection refused
+Traceback (most recent call last):
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1192, in worker_main
+    worker_proc._worker_busy_loop()
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1036, in _worker_busy_loop
+    msg = self.mq.dequeue(timeout=1.0)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 779, in dequeue
+    with self.acquire_read(timeout, indefinite) as buf:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/src/vllm-ascend/vllm_ascend/patch/platform/patch_shm_broadcast.py", line 67, in acquire_read
+    self._spin_condition.wait(timeout_ms=read_timeout.timeout_ms())
+  File "/cache/zhonghao/h3/src/vllm/vllm/distributed/device_communicators/shm_broadcast.py", line 198, in wait
+    events = dict(self.poller.poll(timeout=timeout_ms))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/site-packages/zmq/sugar/poll.py", line 106, in poll
+    return zmq_poll(self.sockets, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 1680, in zmq.backend.cython._zmq.zmq_poll
+    _check_rc(rc)
+    ^^^^^^^^^^^
+  File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+    PyErr_CheckSignals()
+    ^^^^^^^^^^^
+  File "/cache/zhonghao/h3/candidates/b_v1/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1159, in signal_handler
+    raise SystemExit(128 + signum)
+SystemExit: 143
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 820, in _callmethod
+    conn = self._tls.connection
+           ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 303, in _run_finalizers
+    finalizer()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/util.py", line 227, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 63, in wrapper
+    return func(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/route.py", line 217, in finalize
+    cls.cann_kb_mgr.finalize()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/knowledge_bank_manager.py", line 42, in finalize
+    self.__static_mgr.close()
+  File "/cache/zhonghao/h3/env/Ascend/cann-9.0.1/python/site-packages/tbe/common/repository_manager/cann_kb_manager/base_manager.py", line 342, in close
+    for name in copy.deepcopy(self.write_kb.keys()):
+                              ^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in keys
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 824, in _callmethod
+    self._connect()
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/managers.py", line 811, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 519, in Client
+    c = SocketClient(address)
+        ^^^^^^^^^^^^^^^^^^^^^
+  File "/cache/zhonghao/h3/env/lib/python3.12/multiprocessing/connection.py", line 647, in SocketClient
+    s.connect(address)
+ConnectionRefusedError: [Errno 111] Connection refused
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:28:11,599 WARNING vllm_omni.diffusion.executor.multiproc_executor Terminating diffusion worker DiffusionWorker-0 after timeout
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:28:21,607 WARNING vllm_omni.diffusion.executor.multiproc_executor Terminating diffusion worker DiffusionWorker-1 after timeout
+(APIServer pid=428131) H3B pid=428131 2026-09-14 00:28:31,615 WARNING vllm_omni.diffusion.executor.multiproc_executor Terminating diffusion worker DiffusionWorker-2 after timeout

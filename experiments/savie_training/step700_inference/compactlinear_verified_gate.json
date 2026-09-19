@@ -1,0 +1,61 @@
+{
+  "checkpoint_step": 1000,
+  "integration_passed": true,
+  "weights_changed": false,
+  "connectivity_changed": false,
+  "selector_algorithm_changed": false,
+  "helpers": {
+    "savie_source_query_flash.py": "8db4640bcbd66fb15a0ddc3943552e05059bdaaba46fbdb243681cba7866a106",
+    "savie_grouped_queries.py": "0d9dcf4b1888dda1cb0ded28411601bc01f4206096438bd7b4af68d4d880fdcc",
+    "savie_step_token_plan.py": "92269649ad499187d236258c8843812224be0757db46f9ede8dbfe9b9573d6d4",
+    "savie_token_plan_install.py": "8f21ae9064522141cec6e3442d31d92b6e6a8d0e50d270933227b6e55525c10f",
+    "savie_linear_live_rows.py": "cbc92dd5c2fcd7962f79c5c6af6a874887458e4f3391b71d65f557edc6adff48",
+    "savie_active_post_block.py": "9fd9b1916c0d21585ec7b808ac927fb0a27de9e2ab85e3a9f726e8ac931bf0fc",
+    "savie_target_query_flash.py": "5bd027327ec3b1abb3a359191faf26580948f5a175bab63c35ceeaf3d93900bf",
+    "savie_compact_linear.py": "64fd8a2569a693ac58b0df881fbbe19da6ba83009fe5fbbc561eb1cbe8fa738b"
+  },
+  "overlay_sha": "6a74cd0f4034653bb2160565cc20fa686053de655914a72172eb4297c314cc04",
+  "attention_forward_cases": 8,
+  "grouped_gpu_cases": 8,
+  "source_target_isolation_exact": true,
+  "full_model_generation_validated": false,
+  "parent": "targetflash_216.654535_seconds",
+  "change": "compactlinear",
+  "target_flash_gpu_cases": 8,
+  "non_target_output_exact": true,
+  "compact_NCCL_scan_bitexact_cases": 8,
+  "transport_timing": {
+    "full_rows": 81216,
+    "compact_rows": 43456,
+    "keeps_text_and_all_target": true,
+    "baseline_ms": 11.13907241821289,
+    "compact_ms": 8.811007976531982,
+    "measurements": {
+      "baseline": [
+        11.686911582946777,
+        11.134976387023926,
+        11.152383804321289,
+        11.185152053833008,
+        11.157504081726074,
+        11.143168449401855,
+        11.095040321350098,
+        11.023360252380371,
+        11.033599853515625,
+        11.03872013092041
+      ],
+      "compact": [
+        8.901632308959961,
+        8.884223937988281,
+        8.781824111938477,
+        8.846336364746094,
+        8.932352066040039,
+        8.840191841125488,
+        8.712191581726074,
+        8.734720230102539,
+        8.770560264587402,
+        8.767487525939941
+      ]
+    },
+    "scope": "Second linear pre/post exchange INCLUDING additional pack, V gather and output scatter; excludes unchanged linear scan"
+  }
+}

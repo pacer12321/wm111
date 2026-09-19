@@ -1,0 +1,730 @@
+{
+  "status": "passed",
+  "torch_version": "2.10.0+cpu",
+  "device": "cpu",
+  "world_size": 4,
+  "source_sha256": {
+    "upstream/openvdn_npu.py": "bb06d4183e79dc5837d19a68ebaf1abdb520098dc50b05b6e22d34e9259cb43c",
+    "patched/openvdn_npu.py": "4808ef3017343904d8b52cda9cfebc94798f4d609f8ec19e63c59b92abf3381f"
+  },
+  "npu_calls": "none; optional module import only",
+  "limitations": [
+    "Synthetic tiny tensors; not trained weights, video quality, NPU performance, or large-shape memory validation.",
+    "Gloo transport is the test adapter, not the actual vLLM/HCCL wrapper or end-to-end transformer block.",
+    "LoRA loading, full-model integration, and distributed output projection are outside this test."
+  ],
+  "single_results": [
+    {
+      "case": {
+        "seed": 11,
+        "frames": 7,
+        "prefix": 9,
+        "text": 3,
+        "suffix": 2,
+        "extra_pad": 5,
+        "dim": 4,
+        "text_before_video": false
+      },
+      "dtype": "torch.float32",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": {
+        "seed": 29,
+        "frames": 17,
+        "prefix": 11,
+        "text": 5,
+        "suffix": 3,
+        "extra_pad": 7,
+        "dim": 8,
+        "text_before_video": false
+      },
+      "dtype": "torch.float32",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 1.4901161193847656e-08,
+          "rms_error": 8.988004229770752e-10,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 2.9802322387695312e-08,
+          "rms_error": 3.3435503254963805e-09,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 1.1920928955078125e-07,
+          "rms_error": 2.0772061848362e-09,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 1.1920928955078125e-07,
+          "rms_error": 2.0772061848362e-09,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": {
+        "seed": 41,
+        "frames": 17,
+        "prefix": 5,
+        "text": 0,
+        "suffix": 3,
+        "extra_pad": 4,
+        "dim": 4,
+        "text_before_video": false
+      },
+      "dtype": "torch.float32",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 1.1175870895385742e-08,
+          "rms_error": 1.0353701229703915e-09,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": {
+        "seed": 53,
+        "frames": 7,
+        "prefix": 13,
+        "text": 1,
+        "suffix": 1,
+        "extra_pad": 1,
+        "dim": 8,
+        "text_before_video": true
+      },
+      "dtype": "torch.float32",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 1.4901161193847656e-08,
+          "rms_error": 2.1100845515320543e-09,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 1.9222497940063477e-06,
+          "rms_error": 5.735331853884418e-08,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 1.9222497940063477e-06,
+          "rms_error": 5.738012021083705e-08,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": {
+        "seed": 67,
+        "frames": 17,
+        "prefix": 3,
+        "text": 1,
+        "suffix": 0,
+        "extra_pad": 0,
+        "dim": 8,
+        "text_before_video": false
+      },
+      "dtype": "torch.float32",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 1.4901161193847656e-08,
+          "rms_error": 1.3487316818938666e-09,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 1.4901161193847656e-08,
+          "rms_error": 1.001141725076593e-09,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": {
+        "seed": 11,
+        "frames": 7,
+        "prefix": 9,
+        "text": 3,
+        "suffix": 2,
+        "extra_pad": 5,
+        "dim": 4,
+        "text_before_video": false
+      },
+      "dtype": "torch.bfloat16",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": {
+        "seed": 29,
+        "frames": 17,
+        "prefix": 11,
+        "text": 5,
+        "suffix": 3,
+        "extra_pad": 7,
+        "dim": 8,
+        "text_before_video": false
+      },
+      "dtype": "torch.bfloat16",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 0.0001220703125,
+          "rms_error": 1.557343694003066e-06,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": {
+        "seed": 41,
+        "frames": 17,
+        "prefix": 5,
+        "text": 0,
+        "suffix": 3,
+        "extra_pad": 4,
+        "dim": 4,
+        "text_before_video": false
+      },
+      "dtype": "torch.bfloat16",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 6.103515625e-05,
+          "rms_error": 1.2063131862305454e-06,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": {
+        "seed": 53,
+        "frames": 7,
+        "prefix": 13,
+        "text": 1,
+        "suffix": 1,
+        "extra_pad": 1,
+        "dim": 8,
+        "text_before_video": true
+      },
+      "dtype": "torch.bfloat16",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": {
+        "seed": 67,
+        "frames": 17,
+        "prefix": 3,
+        "text": 1,
+        "suffix": 0,
+        "extra_pad": 0,
+        "dim": 8,
+        "text_before_video": false
+      },
+      "dtype": "torch.bfloat16",
+      "checks": [
+        {
+          "check": "upstream-softmax-independent-mask",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "frame-counts",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "frame-mean",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 2e-06,
+          "rtol": 2e-05
+        },
+        {
+          "check": "four-head-shards-softmax",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-linear",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "four-head-shards-hybrid",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "linear-source-text-anchor-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "softmax-padding-zero",
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    }
+  ],
+  "gloo_results_path": "/cache/zhonghao/h3_v2v_minimal_20260913/cpu_regression_20260913_1828/results.gloo.json",
+  "wall_seconds": 13.548129552043974
+}

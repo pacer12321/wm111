@@ -1,0 +1,458 @@
+B Ref2VA smoke service: cards=2,3,6,7, model=/cache/yunfeng/models/MiniMax-H3/Ref2VA, Stage-B=/cache/yunfeng/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000, output=/cache/zhonghao/h3_v2v_minimal_20260913/b_model/runs/b_20260913T105448_452965Z/output, port=19098
+INFO 09-13 18:55:20 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 09-13 18:55:20 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 09-13 18:55:20 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 09-13 18:55:20 [__init__.py:237] Platform plugin ascend is activated
+INFO 09-13 18:55:20 [platform.py:61] Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+INFO 09-13 18:55:34 [patch.py:252] NVFP4 W4A4 weight_scale NaN-clamp: installed.
+INFO 09-13 18:55:34 [patch.py:481] [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+INFO 09-13 18:55:38 [main.py:54] Delegating entrypoint handling to vllm-omni
+2026-09-13 18:55:38,739 - 27814 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+INFO 09-13 18:55:38 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+INFO 09-13 18:55:38 [__init__.py:112] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+INFO 09-13 18:55:39 [serve.py:175] Detected diffusion model: /cache/yunfeng/models/MiniMax-H3/Ref2VA
+INFO 09-13 18:55:39 [logo.py:52]        [97m█     █     █▄   ▄█[0m    [34m   ▄▀▀[38;5;208m▀▀▄ [0m[97m█▄   ▄█ █▄    █ ▀█▀ [0m
+INFO 09-13 18:55:39 [logo.py:52]  [38;5;208m▄▄[0m [34m▄█[0m [97m█     █     █ ▀▄▀ █[0m[97m  ▄▄▄ [0m[34m █    [38;5;208m█ [0m[97m█ ▀▄▀ █ █ ▀▄  █  █  [0m
+INFO 09-13 18:55:39 [logo.py:52]   [38;5;208m█[0m[34m▄█▀[0m [97m█     █     █     █[0m[97m      [0m[34m █    [38;5;208m█ [0m[97m█     █ █   ▀▄█  █  [0m
+INFO 09-13 18:55:39 [logo.py:52]    [34m▀▀[0m  [97m▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀[0m      [35m  ▀▀▀▀  [0m[97m▀     ▀ ▀     ▀ ▀▀▀ [0m
+INFO 09-13 18:55:39 [logo.py:52] 
+[0;36m(APIServer pid=27814)[0;0m INFO 09-13 18:55:39 [api_utils.py:345] vLLM server version 0.26.0, serving model /cache/yunfeng/models/MiniMax-H3/Ref2VA
+[0;36m(APIServer pid=27814)[0;0m INFO 09-13 18:55:39 [api_utils.py:273] non-default args: {'model_tag': '/cache/yunfeng/models/MiniMax-H3/Ref2VA', 'host': '127.0.0.1', 'port': 19098, 'model': '/cache/yunfeng/models/MiniMax-H3/Ref2VA', 'trust_remote_code': True}
+[0;36m(APIServer pid=27814)[0;0m INFO 09-13 18:55:39 [omni_base.py:172] [AsyncOmni] Initializing with model /cache/yunfeng/models/MiniMax-H3/Ref2VA
+[0;36m(APIServer pid=27814)[0;0m INFO 09-13 18:55:39 [async_omni_engine.py:175] [AsyncOmniEngine] Initializing with model /cache/yunfeng/models/MiniMax-H3/Ref2VA
+[0;36m(APIServer pid=27814)[0;0m INFO 09-13 18:55:39 [async_omni_engine.py:274] [AsyncOmniEngine] Launching Orchestrator thread with 1 stages
+[0;36m(APIServer pid=27814)[0;0m INFO 09-13 18:55:39 [stage_utils.py:167] Stage 0 logical-to-physical device mapping: 0->2, 1->3, 2->6, 3->7
+[0;36m(APIServer pid=27814)[0;0m WARNING 09-13 18:55:39 [ring_globals.py:73] FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[0;36m(APIServer pid=27814)[0;0m INFO 09-13 18:55:39 [multiproc_executor.py:254] Starting server...
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:52][0m Available plugins for group vllm.platform_plugins:
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:54][0m - ascend -> vllm_ascend:register
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:57][0m All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[__init__.py:237][0m Platform plugin ascend is activated
+[32mINFO[0m [90m09-13 18:55:48[0m [90m[platform.py:61][0m Breakable cudagraph is force disabled on Ascend because DeepSeek V4 PIECEWISE cudagraph is not supported yet.
+[32mINFO[0m [90m09-13 18:56:00[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 18:56:00[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 18:56:01[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 18:56:02[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 18:56:02[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 18:56:02[0m [90m[patch.py:252][0m NVFP4 W4A4 weight_scale NaN-clamp: installed.
+[32mINFO[0m [90m09-13 18:56:02[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+[32mINFO[0m [90m09-13 18:56:02[0m [90m[patch.py:481][0m [cumem-cuda] CuMemAllocator._python_free_callback patched: asleep guard extended to all platforms.
+2026-09-13 18:56:04,176 - 28771 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 18:56:04[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 18:56:04[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 18:56:04[0m [90m[diffusion_worker.py:819][0m Worker 0 created result MessageQueue
+2026-09-13 18:56:05,189 - 28773 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[diffusion_worker.py:819][0m Worker 2 created result MessageQueue
+2026-09-13 18:56:05,542 - 28772 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+2026-09-13 18:56:05,614 - 28774 - ServiceProfiler - INFO - VLLM_USE_V1 not set, auto-detected via vLLM 0.26.0: default 1
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[diffusion_worker.py:819][0m Worker 1 created result MessageQueue
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[__init__.py:112][0m Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[diffusion_worker.py:819][0m Worker 3 created result MessageQueue
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 18:56:05[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 18:56:05[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 18:56:06[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 18:56:06[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 18:56:06[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 18:56:06[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 18:56:06[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 18:56:06[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 18:56:06[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 18:56:06[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 18:56:07[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[scheduler.py:252][0m Chunked prefill is enabled with max_num_batched_tokens=2048.
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[vllm.py:1109][0m Asynchronous scheduling is enabled.
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[kernel.py:295][0m Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[33mWARNING[0m [90m09-13 18:56:07[0m [90m[platform.py:420][0m Model config is missing. Skipping Ascend-specific config updates.
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[compilation.py:329][0m Enabled custom fusions: norm_quant, act_quant
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[diffusion_worker.py:303][0m Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[ascend_config.py:921][0m Dynamic EPLB is False
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[ascend_config.py:922][0m The number of redundant experts is 0
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[diffusion_worker.py:315][0m Worker 0: Initialized device and distributed environment.
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[diffusion_worker.py:315][0m Worker 2: Initialized device and distributed environment.
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[diffusion_worker.py:315][0m Worker 3: Initialized device and distributed environment.
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[diffusion_worker.py:315][0m Worker 1: Initialized device and distributed environment.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=4, ulysses=4, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[parallel_state.py:676][0m SP group details for rank 0: sp_group=[0, 1, 2, 3], ulysses_group=[0, 1, 2, 3], ring_group=[0]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=4, ulysses=4, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[parallel_state.py:676][0m SP group details for rank 1: sp_group=[0, 1, 2, 3], ulysses_group=[0, 1, 2, 3], ring_group=[1]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=4, ulysses=4, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[parallel_state.py:634][0m Building SP subgroups from explicit sp_group_ranks (sp_size=4, ulysses=4, ring=1, use_ulysses_low=True).
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[parallel_state.py:676][0m SP group details for rank 2: sp_group=[0, 1, 2, 3], ulysses_group=[0, 1, 2, 3], ring_group=[2]
+[32mINFO[0m [90m09-13 18:56:07[0m [90m[parallel_state.py:676][0m SP group details for rank 3: sp_group=[0, 1, 2, 3], ulysses_group=[0, 1, 2, 3], ring_group=[3]
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[33mWARNING[0m [90m09-13 18:56:08[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[33mWARNING[0m [90m09-13 18:56:08[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[33mWARNING[0m [90m09-13 18:56:08[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[32mINFO[0m [90m09-13 18:56:08[0m [90m[openvdn_checkpoint.py:102][0m OPENVDN_B_CONFIG checkpoint=/cache/yunfeng/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+[32mINFO[0m [90m09-13 18:56:08[0m [90m[openvdn_checkpoint.py:102][0m OPENVDN_B_CONFIG checkpoint=/cache/yunfeng/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+[32mINFO[0m [90m09-13 18:56:08[0m [90m[openvdn_checkpoint.py:102][0m OPENVDN_B_CONFIG checkpoint=/cache/yunfeng/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+[32mINFO[0m [90m09-13 18:56:08[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[32mINFO[0m [90m09-13 18:56:08[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[32mINFO[0m [90m09-13 18:56:08[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[33mWARNING[0m [90m09-13 18:56:08[0m [90m[ring_globals.py:73][0m FlashInfer is unavailable; falling back to other attention backends. Reason: No module named 'flashinfer'
+[32mINFO[0m [90m09-13 18:56:08[0m [90m[openvdn_checkpoint.py:102][0m OPENVDN_B_CONFIG checkpoint=/cache/yunfeng/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000 base_partition=ref2va TP=1
+[32mINFO[0m [90m09-13 18:56:08[0m [90m[selector.py:89][0m Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via attention_config.default
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[32mINFO[0m [90m09-13 18:57:13[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=4, vision replicated
+The config attributes {'vae_ratio': 16, 'vae_ratio_t': 4} were passed to AutoencoderKLLegacy, but are not expected and will be ignored. Please verify your config.json configuration file.
+[32mINFO[0m [90m09-13 18:57:13[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=4, vision replicated
+[32mINFO[0m [90m09-13 18:57:13[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=4, vision replicated
+[32mINFO[0m [90m09-13 18:57:13[0m [90m[encoder.py:941][0m MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=4, vision replicated
+[32mINFO[0m [90m09-13 18:58:19[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=4, mode=ulysses, ulysses=4, ring=1)
+[32mINFO[0m [90m09-13 18:58:20[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=4, mode=ulysses, ulysses=4, ring=1)
+[32mINFO[0m [90m09-13 18:58:21[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=4, mode=ulysses, ulysses=4, ring=1)
+[32mINFO[0m [90m09-13 18:58:21[0m [90m[registry.py:471][0m Applying sequence parallelism to MiniMaxH3DiTModel (transformer) (sp_size=4, mode=ulysses, ulysses=4, ring=1)
+Multi-thread loading shards:   0% Completed | 0/13 [00:00<?, ?it/s]
+[32mINFO[0m [90m09-13 18:59:09[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=50/535
+[32mINFO[0m [90m09-13 18:59:09[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=50/535
+Multi-thread loading shards:   8% Completed | 1/13 [00:52<10:29, 52.43s/it]
+[32mINFO[0m [90m09-13 18:59:24[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=50/535
+[32mINFO[0m [90m09-13 18:59:25[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=50/535
+[32mINFO[0m [90m09-13 18:59:59[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=100/535
+[32mINFO[0m [90m09-13 19:00:02[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=100/535
+Multi-thread loading shards:  15% Completed | 2/13 [01:42<09:23, 51.23s/it]
+[32mINFO[0m [90m09-13 19:00:16[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=100/535
+[32mINFO[0m [90m09-13 19:00:27[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=100/535
+[32mINFO[0m [90m09-13 19:00:46[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=150/535
+[32mINFO[0m [90m09-13 19:00:46[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=150/535
+Multi-thread loading shards:  23% Completed | 3/13 [02:31<08:18, 49.87s/it]
+[32mINFO[0m [90m09-13 19:01:11[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=150/535
+[32mINFO[0m [90m09-13 19:01:15[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=150/535
+[32mINFO[0m [90m09-13 19:01:36[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=200/535
+Multi-thread loading shards:  31% Completed | 4/13 [03:16<07:12, 48.01s/it]
+[32mINFO[0m [90m09-13 19:01:37[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=200/535
+[32mINFO[0m [90m09-13 19:02:06[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=200/535
+[32mINFO[0m [90m09-13 19:02:09[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=200/535
+Multi-thread loading shards:  38% Completed | 5/13 [04:00<06:13, 46.70s/it]
+[32mINFO[0m [90m09-13 19:02:33[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=250/535
+[32mINFO[0m [90m09-13 19:02:34[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=250/535
+[32mINFO[0m [90m09-13 19:03:02[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=250/535
+Multi-thread loading shards:  46% Completed | 6/13 [04:45<05:22, 46.10s/it]
+[32mINFO[0m [90m09-13 19:03:08[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=250/535
+[32mINFO[0m [90m09-13 19:03:27[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=300/535
+[32mINFO[0m [90m09-13 19:03:30[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=300/535
+Multi-thread loading shards:  54% Completed | 7/13 [05:30<04:33, 45.66s/it]
+[32mINFO[0m [90m09-13 19:03:58[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=300/535
+[32mINFO[0m [90m09-13 19:04:05[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=300/535
+[32mINFO[0m [90m09-13 19:04:21[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=350/535
+[32mINFO[0m [90m09-13 19:04:26[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=350/535
+Multi-thread loading shards:  62% Completed | 8/13 [06:15<03:47, 45.46s/it]
+[32mINFO[0m [90m09-13 19:04:55[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=350/535
+[32mINFO[0m [90m09-13 19:05:02[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=350/535
+[32mINFO[0m [90m09-13 19:05:18[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=400/535
+Multi-thread loading shards:  69% Completed | 9/13 [07:01<03:02, 45.73s/it]
+[32mINFO[0m [90m09-13 19:05:25[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=400/535
+[0;36m(APIServer pid=27814)[0;0m WARNING 09-13 19:05:39 [async_omni_engine.py:475] [AsyncOmniEngine] Orchestrator startup timed out after 600s. Multi-stage deployments that initialize stages sequentially on one device or load checkpoints from slow storage may need larger --init-timeout and --stage-init-timeout values.
+[0;36m(APIServer pid=27814)[0;0m INFO 09-13 19:05:39 [async_omni_engine.py:1827] [AsyncOmniEngine] Shutting down Orchestrator
+[32mINFO[0m [90m09-13 19:05:52[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=400/535
+[32mINFO[0m [90m09-13 19:06:01[0m [90m[openvdn_checkpoint.py:178][0m OPENVDN_B_BASE_VALIDATED tensors=400/535
+Multi-thread loading shards:  77% Completed | 10/13 [07:47<02:16, 45.66s/it]
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:09 [async_omni_engine.py:1856] [AsyncOmniEngine] Orchestrator did not stop within 30.0 seconds; continuing cleanup
+[0;36m(APIServer pid=27814)[0;0m WARNING 09-13 19:06:09 [async_omni_engine.py:1876] [AsyncOmniEngine] Deferring StageRuntime shutdown until the Orchestrator exits
+[0;36m(APIServer pid=27814)[0;0m Traceback (most recent call last):
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/bin/vllm", line 6, in <module>
+[0;36m(APIServer pid=27814)[0;0m     sys.exit(main())
+[0;36m(APIServer pid=27814)[0;0m              ^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/minimax_h3_npu/src/vllm/vllm/entrypoints/cli/main.py", line 55, in main
+[0;36m(APIServer pid=27814)[0;0m     omni_main()
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/entrypoints/cli/main.py", line 72, in main
+[0;36m(APIServer pid=27814)[0;0m     args.dispatch_function(args)
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/entrypoints/cli/serve.py", line 107, in cmd
+[0;36m(APIServer pid=27814)[0;0m     uvloop.run(omni_run_server(args))
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+[0;36m(APIServer pid=27814)[0;0m     return __asyncio.run(
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/asyncio/runners.py", line 195, in run
+[0;36m(APIServer pid=27814)[0;0m     return runner.run(main)
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/asyncio/runners.py", line 118, in run
+[0;36m(APIServer pid=27814)[0;0m     return self._loop.run_until_complete(task)
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+[0;36m(APIServer pid=27814)[0;0m     return await main
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 458, in omni_run_server
+[0;36m(APIServer pid=27814)[0;0m     await omni_run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 485, in omni_run_server_worker
+[0;36m(APIServer pid=27814)[0;0m     async with build_async_omni(
+[0;36m(APIServer pid=27814)[0;0m                ^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/contextlib.py", line 210, in __aenter__
+[0;36m(APIServer pid=27814)[0;0m     return await anext(self.gen)
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 629, in build_async_omni
+[0;36m(APIServer pid=27814)[0;0m     async with build_async_omni_from_stage_config(
+[0;36m(APIServer pid=27814)[0;0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/contextlib.py", line 210, in __aenter__
+[0;36m(APIServer pid=27814)[0;0m     return await anext(self.gen)
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 695, in build_async_omni_from_stage_config
+[0;36m(APIServer pid=27814)[0;0m     async_omni = AsyncOmni(model=model, **kwargs)
+[0;36m(APIServer pid=27814)[0;0m                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/entrypoints/async_omni.py", line 147, in __init__
+[0;36m(APIServer pid=27814)[0;0m     OmniBase.__init__(self, model=model, **kwargs)
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/entrypoints/omni_base.py", line 178, in __init__
+[0;36m(APIServer pid=27814)[0;0m     self.engine = AsyncOmniEngine(
+[0;36m(APIServer pid=27814)[0;0m                   ^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 289, in __init__
+[0;36m(APIServer pid=27814)[0;0m     self._wait_for_orchestrator_init(startup_future, startup_timeout)
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 483, in _wait_for_orchestrator_init
+[0;36m(APIServer pid=27814)[0;0m     raise TimeoutError(f"Orchestrator did not become ready within {startup_timeout}s")
+[0;36m(APIServer pid=27814)[0;0m TimeoutError: Orchestrator did not become ready within 600s
+[32mINFO[0m [90m09-13 19:06:10[0m [90m[diffusion_worker.py:1194][0m Worker 0: Shutdown signal received, starting cleanup.
+[32mINFO[0m [90m09-13 19:06:10[0m [90m[diffusion_worker.py:1194][0m Worker 1: Shutdown signal received, starting cleanup.
+Multi-thread loading shards:  77% Completed | 10/13 [07:49<02:20, 46.95s/it]
+
+[32mINFO[0m [90m09-13 19:06:10[0m [90m[diffusion_worker.py:1194][0m Worker 3: Shutdown signal received, starting cleanup.
+[32mINFO[0m [90m09-13 19:06:11[0m [90m[diffusion_worker.py:1194][0m Worker 2: Shutdown signal received, starting cleanup.
+[0;36m(APIServer pid=27814)[0;0m [ERROR] 2026-09-13-19:06:09 (PID:27814, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [multiproc_executor.py:298] Rank 0 scheduler is dead. Please check if there are relevant logs.
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [multiproc_executor.py:300] Exit code: 143
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253] [StageRuntime] Stage initialization failed; shutting down 0 initialized client(s)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253] Traceback (most recent call last):
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 240, in initialize
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 504, in _initialize_stage_replicas
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     raise primary_exc
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 465, in _init_group
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     client = self._initialize_replica(
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]              ^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 529, in _initialize_replica
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 650, in _initialize_local_diffusion_replica
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     client, resources = launch_diffusion_stage_replica(
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1506, in launch_diffusion_stage_replica
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     client = initialize_diffusion_stage(
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 1241, in initialize_diffusion_stage
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, batch_size, use_inline)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 55, in create_diffusion_client
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     return InlineStageDiffusionClient(model, od_config, metadata, batch_size=batch_size)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 62, in __init__
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     self._engine = DiffusionEngine.make_engine(self.od_config)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 685, in make_engine
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     engine = engine_class(config, scheduler=scheduler)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 180, in __init__
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     self._init_executor(od_config)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 215, in _init_executor
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     self.executor = executor_class(od_config)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 64, in __init__
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     self._init_executor()
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 87, in _init_executor
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     processes, result_handle = self._launch_workers(broadcast_handle, self.wake_events)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 296, in _launch_workers
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     data = reader.recv()
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]            ^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     buf = self._recv_bytes()
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]           ^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     buf = self._recv(4)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]           ^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253]     raise EOFError
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:18 [stage_runtime.py:253] EOFError
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440] [AsyncOmniEngine] Orchestrator thread crashed
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440] Traceback (most recent call last):
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 434, in _bootstrap_orchestrator
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     loop.run_until_complete(_run_orchestrator())
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     return future.result()
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]            ^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 392, in _run_orchestrator
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     self._initialize_stages(stage_init_timeout)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 342, in _initialize_stages
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     self._runtime.initialize()
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 259, in initialize
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     raise exc
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 240, in initialize
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 504, in _initialize_stage_replicas
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     raise primary_exc
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 465, in _init_group
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     client = self._initialize_replica(
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]              ^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 529, in _initialize_replica
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 650, in _initialize_local_diffusion_replica
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     client, resources = launch_diffusion_stage_replica(
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1506, in launch_diffusion_stage_replica
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     client = initialize_diffusion_stage(
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 1241, in initialize_diffusion_stage
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, batch_size, use_inline)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 55, in create_diffusion_client
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     return InlineStageDiffusionClient(model, od_config, metadata, batch_size=batch_size)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 62, in __init__
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     self._engine = DiffusionEngine.make_engine(self.od_config)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 685, in make_engine
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     engine = engine_class(config, scheduler=scheduler)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 180, in __init__
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     self._init_executor(od_config)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 215, in _init_executor
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     self.executor = executor_class(od_config)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 64, in __init__
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     self._init_executor()
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 87, in _init_executor
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     processes, result_handle = self._launch_workers(broadcast_handle, self.wake_events)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 296, in _launch_workers
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     data = reader.recv()
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]            ^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     buf = self._recv_bytes()
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]           ^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     buf = self._recv(4)
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]           ^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440]     raise EOFError
+[0;36m(APIServer pid=27814)[0;0m ERROR 09-13 19:06:19 [async_omni_engine.py:440] EOFError
+[0;36m(APIServer pid=27814)[0;0m Exception in thread orchestrator:
+[0;36m(APIServer pid=27814)[0;0m Traceback (most recent call last):
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+[0;36m(APIServer pid=27814)[0;0m     self.run()
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/threading.py", line 1012, in run
+[0;36m(APIServer pid=27814)[0;0m     self._target(*self._args, **self._kwargs)
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 434, in _bootstrap_orchestrator
+[0;36m(APIServer pid=27814)[0;0m     loop.run_until_complete(_run_orchestrator())
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+[0;36m(APIServer pid=27814)[0;0m     return future.result()
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 392, in _run_orchestrator
+[0;36m(APIServer pid=27814)[0;0m     self._initialize_stages(stage_init_timeout)
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 342, in _initialize_stages
+[0;36m(APIServer pid=27814)[0;0m     self._runtime.initialize()
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 259, in initialize
+[0;36m(APIServer pid=27814)[0;0m     raise exc
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 240, in initialize
+[0;36m(APIServer pid=27814)[0;0m     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+[0;36m(APIServer pid=27814)[0;0m                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 504, in _initialize_stage_replicas
+[0;36m(APIServer pid=27814)[0;0m     raise primary_exc
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 465, in _init_group
+[0;36m(APIServer pid=27814)[0;0m     client = self._initialize_replica(
+[0;36m(APIServer pid=27814)[0;0m              ^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 529, in _initialize_replica
+[0;36m(APIServer pid=27814)[0;0m     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_runtime.py", line 650, in _initialize_local_diffusion_replica
+[0;36m(APIServer pid=27814)[0;0m     client, resources = launch_diffusion_stage_replica(
+[0;36m(APIServer pid=27814)[0;0m                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1506, in launch_diffusion_stage_replica
+[0;36m(APIServer pid=27814)[0;0m     client = initialize_diffusion_stage(
+[0;36m(APIServer pid=27814)[0;0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 1241, in initialize_diffusion_stage
+[0;36m(APIServer pid=27814)[0;0m     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, batch_size, use_inline)
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 55, in create_diffusion_client
+[0;36m(APIServer pid=27814)[0;0m     return InlineStageDiffusionClient(model, od_config, metadata, batch_size=batch_size)
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 62, in __init__
+[0;36m(APIServer pid=27814)[0;0m     self._engine = DiffusionEngine.make_engine(self.od_config)
+[0;36m(APIServer pid=27814)[0;0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 685, in make_engine
+[0;36m(APIServer pid=27814)[0;0m     engine = engine_class(config, scheduler=scheduler)
+[0;36m(APIServer pid=27814)[0;0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 180, in __init__
+[0;36m(APIServer pid=27814)[0;0m     self._init_executor(od_config)
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 215, in _init_executor
+[0;36m(APIServer pid=27814)[0;0m     self.executor = executor_class(od_config)
+[0;36m(APIServer pid=27814)[0;0m                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 64, in __init__
+[0;36m(APIServer pid=27814)[0;0m     self._init_executor()
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 87, in _init_executor
+[0;36m(APIServer pid=27814)[0;0m     processes, result_handle = self._launch_workers(broadcast_handle, self.wake_events)
+[0;36m(APIServer pid=27814)[0;0m                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 296, in _launch_workers
+[0;36m(APIServer pid=27814)[0;0m     data = reader.recv()
+[0;36m(APIServer pid=27814)[0;0m            ^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+[0;36m(APIServer pid=27814)[0;0m     buf = self._recv_bytes()
+[0;36m(APIServer pid=27814)[0;0m           ^^^^^^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+[0;36m(APIServer pid=27814)[0;0m     buf = self._recv(4)
+[0;36m(APIServer pid=27814)[0;0m           ^^^^^^^^^^^^^
+[0;36m(APIServer pid=27814)[0;0m   File "/cache/yunfeng/envs/minimax-h3-npu/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+[0;36m(APIServer pid=27814)[0;0m     raise EOFError
+[0;36m(APIServer pid=27814)[0;0m EOFError

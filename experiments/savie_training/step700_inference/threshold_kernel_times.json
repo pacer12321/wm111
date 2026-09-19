@@ -1,0 +1,92 @@
+[
+  {
+    "name": "skip_off",
+    "median_ms": 237.60734498500824,
+    "samples_ms": [
+      237.60734498500824,
+      237.61585354804993,
+      237.71113902330399,
+      237.89051920175552,
+      237.59273439645767,
+      237.59020119905472,
+      237.59868741035461
+    ],
+    "active_q": 81216,
+    "scope": "Grouped softmax including pack/scatter; synthetic QKV, own1000 masks; NOT DiT/E2E timing"
+  },
+  {
+    "name": "original",
+    "median_ms": 205.9052586555481,
+    "samples_ms": [
+      205.81769943237305,
+      205.92811703681946,
+      205.91450482606888,
+      205.914705991745,
+      205.9052586555481,
+      205.82730323076248,
+      205.80412447452545
+    ],
+    "active_q": 69745,
+    "scope": "Grouped softmax including pack/scatter; synthetic QKV, own1000 masks; NOT DiT/E2E timing"
+  },
+  {
+    "name": "stable50",
+    "median_ms": 187.2970461845398,
+    "samples_ms": [
+      187.2970461845398,
+      187.3186081647873,
+      187.2982308268547,
+      187.28865683078766,
+      187.2762367129326,
+      187.29614466428757,
+      187.3871460556984
+    ],
+    "active_q": 62569,
+    "scope": "Grouped softmax including pack/scatter; synthetic QKV, own1000 masks; NOT DiT/E2E timing"
+  },
+  {
+    "name": "stable65",
+    "median_ms": 173.34842681884766,
+    "samples_ms": [
+      173.2795163989067,
+      173.3117401599884,
+      173.44991862773895,
+      173.41651767492294,
+      173.3330488204956,
+      173.34842681884766,
+      173.4701320528984
+    ],
+    "active_q": 56974,
+    "scope": "Grouped softmax including pack/scatter; synthetic QKV, own1000 masks; NOT DiT/E2E timing"
+  },
+  {
+    "name": "stable75",
+    "median_ms": 163.25272619724274,
+    "samples_ms": [
+      163.25105726718903,
+      163.3213311433792,
+      163.25272619724274,
+      163.28158974647522,
+      163.23281824588776,
+      163.27542066574097,
+      163.23018819093704
+    ],
+    "active_q": 53248,
+    "scope": "Grouped softmax including pack/scatter; synthetic QKV, own1000 masks; NOT DiT/E2E timing"
+  },
+  {
+    "name": "stable85",
+    "median_ms": 153.40681374073029,
+    "samples_ms": [
+      153.40649336576462,
+      153.42144668102264,
+      153.40671688318253,
+      153.41823548078537,
+      153.40681374073029,
+      153.40054035186768,
+      153.4319818019867
+    ],
+    "active_q": 49513,
+    "scope": "Grouped softmax including pack/scatter; synthetic QKV, own1000 masks; NOT DiT/E2E timing"
+  }
+]

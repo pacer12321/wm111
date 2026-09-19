@@ -1,0 +1,62 @@
+{
+  "review_date": "2026-09-13",
+  "method": "Manual visual inspection of all eleven CPU-generated contact sheets, sampling every six input frames (0.25 seconds) at 24 fps; exact source PTS labels. No VLM/ASR/NPU inference. Audio streams were detected with ffprobe but not listened to or transcribed.",
+  "scope": "Four official OmniEdit source videos and official instructions only; no edited targets generated, no current H3 experiment inputs changed.",
+  "routing_ground_truth_status": "Not established. These are evidence-bearing candidates, not a validated same-instruction opposite-routing pair.",
+  "cases": [
+    {
+      "case": "reorder04_couple",
+      "official_id": "Te_Temporal_reordering_04",
+      "duration_seconds": 9.5,
+      "has_audio_stream": false,
+      "official_goal_paraphrase_zh": "情侣先拥抱，再轻吻。",
+      "observed_events": [
+        {"approx_seconds": [0.0, 1.25], "description": "面对面站立；男子扶女子面颊/头部，女子已经触碰或环住男子腰侧。"},
+        {"approx_seconds": [1.5, 2.5], "description": "明显亲吻。"},
+        {"approx_seconds": [3.0, 4.25], "description": "双方面部稍分开、仍接触腰和脸。"},
+        {"approx_seconds": [4.75, 6.0], "description": "再次靠近并亲吻/贴近脸部。"},
+        {"approx_seconds": [6.75, 9.25], "description": "女子把头靠在男子胸口，双方形成明显的贴胸拥抱。"}
+      ],
+      "assessment_zh": "可见主要事件是亲吻后贴胸拥抱，适合继续作为目标顺序候选；但开头已有扶腰接触，若hug定义宽泛，源视频可能已部分满足先抱再吻。必须定义拥抱事件边界，不能仅用官方分类生成二元路由GT。存在两次亲吻，不是干净的单次A→B。"
+    },
+    {
+      "case": "causal03_cube",
+      "official_id": "Re_Causal_reasoning_editing_03",
+      "duration_seconds": 10.0,
+      "has_audio_stream": true,
+      "official_goal_paraphrase_zh": "魔方开头已还原，随后逐渐打乱。",
+      "observed_events": [
+        {"approx_seconds": [0.0, 3.25], "description": "开头可见面颜色混杂，魔方已经是打乱状态；手持展示并准备操作。"},
+        {"approx_seconds": [3.5, 9.75], "description": "不断转动魔方；所有0.25秒采样中仍见混色，未见完整还原终态。"}
+      ],
+      "assessment_zh": "撤回仅按metadata作出的纯还原→打乱倒序推测。不能当作现有solved/unsolved事件段的简单交换；目标至少要合成或重绘solved起始状态。它可能适合状态/因果编辑，但不作为首轮纯时间对应路由核心样例。采样未见还原不等于对未采样帧的绝对否定。"
+    },
+    {
+      "case": "reorder01_smoke",
+      "official_id": "Te_Temporal_reordering_01",
+      "duration_seconds": 6.72,
+      "has_audio_stream": true,
+      "official_goal_paraphrase_zh": "男子先说话，再抽烟。",
+      "observed_events": [
+        {"approx_seconds": [0.0, 0.75], "description": "手持香烟处于嘴唇附近。"},
+        {"approx_seconds": [1.0, 1.25], "description": "拿烟的手向下放离嘴部。"},
+        {"approx_seconds": [1.5, 6.5], "description": "连续采样可见嘴型变化，但尚未据音频核实说话。"},
+        {"approx_seconds": [4.0, 4.75], "description": "面部前方可见呼出烟雾；与嘴型变化时间交叠。"}
+      ],
+      "assessment_zh": "是先烟靠嘴、后嘴型变化的视觉候选，不直接写成已确认抽烟→说话。抽烟阶段是否包括吐烟会影响边界，动作可能交叠。需听音后给speech onset；未生成路由GT。"
+    },
+    {
+      "case": "reorder02_drink",
+      "official_id": "Te_Temporal_reordering_02",
+      "duration_seconds": 9.984,
+      "has_audio_stream": true,
+      "official_goal_paraphrase_zh": "男子喝一口酒后开始说话。",
+      "observed_events": [
+        {"approx_seconds": [0.0, 8.5], "description": "连续嘴型变化；未据音频核实具体说话时段。"},
+        {"approx_seconds": [8.75, 9.0], "description": "瓶子从画面下方出现，向嘴部举起。"},
+        {"approx_seconds": [9.25, 9.75], "description": "瓶口接近/接触嘴唇，片段随后结束。"}
+      ],
+      "assessment_zh": "视频不提供清晰完整的喝完一口→放下瓶子事件段；不能包装成两个完整可交换动作。保留为需听音和确认喝酒动作覆盖的候选，不能直接据metadata标注目标需要纯重排。"
+    }
+  ]
+}

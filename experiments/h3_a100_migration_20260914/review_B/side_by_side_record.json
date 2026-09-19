@@ -1,0 +1,20 @@
+{
+  "output": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_a100_migration_20260914\\review_B\\source_vs_B_synchronized.mp4",
+  "sha256": "b89becb5b785a04f642ba5d8613be642faad94fb059c05997012aae1918b15b7",
+  "bytes": 1346514,
+  "left_source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+  "right_B_sha256": "b80fe4dedf5a10b4edb75ba4d21bc80d19e2718af7693570cf74c2be1170d808",
+  "frames": 124,
+  "fps": 24,
+  "dimensions": [
+    1344,
+    428
+  ],
+  "synchronization": "Same original frame index and verified i/24 PTS; no retiming or reversal",
+  "resizing": "Aspect-preserving fit into672x384 per half with black letterboxing; labels above",
+  "silent": true,
+  "audio_note": "Source has no audio; generated B audio deliberately omitted from visual comparison only",
+  "is_original_model_output": false,
+  "new_model_call": false,
+  "inputs_unchanged": true
+}

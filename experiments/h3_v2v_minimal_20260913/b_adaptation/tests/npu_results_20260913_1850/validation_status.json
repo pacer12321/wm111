@@ -1,0 +1,100 @@
+{
+  "case": "B_NPU_wrapper_validation",
+  "run_id": "98e96b261e254d01a28faedbe6a74c8c",
+  "supervisor_pid": 23207,
+  "supervisor_proc_identity": {
+    "pid": 23207,
+    "state": "R",
+    "pgrp": 23207,
+    "session": 23207,
+    "start_ticks": 259681058
+  },
+  "started_at": "2026-09-13T10:48:44.134377+00:00",
+  "allocated_physical_npu_ids": [
+    2,
+    3,
+    6,
+    7
+  ],
+  "master_port": 29673,
+  "collective_timeout_seconds": 180,
+  "outer_timeout_seconds": 900,
+  "scope": "Tiny wrapper correctness only; no full H3 weights, video, or speed claim.",
+  "run_directory": "/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c",
+  "phase": "completed",
+  "updated_at": "2026-09-13T10:50:02.517999+00:00",
+  "resource_snapshot": {
+    "selected_physical_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "other_busy_cards": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  "selected_card_health": {
+    "2": "OK",
+    "3": "OK",
+    "6": "OK",
+    "7": "OK"
+  },
+  "source_sha256": {
+    "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/run_a_supervised.py": "f570a30a4843029ffdaf6336c8db14e6f0b649639de076b8e217c74c71ffb041",
+    "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/launch_npu_validation.sh": "c704b57ef2186d4e855ddcb89f85269c21a7e6ed7792ef56a1915340809d6aca",
+    "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/tests/npu_wrapper_regression.py": "9a6a1123f828b4fcbb3fe7e32097c740927b43a89101d26d6e205501b27a88cf",
+    "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/upstream/openvdn_npu.py": "bb06d4183e79dc5837d19a68ebaf1abdb520098dc50b05b6e22d34e9259cb43c",
+    "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/patched/openvdn_npu.py": "4808ef3017343904d8b52cda9cfebc94798f4d609f8ec19e63c59b92abf3381f",
+    "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/patched/minimax_h3_transformer.py": "c1b6b89a1be2a0cac3a2bf3add15ed73d19340086ede91e4a085a218581a0c83"
+  },
+  "worker_pid": 23399,
+  "worker_started_at": "2026-09-13T10:48:45.278710+00:00",
+  "worker_proc_identity": {
+    "pid": 23399,
+    "state": "R",
+    "pgrp": 23399,
+    "session": 23399,
+    "start_ticks": 259681243
+  },
+  "worker_returncode": 0,
+  "validation_wall_seconds": 76.01527303177863,
+  "result_path": "/cache/zhonghao/h3_v2v_minimal_20260913/b_validation/runs/20260913T104844_134753Z_98e96b261e254d01a28faedbe6a74c8c/npu_wrapper.json",
+  "validation_passed": true,
+  "remaining_owned_process_groups": {},
+  "cleanup_completed": true,
+  "needs_attention": false,
+  "resource_release_check": {
+    "selected_physical_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "other_busy_cards": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  "selected_cards_verified_idle_after_cleanup": true,
+  "finished_at": "2026-09-13T10:50:02.517944+00:00",
+  "error": null,
+  "note": "Only tiny B wrapper correctness validation; no full-model B/C or acceleration result."
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "real_shape": false,
+    "case": "skip_off",
+    "query_rows": 96,
+    "group_size": 4,
+    "relative_l2": 0.0022489288821816444,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim"
+  },
+  {
+    "real_shape": false,
+    "case": "partial",
+    "query_rows": 32,
+    "group_size": 4,
+    "relative_l2": 0.002209465717896819,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim"
+  },
+  {
+    "real_shape": true,
+    "case": "skip_off",
+    "query_rows": 37296,
+    "group_size": 1,
+    "relative_l2": 0.0030805091373622417,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim",
+    "median_ms": {
+      "flex": 108.86962890625,
+      "flash": 110.80703735351562
+    },
+    "samples_ms": {
+      "flex": [
+        108.81330871582031,
+        109.03142547607422,
+        108.97612762451172,
+        108.86962890625,
+        108.86348724365234
+      ],
+      "flash": [
+        110.86847686767578,
+        110.77836608886719,
+        110.80703735351562,
+        110.76710510253906,
+        110.84697723388672
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "case": "skip_off",
+    "query_rows": 37296,
+    "group_size": 2,
+    "relative_l2": 0.0030805091373622417,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim",
+    "median_ms": {
+      "flex": 108.91571044921875,
+      "flash": 93.34272003173828
+    },
+    "samples_ms": {
+      "flex": [
+        109.57414245605469,
+        109.73388671875,
+        108.8911361694336,
+        108.85939025878906,
+        108.91571044921875
+      ],
+      "flash": [
+        93.12153625488281,
+        93.48198699951172,
+        93.34272003173828,
+        93.75846099853516,
+        93.19731140136719
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "case": "skip_off",
+    "query_rows": 37296,
+    "group_size": 4,
+    "relative_l2": 0.0030805091373622417,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim",
+    "median_ms": {
+      "flex": 110.59302520751953,
+      "flash": 85.81734466552734
+    },
+    "samples_ms": {
+      "flex": [
+        110.68109130859375,
+        110.60736083984375,
+        108.91264343261719,
+        110.59302520751953,
+        109.15737915039062
+      ],
+      "flash": [
+        85.81734466552734,
+        86.20134735107422,
+        85.32787322998047,
+        86.95091247558594,
+        85.32991790771484
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "case": "skip_off",
+    "query_rows": 37296,
+    "group_size": 8,
+    "relative_l2": 0.0030805091373622417,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim",
+    "median_ms": {
+      "flex": 110.94834899902344,
+      "flash": 81.91283416748047
+    },
+    "samples_ms": {
+      "flex": [
+        111.72249603271484,
+        110.94834899902344,
+        109.02015686035156,
+        111.35590362548828,
+        109.16659545898438
+      ],
+      "flash": [
+        81.85651397705078,
+        83.45702362060547,
+        81.86470031738281,
+        82.89997100830078,
+        81.91283416748047
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "case": "own1000_adaptive",
+    "query_rows": 25886,
+    "group_size": 1,
+    "relative_l2": 0.003079182468354702,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim",
+    "median_ms": {
+      "flex": 77.45331573486328,
+      "flash": 75.97261047363281
+    },
+    "samples_ms": {
+      "flex": [
+        77.39801788330078,
+        77.58438110351562,
+        77.4625244140625,
+        77.45331573486328,
+        77.45331573486328
+      ],
+      "flash": [
+        75.97261047363281,
+        75.99411010742188,
+        75.95622253417969,
+        75.98182678222656,
+        75.95110321044922
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "case": "own1000_adaptive",
+    "query_rows": 25886,
+    "group_size": 2,
+    "relative_l2": 0.003079182468354702,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim",
+    "median_ms": {
+      "flex": 77.44204711914062,
+      "flash": 73.57337951660156
+    },
+    "samples_ms": {
+      "flex": [
+        77.40415954589844,
+        78.1690902709961,
+        77.44204711914062,
+        78.1496353149414,
+        77.43692779541016
+      ],
+      "flash": [
+        73.57337951660156,
+        73.95225524902344,
+        73.53548431396484,
+        73.83551788330078,
+        73.35628509521484
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "case": "own1000_adaptive",
+    "query_rows": 25886,
+    "group_size": 4,
+    "relative_l2": 0.003079182468354702,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim",
+    "median_ms": {
+      "flex": 78.60633850097656,
+      "flash": 67.5778579711914
+    },
+    "samples_ms": {
+      "flex": [
+        78.60633850097656,
+        78.94425964355469,
+        77.98271942138672,
+        78.9749755859375,
+        77.88543701171875
+      ],
+      "flash": [
+        67.07609558105469,
+        67.8256607055664,
+        67.0914535522461,
+        68.05401611328125,
+        67.5778579711914
+      ]
+    }
+  },
+  {
+    "real_shape": true,
+    "case": "own1000_adaptive",
+    "query_rows": 25886,
+    "group_size": 8,
+    "relative_l2": 0.003079182468354702,
+    "scope": "Target softmax only; fresh synthetic QKV; pack/kernel/scatter included; common KV reorder and one-time plan excluded; no E2E claim",
+    "median_ms": {
+      "flex": 78.97087860107422,
+      "flash": 65.51142120361328
+    },
+    "samples_ms": {
+      "flex": [
+        79.82080078125,
+        78.97087860107422,
+        78.03596496582031,
+        79.17874908447266,
+        78.14041900634766
+      ],
+      "flash": [
+        65.48480224609375,
+        66.1739501953125,
+        65.38137817382812,
+        66.77913665771484,
+        65.51142120361328
+      ]
+    }
+  }
+]

@@ -1,0 +1,172 @@
+{
+  "review_date": "2026-09-13",
+  "scope": "Read-only official metadata search and manual review of two public source videos; no model inference, generated target, or active ABC input change.",
+  "status": "candidate_for_source_dependent_router_sanity_check_not_ready_5s_generation_benchmark",
+  "pair_provenance": {
+    "official_dataset": "Perception Test",
+    "official_repository": "https://github.com/google-deepmind/perception_test",
+    "official_viewer": "https://ptchallenge-workshop.github.io/explore.html",
+    "official_viewer_question_metadata": "https://ptchallenge-workshop.github.io/data.json",
+    "official_action_metadata": "https://storage.googleapis.com/dm-perception-test/zip_data/challenge_action_localisation_valid_annotations.zip",
+    "source_license": "CC-BY-4.0 according to the official repository's License and disclaimer section; code Apache-2.0 is a separate license.",
+    "sources_are_independent_natural_recordings": true,
+    "sources_are_same_scene": false,
+    "sources_reversed_or_spliced_by_us": false,
+    "official_shared_edit_instruction_exists": false,
+    "instruction_author": "Self-authored proposed diagnostic instructions, not official Perception Test editing annotations.",
+    "official_edited_target_or_frame_correspondence": false
+  },
+  "inspection": {
+    "method": "Inspected all eight CPU-generated contact sheets sampling every 15 original frames (approximately 2 fps), plus three full-resolution detail frames. This was sampled visual review, not continuous playback or frame-by-frame inspection.",
+    "detail_frames": [
+      "video_1374/detail_shuffle.jpg, ffmpeg requested seek 10.7 seconds",
+      "video_1374/detail_pour.jpg, ffmpeg requested seek 16.3 seconds",
+      "video_6578/detail_shuffle.jpg, ffmpeg requested seek 25.5 seconds"
+    ],
+    "exact_contact_timestamps": "Per-video metadata.json records decoder PTS for every contact frame; detail seek times are requested times rather than certified exact output PTS.",
+    "audio_reviewed": false,
+    "audio_required_for_selected_events": false,
+    "vlm_called": false,
+    "npu_called": false,
+    "source_media_download_bytes": 42205078,
+    "media_download_budget_bytes": 50000000,
+    "additional_source_downloads_this_round": 0,
+    "remote_directory": "/cache/zhonghao/temporal_source_review_20260913/search_round_20260913_2120",
+    "production_directories_touched": false
+  },
+  "sources": [
+    {
+      "video_id": "video_6578",
+      "url": "https://storage.googleapis.com/dm-perception-test/visualisation_videos/video_6578.mp4",
+      "remote_path": "/cache/zhonghao/temporal_source_review_20260913/search_round_20260913_2120/video_6578/source.mp4",
+      "sha256": "2da1845386875035467799c15f6b5e3bddb3d78471c78256824e3183ce1e45c2",
+      "size_bytes": 15341984,
+      "video_stream_duration_seconds": 28.747086,
+      "container_duration_seconds": 28.8,
+      "video_frames": 851,
+      "video_fps_exact": "29603/1000",
+      "resolution": [1920, 1080],
+      "source_order": ["pour_liquid", "handle_letter_objects"],
+      "official_selected_events": [
+        {
+          "action_id": 8,
+          "label_id": 26,
+          "label": "Pouring something from something into something",
+          "timestamps_microseconds": [15640441, 17430816],
+          "frame_ids": [463, 516]
+        },
+        {
+          "action_id": 11,
+          "label_id": 49,
+          "label": "Shuffling objects",
+          "timestamps_microseconds": [24930121, 26247566],
+          "frame_ids": [738, 777]
+        }
+      ],
+      "manual_observations": [
+        "Indoor preparation scene. A person tilts a transparent bottle into a metal bowl around 15.7-17.2 s, then replaces/closes the bottle and stirs.",
+        "Around 24.8-26.3 s the person reaches to and moves the orange letter blocks beside the bowl. The full-resolution 25.5 s detail confirms orange blocks rather than paper pieces or cups.",
+        "The official viewer questions independently refer to the letters being shuffled; their reported starting order is asd and final order sad. Those question answers were checked as metadata, not independently read off every letter face.",
+        "A red container is also tilted earlier around 9.7-11.2 s. Official annotations label that event Pretending to pour from something into something, distinct from the later actual pouring event. This is an explicit ambiguity/distractor, not silently omitted.",
+        "Mixing occurs before and after the letter action; this is not a video containing only two isolated action blocks. The selected prompt constrains their relative order rather than the order of every action in the source."
+      ],
+      "review_quality": "Action order supported by official temporal labels and approximately 2 fps visual inspection. No claim of exact pixel/latent correspondence or complete continuous-playback verification.",
+      "minimum_annotation_span_covering_both_selected_actions_seconds": 10.607125,
+      "can_keep_both_complete_in_contiguous_124_frames_at_24fps": false
+    },
+    {
+      "video_id": "video_1374",
+      "url": "https://storage.googleapis.com/dm-perception-test/visualisation_videos/video_1374.mp4",
+      "remote_path": "/cache/zhonghao/temporal_source_review_20260913/search_round_20260913_2120/video_1374/source.mp4",
+      "sha256": "b04f893b618acb556080e25ee653af5c3a099d795c9403cb7ce306c4cd754d90",
+      "size_bytes": 26863094,
+      "video_stream_duration_seconds": 26.603164,
+      "container_duration_seconds": 26.667,
+      "video_frames": 782,
+      "video_fps_exact": "5879/200",
+      "resolution": [1920, 1080],
+      "source_order": ["handle_letter_objects", "pour_liquid"],
+      "official_selected_events": [
+        {
+          "action_id": 2,
+          "label_id": 49,
+          "label": "Shuffling objects",
+          "timestamps_microseconds": [8402843, 14016078],
+          "frame_ids": [247, 412]
+        },
+        {
+          "action_id": 3,
+          "label_id": 26,
+          "label": "Pouring something from something into something",
+          "timestamps_microseconds": [14526372, 17520097],
+          "frame_ids": [427, 515]
+        }
+      ],
+      "manual_observations": [
+        "Outdoor preparation scene. The person moves small paper letter objects near the front of the table around 8.4-14.0 s. The full-resolution 10.7 s detail shows the paper letters being handled.",
+        "Afterwards the person lifts a small white bowl and tilts it into the larger metal bowl around 14.8-17.3 s. The full-resolution 16.3 s detail visibly shows a narrow yellow liquid stream; this is not inferred solely from container tilt.",
+        "The official viewer questions state that the letters end in their original order (to). Consequently the selected event means handling/shuffling the letters, not requiring that their final spatial order differ. The temporal test is the order of this action versus pouring, not the letters' left-right arrangement.",
+        "Earlier banana handling and later ingredient addition are also present. The selected actions are not truncated by the public file boundary and their annotated intervals do not overlap."
+      ],
+      "review_quality": "Action order and the liquid stream are supported by official annotations plus sampled visual review and full-resolution details. No claim of dense correspondence GT.",
+      "minimum_annotation_span_covering_both_selected_actions_seconds": 9.117254,
+      "can_keep_both_complete_in_contiguous_124_frames_at_24fps": false
+    }
+  ],
+  "proposed_crossed_router_test": {
+    "not_official_edit_instructions": true,
+    "positive_label_definition": "The source order of the two selected actions must change to satisfy the target relation while retaining both forward actions.",
+    "negative_label_definition": "The source already satisfies the selected relative-order requirement, so the instruction does not require changing that order. This is not proof of exact same-frame correspondence in a generated output.",
+    "instructions": [
+      {
+        "id": "pour_before_letters",
+        "instruction": "The liquid-pouring action should occur before the letter-handling action. Keep both actions and preserve the forward motion within each action, along with the person, setting, and objects.",
+        "labels": {"video_6578": "order_change_not_required", "video_1374": "order_change_required"}
+      },
+      {
+        "id": "letters_before_pour",
+        "instruction": "The letter-handling action should occur before the liquid-pouring action. Keep both actions and preserve the forward motion within each action, along with the person, setting, and objects.",
+        "labels": {"video_6578": "order_change_required", "video_1374": "order_change_not_required"}
+      }
+    ],
+    "why_source_dependent": "Each exact instruction has opposite labels on the two source videos; each source has opposite labels under the two instructions. A deterministic text-only or source-only classifier cannot classify all four cases correctly without additional source-order or instruction information.",
+    "text_only_balanced_expectation": "With both sources weighted equally per prompt, a fixed prompt-only prediction gives 50% accuracy on the four crossed cases. This is a construction property, not a measured model result.",
+    "what_is_not_proven": [
+      "No VLM has been run; neither its accuracy nor its benefit is established.",
+      "A VLM is not the only possible implementation: a reliable visual event recognizer plus an order comparator, or an accurate event transcript, could supply the needed source information.",
+      "Order already satisfied does not guarantee the generated target preserves timing, duration, or exact frame correspondence. That stricter claim needs output/correspondence evaluation.",
+      "Two different scenes with different letter-object forms are not a same-scene paired capture and do not establish broad benchmark generalization.",
+      "There is no official reference edited video, no approved 5-second derivative, and no generated GT. These long sources should not silently replace the current frozen ABC inputs."
+    ]
+  },
+  "other_search_results": [
+    {
+      "dataset": "OmniEdit-Bench",
+      "official_link": "https://huggingface.co/datasets/OmniEdit-Bench/OmniEdit-Bench",
+      "inspection": "Metadata only in this round; previous seven visual reviews preserved separately.",
+      "result": "Exact-instruction duplicate grouping over the 250 inspected temporal/reasoning entries found no shared-prompt, different-source group. This is not a claim about every entry or semantically equivalent instructions.",
+      "keep": "Previously visually reviewed Temporal_reordering 07 jump remains a positive example, but no natural exact-prompt negative pair was confirmed."
+    },
+    {
+      "dataset": "UniEditBench",
+      "official_link": "https://huggingface.co/datasets/wesar1/UniEditBench",
+      "inspection": "All 77 video rows checked as metadata; no media downloaded.",
+      "result": "The ten video reordering entries 00053-00062 concern spatial position swaps, so were excluded from this temporal-action-order search."
+    },
+    {
+      "dataset": "VEFX-Bench",
+      "official_link": "https://huggingface.co/datasets/xiangbog/VEFX-Bench",
+      "inspected_revision": "3bf997e7eb4fa0d0c2d56cce5ddfccc1dfbda235",
+      "inspection": "300 prompt records inspected; no media downloaded.",
+      "result": "0220 requests synchronized water jumps by three children; this is a multi-subject timing candidate, not a verified opposite-order natural pair or a simple global frame-map test."
+    },
+    {
+      "dataset": "DyBench",
+      "official_link": "https://huggingface.co/datasets/ddz16/DyBench",
+      "project_link": "https://ddz16.github.io/crpo.github.io/",
+      "inspection": "Event-sequence metadata/project description only; 2.783 GB media archive not downloaded.",
+      "result": "The event-sequence set constructs both action orders by concatenating two action segments. This is a potential controlled synthetic stress set, not an unedited natural balanced editing pair. Its supplied tasks are QA, not video-edit instructions. Underlying source-dataset licenses still need checking for reuse."
+    }
+  ],
+  "recommended_next_step": "Use the four proposed crossed cases first for an explicitly labeled source-dependent routing sanity check after selecting an authorized local visual model or other event-order observer. Continue looking for shorter same-scene natural sources or design and disclose derivatives separately. Do not infer VLM success or change frozen ABC jobs from this candidate review."
+}

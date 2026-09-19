@@ -1,0 +1,188 @@
+[
+  {
+    "test": "cpu_mask_equivalence",
+    "cases": 48,
+    "extra_out_of_bounds_indices": true,
+    "cross_chunk_boundaries": true,
+    "padding": true,
+    "text_source_target_boundaries": true,
+    "invalid_mapping_rejected": true
+  },
+  {
+    "test": "compiled_gpu_equivalence",
+    "case": 0,
+    "queries": 304,
+    "max_abs": 0.0,
+    "sdpa_max_abs": 0.00390625,
+    "source_text_target_isolation": "exact"
+  },
+  {
+    "test": "compiled_gpu_equivalence",
+    "case": 1,
+    "queries": 208,
+    "max_abs": 0.0,
+    "sdpa_max_abs": 0.00390625,
+    "source_text_target_isolation": "exact"
+  },
+  {
+    "test": "compiled_gpu_equivalence",
+    "case": 2,
+    "queries": 208,
+    "max_abs": 0.0,
+    "sdpa_max_abs": 0.00390625,
+    "source_text_target_isolation": "exact"
+  },
+  {
+    "test": "compiled_gpu_equivalence",
+    "case": 3,
+    "queries": 304,
+    "max_abs": 0.0,
+    "sdpa_max_abs": 0.00390625,
+    "source_text_target_isolation": "exact"
+  },
+  {
+    "test": "empty_active_queries",
+    "safe_zero_output": true
+  },
+  {
+    "test": "production_size_speed",
+    "variant": "no_skip",
+    "shape": [
+      81024,
+      28,
+      128
+    ],
+    "active_target_ratio": 1.0,
+    "old_wall_ms": 467.37418323755264,
+    "new_wall_ms": 286.26978397369385,
+    "latency_reduction": 0.3874933741725497,
+    "old_samples_ms": [
+      467.46524423360825,
+      467.9320752620697,
+      467.27555245161057,
+      467.37418323755264,
+      467.2694578766823
+    ],
+    "new_samples_ms": [
+      286.26978397369385,
+      286.19662672281265,
+      286.6945341229439,
+      286.23688220977783,
+      286.37442737817764
+    ],
+    "old_gpu_ms": [
+      467.39398193359375,
+      467.8707275390625,
+      467.21636962890625,
+      467.3177490234375,
+      467.2071533203125
+    ],
+    "new_gpu_ms": [
+      286.2366638183594,
+      286.1475830078125,
+      286.6534423828125,
+      286.19775390625,
+      286.3206481933594
+    ],
+    "max_abs": 0.0,
+    "scope": "softmax path including mask lookup, gather and scatter; excludes compilation"
+  },
+  {
+    "test": "production_size_speed",
+    "variant": "partial_step700",
+    "shape": [
+      81024,
+      28,
+      128
+    ],
+    "active_target_ratio": 0.6939618587493896,
+    "old_wall_ms": 410.5239138007164,
+    "new_wall_ms": 342.62149035930634,
+    "latency_reduction": 0.16540430693246388,
+    "old_samples_ms": [
+      410.4130417108536,
+      410.3722795844078,
+      410.75772047042847,
+      410.54580360651016,
+      410.5239138007164
+    ],
+    "new_samples_ms": [
+      342.8787514567375,
+      342.62149035930634,
+      342.49500930309296,
+      342.49792993068695,
+      342.8177908062935
+    ],
+    "old_gpu_ms": [
+      410.3380126953125,
+      410.3116760253906,
+      410.68646240234375,
+      410.4867858886719,
+      410.4509582519531
+    ],
+    "new_gpu_ms": [
+      342.8198547363281,
+      342.5689697265625,
+      342.445068359375,
+      342.4583740234375,
+      342.75225830078125
+    ],
+    "max_abs": 0.0,
+    "scope": "softmax path including mask lookup, gather and scatter; excludes compilation"
+  },
+  {
+    "test": "production_size_speed",
+    "variant": "partial_old_B_ratio",
+    "shape": [
+      81024,
+      28,
+      128
+    ],
+    "active_target_ratio": 0.32255470752716064,
+    "old_wall_ms": 354.83627766370773,
+    "new_wall_ms": 293.6355173587799,
+    "latency_reduction": 0.17247605207641759,
+    "old_samples_ms": [
+      354.86163944005966,
+      354.77786511182785,
+      354.83627766370773,
+      355.1226407289505,
+      354.7229692339897
+    ],
+    "new_samples_ms": [
+      293.66520792245865,
+      293.5781925916672,
+      293.6355173587799,
+      293.70348900556564,
+      293.4509292244911
+    ],
+    "old_gpu_ms": [
+      354.7908020019531,
+      354.7166748046875,
+      354.76788330078125,
+      355.0904235839844,
+      354.67877197265625
+    ],
+    "new_gpu_ms": [
+      293.60333251953125,
+      293.53369140625,
+      293.5777282714844,
+      293.64837646484375,
+      293.396484375
+    ],
+    "max_abs": 0.0,
+    "scope": "softmax path including mask lookup, gather and scatter; excludes compilation"
+  },
+  {
+    "test": "peak_memory",
+    "gib": 20.006042003631592
+  },
+  {
+    "test": "ALL_PASSED",
+    "files": {
+      "savie_overlay.py": "e0460e3a44d032adaa2a433d109395a33f5ba9b452a63bebc408635637c194b9",
+      "savie_mask_arithmetic.py": "5ebb31e481be6e58f5a9e553114fbdcf437f131f0f7a0bc238a5550d223b426f",
+      "test_flex_arithmetic.py": "ba940324dc0ee9dabe5e375e692e7f4a7a33df43f809b7cc6fc091839e367fb3"
+    }
+  }
+]

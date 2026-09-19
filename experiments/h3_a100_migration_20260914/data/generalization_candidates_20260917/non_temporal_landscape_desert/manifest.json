@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "sample_id": "landscape_desert_124",
+  "source_video": "/cache/zhonghao/h3/data/generalization_candidates_20260917/non_temporal_landscape_desert/source.mp4",
+  "source_sha256": "29471234919466954034f6d47c68f28a905005f2e5af1cb15fbd16c7c8896fcb",
+  "source_metadata": {
+    "width": 1280,
+    "height": 720,
+    "frames": 124,
+    "fps": 24,
+    "duration_seconds": 5.166667
+  },
+  "edit_prompt": "Transform the green field and hills into a dry desert-like landscape with sparse arid vegetation and a subtle heat haze. Preserve the original camera motion, scene geometry, timing, and all unrelated structures.",
+  "temporal_structure_change_required": false,
+  "provenance": {
+    "dataset": "OmniEdit-Bench",
+    "official_source_id": "Sp_Landscape_change_04",
+    "official_instruction": "Transform the entire green field and hills into a dry, desert-like environment with sparse, arid vegetation. The vibrant green is gone. Add a shimmering, hazy atmosphere over the sand and distant hills under a scorching, bright white-blue sky.",
+    "source_path": "Spatial/Global-Level/Landscape_change/4_1280x720.mp4",
+    "source_url": "https://huggingface.co/datasets/OmniEdit-Bench/OmniEdit-Bench/resolve/main/Spatial/Global-Level/Landscape_change/4_1280x720.mp4",
+    "license": "CC-BY-NC-4.0"
+  },
+  "preparation": {
+    "operation": "first 124 frames re-encoded with libx264 CRF 18",
+    "original_frames": 240,
+    "original_duration_seconds": 10.0
+  }
+}

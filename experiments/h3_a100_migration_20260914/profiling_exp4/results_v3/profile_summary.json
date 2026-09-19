@@ -1,0 +1,179 @@
+{
+  "by_mode_and_rank": {
+    "partial_skip": {
+      "rank0": {
+        "block_total_ms_per_forward": 27976.18865094866,
+        "component_totals_normalized_to_50_blocks": true,
+        "event_error_count": 0,
+        "group_ms_per_forward": {
+          "attention_core": 17668.529938834054,
+          "mlp": 3867.4278411865234,
+          "norm_and_adaln": 778.2541884013584,
+          "out_projection": 1345.4896283830915,
+          "qkv_projection": 1829.0747904096331,
+          "rope": 678.2060256685529,
+          "ulysses_communication": 1307.0252758472095
+        },
+        "group_percent_of_block_total": {
+          "attention_core": 63.155600497549976,
+          "mlp": 13.823998291687888,
+          "norm_and_adaln": 2.7818449400360623,
+          "out_projection": 4.809410049275838,
+          "qkv_projection": 6.537969890146598,
+          "rope": 2.4242259520420957,
+          "ulysses_communication": 4.671920439751856
+        },
+        "requested_comparison": {
+          "attention_core_out_proj_mlp_ms": 22881.44740840367,
+          "attention_core_out_proj_mlp_percent": 81.78900883851371,
+          "other_ms": 502.18096221823726,
+          "other_percent": 1.7950299395096783,
+          "qkv_norm_rope_ulysses_ms": 4592.560280326754,
+          "qkv_norm_rope_ulysses_percent": 16.415961221976612
+        },
+        "sample_count": 7
+      },
+      "rank1": {
+        "block_total_ms_per_forward": 27909.06326729911,
+        "component_totals_normalized_to_50_blocks": true,
+        "event_error_count": 0,
+        "group_ms_per_forward": {
+          "attention_core": 17452.107270104545,
+          "mlp": 1441.6101651872907,
+          "norm_and_adaln": 790.9408204385213,
+          "out_projection": 557.3373099054609,
+          "qkv_projection": 1769.4798998151507,
+          "rope": 839.0385375704084,
+          "ulysses_communication": 4553.283414122249
+        },
+        "group_percent_of_block_total": {
+          "attention_core": 62.53204237977088,
+          "mlp": 5.165383557951288,
+          "norm_and_adaln": 2.8339927172162107,
+          "out_projection": 1.9969760524298565,
+          "qkv_projection": 6.340162272262432,
+          "rope": 3.00632998511815,
+          "ulysses_communication": 16.31471243055766
+        },
+        "requested_comparison": {
+          "attention_core_out_proj_mlp_ms": 19451.0547451973,
+          "attention_core_out_proj_mlp_percent": 69.69440199015203,
+          "other_ms": 505.2658501554797,
+          "other_percent": 1.8104006046935184,
+          "qkv_norm_rope_ulysses_ms": 7952.742671946329,
+          "qkv_norm_rope_ulysses_percent": 28.49519740515445
+        },
+        "sample_count": 7
+      }
+    },
+    "refresh": {
+      "rank0": {
+        "block_total_ms_per_forward": 32851.29274495443,
+        "component_totals_normalized_to_50_blocks": true,
+        "event_error_count": 252,
+        "group_ms_per_forward": {
+          "attention_core": 22916.523975372314,
+          "mlp": 3776.316948542519,
+          "norm_and_adaln": 793.7055384882688,
+          "out_projection": 1133.92445788239,
+          "qkv_projection": 1836.974154096661,
+          "rope": 678.600145108772,
+          "ulysses_communication": 1386.8664236863453
+        },
+        "group_percent_of_block_total": {
+          "attention_core": 69.75836279347644,
+          "mlp": 11.495185221051969,
+          "norm_and_adaln": 2.416055723134891,
+          "out_projection": 3.4516889995342646,
+          "qkv_projection": 5.591786503984074,
+          "rope": 2.065672576044962,
+          "ulysses_communication": 4.221649462788193
+        },
+        "requested_comparison": {
+          "attention_core_out_proj_mlp_ms": 27826.765381797224,
+          "attention_core_out_proj_mlp_percent": 84.70523701406267,
+          "other_ms": 328.3811017771586,
+          "other_percent": 0.99959871998521,
+          "qkv_norm_rope_ulysses_ms": 4696.146261380047,
+          "qkv_norm_rope_ulysses_percent": 14.29516426595212
+        },
+        "sample_count": 3
+      },
+      "rank1": {
+        "block_total_ms_per_forward": 32849.709493001305,
+        "component_totals_normalized_to_50_blocks": true,
+        "event_error_count": 252,
+        "group_ms_per_forward": {
+          "attention_core": 22791.099266052246,
+          "mlp": 3840.34539480058,
+          "norm_and_adaln": 781.7849712755428,
+          "out_projection": 1147.2985209840717,
+          "qkv_projection": 1826.1077375122995,
+          "rope": 676.201115955006,
+          "ulysses_communication": 1467.2146453062694
+        },
+        "group_percent_of_block_total": {
+          "attention_core": 69.3799111706237,
+          "mlp": 11.690652532616074,
+          "norm_and_adaln": 2.3798839726180945,
+          "out_projection": 3.4925682409109458,
+          "qkv_projection": 5.558976824137076,
+          "rope": 2.0584690896553344,
+          "ulysses_communication": 4.46644633377614
+        },
+        "requested_comparison": {
+          "attention_core_out_proj_mlp_ms": 27778.743181836897,
+          "attention_core_out_proj_mlp_percent": 84.56313194415073,
+          "other_ms": 319.6578411152914,
+          "other_percent": 0.9730918356626415,
+          "qkv_norm_rope_ulysses_ms": 4751.308470049118,
+          "qkv_norm_rope_ulysses_percent": 14.463776220186647
+        },
+        "sample_count": 3
+      }
+    }
+  },
+  "critical_path": {
+    "block_speedup": 1.1743166462839567,
+    "block_time_reduction_percent": 14.844092250209476,
+    "partial_skip_block_ms_per_forward": 27976.18865094866,
+    "per_step_ms": {
+      "partial_skip": [
+        28142.03399658203,
+        27988.764709472656,
+        27973.844116210938,
+        27949.268981933594,
+        27924.092041015625,
+        27923.95654296875,
+        27931.36016845703
+      ],
+      "refresh": [
+        32796.22546386719,
+        32925.951171875,
+        32836.53546142578
+      ]
+    },
+    "refresh_block_ms_per_forward": 32852.90403238932
+  },
+  "method": {
+    "active_target_ratio": 0.3231445848941803,
+    "block_count_per_forward": 50,
+    "excluded": "refresh step 0 (TorchDynamo cold start)",
+    "partial_skip_steps": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "refresh_steps": [
+      1,
+      2,
+      3
+    ],
+    "source_records": 22,
+    "steady_records": 20
+  }
+}

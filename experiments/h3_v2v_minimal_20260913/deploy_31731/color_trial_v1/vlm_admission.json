@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "run_id": "4cfa7803ddc3482a8906b91184743384",
+  "run_directory": "/cache/zhonghao/h3/color_trial_v1/vlm_results/shirt_red_couple_124/runs/20260914T035257Z_4cfa7803ddc3482a8906b91184743384",
+  "status_sha256": "89141b67ba58c5b9c7d342de0244002b2c1b605e31583de9317fddc9c10cb1bc",
+  "result_sha256": "8ad3b178c916ce20b9dd5157ce9c760caf27b0afd99e6c4d699f88ae36f4d190",
+  "source": {
+    "path": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+    "sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+    "size_bytes": 1527004
+  },
+  "edit_prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+  "classification": "preserve",
+  "root_reviewed_real_evidence": true
+}

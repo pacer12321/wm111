@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "status": "limited_independent_visual_review_completed",
+  "reviewer": "/root/h3_resource_expansion_review",
+  "run_id": "b52c1cc39548462f9a6b1f6124fef1ea",
+  "case": "B",
+  "sample_id": "shirt_red_couple_124",
+  "review_date_local": "2026-09-14",
+  "method": "实际使用 view_image，以 original detail 查看三张左 source / 右 B 分段对照图和 B 的三个原生 PNG；未播放视频。",
+  "viewed_files_sha256": {
+    "source_B_color_part_1.jpg": "6680435aa18deb6dd69f9cfd1a84c3001dfce77e92599d8b420bbd4d4eaa01b0",
+    "source_B_color_part_3.jpg": "ae3cc70fe8006d6c23f2bb5e520307839168a40318cb2b002912f5f4fc699856",
+    "source_B_color_part_2.jpg": "34730e73203a3f1b26082a1179fcbc5f41823e9282329f71e1d37b34075b0c76",
+    "B_color_frame_000.png": "5b270e431512648acfa0f0fe4b1cd702954822206037af1f87c7a830be4a1db4",
+    "B_color_frame_123.png": "8accd80abb8a0e652b23a4d9e004effddfe24c0207e891ac14e97bb8aa4b991d",
+    "B_color_frame_060.png": "1fb0fa929fb23b512b12567bcbcc1a8f577a6c59c595b218bbbe3ed40abaeedc"
+  },
+  "contact_frame_indices": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    123
+  ],
+  "native_B_frame_indices": [
+    0,
+    60,
+    123
+  ],
+  "native_source_frames_viewed_separately": false,
+  "A_video_or_images_viewed_in_this_review": false,
+  "observations": {
+    "shirt_color": "九个对照抽样时刻中，source 男子浅色衬衫在 B 中均明显变成红色；原生 B 帧 0/60/123 中衣领、躯干和可见袖子都为红色，未看到抽样点恢复浅衣或明显大块漏改。",
+    "woman_clothing": "九个抽样点中女子上衣保持白色/浅白色，没有看到明显被一起染红；原生帧中的可见袖子和衣身也保持浅色。",
+    "coarse_actions_and_order": "与同帧 source 对照，B 的 0 帧为面对面托头，15 帧继续靠近，30 帧轻吻/接触，45 帧分开后仍面对面，60 帧转为女子贴胸，75/90/105 帧拥抱，123 帧女子在拥抱中面向镜头。抽样支持原有靠近→轻吻→贴胸拥抱的主要顺序保留，而不是倒放或静态冻结。",
+    "people_and_background": "两人的外观、相对站位、头发、拥抱构图及草地/远处树丛/浅色天空等主要场景元素在抽样中与 source 大体一致；未见明显换人、换场景或插入新主体。",
+    "viewpoint_and_framing": "同帧对照的主要取景和背景轮廓大体接近，没有看到如前一轮倒放 C 那样女子转为大面积背朝镜头的明显视向改变。不能凭这些静帧证明相机运动逐帧完全不变。",
+    "non_identity_and_fine_details": "B 不是源视频的严格逐像素换色：对照可见衣褶、袖口/躯干轮廓以及部分手臂贴合位置有细微重绘差异；背景色调/柔化程度也不能视为完全相同。无法据抽样确认衬衫布料、所有按钮/缝线/纹理等细节严格保真。",
+    "gross_failures": "指定原生帧和九点对照中未见黑屏、整体场景崩坏或红色大范围污染女子白衣；这不排除未抽到帧中的闪烁、短暂瑕疵或细部手指问题。"
+  },
+  "conclusion": {
+    "limited_task_assessment": "有限视觉抽查支持 B 已实现男子浅衬衫换红、女子白衣大体保留，并维持主要动作顺序与场景构图。",
+    "full_quality_equivalence_established": false,
+    "exact_temporal_timing_preservation_established": false,
+    "exact_garment_detail_preservation_established": false,
+    "performance_assessment_performed": false
+  },
+  "limitations": [
+    "仅查看指定的三张对照图（共九时刻）与三个 B 原生帧，没有连续播放。",
+    "未单独查看 source 原生帧；source 依据为所给左侧对照缩图。",
+    "本次未查看 A 图像，因此不作 A/B 画质优劣比较。",
+    "未听音频，未评估音画同步、细粒度动作速度、所有中间帧或完整闪烁。",
+    "未重新解码验证视频、全 124 帧 PTS、提取脚本或源/成片视频 SHA；这里只记录实际所看六个图像文件的 SHA。",
+    "抽样编辑效果支持不等于总体/等质加速或严格像素、相机、时间一致性证明。"
+  ]
+}

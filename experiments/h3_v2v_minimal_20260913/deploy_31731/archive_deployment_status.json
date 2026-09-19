@@ -1,0 +1,17 @@
+{
+  "status": "deployed_v2_linux_cpu_tests_passed_real_archive_not_authorized",
+  "observed_at": "2026-09-13T21:11:19+08:00",
+  "source_tools": "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/deploy_31731/archive_review_20260913_2111_v2",
+  "target_tools": "/home/ma-user/workspace/zhonghao/h3_deploy_31731/archive_review_20260913_2111_v2",
+  "files": {
+    "archive_30213_experiments.py": "965d52127aea24023cc62f292eb1509bbeeec8d84d31cb852f7ab8afc41b0257",
+    "test_archive_30213_experiments.py": "4247724da7d8af4c081009facc06700eefe39c648620176c12bcbe6be1d26fad"
+  },
+  "linux_cpu_tests": {"host_port": 31731, "passed": 20, "skipped": 0, "returncode": 0, "elapsed_seconds": 0.081},
+  "first_v1_attempt": {"passed": 16, "errors": 4, "reason": "System Python 3.10 has no hashlib.file_digest; v2 uses streaming hashlib.sha256 instead", "evidence_preserved": true},
+  "real_produce_executed": false,
+  "real_receive_executed": false,
+  "npu_operations": 0,
+  "source_experiment_files_modified": false,
+  "required_source_run": "b_smoke_formal_20260913T122957_063593Z"
+}

@@ -1,0 +1,76 @@
+{
+  "review_type": "independent_limited_visual_review_of_formal_shirt_red_A",
+  "review_date_local": "2026-09-14",
+  "reviewer": "source_dependent_temporal_edits",
+  "run": "a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304",
+  "sample_id": "shirt_red_couple_124",
+  "formal_A_video_sha256_provided_and_verified_by_root": "392fd304bab4ca92f8a883f6c85c8a27f7adbd61dd5f1b5a6f678e1dee06d9ba",
+  "root_reported_decode_checks": {
+    "source_and_A_frames": 124,
+    "fps": 24,
+    "all_PTS_verified": true,
+    "independently_redecoded_in_this_visual_review": false
+  },
+  "inspection": {
+    "images_actually_viewed": [
+      "source_A_color_part_1.jpg",
+      "source_A_color_part_2.jpg",
+      "source_A_color_part_3.jpg",
+      "A_color_frame_000.png",
+      "A_color_frame_060.png",
+      "A_color_frame_123.png"
+    ],
+    "source_A_contact_frame_indices_seen": [0, 15, 30, 45, 60, 75, 90, 105, 123],
+    "contact_PTS_seconds": [0.0, 0.625, 1.25, 1.875, 2.5, 3.125, 3.75, 4.375, 5.125],
+    "A_native_frame_indices_seen": [0, 60, 123],
+    "continuous_video_playback_performed": false,
+    "synchronized_comparison_video_watched_by_this_reviewer": false,
+    "audio_reviewed": false,
+    "new_model_or_VLM_called": false,
+    "remote_operations": false
+  },
+  "task": "Change only the man's pale shirt to solid red; preserve garment style/details, the woman's clothing, people, background, camera, action order and timing.",
+  "findings": {
+    "requested_color_change": {
+      "assessment": "clearly_achieved_in_all_nine_sampled_frames",
+      "evidence": "The man's shirt is consistently saturated red in the sampled output rather than the pale source shirt. Natural shading and folds remain visible; solid red is not interpreted as requiring an identical flat RGB value across all fabric pixels."
+    },
+    "edit_locality_and_appearance": {
+      "assessment": "broadly_localized_to_the_man_shirt_in_the_inspected_images_not_pixel_exact",
+      "evidence": [
+        "The woman's clothing remains pale in all nine compared states; grass and sky retain their broad colors.",
+        "No conspicuous large red spill onto the woman's clothing, skin, or background was seen in the inspected images.",
+        "The man's collared-shirt and long/rolled-sleeve silhouette remains recognizable. Fabric folds, local shape and boundary details differ; strict preservation of the exact fabric, tailoring and every detail has not been established.",
+        "The same two-person arrangement and broad appearance remain recognizable, but no biometric identity or fine face/hand fidelity metric was performed."
+      ]
+    },
+    "actions_and_timing": {
+      "assessment": "coarse_event_order_and_sampled_action_phases_match_source",
+      "evidence": [
+        "Frame 0: facing each other with the man's hand against the woman's head.",
+        "Frames 15 and 30: facial approach/contact and kissing pose.",
+        "Frame 45: faces separate again.",
+        "Frames 60 through 105: the woman's head rests against his chest in an embrace.",
+        "Frame 123: the embrace continues with her face turned toward the camera."
+      ],
+      "limitation": "These nine corresponding-index observations support preservation of the main event order and coarse phase, but do not measure exact per-frame alignment, transition timing, speed, or every intervening motion."
+    },
+    "composition_background_and_camera": {
+      "assessment": "broad_composition_and_field_background_retained_at_sampled_times",
+      "evidence": "The couple, grassy landscape and pale sky occupy broadly corresponding regions. No major viewpoint substitution or scene replacement was observed in these comparisons.",
+      "limitation": "Local contours and background/subject positions are not asserted to match exactly. No camera trajectory, optical flow, geometric registration or perceptual comparison was measured."
+    },
+    "obvious_artifacts": {
+      "assessment": "no_gross_failure_seen_in_selected_frames",
+      "evidence": "No inspected frame is black, blank or dominated by a major geometric collapse. Clothing, faces and embracing arms remain recognizable.",
+      "limitation": "This does not exclude subtle anatomy errors, texture changes, transient defects or flicker between samples."
+    }
+  },
+  "conclusion_zh": "独立看过三张对照图的九个时点及A首/中/尾原图后，确认男士衬衫换红在抽样画面中明确达成，女士衣服未明显换色，主要动作顺序和相位与源视频对应，未见大幅换视角、黑屏或整体畸变。但局部衣褶/形状细节并非严格不变，不能据抽帧宣称全程流畅无闪烁、精确时序/相机保持、音频合格或完全等质。",
+  "scope": {
+    "main_thread_observations_read_or_modified": false,
+    "only_new_file_written": "independent_observations.json",
+    "input_videos_existing_images_progress_files_and_production_unchanged": true,
+    "latency_memory_or_speedup_not_assessed": true
+  }
+}

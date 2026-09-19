@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "owner": "zhonghao",
+  "authorization": "All new experiments use31731 single-node8cards. Latest user explicitly cancelled/discarded30213 experiments, including result archive. No remaining own30213 jobs; do not delete shared assets or stop others. User said continue running.",
+  "ssh_config": "C:/Users/DZH/.ssh/config-vdn-h3-30213",
+  "ssh_alias": "vdn-h3-ascend-30213",
+  "connection_note": "Use an explicit ssh -p override for each host. Do not rewrite the existing SSH config or copy private keys to either server.",
+  "hosts": [
+    {
+      "ssh_port": 30213,
+      "hostname": "ma-job-e03cb638-a995-4fcf-aad0-ebcf50a7c3ff-worker-0",
+      "boot_id": "267b29c9-c982-4333-8fa9-027646f46d10",
+      "observed_at": "2026-09-13T19:59:06+08:00",
+      "model": "Ascend 910B3",
+      "hbm_mib_per_card": 65536,
+      "authorized_physical_cards": [2, 3, 6, 7],
+      "scheduling_status": "cancelled_discarded_no_jobs_no_archive",
+      "other_busy_cards_do_not_use": [0, 1, 4, 5],
+      "existing_card_lease_root": "/cache/zihaohe/generation-supervision/runs",
+      "h3_environment_and_weights_present": true,
+      "b_smoke_cleanup_completed_at": "2026-09-13T19:59:08+08:00",
+      "b_smoke_phase": "smoke_completed_review_required",
+      "new_job_started_by_resource_expansion": true,
+      "current_b_mode": "smoke-then-formal",
+      "current_b_run_id": "7b7090f4ba704e77bab9a7d271433a82",
+      "current_b_live_status": "/cache/zhonghao/h3_v2v_minimal_20260913/b_model/b_formal_status.json"
+    },
+    {
+      "ssh_port": 31731,
+      "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+      "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+      "observed_at": "2026-09-13T19:59:16+08:00",
+      "model": "Ascend 910B3",
+      "hbm_mib_per_card": 65536,
+      "authorized_physical_cards": [0, 1, 2, 3, 4, 5, 6, 7],
+      "observed_idle_healthy_cards": [0, 1, 2, 3, 4, 5, 6, 7],
+      "architecture": "aarch64",
+      "cann_version": "8.5.2",
+      "cgroup_memory_limit_bytes": 1520999997440,
+      "observed_cache_available": "13 TiB rounded by df",
+      "h3_environment_and_weights_present": true,
+      "asset_search_scope": "No MiniMax/H3/VDN found in bounded checks of /cache, /home, /opt, /temp/yunfeng and /temp/workspace; this is not an exhaustive search of every shared directory.",
+      "existing_environment": "FastWAM environments under /cache/yunfeng/envs; not validated for H3 and must not be modified.",
+      "h3_deployment_status": "runtime_tiny8_passed_corrected_A8_active_since2126_text8_vae8",
+      "h3_private_root": "/cache/zhonghao/h3",
+      "h3_deployment_record": "deploy_31731/deployment_status.json",
+      "card_lease_protocol": "Existing 30213 lease directory is absent on this node. Establish node-specific own-job exclusion and verify there is no existing scheduler reservation; do not create or alter another user's lock files.",
+      "new_job_started_by_resource_expansion": false
+    }
+  ],
+  "scheduling_rules": [
+    "These snapshots are not reservations. Recheck node identity, NPU processes, health, ownership/leases and host/cgroup memory immediately before starting any job.",
+    "Latest instruction supersedes former4+8parallel plan: all future A/B/C run on31731 fixed group01234567, USP8/ring1/DiT-TP1 after CPU runtime and fresh8card tiny checks. Do not silently fall back to4card or cross-node12.",
+    "Use all8cards as one experiment group. Run A8lake baseline rerun first, then matched8cardB/C and explicit temporal edit cases; do not run multiple full replicas concurrently.",
+    "Use separate host/group run roots, status, locks, HTTP/rendezvous ports, temporary paths and caches. Do not reuse 30213 proof files as evidence of tests executed on 31731.",
+    "New-node H3 deployment must use zhonghao-owned directories and read-only shared assets. Do not modify shared FastWAM/H3 environments, checkpoints or other users' outputs.",
+    "Formal latency comparisons must use matched hardware, eight-card parallelism and concurrency conditions. Do not compare a new eight-card B directly against the old four-card A or hide shared CPU/I/O contention. Keep old4card results labelled historical.",
+    "This resource authorization does not by itself start training, linear-attention simplification, paid VLM calls, broad parameter searches or large internet dataset downloads."
+  ]
+}

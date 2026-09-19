@@ -1,0 +1,179 @@
+{
+  "schema": "h3_fastest_ss_spatial_oracle_analysis_v1",
+  "definition": "For each sampled source query, preserve every non-source key and replace dense S-S with a shifted same-coordinate spatial window in every source frame. The 5x5 setting therefore keeps exactly 25 source keys per source frame, not 25 for the whole video.",
+  "capture_dir": "/cache/zhonghao/h3/ss_spatial_oracle_fastest_redshirt_20260917_v1/source_qkv_capture",
+  "window": 5,
+  "layers": [
+    {
+      "layer": 8,
+      "step": 4,
+      "spotedit_refresh": false,
+      "active_target_ratio": 0.3231445848941803,
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "dense_keys_per_query": 81165,
+      "source_keys_dense": 37296,
+      "source_keys_spatial_local": 925,
+      "all_keys_spatial_local": 44794,
+      "ss_key_reduction_fraction": 0.9751984126984127,
+      "all_key_reduction_fraction": 0.4481118708803056,
+      "spatial_local_relative_output_error": {
+        "mean": 0.5792814493179321,
+        "median": 0.5779256820678711,
+        "p95": 1.066593050956726,
+        "max": 1.8509570360183716
+      },
+      "random_relative_output_error": {
+        "mean": 0.6017663478851318,
+        "median": 0.6300688982009888,
+        "p95": 1.0298399925231934,
+        "max": 2.8663389682769775
+      },
+      "spatial_local_output_cosine": {
+        "mean": 0.7682080268859863,
+        "median": 0.8346312046051025,
+        "p95": 0.998336672782898,
+        "max": 1.000000238418579
+      },
+      "spatial_local_retained_source_mass": {
+        "mean": 0.08437322080135345,
+        "median": 0.028409454971551895,
+        "p95": 0.38136807084083557,
+        "max": 0.9976909756660461
+      },
+      "random_retained_source_mass": {
+        "mean": 0.02410946413874626,
+        "median": 0.02094760350883007,
+        "p95": 0.05374889820814133,
+        "max": 0.9728499054908752
+      },
+      "spatial_local_retained_total_attention_mass": {
+        "mean": 0.0667901337146759,
+        "median": 0.01638663560152054,
+        "p95": 0.3093002736568451,
+        "max": 0.9972503781318665
+      },
+      "random_retained_total_attention_mass": {
+        "mean": 0.01824258826673031,
+        "median": 0.013277566991746426,
+        "p95": 0.04666144773364067,
+        "max": 0.9496474862098694
+      },
+      "local_vs_random_mean_error_ratio": 0.9626351594924927
+    },
+    {
+      "layer": 24,
+      "step": 4,
+      "spotedit_refresh": false,
+      "active_target_ratio": 0.3231445848941803,
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "dense_keys_per_query": 81165,
+      "source_keys_dense": 37296,
+      "source_keys_spatial_local": 925,
+      "all_keys_spatial_local": 44794,
+      "ss_key_reduction_fraction": 0.9751984126984127,
+      "all_key_reduction_fraction": 0.4481118708803056,
+      "spatial_local_relative_output_error": {
+        "mean": 0.5533691644668579,
+        "median": 0.5877689123153687,
+        "p95": 1.0349479913711548,
+        "max": 2.149359703063965
+      },
+      "random_relative_output_error": {
+        "mean": 0.5747778415679932,
+        "median": 0.6421372890472412,
+        "p95": 0.9875484704971313,
+        "max": 1.6914459466934204
+      },
+      "spatial_local_output_cosine": {
+        "mean": 0.7730536460876465,
+        "median": 0.8335065841674805,
+        "p95": 0.9999809265136719,
+        "max": 1.0000001192092896
+      },
+      "spatial_local_retained_source_mass": {
+        "mean": 0.08383582532405853,
+        "median": 0.02483874186873436,
+        "p95": 0.3879283368587494,
+        "max": 0.9887498021125793
+      },
+      "random_retained_source_mass": {
+        "mean": 0.025614285841584206,
+        "median": 0.020865395665168762,
+        "p95": 0.05798948183655739,
+        "max": 0.7838757038116455
+      },
+      "spatial_local_retained_total_attention_mass": {
+        "mean": 0.06105552613735199,
+        "median": 0.010202992707490921,
+        "p95": 0.3134690225124359,
+        "max": 0.988074779510498
+      },
+      "random_retained_total_attention_mass": {
+        "mean": 0.0158076249063015,
+        "median": 0.011651186272501945,
+        "p95": 0.0423625223338604,
+        "max": 0.640093207359314
+      },
+      "local_vs_random_mean_error_ratio": 0.9627531170845032
+    },
+    {
+      "layer": 41,
+      "step": 4,
+      "spotedit_refresh": false,
+      "active_target_ratio": 0.3231445848941803,
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "dense_keys_per_query": 81165,
+      "source_keys_dense": 37296,
+      "source_keys_spatial_local": 925,
+      "all_keys_spatial_local": 44794,
+      "ss_key_reduction_fraction": 0.9751984126984127,
+      "all_key_reduction_fraction": 0.4481118708803056,
+      "spatial_local_relative_output_error": {
+        "mean": 0.5448325872421265,
+        "median": 0.5350328683853149,
+        "p95": 1.027994990348816,
+        "max": 1.792526125907898
+      },
+      "random_relative_output_error": {
+        "mean": 0.6253799200057983,
+        "median": 0.6459762454032898,
+        "p95": 1.0487581491470337,
+        "max": 1.912307858467102
+      },
+      "spatial_local_output_cosine": {
+        "mean": 0.7646152973175049,
+        "median": 0.8619940280914307,
+        "p95": 0.9978700876235962,
+        "max": 0.999998927116394
+      },
+      "spatial_local_retained_source_mass": {
+        "mean": 0.09596341103315353,
+        "median": 0.03697102144360542,
+        "p95": 0.3933029770851135,
+        "max": 0.9948745965957642
+      },
+      "random_retained_source_mass": {
+        "mean": 0.024525834247469902,
+        "median": 0.01990848407149315,
+        "p95": 0.05786159634590149,
+        "max": 0.8731258511543274
+      },
+      "spatial_local_retained_total_attention_mass": {
+        "mean": 0.05817218869924545,
+        "median": 0.015600712038576603,
+        "p95": 0.2709774076938629,
+        "max": 0.9079142808914185
+      },
+      "random_retained_total_attention_mass": {
+        "mean": 0.013639024458825588,
+        "median": 0.008844398893415928,
+        "p95": 0.03899521380662918,
+        "max": 0.6947621703147888
+      },
+      "local_vs_random_mean_error_ratio": 0.8712025880813599
+    }
+  ]
+}

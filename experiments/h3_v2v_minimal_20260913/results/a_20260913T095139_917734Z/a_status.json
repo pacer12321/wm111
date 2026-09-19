@@ -1,0 +1,190 @@
+{
+  "case": "A",
+  "run_id": "e39c4fc7b60c4b5580b3557e6ab1483e",
+  "supervisor_pid": 4123004,
+  "supervisor_proc_identity": {
+    "pid": 4123004,
+    "state": "R",
+    "pgrp": 4122828,
+    "session": 4122828,
+    "start_ticks": 259338695
+  },
+  "started_at": "2026-09-13T09:51:39.917583+00:00",
+  "allocated_physical_npu_ids": [
+    2,
+    3,
+    6,
+    7
+  ],
+  "port": 19098,
+  "actual_model_forward_calls": null,
+  "new_acceleration_results": null,
+  "run_directory": "/cache/zhonghao/h3_v2v_minimal_20260913/runs/a_20260913T095139_917734Z",
+  "phase": "completed",
+  "updated_at": "2026-09-13T10:26:08.355568+00:00",
+  "resource_snapshot": {
+    "selected_physical_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "other_busy_cards": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  "server_pid": 4123017,
+  "server_started_at": "2026-09-13T09:51:41.039670+00:00",
+  "server_proc_identity": {
+    "pid": 4123017,
+    "state": "R",
+    "pgrp": 4123017,
+    "session": 4123017,
+    "start_ticks": 259338819
+  },
+  "server_ready_at": "2026-09-13T09:56:01.355148+00:00",
+  "smoke_2step": {
+    "completed_at": "2026-09-13T09:58:48.381707+00:00",
+    "http_code": "200",
+    "content_type": "video/mp4",
+    "curl_returncode": 0,
+    "request_end_to_end_seconds": 167.02200884139165,
+    "requested_steps": 2,
+    "actual_model_forward_calls": null,
+    "dit_latency_seconds": null,
+    "success": true,
+    "quality_evidence": false,
+    "output_video": "/cache/zhonghao/h3_v2v_minimal_20260913/runs/a_20260913T095139_917734Z/output/smoke_2step.mp4",
+    "ffprobe": {
+      "verified": true,
+      "executable": "/usr/local/ffmpeg/bin/ffprobe",
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1344,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "nb_frames": "163"
+          }
+        ],
+        "format": {
+          "duration": "5.207000",
+          "size": "17942875"
+        }
+      },
+      "checks": {
+        "dimensions": [
+          1344,
+          768
+        ],
+        "fps": 24.0,
+        "frame_count": 124,
+        "container_duration_seconds": 5.207,
+        "duration_tolerance_seconds": 0.5
+      },
+      "failures": [],
+      "warnings": []
+    }
+  },
+  "a_50step": {
+    "completed_at": "2026-09-13T10:25:36.555385+00:00",
+    "http_code": "200",
+    "content_type": "video/mp4",
+    "curl_returncode": 0,
+    "request_end_to_end_seconds": 1608.1394879361615,
+    "requested_steps": 50,
+    "actual_model_forward_calls": null,
+    "dit_latency_seconds": null,
+    "success": true,
+    "quality_evidence": false,
+    "output_video": "/cache/zhonghao/h3_v2v_minimal_20260913/runs/a_20260913T095139_917734Z/output/a_50step.mp4",
+    "ffprobe": {
+      "verified": true,
+      "executable": "/usr/local/ffmpeg/bin/ffprobe",
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1344,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "nb_frames": "124"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "nb_frames": "163"
+          }
+        ],
+        "format": {
+          "duration": "5.207000",
+          "size": "11913675"
+        }
+      },
+      "checks": {
+        "dimensions": [
+          1344,
+          768
+        ],
+        "fps": 24.0,
+        "frame_count": 124,
+        "container_duration_seconds": 5.207,
+        "duration_tolerance_seconds": 0.5
+      },
+      "failures": [],
+      "warnings": []
+    }
+  },
+  "remaining_owned_process_groups": {},
+  "cleanup_completed": true,
+  "needs_attention": false,
+  "resource_release_check": {
+    "selected_physical_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      2,
+      3,
+      6,
+      7
+    ],
+    "other_busy_cards": [
+      0,
+      1,
+      4,
+      5
+    ]
+  },
+  "selected_cards_verified_idle_after_cleanup": true,
+  "finished_at": "2026-09-13T10:26:08.355530+00:00",
+  "error": null,
+  "note": "Scope: baseline A only. No B/C result or acceleration claim; NFE unmeasured."
+}

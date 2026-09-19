@@ -1,0 +1,179 @@
+{
+  "status": "passed",
+  "rank": 0,
+  "physical_card": 2,
+  "source_sha256": {
+    "upstream/openvdn_npu.py": "bb06d4183e79dc5837d19a68ebaf1abdb520098dc50b05b6e22d34e9259cb43c",
+    "patched/openvdn_npu.py": "4808ef3017343904d8b52cda9cfebc94798f4d609f8ec19e63c59b92abf3381f",
+    "patched/minimax_h3_transformer.py": "c1b6b89a1be2a0cac3a2bf3add15ed73d19340086ede91e4a085a218581a0c83"
+  },
+  "tests": [
+    {
+      "case": "source_prefix",
+      "packed_rows": 164,
+      "local_rows": [
+        0,
+        41
+      ],
+      "layout": {
+        "used_len": 150,
+        "video_start": 73,
+        "num_frames": 17,
+        "tokens_per_frame": 4,
+        "frame_height": 2,
+        "frame_width": 2,
+        "text_start": 1,
+        "text_len": 43
+      },
+      "checks": [
+        {
+          "check": "wrapper-softmax",
+          "shape": [
+            41,
+            56,
+            128
+          ],
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "golden_rms": 0.012336194515228271,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "wrapper-linear-gated",
+          "shape": [
+            41,
+            7168
+          ],
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "golden_rms": 0.0,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "actual-attention-forward-projected",
+          "shape": [
+            41,
+            64
+          ],
+          "max_abs": 4.76837158203125e-07,
+          "rms_error": 9.3086818253596e-09,
+          "golden_rms": 0.015285077504813671,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "source-text-anchor-padding-linear-zero",
+          "shape": [
+            41,
+            7168
+          ],
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "golden_rms": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "padding-final-output-zero",
+          "shape": [
+            0,
+            64
+          ],
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "golden_rms": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    },
+    {
+      "case": "source_suffix",
+      "packed_rows": 144,
+      "local_rows": [
+        0,
+        36
+      ],
+      "layout": {
+        "used_len": 132,
+        "video_start": 3,
+        "num_frames": 7,
+        "tokens_per_frame": 8,
+        "frame_height": 2,
+        "frame_width": 4,
+        "text_start": 76,
+        "text_len": 33
+      },
+      "checks": [
+        {
+          "check": "wrapper-softmax",
+          "shape": [
+            36,
+            56,
+            128
+          ],
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "golden_rms": 0.01293098647147417,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "wrapper-linear-gated",
+          "shape": [
+            36,
+            7168
+          ],
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "golden_rms": 0.3927990794181824,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "actual-attention-forward-projected",
+          "shape": [
+            36,
+            64
+          ],
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "golden_rms": 0.9967778325080872,
+          "atol": 0.001953125,
+          "rtol": 0.0078125
+        },
+        {
+          "check": "source-text-anchor-padding-linear-zero",
+          "shape": [
+            11,
+            7168
+          ],
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "golden_rms": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        },
+        {
+          "check": "padding-final-output-zero",
+          "shape": [
+            0,
+            64
+          ],
+          "max_abs": 0.0,
+          "rms_error": 0.0,
+          "golden_rms": 0.0,
+          "atol": 0.0,
+          "rtol": 0.0
+        }
+      ]
+    }
+  ],
+  "real_strategy_source": "/home/ma-user/workspace/zhonghao/h3_v2v_minimal_20260913/b_adaptation/vendor/vllm-omni/vllm_omni/diffusion/attention/parallel/ulysses.py",
+  "real_strategy_sha256": "62e0507daffa9862be2a12a785e5cedd7d2a785f1ecb38d451e7bba88ff9efcc",
+  "torch_version": "2.10.0+cpu",
+  "device_name": "Ascend910B3",
+  "wall_seconds": 3.681035276968032
+}

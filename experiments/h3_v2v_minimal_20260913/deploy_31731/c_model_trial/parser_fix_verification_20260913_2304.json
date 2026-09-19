@@ -1,0 +1,37 @@
+{
+  "revision": "bounded_ascii_dot_metadata_log_prefix_only",
+  "verified_at": "2026-09-13T23:04:26.731621+08:00",
+  "ssh_port": 31731,
+  "host": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+  "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+  "changed_files": {
+    "c_trial_gates.py": "a992a398458a4a9612e737ef5ac1a0713248ea0332fc2fe4a7048bef916820df",
+    "test_c_trial_cpu.py": "3488282b4ee120b8abdea9b00e3b061b03f0603bb0d43e7e099cdf42cdbbd316"
+  },
+  "unchanged_entry_files": {
+    "run_c_trial.py": "ac5755058f7546de0e36821dae6bcad639f27a771a9cd2855c5b39cdb3aa54b2",
+    "launch_c_trial.sh": "430e522b84ac70d33560c11163af5c8197078a0f9573af88595d9b5bdfb309d6"
+  },
+  "old_remote_gate_backup": "/cache/zhonghao/h3/c_model_trial_code_history/c_trial_gates_45e925f83453e225.py",
+  "tests": {
+    "author_local_passed": 49,
+    "independent_audit_local_passed": 49,
+    "root_local_passed": 49,
+    "real_linux_remote_passed": 49,
+    "real_linux_remote_skipped": 0,
+    "real_linux_remote_seconds": 13.190,
+    "real_unmodified_failed_log_replay_local_and_remote_passed": true,
+    "actual_replayed_worker_pids": [120387,120388,120389,120390,120391,120392,120393,120394]
+  },
+  "prelaunch": {
+    "all_readonly_C_gates_passed": true,
+    "source_records": 47,
+    "reused_unchanged_C_tiny_run": "db9ddbbbedfc4aacb13ed6823c69b2fe",
+    "fresh_idle_healthy_cards": [0,1,2,3,4,5,6,7],
+    "old_C_and_queue_processes_exit_verified": true,
+    "new_supervisor_pid": 211295,
+    "new_run_id": "19941bde9a10446296621418e68a09bc",
+    "launch_log": "/home/ma-user/workspace/zhonghao/h3_deploy_31731/c8_lake_parserfixed_launch_20260913_230426.log"
+  },
+  "scope": "Only anchored log parser permits zero to 64 ASCII dots immediately before H3C. All PID, fullmatch, metadata, literal-size and request-count checks retained. Candidate/model/attention/weights/environment/sampler/tiny files unchanged. The exact dot producer remains unproven. This proof does not claim new smoke or formal completion; initial 38-test deployment proof and old failed run/queue remain historical evidence."
+}

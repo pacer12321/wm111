@@ -1,0 +1,42 @@
+{
+  "definition": "source-query attention output: dense all-K/V vs target K/V removed",
+  "capture_dir": "/cache/zhonghao/h3/ss_spatial_oracle_fastest_redshirt_20260917_v1/source_qkv_capture/step_04",
+  "layers": [
+    {
+      "layer": 8,
+      "step": 4,
+      "source_queries": 592,
+      "all_keys": 81165,
+      "keys_after_dropping_target": 43869,
+      "global_relative_l2": 0.2983885249626718,
+      "mean_query_relative_l2": 0.2990358769893646,
+      "p50_query_relative_l2": 0.29969578981399536,
+      "p95_query_relative_l2": 0.38072672486305237,
+      "mean_query_cosine": 0.9586689407761032
+    },
+    {
+      "layer": 24,
+      "step": 4,
+      "source_queries": 592,
+      "all_keys": 81165,
+      "keys_after_dropping_target": 43869,
+      "global_relative_l2": 0.42853072032244355,
+      "mean_query_relative_l2": 0.44085538387298584,
+      "p50_query_relative_l2": 0.4423195719718933,
+      "p95_query_relative_l2": 0.644409716129303,
+      "mean_query_cosine": 0.9092541014825976
+    },
+    {
+      "layer": 41,
+      "step": 4,
+      "source_queries": 592,
+      "all_keys": 81165,
+      "keys_after_dropping_target": 43869,
+      "global_relative_l2": 0.20956610914244,
+      "mean_query_relative_l2": 0.19969519972801208,
+      "p50_query_relative_l2": 0.18179936707019806,
+      "p95_query_relative_l2": 0.3441028296947479,
+      "mean_query_cosine": 0.9821738375199808
+    }
+  ]
+}

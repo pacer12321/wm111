@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "audit_status": "passed",
+  "artifact_type": "independent_actual_A_request_and_http_terminal_audit",
+  "author_agent": "/root/h3_b_smoke_result_audit",
+  "observed_start_utc": "2026-09-14T04:48:45.113197+00:00",
+  "observed_end_utc": "2026-09-14T04:48:45.311746+00:00",
+  "tool": {
+    "chunk_id": "9b35dc",
+    "exit_code": 0,
+    "wall_time_seconds": 4.3847207
+  },
+  "local_target_existence_check": {
+    "chunk_id": "7bc8a0",
+    "exit_code": 0,
+    "existed": false
+  },
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "run_id": "5bcd246fd46d4965915dbf8d2c990304",
+  "run_directory": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304",
+  "source": {
+    "path": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+    "size_bytes": 1527004,
+    "sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2"
+  },
+  "generation": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "duration_seconds": 5,
+    "seed": 4101,
+    "num_inference_steps": 50,
+    "flow_shift": 12,
+    "audio_flow_shift": 3
+  },
+  "original_server_identity": {
+    "pid": 759877,
+    "start_ticks": 129496385,
+    "pgrp": 759877,
+    "session": 759877
+  },
+  "method": {
+    "ssh": "ssh -F C:/Users/DZH/.ssh/config-vdn-h3-30213 -p 31731 -T -o BatchMode=yes -o ConnectTimeout=15 vdn-h3-ascend-30213",
+    "remote_environment": "PYTHONDONTWRITEBYTECODE=1 TORCH_DEVICE_BACKEND_AUTOLOAD=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1",
+    "interpreter": "/cache/zhonghao/h3/env/bin/python -B",
+    "payload_transport": "UTF-8 Python payload encoded as Base64, executed with python -c; no remote script file.",
+    "imports": [
+      "datetime",
+      "hashlib",
+      "json",
+      "re",
+      "socket",
+      "os",
+      "pathlib"
+    ],
+    "remote_mutations": false,
+    "subprocesses_spawned_by_python": false,
+    "model_import_or_execution": false,
+    "scope": "Read fixed A status/frozen/smoke proof, source, both request/result/header/curl/ffprobe JSON artifacts; hash their actual bytes, require all comparisons, then emit this recorded observation.",
+    "note": "Header text below comes from Path.read_text and has normalized newlines; the recorded response.headers SHA/size were computed from the original file bytes."
+  },
+  "requests": [
+    {
+      "name": "smoke_2step",
+      "requested_steps": 2,
+      "request": {
+        "started_at": "2026-09-14T04:02:10.523211+00:00",
+        "host": {
+          "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+          "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+          "machine": "aarch64"
+        },
+        "group": "01234567",
+        "run_id": "5bcd246fd46d4965915dbf8d2c990304",
+        "sample_id": "shirt_red_couple_124",
+        "fields": {
+          "width": 1344,
+          "height": 768,
+          "fps": 24,
+          "flow_shift": 12,
+          "seed": 4101,
+          "prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+          "num_inference_steps": 2,
+          "extra_params": "{\"task\": \"ref2va\", \"duration\": 5.0, \"audio_flow_shift\": 3.0}"
+        },
+        "source_video": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+        "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+        "requested_steps": 2,
+        "actual_model_forward_calls": null,
+        "quality_evidence": false,
+        "server_proc_identity": {
+          "pid": 759877,
+          "state": "S",
+          "pgrp": 759877,
+          "session": 759877,
+          "start_ticks": 129496385
+        }
+      },
+      "result_summary": {
+        "completed_at": "2026-09-14T04:04:28.543573+00:00",
+        "success": true,
+        "http_code": "200",
+        "content_type": "video/mp4",
+        "curl_returncode": 0,
+        "request_end_to_end_seconds": 138.0171418611426,
+        "requested_steps": 2,
+        "output_video": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/output/smoke_2step.mp4",
+        "output_sha256": "bd1f648647cf2f53252b81ed8ca6001d3007673a18293b8717ba6b0ef823f078"
+      },
+      "records": {
+        "request.json": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/smoke_2step/request.json",
+          "size_bytes": 1259,
+          "sha256": "8fb7ff081b78dd3ba431d5fe45e7908ed4a97ebb69ab7a41477875dda3381aee"
+        },
+        "result.json": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/smoke_2step/result.json",
+          "size_bytes": 1533,
+          "sha256": "31af427b02c5f2aa8c5d3de74752aa0a210bda1162725bbd3d387a6fb89a4221"
+        },
+        "response.headers": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/smoke_2step/response.headers",
+          "size_bytes": 396,
+          "sha256": "5bccc5b55225f195877aa18f10e42379f36236f65ddc9edd0816841ef3726a8f"
+        },
+        "curl.stdout": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/smoke_2step/curl.stdout",
+          "size_bytes": 3,
+          "sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
+        },
+        "curl.stderr": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/smoke_2step/curl.stderr",
+          "size_bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "ffprobe.json": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/smoke_2step/ffprobe.json",
+          "size_bytes": 849,
+          "sha256": "b866a1795d06b77d4c01de7a365d72d01dd273336c00773628986a4c2989777b"
+        }
+      },
+      "raw_response_headers": "HTTP/1.1 100 Continue\n\nHTTP/1.1 200 OK\ndate: Mon, 14 Sep 2026 04:02:10 GMT\nserver: uvicorn\nx-request-id: video_sync-a51e0ac0e99ace2c\nx-model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA\nx-inference-time-s: 137.730\nx-stage-durations: {\"queue_wait_ms\":0.3389220219105482,\"stage_0_gen_ms\":127852.69594192505}\nx-peak-memory-mb: 54956.000\ncontent-length: 6659090\ncontent-type: video/mp4\n\n",
+      "raw_curl_stdout": "200",
+      "raw_curl_stderr": "",
+      "all_checks_passed": true
+    },
+    {
+      "name": "a_50step",
+      "requested_steps": 50,
+      "request": {
+        "started_at": "2026-09-14T04:04:32.200870+00:00",
+        "host": {
+          "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+          "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+          "machine": "aarch64"
+        },
+        "group": "01234567",
+        "run_id": "5bcd246fd46d4965915dbf8d2c990304",
+        "sample_id": "shirt_red_couple_124",
+        "fields": {
+          "width": 1344,
+          "height": 768,
+          "fps": 24,
+          "flow_shift": 12,
+          "seed": 4101,
+          "prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+          "num_inference_steps": 50,
+          "extra_params": "{\"task\": \"ref2va\", \"duration\": 5.0, \"audio_flow_shift\": 3.0}"
+        },
+        "source_video": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+        "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+        "requested_steps": 50,
+        "actual_model_forward_calls": null,
+        "quality_evidence": false,
+        "server_proc_identity": {
+          "pid": 759877,
+          "state": "S",
+          "pgrp": 759877,
+          "session": 759877,
+          "start_ticks": 129496385
+        }
+      },
+      "result_summary": {
+        "completed_at": "2026-09-14T04:18:47.306898+00:00",
+        "success": true,
+        "http_code": "200",
+        "content_type": "video/mp4",
+        "curl_returncode": 0,
+        "request_end_to_end_seconds": 855.1022686900105,
+        "requested_steps": 50,
+        "output_video": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/output/a_50step.mp4",
+        "output_sha256": "392fd304bab4ca92f8a883f6c85c8a27f7adbd61dd5f1b5a6f678e1dee06d9ba"
+      },
+      "records": {
+        "request.json": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/a_50step/request.json",
+          "size_bytes": 1261,
+          "sha256": "cd7a6d3005224c7d40e7335bc0617500e5556e2187e6d9a53f0d322891bb3d4a"
+        },
+        "result.json": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/a_50step/result.json",
+          "size_bytes": 1531,
+          "sha256": "1dbbfca3ba85604cdeb478193928779576c8378deebd9a1f660935a05a34939b"
+        },
+        "response.headers": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/a_50step/response.headers",
+          "size_bytes": 395,
+          "sha256": "22584ed69ad641c11022c91af38cd220d7bd38d905b771ab7ddc6814671fb7e4"
+        },
+        "curl.stdout": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/a_50step/curl.stdout",
+          "size_bytes": 3,
+          "sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
+        },
+        "curl.stderr": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/a_50step/curl.stderr",
+          "size_bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "ffprobe.json": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/a_50step/ffprobe.json",
+          "size_bytes": 849,
+          "sha256": "9a44c6f60296272a9812200cb0afb4abfa3c8f78388c7c75324235a0d3fee6f9"
+        }
+      },
+      "raw_response_headers": "HTTP/1.1 100 Continue\n\nHTTP/1.1 200 OK\ndate: Mon, 14 Sep 2026 04:04:32 GMT\nserver: uvicorn\nx-request-id: video_sync-84f196c0e5993340\nx-model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA\nx-inference-time-s: 854.904\nx-stage-durations: {\"queue_wait_ms\":0.6559230387210846,\"stage_0_gen_ms\":845476.1865139008}\nx-peak-memory-mb: 55700.000\ncontent-length: 5031092\ncontent-type: video/mp4\n\n",
+      "raw_curl_stdout": "200",
+      "raw_curl_stderr": "",
+      "all_checks_passed": true
+    }
+  ],
+  "terminal_records": {
+    "a_status.json": {
+      "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/a_status.json",
+      "size_bytes": 12828,
+      "sha256": "2badc15fcae26e706396950477ec0b56f406f43ad11f43faea86da76368cd2de"
+    },
+    "frozen_evidence.json": {
+      "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/frozen_evidence.json",
+      "size_bytes": 11646218,
+      "sha256": "0f5939af72ecaccca74d14cc5c75bc1f04c6e296284da491bbe4cdc267202e7b"
+    },
+    "formal_smoke_gate.json": {
+      "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/A/runs/a_20260914T035755Z_5bcd246fd46d4965915dbf8d2c990304/formal_smoke_gate.json",
+      "size_bytes": 3687,
+      "sha256": "42e9d005bc4880cb9810cdcfccc4c7c564211b95c643fe48245182eca42cc3ea"
+    }
+  },
+  "terminal_finished_at": "2026-09-14T04:19:20.814637+00:00",
+  "checks_passed": {
+    "frozen_sha_matches_expected": true,
+    "actual_host_boot_matches_frozen_and_status": true,
+    "fixed_run_group_sample_matches_frozen_and_status": true,
+    "terminal_formal_completed_once_cleanup_complete_no_error": true,
+    "intended_generation_matches_frozen_and_status": true,
+    "actual_source_path_size_sha_matches_frozen_and_pinned_sample": true,
+    "prompt_equals_exact_frozen_manifest_and_status_prompt": true,
+    "both_request_host_run_group_sample_source_path_source_sha_match": true,
+    "both_actual_request_fields_match_exact_expected_fields": true,
+    "both_actual_extra_params_parse_as_ref2va_duration5_audioflow3": true,
+    "requested_steps_are_2_then_50": true,
+    "both_request_original_server_pid_start_pgrp_session_match": true,
+    "formal_smoke_gate_equals_status_and_is_same_run_host_sample": true,
+    "formal_smoke_gate_server_matches_original_server": true,
+    "smoke_request_and_result_sha_match_formal_smoke_gate_records": true,
+    "both_actual_results_equal_status_entries": true,
+    "both_results_http200_video_mp4_curl_returncode0_success": true,
+    "both_actual_header_final_status200_and_content_type_video_mp4": true,
+    "both_curl_stdout_200_and_stderr_empty": true,
+    "both_recorded_output_paths_are_fixed_per_run_output_paths": true,
+    "both_saved_ffprobe_equal_results_and_report_124_frames_24fps_1344x768": true,
+    "smoke_completion_precedes_formal_start_and_formal_completion_precedes_cleanup_finish": true
+  },
+  "evidence_limitations": {
+    "fresh_npu_idle_checked": false,
+    "historical_npu_idle_rechecked_this_round": false,
+    "original_process_exit_rechecked_this_round": false,
+    "new_media_hash_or_decode_performed": false,
+    "media_output_sha_source": "Read from actual result.json and status; not a new hash of MP4 bytes in this audit.",
+    "new_model_hash_or_execution_performed": false,
+    "full_dependency_snapshot_repeated": false,
+    "visual_quality_checked": false,
+    "actual_model_forward_call_count_measured": false,
+    "http_header_timings_note": "x-inference-time-s and x-stage-durations are raw server header values, not independently measured DiT-only timing.",
+    "prior_audit": {
+      "file": "color_A_terminal_independent_audit_20260914.json",
+      "sha256": "fb3e0bbae4dd85e17dfc99281614dbac1a814d46fbe674b659e6365f80912e59",
+      "scope": "Prior dependency equality, original ten PID/start exits, historical eight-card release and cleanup-log order. Historical idle is not a fresh idle claim."
+    }
+  },
+  "conclusion": "Both actual smoke and formal request/HTTP/result records pass all requested checks. This supplements, without rewriting, the previous independent dependency audit. No B/C process was started by this audit."
+}

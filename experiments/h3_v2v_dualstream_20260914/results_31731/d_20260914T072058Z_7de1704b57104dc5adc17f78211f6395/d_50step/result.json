@@ -1,0 +1,56 @@
+{
+  "completed_at": "2026-09-14T07:49:36.218872+00:00",
+  "requested_steps": 50,
+  "success": true,
+  "http_code": "200",
+  "content_type": "video/mp4",
+  "curl_returncode": 0,
+  "request_end_to_end_seconds": 972.1087382230908,
+  "actual_model_forward_calls": null,
+  "dit_latency_seconds": null,
+  "quality_evidence": false,
+  "output_video": "/cache/zhonghao/h3/dualstream_v1/results/01234567/shirt_red_couple_124/D/runs/d_20260914T072058Z_7de1704b57104dc5adc17f78211f6395/output/d_50step.mp4",
+  "output_sha256": "5cb4b4e3f215e6f3cb0403a8a993e4977d40f17eaccbda876a2fba8d7bf4363b",
+  "ffprobe": {
+    "verified": true,
+    "metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1344,
+          "height": 768,
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1",
+          "nb_frames": "124",
+          "nb_read_frames": "124"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "nb_frames": "163",
+          "nb_read_frames": "163"
+        }
+      ],
+      "format": {
+        "duration": "5.207000",
+        "size": "4448282"
+      }
+    },
+    "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+    "checks": {
+      "dimensions": [
+        1344,
+        768
+      ],
+      "fps": 24.0,
+      "frame_count": 124,
+      "container_duration_seconds": 5.207
+    }
+  }
+}

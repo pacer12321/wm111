@@ -1,0 +1,374 @@
+[
+  {
+    "kind": "contract",
+    "shape": [
+      81024,
+      28,
+      128
+    ],
+    "target_active_ratio": 0.6939618587493896,
+    "total_queries": 81024,
+    "remaining_queries": 69610,
+    "query_reduction": 0.14087184044233803,
+    "actual_checkpoint_activations": false,
+    "token_ownership": "unchanged odd/even",
+    "communication": "none; post-all-to-all benchmark"
+  },
+  {
+    "kind": "timing",
+    "name": "current_partial_total",
+    "median_wall_ms": 342.38218516111374,
+    "median_device_ms": 342.302734375,
+    "wall_samples_ms": [
+      342.47539937496185,
+      342.77330338954926,
+      342.3466831445694,
+      342.38218516111374,
+      342.36640483140945
+    ],
+    "device_samples_ms": [
+      342.3498229980469,
+      342.61810302734375,
+      342.2822265625,
+      342.302734375,
+      342.2720031738281
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "timing",
+    "name": "current_full_total",
+    "median_wall_ms": 286.3487973809242,
+    "median_device_ms": 286.2561340332031,
+    "wall_samples_ms": [
+      286.37782484292984,
+      286.3487973809242,
+      286.95206344127655,
+      286.320723593235,
+      286.3214984536171
+    ],
+    "device_samples_ms": [
+      286.276611328125,
+      286.23974609375,
+      286.7978210449219,
+      286.2366638183594,
+      286.2561340332031
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "full_vs_partial_active_rows",
+    "max_abs": 0.000244140625,
+    "relative_l2": 0.00026470841839909554
+  },
+  {
+    "kind": "block_mask",
+    "name": "full",
+    "shape": [
+      1,
+      1,
+      81024,
+      81024
+    ],
+    "partial_blocks": 13459,
+    "full_blocks": 117690,
+    "visited_blocks": 131149,
+    "visited_fraction": 0.32730871074574047,
+    "partial_of_visited": 0.10262373331096691
+  },
+  {
+    "kind": "timing",
+    "name": "full_kernel_only",
+    "median_wall_ms": 286.29739582538605,
+    "median_device_ms": 286.2274475097656,
+    "wall_samples_ms": [
+      286.38894110918045,
+      286.47078573703766,
+      286.29739582538605,
+      286.14938259124756,
+      286.1475199460983
+    ],
+    "device_samples_ms": [
+      286.2868347167969,
+      286.34521484375,
+      286.2274475097656,
+      286.1127624511719,
+      286.1035461425781
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "profile",
+    "name": "full_total",
+    "top_ops": [
+      {
+        "op": "triton_tem_fused_flex_attention_0",
+        "count": 1,
+        "self_device_ms": 286.105118,
+        "cpu_ms": 0.05101899999999978
+      }
+    ],
+    "total_self_device_ms": 286.105118
+  },
+  {
+    "kind": "block_mask",
+    "name": "partial",
+    "shape": [
+      1,
+      1,
+      69610,
+      81024
+    ],
+    "partial_blocks": 11596,
+    "full_blocks": 101672,
+    "visited_blocks": 113268,
+    "visited_fraction": 0.3289308614441037,
+    "partial_of_visited": 0.10237666419465338
+  },
+  {
+    "kind": "timing",
+    "name": "partial_kernel_only",
+    "median_wall_ms": 340.30982851982117,
+    "median_device_ms": 340.225830078125,
+    "wall_samples_ms": [
+      340.283639729023,
+      340.30982851982117,
+      340.2685970067978,
+      340.6777158379555,
+      340.4582589864731
+    ],
+    "device_samples_ms": [
+      340.166015625,
+      340.225830078125,
+      340.1820068359375,
+      340.5666198730469,
+      340.3581237792969
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "profile",
+    "name": "partial_total",
+    "top_ops": [
+      {
+        "op": "triton_tem_fused_flex_attention_0",
+        "count": 1,
+        "self_device_ms": 339.80864999999994,
+        "cpu_ms": 0.04687499999999954
+      },
+      {
+        "op": "aten::index_copy_",
+        "count": 1,
+        "self_device_ms": 1.3358040000000038,
+        "cpu_ms": 0.01793199999999979
+      },
+      {
+        "op": "aten::gather",
+        "count": 1,
+        "self_device_ms": 0.60483,
+        "cpu_ms": 0.01966100000000051
+      },
+      {
+        "op": "aten::fill_",
+        "count": 1,
+        "self_device_ms": 0.2848960000000079,
+        "cpu_ms": 0.016996999999999842
+      },
+      {
+        "op": "aten::nonzero",
+        "count": 1,
+        "self_device_ms": 0.016063999999999624,
+        "cpu_ms": 0.49964500000000045
+      },
+      {
+        "op": "Activity Buffer Request",
+        "count": 1,
+        "self_device_ms": 0.016063999999999624,
+        "cpu_ms": 1.5760359999999998
+      },
+      {
+        "op": "aten::all",
+        "count": 1,
+        "self_device_ms": 0.013183999999999741,
+        "cpu_ms": 0.025301000000000386
+      },
+      {
+        "op": "aten::equal",
+        "count": 1,
+        "self_device_ms": 0.0027840000000001054,
+        "cpu_ms": 0.04356800000000021
+      },
+      {
+        "op": "aten::_local_scalar_dense",
+        "count": 2,
+        "self_device_ms": 0.0019840000000003783,
+        "cpu_ms": 0.008528000000000247
+      }
+    ],
+    "total_self_device_ms": 342.08426
+  },
+  {
+    "kind": "block_mask",
+    "name": "logical_Q_only",
+    "shape": [
+      1,
+      1,
+      69610,
+      81024
+    ],
+    "partial_blocks": 8867,
+    "full_blocks": 103179,
+    "visited_blocks": 112046,
+    "visited_fraction": 0.3253821670848434,
+    "partial_of_visited": 0.07913714010317191
+  },
+  {
+    "kind": "timing",
+    "name": "logical_Q_only_including_pack_scatter",
+    "median_wall_ms": 304.56477403640747,
+    "median_device_ms": 304.46148681640625,
+    "wall_samples_ms": [
+      304.4853135943413,
+      304.4758811593056,
+      304.7405928373337,
+      304.61087077856064,
+      304.56477403640747
+    ],
+    "device_samples_ms": [
+      304.3952941894531,
+      304.40435791015625,
+      304.6118469238281,
+      304.5576171875,
+      304.46148681640625
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "equivalence",
+    "variant": "logical_Q_only",
+    "max_abs": 0.000244140625,
+    "relative_l2": 0.0002977651311084628,
+    "stable_rows_zero": true
+  },
+  {
+    "kind": "profile",
+    "name": "logical_Q_only_including_pack_scatter",
+    "top_ops": [
+      {
+        "op": "triton_tem_fused_flex_attention_0",
+        "count": 1,
+        "self_device_ms": 302.202462,
+        "cpu_ms": 0.038307000000000244
+      },
+      {
+        "op": "aten::index_copy_",
+        "count": 1,
+        "self_device_ms": 1.3360920000000043,
+        "cpu_ms": 0.018231000000000677
+      },
+      {
+        "op": "aten::gather",
+        "count": 1,
+        "self_device_ms": 0.6044789999999998,
+        "cpu_ms": 0.05084500000000026
+      },
+      {
+        "op": "Activity Buffer Request",
+        "count": 1,
+        "self_device_ms": 0.6044789999999998,
+        "cpu_ms": 1.450917
+      },
+      {
+        "op": "aten::fill_",
+        "count": 1,
+        "self_device_ms": 0.2844789999999921,
+        "cpu_ms": 0.015652000000000044
+      }
+    ],
+    "total_self_device_ms": 305.031991
+  },
+  {
+    "kind": "block_mask",
+    "name": "logical_QKV",
+    "shape": [
+      1,
+      1,
+      69610,
+      81024
+    ],
+    "partial_blocks": 5995,
+    "full_blocks": 104601,
+    "visited_blocks": 110596,
+    "visited_fraction": 0.3211713595390763,
+    "partial_of_visited": 0.05420630040869471
+  },
+  {
+    "kind": "timing",
+    "name": "logical_QKV_including_pack_scatter",
+    "median_wall_ms": 274.06880259513855,
+    "median_device_ms": 273.95660400390625,
+    "wall_samples_ms": [
+      274.34227615594864,
+      274.06880259513855,
+      274.11746978759766,
+      273.9524096250534,
+      273.95203709602356
+    ],
+    "device_samples_ms": [
+      274.1434326171875,
+      273.95660400390625,
+      274.0259094238281,
+      273.8919372558594,
+      273.8841247558594
+    ],
+    "repeats": 5
+  },
+  {
+    "kind": "equivalence",
+    "variant": "logical_QKV",
+    "max_abs": 0.00048828125,
+    "relative_l2": 0.0012158609461039305,
+    "stable_rows_zero": true
+  },
+  {
+    "kind": "profile",
+    "name": "logical_QKV_including_pack_scatter",
+    "top_ops": [
+      {
+        "op": "triton_tem_fused_flex_attention_0",
+        "count": 1,
+        "self_device_ms": 270.259126,
+        "cpu_ms": 0.03847800000000007
+      },
+      {
+        "op": "aten::gather",
+        "count": 3,
+        "self_device_ms": 2.0194190000000005,
+        "cpu_ms": 0.06672699999999986
+      },
+      {
+        "op": "aten::index_copy_",
+        "count": 1,
+        "self_device_ms": 1.3359650000000256,
+        "cpu_ms": 0.01716200000000026
+      },
+      {
+        "op": "Activity Buffer Request",
+        "count": 1,
+        "self_device_ms": 0.6034859999999999,
+        "cpu_ms": 1.416312
+      },
+      {
+        "op": "aten::fill_",
+        "count": 1,
+        "self_device_ms": 0.28441499999997905,
+        "cpu_ms": 0.01080199999999968
+      }
+    ],
+    "total_self_device_ms": 274.502411
+  },
+  {
+    "kind": "complete",
+    "peak_memory_gib": 9.02432632446289
+  }
+]

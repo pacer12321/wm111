@@ -1,0 +1,90 @@
+{
+  "checkpoint_step": 1000,
+  "seed": 4101,
+  "original_exact_reproduction": true,
+  "score_origin": "OWN step1000 first-x0; not old B or step700",
+  "unchanged": [
+    "normalized latent difference",
+    "2x2 average pooling",
+    "3x3 active dilation",
+    "odd/even SP"
+  ],
+  "records": [
+    {
+      "name": "original",
+      "desired_stable_target_fraction": null,
+      "threshold": 1.4427252411842346,
+      "active_target_fraction": 0.6924334764480591,
+      "stable_target_fraction": 0.30756649374961853,
+      "active_full_sequence_fraction": 0.858759343624115,
+      "per_rank_active": [
+        34904,
+        34841
+      ],
+      "additionally_stable_vs_original": 0,
+      "mask_path": "/cache/zhonghao/h3/savie_step1000_eval/threshold_study/original_payload.pt",
+      "quality_validated": false
+    },
+    {
+      "name": "stable50",
+      "desired_stable_target_fraction": 0.5,
+      "threshold": 1.799556910991606,
+      "active_target_fraction": 0.5000268220901489,
+      "stable_target_fraction": 0.4999731779098511,
+      "active_full_sequence_fraction": 0.7704023718833923,
+      "per_rank_active": [
+        31340,
+        31229
+      ],
+      "additionally_stable_vs_original": 7176,
+      "mask_path": "/cache/zhonghao/h3/savie_step1000_eval/threshold_study/stable50_payload.pt",
+      "quality_validated": false
+    },
+    {
+      "name": "stable65",
+      "desired_stable_target_fraction": 0.65,
+      "threshold": 2.0505620241154747,
+      "active_target_fraction": 0.3500107228755951,
+      "stable_target_fraction": 0.6499892473220825,
+      "active_full_sequence_fraction": 0.7015120387077332,
+      "per_rank_active": [
+        28520,
+        28454
+      ],
+      "additionally_stable_vs_original": 12771,
+      "mask_path": "/cache/zhonghao/h3/savie_step1000_eval/threshold_study/stable65_payload.pt",
+      "quality_validated": false
+    },
+    {
+      "name": "stable75",
+      "desired_stable_target_fraction": 0.75,
+      "threshold": 2.2010596990576925,
+      "active_target_fraction": 0.2501072585582733,
+      "stable_target_fraction": 0.7498927712440491,
+      "active_full_sequence_fraction": 0.655634343624115,
+      "per_rank_active": [
+        26643,
+        26605
+      ],
+      "additionally_stable_vs_original": 16497,
+      "mask_path": "/cache/zhonghao/h3/savie_step1000_eval/threshold_study/stable75_payload.pt",
+      "quality_validated": false
+    },
+    {
+      "name": "stable85",
+      "desired_stable_target_fraction": 0.85,
+      "threshold": 2.3637956380855485,
+      "active_target_fraction": 0.14996245503425598,
+      "stable_target_fraction": 0.8500375151634216,
+      "active_full_sequence_fraction": 0.6096459031105042,
+      "per_rank_active": [
+        24757,
+        24756
+      ],
+      "additionally_stable_vs_original": 20232,
+      "mask_path": "/cache/zhonghao/h3/savie_step1000_eval/threshold_study/stable85_payload.pt",
+      "quality_validated": false
+    }
+  ],
+  "observed_global_sequence_rows": 81216
+}

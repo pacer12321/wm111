@@ -1,0 +1,56 @@
+{
+  "completed_at": "2026-09-13T17:03:12.930187+00:00",
+  "requested_steps": 50,
+  "success": true,
+  "http_code": "200",
+  "content_type": "video/mp4",
+  "curl_returncode": 0,
+  "request_end_to_end_seconds": 882.104259646032,
+  "actual_model_forward_calls": null,
+  "dit_latency_seconds": null,
+  "quality_evidence": false,
+  "output_video": "/cache/zhonghao/h3/c_model_trial/01234567/explicit_reverse_couple_124/C/runs/c_20260913T163728Z_e2a7c9c133ca49a6af00134623e9e719/output/c_50step.mp4",
+  "output_sha256": "5dce91778b5908c29e3b61f883b045aad621b5f2109d94faaa31b2c325c513ad",
+  "ffprobe": {
+    "verified": true,
+    "metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1344,
+          "height": 768,
+          "r_frame_rate": "24/1",
+          "avg_frame_rate": "24/1",
+          "nb_frames": "124",
+          "nb_read_frames": "124"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "nb_frames": "163",
+          "nb_read_frames": "163"
+        }
+      ],
+      "format": {
+        "duration": "5.207000",
+        "size": "4012027"
+      }
+    },
+    "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+    "checks": {
+      "dimensions": [
+        1344,
+        768
+      ],
+      "fps": 24.0,
+      "frame_count": 124,
+      "container_duration_seconds": 5.207
+    }
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "case": "D",
+  "sample_id": "shirt_red_couple_124",
+  "group": "01234567",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "run_id": "7de1704b57104dc5adc17f78211f6395",
+  "started_at": "2026-09-14T07:20:58.001874+00:00",
+  "supervisor_pid": 1098140,
+  "supervisor_proc_identity": {
+    "pid": 1098140,
+    "state": "R",
+    "pgrp": 1097723,
+    "session": 1097723,
+    "start_ticks": 130714141
+  },
+  "allocated_physical_npu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "port": 19101,
+  "parallelism": {
+    "num_gpus": 8,
+    "usp": 8,
+    "ring": 1,
+    "dit_tensor_parallel_size": 1,
+    "text_encoder_tp_size": 8,
+    "layerwise_offload": true,
+    "vae_use_tiling": true,
+    "vae_parallel_mode": "tile",
+    "vae_patch_parallel_size": 8,
+    "attention_backend": "FLASH_ATTN",
+    "listen_host": "127.0.0.1",
+    "listen_port": 19101,
+    "dtype_cli_override": null,
+    "hccl_internal_ports": "Unchanged original vLLM automatic allocation"
+  },
+  "requested_generation": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "duration_seconds": 5.0,
+    "seed": 4101,
+    "num_inference_steps": 50,
+    "flow_shift": 12.0,
+    "audio_flow_shift": 3.0
+  },
+  "formal_request_attempts": 0,
+  "formal_50step_started": false,
+  "formal_50step_completed": false,
+  "quality_evidence": false,
+  "actual_model_forward_calls": null,
+  "new_acceleration_results": null,
+  "startup_timeouts": {
+    "init": 2400,
+    "stage_init": 2400,
+    "health": 2700
+  },
+  "request_timeout_seconds": 3600,
+  "stage_b_checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+  "attention_policy": {
+    "auxiliary_policy": "preserve_existing",
+    "chunk_frames": 5,
+    "chunk_radius": 1,
+    "endpoint_policy": "vdn_anchors",
+    "independent_stream_states": true,
+    "share_parameters": true,
+    "source_linear_text": "text",
+    "target_linear_text": "text"
+  },
+  "mode": "D_source_hybrid_same_frame_v1",
+  "training_performed": false,
+  "policy_sha256": "a412150f34a5f3c564e908e5ba85dcebe32ca641b2d139ce6963cbfc5d3949cd",
+  "timeout_policy": "3600 seconds is only a waiting ceiling, never a speedup measurement",
+  "submission": {
+    "record": {
+      "path": "/cache/zhonghao/h3/dualstream_v1/results/01234567/shirt_red_couple_124/D/submission_20260914.json",
+      "size_bytes": 874,
+      "sha256": "672e9e833c1a058d5cbbc0a23339dd88f9218a53499e9f04cf36b150061d413a"
+    },
+    "value": {
+      "schema_version": 1,
+      "case": "D",
+      "mode": "D_source_hybrid_same_frame_v1",
+      "group": "01234567",
+      "sample_id": "shirt_red_couple_124",
+      "run_id": "7de1704b57104dc5adc17f78211f6395",
+      "host": {
+        "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+        "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+        "machine": "aarch64"
+      },
+      "policy_sha256": "a412150f34a5f3c564e908e5ba85dcebe32ca641b2d139ce6963cbfc5d3949cd",
+      "supervisor_identity": {
+        "pid": 1098140,
+        "state": "R",
+        "pgrp": 1097723,
+        "session": 1097723,
+        "start_ticks": 130714141
+      },
+      "created_at": "2026-09-14T07:20:58.004149+00:00",
+      "allowed_requests": [
+        {
+          "name": "smoke_2step",
+          "steps": 2
+        },
+        {
+          "name": "d_50step",
+          "steps": 50
+        }
+      ],
+      "retry_policy": "single submission consumed even on failure; no automatic retry"
+    }
+  },
+  "run_directory": "/cache/zhonghao/h3/dualstream_v1/results/01234567/shirt_red_couple_124/D/runs/d_20260914T072058Z_7de1704b57104dc5adc17f78211f6395",
+  "phase": "server_starting",
+  "updated_at": "2026-09-14T07:21:05.672448+00:00",
+  "resource_snapshot": {
+    "selected_physical_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_busy_cards": []
+  },
+  "card_health_memory": {
+    "health": {
+      "0": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "1": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "2": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "3": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "4": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "5": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "6": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "7": {
+        "model": "910B3",
+        "health": "OK"
+      }
+    },
+    "hbm": {
+      "0": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "1": {
+        "used_mib": 3411,
+        "total_mib": 65536,
+        "free_mib": 62125
+      },
+      "2": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "3": {
+        "used_mib": 3411,
+        "total_mib": 65536,
+        "free_mib": 62125
+      },
+      "4": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "5": {
+        "used_mib": 3411,
+        "total_mib": 65536,
+        "free_mib": 62125
+      },
+      "6": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "7": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      }
+    }
+  },
+  "host_memory": {
+    "host_mem_available_bytes": 1608647397376,
+    "cgroup_limit_bytes": 1520999997440,
+    "cgroup_used_bytes": 829706240,
+    "effective_available_bytes": 1520170291200,
+    "required_available_bytes": 644245094400,
+    "cgroup_files": [
+      "/sys/fs/cgroup/memory/memory.limit_in_bytes",
+      "/sys/fs/cgroup/memory/memory.usage_in_bytes"
+    ]
+  },
+  "frozen_evidence_sha256": "e2c33a6d9af61f7e1c7545cba6727910dcc9b618d55e86f363b69107ec04db56",
+  "source_video": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+  "edit_prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+  "note": "D source-hybrid only; frozen reviewed policy and own SP8 proof plus fresh load/PID/execution gates.",
+  "server_pid": 1098165,
+  "server_started_at": "2026-09-14T07:21:05.672327+00:00",
+  "server_proc_identity": {
+    "pid": 1098165,
+    "state": "R",
+    "pgrp": 1098165,
+    "session": 1098165,
+    "start_ticks": 130714926
+  }
+}

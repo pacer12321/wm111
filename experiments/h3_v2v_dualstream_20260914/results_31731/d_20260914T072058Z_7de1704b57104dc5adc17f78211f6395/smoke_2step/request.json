@@ -1,0 +1,36 @@
+{
+  "case": "D",
+  "mode": "D_source_hybrid_same_frame_v1",
+  "policy_sha256": "a412150f34a5f3c564e908e5ba85dcebe32ca641b2d139ce6963cbfc5d3949cd",
+  "started_at": "2026-09-14T07:30:43.969722+00:00",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "group": "01234567",
+  "run_id": "7de1704b57104dc5adc17f78211f6395",
+  "sample_id": "shirt_red_couple_124",
+  "fields": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "flow_shift": 12.0,
+    "seed": 4101,
+    "prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+    "num_inference_steps": 2,
+    "extra_params": "{\"task\": \"ref2va\", \"duration\": 5.0, \"audio_flow_shift\": 3.0}"
+  },
+  "source_video": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+  "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+  "requested_steps": 2,
+  "actual_model_forward_calls": null,
+  "quality_evidence": false,
+  "server_proc_identity": {
+    "pid": 1098165,
+    "state": "S",
+    "pgrp": 1098165,
+    "session": 1098165,
+    "start_ticks": 130714926
+  }
+}

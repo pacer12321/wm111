@@ -1,0 +1,38 @@
+{
+  "scope": "C independent vendor deployer CPU filesystem verification and readonly real-source inventory only",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "started_at": "2026-09-13T14:14:16.098191+00:00",
+  "completed_at": "2026-09-13T14:14:18.843255+00:00",
+  "tests_run": 29,
+  "tests_passed": 29,
+  "skipped": 0,
+  "unittest_wall_seconds": 0.566,
+  "ssh_exit_code": 0,
+  "test_evidence": "Root executed real Linux tests, including symlink, FIFO, hardlink rejection and renameat2 no-replace behavior; all 29 passed. Full textual output retained in current conversation tool result chunk6a6a79.",
+  "deployer_sha256": "6a43c17201a0a5a693c9bc8b6286ac009900916fd7f65bea524a2f7d763db7dc",
+  "tests_sha256": "b8e47a8df0400fecf421948190fe42cc132b2d23604c3e5cb561fb1b40c179d6",
+  "remote_deployer": "/cache/zhonghao/h3/c_adaptation/deploy_candidate_31731.py",
+  "readonly_inventory": {
+    "source_B_files": 2777,
+    "source_B_bytes": 54234768,
+    "expected_C_files": 2779,
+    "expected_C_bytes": 54252496,
+    "excluded_entries": [],
+    "all_B4_and_C6_pins_matched": true,
+    "per_file_20MiB_and_total_128MiB_caps_passed": true
+  },
+  "B_run_id": "6362ce1811da4db69d335b3b3ca5d1a4",
+  "B_before_phase": "smoke_2step_request_running",
+  "B_after_phase": "smoke_2step_request_running",
+  "B_after_formal_started": false,
+  "B_formal_started_later_at": "2026-09-13T14:14:29.055894+00:00",
+  "contention_note": "CPU verification overlapped B smoke only, not formal50. Do not claim smoke had no concurrent activity.",
+  "NPU_imported_or_used": false,
+  "C_vendor_created": false,
+  "C_tiny_NPU_run": false,
+  "next": "B formal is now active. Defer the 54MB C source copy and further remote CPU work until B completes and cleans up; then run reviewed deployer --apply only into nonexistent c_v1. Never reuse/delete a failed reservation without inspection."
+}

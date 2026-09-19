@@ -1,0 +1,173 @@
+{
+  "method": "CPU PyAV full decode; five corresponding-index PNGs per source; PIL contact; no continuous playback",
+  "videos": {
+    "source": {
+      "path": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\a_20260913T133502Z_294205bef2e043dc84b41315e544b36d\\source.mp4",
+      "sha256": "e02b3df481f66d0968ab65eac1d56ded8493da952c0bfb21b70ecd5715f87cf9",
+      "bytes": 12754317,
+      "width": 1344,
+      "height": 768,
+      "average_rate": "24",
+      "time_base": "1/12288",
+      "declared_frames": 124,
+      "video_duration_seconds": 5.166666666666667,
+      "has_audio": true,
+      "audio_reviewed": false,
+      "decoded_frame_count": 124,
+      "samples": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\source_frame_000.png"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\source_frame_030.png"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\source_frame_060.png"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\source_frame_090.png"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\source_frame_123.png"
+        }
+      ]
+    },
+    "A8": {
+      "path": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\a_20260913T133502Z_294205bef2e043dc84b41315e544b36d\\a_50step.mp4",
+      "sha256": "1df518c92da95f9f926d1a82284199a6017660a46a502502c08b12219c52c9a8",
+      "bytes": 11934240,
+      "width": 1344,
+      "height": 768,
+      "average_rate": "24",
+      "time_base": "1/12288",
+      "declared_frames": 124,
+      "video_duration_seconds": 5.166666666666667,
+      "has_audio": true,
+      "audio_reviewed": false,
+      "decoded_frame_count": 124,
+      "samples": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\A8_frame_000.png"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\A8_frame_030.png"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\A8_frame_060.png"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\A8_frame_090.png"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\A8_frame_123.png"
+        }
+      ]
+    },
+    "B8": {
+      "path": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\b_50step.mp4",
+      "sha256": "ca8aa801cb1c96026b237f4f1dbb93d8e4846071338aae3796ae77c24537d2fa",
+      "bytes": 11740798,
+      "width": 1344,
+      "height": 768,
+      "average_rate": "24",
+      "time_base": "1/12288",
+      "declared_frames": 124,
+      "video_duration_seconds": 5.166666666666667,
+      "has_audio": true,
+      "audio_reviewed": false,
+      "decoded_frame_count": 124,
+      "samples": [
+        {
+          "frame_index": 0,
+          "pts": 0,
+          "time_base": "1/12288",
+          "seconds": 0.0,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\B8_frame_000.png"
+        },
+        {
+          "frame_index": 30,
+          "pts": 15360,
+          "time_base": "1/12288",
+          "seconds": 1.25,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\B8_frame_030.png"
+        },
+        {
+          "frame_index": 60,
+          "pts": 30720,
+          "time_base": "1/12288",
+          "seconds": 2.5,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\B8_frame_060.png"
+        },
+        {
+          "frame_index": 90,
+          "pts": 46080,
+          "time_base": "1/12288",
+          "seconds": 3.75,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\B8_frame_090.png"
+        },
+        {
+          "frame_index": 123,
+          "pts": 62976,
+          "time_base": "1/12288",
+          "seconds": 5.125,
+          "image": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\B8_frame_123.png"
+        }
+      ]
+    }
+  },
+  "indices": [
+    0,
+    30,
+    60,
+    90,
+    123
+  ],
+  "contact": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4\\visual_review\\source_A8_B8_contact.jpg",
+  "inputs_modified": false,
+  "remote_operations": false,
+  "new_model_called": false,
+  "limits": [
+    "Selected frames do not establish absence of inter-frame flicker or exact temporal/camera correspondence.",
+    "No audio review, VLM/perceptual metric, latency/NFE, or memory measurement here."
+  ]
+}

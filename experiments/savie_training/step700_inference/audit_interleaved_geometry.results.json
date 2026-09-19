@@ -1,0 +1,67 @@
+[
+  {
+    "test": "bijection_and_row_aligned_metadata",
+    "cases": 6,
+    "world_sizes": [
+      2,
+      4
+    ],
+    "full_request_tokens": 81024
+  },
+  {
+    "test": "independent_four_branch_predicate",
+    "pairs": 92416,
+    "mismatches": 0,
+    "ss": "chunk5 radius1 + first/last query/key anchors",
+    "ts": "same frame",
+    "st": "absent",
+    "text_source_isolated_from_target_audio": true,
+    "padding": "self only"
+  },
+  {
+    "test": "selector_shard_distribution",
+    "version": "B",
+    "ranks": [
+      {
+        "rank": 0,
+        "target_tokens": 18648,
+        "active_target": 6028,
+        "stable_target": 12620,
+        "all_active": 27892
+      },
+      {
+        "rank": 1,
+        "target_tokens": 18648,
+        "active_target": 6002,
+        "stable_target": 12646,
+        "all_active": 27866
+      }
+    ],
+    "roundtrip_exact": true
+  },
+  {
+    "test": "selector_shard_distribution",
+    "version": "step700",
+    "ranks": [
+      {
+        "rank": 0,
+        "target_tokens": 18648,
+        "active_target": 12988,
+        "stable_target": 5660,
+        "all_active": 34852
+      },
+      {
+        "rank": 1,
+        "target_tokens": 18648,
+        "active_target": 12894,
+        "stable_target": 5754,
+        "all_active": 34758
+      }
+    ],
+    "roundtrip_exact": true
+  },
+  {
+    "test": "complete",
+    "scope": "CPU geometry and predicates; not an NCCL communication test"
+  }
+]

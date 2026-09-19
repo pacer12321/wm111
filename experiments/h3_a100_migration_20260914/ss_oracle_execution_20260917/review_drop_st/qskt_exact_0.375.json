@@ -1,0 +1,236 @@
+{
+  "schema": "h3_svoo_isa_query_block_oracle_v1",
+  "definition": "Deployment-granularity calibration on the existing sampled source queries. Contiguous query blocks share one exact-key-block route per head, and dense fallback is selected for whole query blocks. Key blocks remain contiguous and unselected blocks remain visible via the ISA zeroth-order Taylor mean-K/V remainder.",
+  "capture_dir": "/cache/zhonghao/h3/ss_spatial_oracle_fastest_redshirt_20260917_v1/source_qkv_capture",
+  "branch": "qskt",
+  "results": [
+    {
+      "layer": 8,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 16,
+      "query_blocks": 37,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.375,
+      "exact_blocks": 219,
+      "exact_block_ratio_realized": 0.37564322469982847,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 18,
+      "dense_query_block_fraction_realized": 0.4864864864864865,
+      "ideal_branch_compute_fraction": 0.6926993996569468,
+      "ideal_branch_compute_reduction": 0.3073006003430532,
+      "global_relative_output_l2": 0.034599803388118744,
+      "per_query_head_relative_output_error": {
+        "mean": 0.015898404642939568,
+        "median": 2.6117344532394782e-05,
+        "p95": 0.0942479595541954,
+        "max": 0.9893375039100647
+      },
+      "output_cosine": {
+        "mean": 0.9990993142127991,
+        "median": 0.9999999403953552,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.012710643000900745,
+        "median": 0.008779538795351982,
+        "p95": 0.03344699740409851,
+        "max": 0.21620336174964905
+      }
+    },
+    {
+      "layer": 24,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 16,
+      "query_blocks": 37,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.375,
+      "exact_blocks": 219,
+      "exact_block_ratio_realized": 0.37564322469982847,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 18,
+      "dense_query_block_fraction_realized": 0.4864864864864865,
+      "ideal_branch_compute_fraction": 0.6926993996569468,
+      "ideal_branch_compute_reduction": 0.3073006003430532,
+      "global_relative_output_l2": 0.0657498762011528,
+      "per_query_head_relative_output_error": {
+        "mean": 0.039765212684869766,
+        "median": 0.00012075094855390489,
+        "p95": 0.21530935168266296,
+        "max": 1.3337898254394531
+      },
+      "output_cosine": {
+        "mean": 0.9970208406448364,
+        "median": 0.9999998807907104,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.006882108747959137,
+        "median": 0.005448854062706232,
+        "p95": 0.015014075674116611,
+        "max": 0.07936355471611023
+      }
+    },
+    {
+      "layer": 41,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 16,
+      "query_blocks": 37,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.375,
+      "exact_blocks": 219,
+      "exact_block_ratio_realized": 0.37564322469982847,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 18,
+      "dense_query_block_fraction_realized": 0.4864864864864865,
+      "ideal_branch_compute_fraction": 0.6926993996569468,
+      "ideal_branch_compute_reduction": 0.3073006003430532,
+      "global_relative_output_l2": 0.061941809952259064,
+      "per_query_head_relative_output_error": {
+        "mean": 0.05979511886835098,
+        "median": 0.005874345079064369,
+        "p95": 0.26786112785339355,
+        "max": 1.01580011844635
+      },
+      "output_cosine": {
+        "mean": 0.9966573119163513,
+        "median": 0.9999963045120239,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.006624678615480661,
+        "median": 0.004847089760005474,
+        "p95": 0.015614863485097885,
+        "max": 0.08130740374326706
+      }
+    },
+    {
+      "layer": 8,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 64,
+      "query_blocks": 10,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.375,
+      "exact_blocks": 219,
+      "exact_block_ratio_realized": 0.37564322469982847,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 5,
+      "dense_query_block_fraction_realized": 0.5,
+      "ideal_branch_compute_fraction": 0.6926993996569468,
+      "ideal_branch_compute_reduction": 0.3073006003430532,
+      "global_relative_output_l2": 0.04853687807917595,
+      "per_query_head_relative_output_error": {
+        "mean": 0.02312956005334854,
+        "median": 0.00011301099584670737,
+        "p95": 0.1352003663778305,
+        "max": 1.0646564960479736
+      },
+      "output_cosine": {
+        "mean": 0.9983462691307068,
+        "median": 0.9999998807907104,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.007951735518872738,
+        "median": 0.005720716901123524,
+        "p95": 0.019833289086818695,
+        "max": 0.09983539581298828
+      }
+    },
+    {
+      "layer": 24,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 64,
+      "query_blocks": 10,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.375,
+      "exact_blocks": 219,
+      "exact_block_ratio_realized": 0.37564322469982847,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 5,
+      "dense_query_block_fraction_realized": 0.5,
+      "ideal_branch_compute_fraction": 0.6926993996569468,
+      "ideal_branch_compute_reduction": 0.3073006003430532,
+      "global_relative_output_l2": 0.07269592583179474,
+      "per_query_head_relative_output_error": {
+        "mean": 0.044930845499038696,
+        "median": 0.000496688939165324,
+        "p95": 0.23803798854351044,
+        "max": 1.3237652778625488
+      },
+      "output_cosine": {
+        "mean": 0.9964047074317932,
+        "median": 0.9999998807907104,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.006266193930059671,
+        "median": 0.004460824653506279,
+        "p95": 0.014057942666113377,
+        "max": 0.07936355471611023
+      }
+    },
+    {
+      "layer": 41,
+      "step": 4,
+      "branch": "qskt",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "query_block_size": 64,
+      "query_blocks": 10,
+      "key_block_size": 64,
+      "key_blocks": 583,
+      "exact_block_ratio_requested": 0.375,
+      "exact_blocks": 219,
+      "exact_block_ratio_realized": 0.37564322469982847,
+      "dense_query_block_fraction_requested": 0.5,
+      "dense_query_blocks_per_head": 5,
+      "dense_query_block_fraction_realized": 0.5,
+      "ideal_branch_compute_fraction": 0.6926993996569468,
+      "ideal_branch_compute_reduction": 0.3073006003430532,
+      "global_relative_output_l2": 0.06422799080610275,
+      "per_query_head_relative_output_error": {
+        "mean": 0.06111029163002968,
+        "median": 0.010079817846417427,
+        "p95": 0.26437777280807495,
+        "max": 1.4359419345855713
+      },
+      "output_cosine": {
+        "mean": 0.9965546727180481,
+        "median": 0.999988317489624,
+        "p95": 1.0000001192092896,
+        "max": 1.000000238418579
+      },
+      "route_sharpness": {
+        "mean": 0.0069584595039486885,
+        "median": 0.004795825574547052,
+        "p95": 0.018370861187577248,
+        "max": 0.07377657294273376
+      }
+    }
+  ]
+}

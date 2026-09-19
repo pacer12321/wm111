@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "sample_id": "temporal_reorder_dog_strict_124",
+  "source_video": "/cache/zhonghao/h3/data/generalization_candidates_20260917/temporal_reorder_dog/source.mp4",
+  "source_sha256": "77f337d9904db09e71a0c2d9decc517746fa637564e9c10dda499c21040a25c7",
+  "source_metadata": {
+    "width": 1280,
+    "height": 720,
+    "frames": 124,
+    "fps": 24,
+    "duration_seconds": 5.166667,
+    "has_audio": false
+  },
+  "edit_prompt": "Reverse the order of the two actions. First, while the owner keeps his throwing arm still and continues holding the stick, the German Shepherd must turn, run into the pond, and visibly enter the water. Only after the dog is already in the pond may the owner throw the stick. Do not show the owner throwing before the dog runs. Preserve the dog and owner's identities, the environment, camera motion, lighting, and all unrelated details.",
+  "requested_generation": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "duration_seconds": 5.0,
+    "seed": 4101,
+    "num_inference_steps": 50,
+    "flow_shift": 12.0,
+    "audio_flow_shift": 3.0
+  },
+  "provenance": {
+    "dataset": "OmniEdit-Bench",
+    "official_source_id": "Te_Temporal_reordering_10",
+    "source_operation": "first 124 frames, H.264 CRF18 re-encode",
+    "license": "CC-BY-NC-4.0"
+  },
+  "evaluation": {
+    "original_order": "owner throws, then dog enters pond",
+    "required_order": "dog enters pond, then owner throws",
+    "success_condition": "dog is visibly in the pond before the owner's first throwing motion"
+  }
+}

@@ -1,0 +1,49 @@
+# Vendored / cloned third-party code (not our work)
+/vendor/
+/external/
+# Separate nested git repo (own history/ownership, not part of this repo)
+/DreamX-World/
+
+# Local tool/dependency bundles, caches, scratch
+/.audio_tools/
+/.local_video_deps/
+/tmp/
+**/__pycache__/
+**/*.pyc
+
+# Server access / credentials / infra config — never publish
+**/.ssh_key_tmp.pem
+**/*.pem
+**/*.key
+**/id_rsa*
+**/id_ed25519*
+20260912_VDN_H3_teacher_requirements.md
+**/proxy_tunnel_*.log
+
+# Pre-H3/VDN work and unrelated local machine tooling — out of scope
+/world_model_teacher_requirements.md
+/codex_move_update.ps1
+
+# Vendored dependency bundles copied into experiment folders (not our work)
+**/deps/
+**/pydeps/
+
+# Meeting / review transcripts — not for publishing
+/20260827_195256_transcript.*
+/20260912_172025_core_review.*
+/20260912_172025_end_review.*
+/20260912_172025_transcript_v1.*
+/worldmodel_*.jsonl
+/worldmodel_*.txt
+/fangle_*.jsonl
+/fangle_*.txt
+/reviewer_static_*.jsonl
+/reviewer_static_*.txt
+/engine_41_47.*
+/transcription_test*.jsonl
+/transcription_test*.txt
+/.tmp_transcribe_audio.py
+
+# Oversized artifacts (exceed reasonable repo size / GitHub limits)
+experiments/h3_a100_migration_20260914/a100_code_export_20260914_v1.tar.gz
+experiments/temporal_fastest_validation_20260917/dog_seed/A_dense_quick8_single_gpu.mp4

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "reviewer": "root",
+  "run_id": "1fa6918c2e4743dc81d256610496f489",
+  "sample_id": "shirt_red_couple_124",
+  "review_type": "nine_point_source_C_visual_comparison_plus_native_frame_spot_checks",
+  "sampled_indices": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    123
+  ],
+  "contact_sheets_viewed": [
+    "source_C_color_part_1.jpg",
+    "source_C_color_part_2.jpg",
+    "source_C_color_part_3.jpg"
+  ],
+  "native_C_frames_viewed": [
+    0,
+    60,
+    123
+  ],
+  "comparison_frame_viewed": 60,
+  "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+  "output_sha256": "f17aedffb0f1492266e81e6d866a9fb887ac653706291d7f6fb3c5dbb313b593",
+  "findings": {
+    "shirt_color": "Man's shirt is red throughout all nine sampled frames; woman's blouse remains white.",
+    "preservation": "Failed the only-recolor constraint: scene framing/background composition and subject facing/placement are substantially changed.",
+    "temporal": "Source starts face-to-face with man holding woman's head, kisses near30, separates near45, then woman rests head on his chest at60-123. C starts with lips together/near-contact and remains facing closely through much of the sampled span, ending face-to-face smiling; source's late chest-resting embrace is not preserved.",
+    "motion": "Some head, expression and body changes across C samples; not evidence of a frozen/static video.",
+    "identity": "Couple remains broadly recognizable as a man and woman, but exact identity preservation is not established from this check.",
+    "artifacts": "No sampled black frame/gross image collapse. High visual plausibility of individual frames does not meet requested preservation."
+  },
+  "assessment": {
+    "recolor_component_succeeded_in_sampled_frames": true,
+    "original_action_timeline_and_view_preservation_passed": false,
+    "equal_quality_acceleration_demonstrated": false,
+    "scope": "Single source/edit/seed trial. Speed improvement is measured; broad quality and universal same-frame feasibility are not established."
+  },
+  "limits": {
+    "continuous_playback_reviewed": false,
+    "audio_reviewed": false,
+    "all_frames_visual_inspected": false,
+    "exact_timing_quantified": false,
+    "causal_mechanism_identified": false,
+    "quantitative_edit_metrics": false
+  },
+  "comparison": {
+    "file": "source_vs_C_synchronized.mp4",
+    "sha256": "941ee112714220dbaf9ee797a86fdbb07f3146efc862feaf5ef68dc43a03b5c7",
+    "frames": 124,
+    "fps": 24,
+    "silent": true,
+    "same_indices_and_PTS": true,
+    "inputs_unmodified": true,
+    "record": "side_by_side_record.json"
+  },
+  "timing": {
+    "A": 855.1022686900105,
+    "B": 956.1085797089618,
+    "C": 888.0960794389248,
+    "C_latency_reduction_vs_B_seconds": 68.01250027003698,
+    "C_latency_reduction_vs_B_percent": 7.113470343581678,
+    "B_div_C_speedup": 1.076582367431467,
+    "C_slower_than_A_seconds": 32.99381074891426,
+    "C_slower_than_A_percent": 3.8584637132889057,
+    "scope": "Formal HTTP request end-to-end; excludes VLM and server/model startup. Not pure DiT/NFE. Speed ratio is not an equal-quality claim."
+  },
+  "independent_review": "independent_observations.json"
+}

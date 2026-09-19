@@ -1,0 +1,46 @@
+{
+  "http_success": true,
+  "requested_steps": 9,
+  "case": "B",
+  "request_seconds": 186.243333,
+  "gpu_memory_sampled_peak_mib": {
+    "GPU-b6d13423-832a-9f23-cf2f-6dd9aabc8670": 60332,
+    "GPU-ce70e1b4-48b4-fd02-3b8a-5484cf25fff3": 61808
+  },
+  "quality_verified": false,
+  "scope": "HTTP request excluding model load; same offload/settings across ABCD",
+  "decoded_frames": 124,
+  "shape_verified": true,
+  "source_reuse_mode": "selective",
+  "source_refresh_forwards": [
+    1,
+    2,
+    5
+  ],
+  "source_kv_recomputed": true,
+  "source_approximation_quality_validated": false,
+  "checkpoint_step": 1000,
+  "actual_dit_forwards": 8,
+  "interleaved_sp": true,
+  "token_skip": "adaptive_latent_selector_own1000_speedops_first_x0",
+  "refresh_forwards": [
+    1,
+    5
+  ],
+  "quality_validated": false,
+  "attention_impl": "kvreuse_S_selective_query_reuse",
+  "stable_target_ratio": null,
+  "selector": {
+    "step": 1000,
+    "active_ratio": 0.6945517063140869,
+    "stable_ratio": 0.3054483234882355,
+    "threshold": 1.44170081615448
+  },
+  "compile_excluded_from_formal": true,
+  "bootstrap_seconds": 101.989121,
+  "warmup_seconds": 195.928768,
+  "schedule_points": 9,
+  "decoded_semantics": "full denoising output",
+  "purpose": "SAViE1000 DMD8 adaptive latent skip KVreuse S-selective SP2 interleaved seed4101",
+  "formal_speed_comparison": false
+}

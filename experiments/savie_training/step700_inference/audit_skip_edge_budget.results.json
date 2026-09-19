@@ -1,0 +1,38 @@
+{
+  "scope": "Legal attention pairs per head; not measured time; excludes linear/projections/MLP/communication",
+  "masks_are_diagnostic_only_not_reused_for_step1000": true,
+  "results": [
+    {
+      "mask": "B_selector",
+      "architecture": "B",
+      "stable_target_tokens": 25266,
+      "full_softmax_pairs": 5790985489,
+      "skipped_softmax_pairs": 1524350658,
+      "fraction_of_all_softmax_pairs_skipped": 0.26322819507931944
+    },
+    {
+      "mask": "B_selector",
+      "architecture": "SAViE",
+      "stable_target_tokens": 25266,
+      "full_softmax_pairs": 2035850299,
+      "skipped_softmax_pairs": 607498050,
+      "fraction_of_all_softmax_pairs_skipped": 0.2984001575648269
+    },
+    {
+      "mask": "step700_selector",
+      "architecture": "B",
+      "stable_target_tokens": 11414,
+      "full_softmax_pairs": 5790985489,
+      "skipped_softmax_pairs": 688938518,
+      "fraction_of_all_softmax_pairs_skipped": 0.1189674053420858
+    },
+    {
+      "mask": "step700_selector",
+      "architecture": "SAViE",
+      "stable_target_tokens": 11414,
+      "full_softmax_pairs": 2035850299,
+      "skipped_softmax_pairs": 274747286,
+      "fraction_of_all_softmax_pairs_skipped": 0.13495456229515232
+    }
+  ]
+}

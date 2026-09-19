@@ -1,0 +1,20 @@
+{
+  "output": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_dualstream_20260914\\results_31731\\d_20260914T072058Z_7de1704b57104dc5adc17f78211f6395\\visual_review\\source_vs_D_synchronized.mp4",
+  "sha256": "be048cc3df9e147839794903bb2be0f375691de596f5adc8c762d00e658888fe",
+  "bytes": 1205374,
+  "left_source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+  "right_D_sha256": "5cb4b4e3f215e6f3cb0403a8a993e4977d40f17eaccbda876a2fba8d7bf4363b",
+  "frames": 124,
+  "fps": 24,
+  "dimensions": [
+    1344,
+    428
+  ],
+  "synchronization": "Same original frame index and verified i/24 PTS; no retiming or reversal",
+  "resizing": "Aspect-preserving fit into672x384 per half with black letterboxing; labels above",
+  "silent": true,
+  "audio_note": "Source has no audio; generated D audio deliberately omitted from visual comparison only",
+  "is_original_model_output": false,
+  "new_model_call": false,
+  "inputs_unchanged": true
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "sample_id": "shirt_red_couple_124",
+  "created_at": "2026-09-14T03:24:09.713435+00:00",
+  "source_video": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+  "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+  "source_metadata": {
+    "width": 1280,
+    "height": 720,
+    "frames": 124,
+    "fps": 24,
+    "duration_seconds": 5.167,
+    "has_audio": false
+  },
+  "edit_prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+  "requested_generation": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "duration_seconds": 5.0,
+    "seed": 4101,
+    "num_inference_steps": 50,
+    "flow_shift": 12.0,
+    "audio_flow_shift": 3.0
+  },
+  "provenance": {
+    "dataset": "OmniEdit-Bench",
+    "official_source_id": "Te_Temporal_reordering_04",
+    "source_url": "https://huggingface.co/datasets/OmniEdit-Bench/OmniEdit-Bench/resolve/main/Temporal/Temporal%20Composition/Temporal_reordering/4_1280x720.mp4",
+    "original_path": "/cache/zhonghao/temporal_source_review_20260913/reorder04_couple/source.mp4",
+    "original_sha256": "a18b5f2dcabe5a97d30350de9e402039a7e6c0886442162b164887698d75d638",
+    "start_frame": 104,
+    "end_frame_exclusive": 228,
+    "original_fps": 24,
+    "derived_source": true,
+    "instruction_is_self_authored": true,
+    "official_paired_target_available": false,
+    "gt_target_generated": false,
+    "license": "CC-BY-NC-4.0 (dataset card; research use)"
+  },
+  "router_control": {
+    "temporal_change_required": false,
+    "text_only_should_identify_temporal_edit": false,
+    "vlm_necessity_evidence": false
+  },
+  "preparation": {
+    "operation": "exact_byte_copy_no_reencoding",
+    "copied_from": "/cache/zhonghao/h3/data/explicit_reverse_couple_124/source.mp4",
+    "original_manifest": "/cache/zhonghao/h3/data/explicit_reverse_couple_124/manifest.json",
+    "original_manifest_sha256": "ca12e01ffbf9b62dc0a26858bbf8a75a741a3aaf3fab10d316c68ead2d482912"
+  },
+  "notes": [
+    "Source is the existing unreversed clip; only the requested edit changed.",
+    "router_control is a manual intended-task label, never a VLM prediction.",
+    "Every source+edit must separately pass real VLM inference before ABC.",
+    "No ground-truth edited target exists; generated outputs require quality review."
+  ]
+}

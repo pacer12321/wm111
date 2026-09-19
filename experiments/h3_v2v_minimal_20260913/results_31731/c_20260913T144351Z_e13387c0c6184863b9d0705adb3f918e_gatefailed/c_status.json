@@ -1,0 +1,286 @@
+{
+  "case": "C",
+  "sample_id": "lake_snow",
+  "group": "01234567",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "run_id": "e13387c0c6184863b9d0705adb3f918e",
+  "started_at": "2026-09-13T14:43:51.788506+00:00",
+  "supervisor_pid": 119429,
+  "supervisor_proc_identity": {
+    "pid": 119429,
+    "state": "R",
+    "pgrp": 119429,
+    "session": 119429,
+    "start_ticks": 124729450
+  },
+  "allocated_physical_npu_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "port": 19100,
+  "parallelism": {
+    "num_gpus": 8,
+    "usp": 8,
+    "ring": 1,
+    "dit_tensor_parallel_size": 1,
+    "text_encoder_tp_size": 8,
+    "layerwise_offload": true,
+    "vae_use_tiling": true,
+    "vae_parallel_mode": "tile",
+    "vae_patch_parallel_size": 8,
+    "attention_backend": "FLASH_ATTN",
+    "listen_host": "127.0.0.1",
+    "listen_port": 19100,
+    "dtype_cli_override": null,
+    "hccl_internal_ports": "Unchanged original vLLM automatic allocation"
+  },
+  "requested_generation": {
+    "width": 1344,
+    "height": 768,
+    "fps": 24,
+    "duration_seconds": 5.0,
+    "seed": 4101,
+    "num_inference_steps": 50,
+    "flow_shift": 12.0,
+    "audio_flow_shift": 3.0
+  },
+  "formal_request_attempts": 0,
+  "formal_50step_started": false,
+  "formal_50step_completed": false,
+  "quality_evidence": false,
+  "actual_model_forward_calls": null,
+  "new_acceleration_results": null,
+  "startup_timeouts": {
+    "init": 2400,
+    "stage_init": 2400,
+    "health": 2700
+  },
+  "request_timeout_seconds": 3600,
+  "stage_b_checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+  "attention_policy": "C strict same-latent-frame visual source in target softmax queries; B target neighborhoods and linear unchanged",
+  "timeout_policy": "3600 seconds is only a waiting ceiling, never a speedup measurement",
+  "run_directory": "/cache/zhonghao/h3/c_model_trial/01234567/lake_snow/C/runs/c_20260913T144351Z_e13387c0c6184863b9d0705adb3f918e",
+  "phase": "failed",
+  "updated_at": "2026-09-13T14:56:09.368073+00:00",
+  "resource_snapshot": {
+    "selected_physical_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_busy_cards": []
+  },
+  "card_health_memory": {
+    "health": {
+      "0": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "1": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "2": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "3": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "4": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "5": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "6": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "7": {
+        "model": "910B3",
+        "health": "OK"
+      }
+    },
+    "hbm": {
+      "0": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "1": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "2": {
+        "used_mib": 3408,
+        "total_mib": 65536,
+        "free_mib": 62128
+      },
+      "3": {
+        "used_mib": 3411,
+        "total_mib": 65536,
+        "free_mib": 62125
+      },
+      "4": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "5": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "6": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "7": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      }
+    }
+  },
+  "host_memory": {
+    "host_mem_available_bytes": 1607731662848,
+    "cgroup_limit_bytes": 1520999997440,
+    "cgroup_used_bytes": 1736818688,
+    "effective_available_bytes": 1519263178752,
+    "required_available_bytes": 644245094400,
+    "cgroup_files": [
+      "/sys/fs/cgroup/memory/memory.limit_in_bytes",
+      "/sys/fs/cgroup/memory/memory.usage_in_bytes"
+    ]
+  },
+  "frozen_evidence_sha256": "ecd71ad48a6a90f87428569c592a03b5fcddb8e5f70acd4d26706dab5d272033",
+  "source_video": "/cache/zhonghao/h3/data/minimax_h3_t2va_50step.mp4",
+  "edit_prompt": "Transform the reference lake video into a photorealistic winter snow scene. Preserve the original camera movement, framing, shot timing, lake shoreline, mountains, and overall composition. Cover the landscape with fresh snow, freeze parts of the lake, add gentle falling snow, and keep synchronized natural winter ambience.",
+  "note": "C strict visual-source same latent frame; B weights/linear unchanged. Edit quality, NFE and acceleration remain unreviewed.",
+  "server_pid": 119694,
+  "server_started_at": "2026-09-13T14:43:58.047139+00:00",
+  "server_proc_identity": {
+    "pid": 119694,
+    "state": "R",
+    "pgrp": 119694,
+    "session": 119694,
+    "start_ticks": 124732164
+  },
+  "server_ready_at": "2026-09-13T14:52:38.264805+00:00",
+  "smoke_2step": {
+    "completed_at": "2026-09-13T14:55:32.330304+00:00",
+    "requested_steps": 2,
+    "success": true,
+    "http_code": "200",
+    "content_type": "video/mp4",
+    "curl_returncode": 0,
+    "request_end_to_end_seconds": 174.02241408801638,
+    "actual_model_forward_calls": null,
+    "dit_latency_seconds": null,
+    "quality_evidence": false,
+    "output_video": "/cache/zhonghao/h3/c_model_trial/01234567/lake_snow/C/runs/c_20260913T144351Z_e13387c0c6184863b9d0705adb3f918e/output/smoke_2step.mp4",
+    "output_sha256": "2c4c358e367a5f3be1fbf1a5fa807048134d2659768f3554321deb775d656f22",
+    "ffprobe": {
+      "verified": true,
+      "metadata": {
+        "programs": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1344,
+            "height": 768,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "nb_frames": "124",
+            "nb_read_frames": "124"
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "nb_frames": "163",
+            "nb_read_frames": "163"
+          }
+        ],
+        "format": {
+          "duration": "5.207000",
+          "size": "16539087"
+        }
+      },
+      "ffprobe": "/usr/local/ffmpeg/bin/ffprobe",
+      "checks": {
+        "dimensions": [
+          1344,
+          768
+        ],
+        "fps": 24.0,
+        "frame_count": 124,
+        "container_duration_seconds": 5.207
+      }
+    }
+  },
+  "error": "RuntimeError: Unlabelled, oversized or malformed real C strict metadata record",
+  "remaining_owned_process_groups": {},
+  "cleanup_completed": true,
+  "needs_attention": false,
+  "resource_release_check": {
+    "selected_physical_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_busy_cards": []
+  },
+  "selected_cards_verified_idle_after_cleanup": true,
+  "finished_at": "2026-09-13T14:56:09.368040+00:00"
+}

@@ -1,0 +1,808 @@
+{
+  "schema": "h3_fastest_st_pooled_oracle_v1",
+  "definition": "For sampled source queries, preserve every non-target key and replace all target spatial tokens with fixed-grid mean-pooled post-RoPE K/V summaries in every target frame. Naive pooling and a log(group-size) softmax multiplicity correction are reported separately. This is a layer-output screening oracle, not an end-to-end quality certificate.",
+  "capture_dir": "/cache/zhonghao/h3/ss_spatial_oracle_fastest_redshirt_20260917_v1/source_qkv_capture",
+  "layers": [
+    {
+      "layer": 8,
+      "step": 4,
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "dense_keys_per_query": 81165,
+      "dense_target_keys": 37296,
+      "dense_target_attention_mass": {
+        "mean": 0.20682716369628906,
+        "median": 0.06209626793861389,
+        "p95": 0.8462740182876587,
+        "max": 0.9999857544898987
+      },
+      "pooling_location": "post-QK-norm, post-RoPE K; projected V",
+      "grids": [
+        {
+          "summary_grid_per_target_frame": "1x1",
+          "target_summary_keys": 37,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.9990079365079365,
+          "all_keys_after_pooling": 43906,
+          "all_key_reduction_fraction": 0.4590525472802316,
+          "naive": {
+            "global_relative_output_l2": 0.297653466463089,
+            "per_query_head_relative_output_error": {
+              "mean": 0.2714594602584839,
+              "median": 0.06771759688854218,
+              "p95": 1.1242685317993164,
+              "max": 2.3255674839019775
+            },
+            "output_cosine": {
+              "mean": 0.9286865592002869,
+              "median": 0.9988856911659241,
+              "p95": 0.9999998807907104,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.0003949305973947048,
+              "median": 8.999842293633264e-07,
+              "p95": 0.0004611772019416094,
+              "max": 0.8083007335662842
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.2525555491447449,
+            "per_query_head_relative_output_error": {
+              "mean": 0.21662060916423798,
+              "median": 0.06476133316755295,
+              "p95": 0.879027783870697,
+              "max": 1.6944636106491089
+            },
+            "output_cosine": {
+              "mean": 0.9519262313842773,
+              "median": 0.9989734888076782,
+              "p95": 0.9999998807907104,
+              "max": 1.0000001192092896
+            },
+            "target_attention_mass": {
+              "mean": 0.044210463762283325,
+              "median": 0.0009063624893315136,
+              "p95": 0.3174438774585724,
+              "max": 0.9997650384902954
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "2x2",
+          "target_summary_keys": 148,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.996031746031746,
+          "all_keys_after_pooling": 44017,
+          "all_key_reduction_fraction": 0.45768496273024084,
+          "naive": {
+            "global_relative_output_l2": 0.2965000867843628,
+            "per_query_head_relative_output_error": {
+              "mean": 0.27043935656547546,
+              "median": 0.06768717616796494,
+              "p95": 1.1160969734191895,
+              "max": 2.2987873554229736
+            },
+            "output_cosine": {
+              "mean": 0.9293836355209351,
+              "median": 0.9988864064216614,
+              "p95": 0.9999998807907104,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.0011673076078295708,
+              "median": 7.182978151831776e-06,
+              "p95": 0.0024841907434165478,
+              "max": 0.9555630087852478
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.24189884960651398,
+            "per_query_head_relative_output_error": {
+              "mean": 0.2039225995540619,
+              "median": 0.06324312090873718,
+              "p95": 0.8149842023849487,
+              "max": 1.6743232011795044
+            },
+            "output_cosine": {
+              "mean": 0.9568526148796082,
+              "median": 0.999018669128418,
+              "p95": 0.9999998807907104,
+              "max": 1.0000001192092896
+            },
+            "target_attention_mass": {
+              "mean": 0.054083630442619324,
+              "median": 0.0018068525241687894,
+              "p95": 0.38558897376060486,
+              "max": 0.9998155832290649
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "4x4",
+          "target_summary_keys": 592,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.9841269841269842,
+          "all_keys_after_pooling": 44461,
+          "all_key_reduction_fraction": 0.45221462453027783,
+          "naive": {
+            "global_relative_output_l2": 0.2926234304904938,
+            "per_query_head_relative_output_error": {
+              "mean": 0.26677846908569336,
+              "median": 0.06760715693235397,
+              "p95": 1.0936203002929688,
+              "max": 2.176048517227173
+            },
+            "output_cosine": {
+              "mean": 0.9312743544578552,
+              "median": 0.9988899827003479,
+              "p95": 0.9999998807907104,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.003951746504753828,
+              "median": 7.267587352544069e-05,
+              "p95": 0.014006838202476501,
+              "max": 0.9926573038101196
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.21728189289569855,
+            "per_query_head_relative_output_error": {
+              "mean": 0.18132978677749634,
+              "median": 0.0590512715280056,
+              "p95": 0.7033699154853821,
+              "max": 1.6160963773727417
+            },
+            "output_cosine": {
+              "mean": 0.9655006527900696,
+              "median": 0.9991244077682495,
+              "p95": 0.9999998807907104,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.07151105254888535,
+              "median": 0.0045570810325443745,
+              "p95": 0.47409194707870483,
+              "max": 0.9998840093612671
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "7x9",
+          "target_summary_keys": 2331,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.9375,
+          "all_keys_after_pooling": 46200,
+          "all_key_reduction_fraction": 0.43078913324708923,
+          "naive": {
+            "global_relative_output_l2": 0.27654722332954407,
+            "per_query_head_relative_output_error": {
+              "mean": 0.2517772614955902,
+              "median": 0.06687124073505402,
+              "p95": 1.0136160850524902,
+              "max": 1.9169079065322876
+            },
+            "output_cosine": {
+              "mean": 0.9381000399589539,
+              "median": 0.998911440372467,
+              "p95": 0.9999998807907104,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.01557991188019514,
+              "median": 0.0006011797813698649,
+              "p95": 0.07918470352888107,
+              "max": 0.9987220764160156
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.18693527579307556,
+            "per_query_head_relative_output_error": {
+              "mean": 0.15154452621936798,
+              "median": 0.052508432418107986,
+              "p95": 0.5726339221000671,
+              "max": 1.4442124366760254
+            },
+            "output_cosine": {
+              "mean": 0.9755141735076904,
+              "median": 0.9992939233779907,
+              "p95": 0.9999998807907104,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.09469875693321228,
+              "median": 0.009438039734959602,
+              "p95": 0.5784651637077332,
+              "max": 0.9999215602874756
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "14x18",
+          "target_summary_keys": 9324,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.75,
+          "all_keys_after_pooling": 53193,
+          "all_key_reduction_fraction": 0.3446313065976714,
+          "naive": {
+            "global_relative_output_l2": 0.20657943189144135,
+            "per_query_head_relative_output_error": {
+              "mean": 0.18693813681602478,
+              "median": 0.059986989945173264,
+              "p95": 0.6973574757575989,
+              "max": 1.4538077116012573
+            },
+            "output_cosine": {
+              "mean": 0.9653598666191101,
+              "median": 0.9991050958633423,
+              "p95": 0.9999998807907104,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.06586751341819763,
+              "median": 0.006196758709847927,
+              "p95": 0.39550817012786865,
+              "max": 0.9998410940170288
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.12436642497777939,
+            "per_query_head_relative_output_error": {
+              "mean": 0.09698115289211273,
+              "median": 0.038612231612205505,
+              "p95": 0.3515560030937195,
+              "max": 1.0555518865585327
+            },
+            "output_cosine": {
+              "mean": 0.9897854328155518,
+              "median": 0.9996132850646973,
+              "p95": 0.9999999403953552,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.13597826659679413,
+              "median": 0.023324012756347656,
+              "p95": 0.7156767845153809,
+              "max": 0.9999600052833557
+            }
+          }
+        }
+      ]
+    },
+    {
+      "layer": 24,
+      "step": 4,
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "dense_keys_per_query": 81165,
+      "dense_target_keys": 37296,
+      "dense_target_attention_mass": {
+        "mean": 0.30852651596069336,
+        "median": 0.14843294024467468,
+        "p95": 0.9573308229446411,
+        "max": 0.999913215637207
+      },
+      "pooling_location": "post-QK-norm, post-RoPE K; projected V",
+      "grids": [
+        {
+          "summary_grid_per_target_frame": "1x1",
+          "target_summary_keys": 37,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.9990079365079365,
+          "all_keys_after_pooling": 43906,
+          "all_key_reduction_fraction": 0.4590525472802316,
+          "naive": {
+            "global_relative_output_l2": 0.4283479154109955,
+            "per_query_head_relative_output_error": {
+              "mean": 0.4444373846054077,
+              "median": 0.1757122278213501,
+              "p95": 1.5045747756958008,
+              "max": 5.28955078125
+            },
+            "output_cosine": {
+              "mean": 0.8685988783836365,
+              "median": 0.9934853315353394,
+              "p95": 0.9999992251396179,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 5.152247831574641e-05,
+              "median": 1.5514915503445081e-06,
+              "p95": 8.735615847399458e-05,
+              "max": 0.07490699738264084
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.39873889088630676,
+            "per_query_head_relative_output_error": {
+              "mean": 0.4196811616420746,
+              "median": 0.16878023743629456,
+              "p95": 1.4331367015838623,
+              "max": 5.2817206382751465
+            },
+            "output_cosine": {
+              "mean": 0.8834481835365295,
+              "median": 0.9939623475074768,
+              "p95": 0.9999992847442627,
+              "max": 1.0000001192092896
+            },
+            "target_attention_mass": {
+              "mean": 0.01938885636627674,
+              "median": 0.0015614635776728392,
+              "p95": 0.08093530684709549,
+              "max": 0.9878963828086853
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "2x2",
+          "target_summary_keys": 148,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.996031746031746,
+          "all_keys_after_pooling": 44017,
+          "all_key_reduction_fraction": 0.45768496273024084,
+          "naive": {
+            "global_relative_output_l2": 0.42760470509529114,
+            "per_query_head_relative_output_error": {
+              "mean": 0.4441043436527252,
+              "median": 0.17565788328647614,
+              "p95": 1.5036768913269043,
+              "max": 5.28950309753418
+            },
+            "output_cosine": {
+              "mean": 0.8688732981681824,
+              "median": 0.9934886693954468,
+              "p95": 0.9999992251396179,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.0003149410476908088,
+              "median": 1.0667146852938458e-05,
+              "p95": 0.0005898253293707967,
+              "max": 0.336309552192688
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.3811081349849701,
+            "per_query_head_relative_output_error": {
+              "mean": 0.4092009365558624,
+              "median": 0.16542549431324005,
+              "p95": 1.4181803464889526,
+              "max": 5.275886058807373
+            },
+            "output_cosine": {
+              "mean": 0.8892987370491028,
+              "median": 0.9941629767417908,
+              "p95": 0.9999992847442627,
+              "max": 1.0000001192092896
+            },
+            "target_attention_mass": {
+              "mean": 0.027702150866389275,
+              "median": 0.002680942416191101,
+              "p95": 0.1294686198234558,
+              "max": 0.9922296404838562
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "4x4",
+          "target_summary_keys": 592,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.9841269841269842,
+          "all_keys_after_pooling": 44461,
+          "all_key_reduction_fraction": 0.45221462453027783,
+          "naive": {
+            "global_relative_output_l2": 0.42274078726768494,
+            "per_query_head_relative_output_error": {
+              "mean": 0.4418547749519348,
+              "median": 0.1754581183195114,
+              "p95": 1.4928665161132812,
+              "max": 5.28927755355835
+            },
+            "output_cosine": {
+              "mean": 0.8707237839698792,
+              "median": 0.993503212928772,
+              "p95": 0.9999992251396179,
+              "max": 1.0000001192092896
+            },
+            "target_attention_mass": {
+              "mean": 0.002033629920333624,
+              "median": 8.924645226215944e-05,
+              "p95": 0.004912209697067738,
+              "max": 0.7796601057052612
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.3468022644519806,
+            "per_query_head_relative_output_error": {
+              "mean": 0.3881143033504486,
+              "median": 0.15697520971298218,
+              "p95": 1.3881728649139404,
+              "max": 5.271777153015137
+            },
+            "output_cosine": {
+              "mean": 0.9001667499542236,
+              "median": 0.9946088790893555,
+              "p95": 0.9999993443489075,
+              "max": 1.0000001192092896
+            },
+            "target_attention_mass": {
+              "mean": 0.044630616903305054,
+              "median": 0.005611573811620474,
+              "p95": 0.23734071850776672,
+              "max": 0.995596706867218
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "7x9",
+          "target_summary_keys": 2331,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.9375,
+          "all_keys_after_pooling": 46200,
+          "all_key_reduction_fraction": 0.43078913324708923,
+          "naive": {
+            "global_relative_output_l2": 0.401957631111145,
+            "per_query_head_relative_output_error": {
+              "mean": 0.43116506934165955,
+              "median": 0.17339631915092468,
+              "p95": 1.469156265258789,
+              "max": 5.287788391113281
+            },
+            "output_cosine": {
+              "mean": 0.8782165050506592,
+              "median": 0.993621289730072,
+              "p95": 0.9999992251396179,
+              "max": 1.0000001192092896
+            },
+            "target_attention_mass": {
+              "mean": 0.0101625332608819,
+              "median": 0.0006527203368023038,
+              "p95": 0.03557500243186951,
+              "max": 0.9537486433982849
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.3111702501773834,
+            "per_query_head_relative_output_error": {
+              "mean": 0.36283186078071594,
+              "median": 0.14544303715229034,
+              "p95": 1.3641791343688965,
+              "max": 5.260286331176758
+            },
+            "output_cosine": {
+              "mean": 0.9109591245651245,
+              "median": 0.9954044222831726,
+              "p95": 0.999999463558197,
+              "max": 1.0000001192092896
+            },
+            "target_attention_mass": {
+              "mean": 0.06530633568763733,
+              "median": 0.010146341286599636,
+              "p95": 0.36278200149536133,
+              "max": 0.9970986247062683
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "14x18",
+          "target_summary_keys": 9324,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.75,
+          "all_keys_after_pooling": 53193,
+          "all_key_reduction_fraction": 0.3446313065976714,
+          "naive": {
+            "global_relative_output_l2": 0.32471829652786255,
+            "per_query_head_relative_output_error": {
+              "mean": 0.3767576217651367,
+              "median": 0.15841379761695862,
+              "p95": 1.3440051078796387,
+              "max": 5.092563629150391
+            },
+            "output_cosine": {
+              "mean": 0.9062585830688477,
+              "median": 0.9945424795150757,
+              "p95": 0.9999993443489075,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.05267782136797905,
+              "median": 0.008739765733480453,
+              "p95": 0.27094945311546326,
+              "max": 0.9981942772865295
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.2505716383457184,
+            "per_query_head_relative_output_error": {
+              "mean": 0.30763551592826843,
+              "median": 0.11645425111055374,
+              "p95": 1.2460254430770874,
+              "max": 4.672962188720703
+            },
+            "output_cosine": {
+              "mean": 0.9309132099151611,
+              "median": 0.9968788623809814,
+              "p95": 0.9999996423721313,
+              "max": 1.000000238418579
+            },
+            "target_attention_mass": {
+              "mean": 0.10965032130479813,
+              "median": 0.02921959012746811,
+              "p95": 0.5559697151184082,
+              "max": 0.9992361068725586
+            }
+          }
+        }
+      ]
+    },
+    {
+      "layer": 41,
+      "step": 4,
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "dense_keys_per_query": 81165,
+      "dense_target_keys": 37296,
+      "dense_target_attention_mass": {
+        "mean": 0.2692394554615021,
+        "median": 0.21674850583076477,
+        "p95": 0.657873272895813,
+        "max": 0.9681060910224915
+      },
+      "pooling_location": "post-QK-norm, post-RoPE K; projected V",
+      "grids": [
+        {
+          "summary_grid_per_target_frame": "1x1",
+          "target_summary_keys": 37,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.9990079365079365,
+          "all_keys_after_pooling": 43906,
+          "all_key_reduction_fraction": 0.4590525472802316,
+          "naive": {
+            "global_relative_output_l2": 0.20954309403896332,
+            "per_query_head_relative_output_error": {
+              "mean": 0.2770078182220459,
+              "median": 0.21089892089366913,
+              "p95": 0.7482960224151611,
+              "max": 2.100302219390869
+            },
+            "output_cosine": {
+              "mean": 0.9675917625427246,
+              "median": 0.9925990104675293,
+              "p95": 0.9999415278434753,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 4.432867171999533e-06,
+              "median": 3.011784599493694e-07,
+              "p95": 2.2429507225751877e-05,
+              "max": 0.0004324368783272803
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.2080606073141098,
+            "per_query_head_relative_output_error": {
+              "mean": 0.2747785151004791,
+              "median": 0.2092321515083313,
+              "p95": 0.745949923992157,
+              "max": 2.100273370742798
+            },
+            "output_cosine": {
+              "mean": 0.9684588313102722,
+              "median": 0.9926753044128418,
+              "p95": 0.9999417662620544,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 0.004233598709106445,
+              "median": 0.00030349582084454596,
+              "p95": 0.022109560668468475,
+              "max": 0.30366235971450806
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "2x2",
+          "target_summary_keys": 148,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.996031746031746,
+          "all_keys_after_pooling": 44017,
+          "all_key_reduction_fraction": 0.45768496273024084,
+          "naive": {
+            "global_relative_output_l2": 0.2095339596271515,
+            "per_query_head_relative_output_error": {
+              "mean": 0.2769944369792938,
+              "median": 0.21089589595794678,
+              "p95": 0.7483260035514832,
+              "max": 2.1003024578094482
+            },
+            "output_cosine": {
+              "mean": 0.9675970673561096,
+              "median": 0.99260014295578,
+              "p95": 0.9999415278434753,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 2.335553836019244e-05,
+              "median": 2.4137470973073505e-06,
+              "p95": 0.00011584660387597978,
+              "max": 0.0028765113092958927
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.2072039097547531,
+            "per_query_head_relative_output_error": {
+              "mean": 0.27377232909202576,
+              "median": 0.20883245766162872,
+              "p95": 0.7439004182815552,
+              "max": 2.100243091583252
+            },
+            "output_cosine": {
+              "mean": 0.9688038229942322,
+              "median": 0.9927359223365784,
+              "p95": 0.9999420642852783,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 0.005538762081414461,
+              "median": 0.0006078958977013826,
+              "p95": 0.028368450701236725,
+              "max": 0.4209517240524292
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "4x4",
+          "target_summary_keys": 592,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.9841269841269842,
+          "all_keys_after_pooling": 44461,
+          "all_key_reduction_fraction": 0.45221462453027783,
+          "naive": {
+            "global_relative_output_l2": 0.20944149792194366,
+            "per_query_head_relative_output_error": {
+              "mean": 0.27689218521118164,
+              "median": 0.2108747363090515,
+              "p95": 0.7482529878616333,
+              "max": 2.1003007888793945
+            },
+            "output_cosine": {
+              "mean": 0.96764075756073,
+              "median": 0.9926037788391113,
+              "p95": 0.9999415278434753,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 0.0001509683788754046,
+              "median": 2.3127366148401052e-05,
+              "p95": 0.0007059837225824594,
+              "max": 0.02926868014037609
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.20432202517986298,
+            "per_query_head_relative_output_error": {
+              "mean": 0.2712204158306122,
+              "median": 0.2067183256149292,
+              "p95": 0.7371537685394287,
+              "max": 2.100207805633545
+            },
+            "output_cosine": {
+              "mean": 0.9697245359420776,
+              "median": 0.9928579926490784,
+              "p95": 0.9999431371688843,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 0.008736461400985718,
+              "median": 0.0014556844253093004,
+              "p95": 0.04242515563964844,
+              "max": 0.6460490226745605
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "7x9",
+          "target_summary_keys": 2331,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.9375,
+          "all_keys_after_pooling": 46200,
+          "all_key_reduction_fraction": 0.43078913324708923,
+          "naive": {
+            "global_relative_output_l2": 0.2086237370967865,
+            "per_query_head_relative_output_error": {
+              "mean": 0.2761983871459961,
+              "median": 0.21046759188175201,
+              "p95": 0.7458973526954651,
+              "max": 2.1002891063690186
+            },
+            "output_cosine": {
+              "mean": 0.9679455757141113,
+              "median": 0.9926248788833618,
+              "p95": 0.9999417066574097,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 0.0009861215949058533,
+              "median": 0.00018346196156926453,
+              "p95": 0.004323467146605253,
+              "max": 0.20526716113090515
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.19892659783363342,
+            "per_query_head_relative_output_error": {
+              "mean": 0.26739346981048584,
+              "median": 0.2030922770500183,
+              "p95": 0.7284450531005859,
+              "max": 2.1000757217407227
+            },
+            "output_cosine": {
+              "mean": 0.971034586429596,
+              "median": 0.9930928349494934,
+              "p95": 0.999944806098938,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 0.0139155313372612,
+              "median": 0.0029167914763092995,
+              "p95": 0.06453735381364822,
+              "max": 0.8345600366592407
+            }
+          }
+        },
+        {
+          "summary_grid_per_target_frame": "14x18",
+          "target_summary_keys": 9324,
+          "dense_target_keys": 37296,
+          "target_key_reduction_fraction": 0.75,
+          "all_keys_after_pooling": 53193,
+          "all_key_reduction_fraction": 0.3446313065976714,
+          "naive": {
+            "global_relative_output_l2": 0.19904200732707977,
+            "per_query_head_relative_output_error": {
+              "mean": 0.2693876028060913,
+              "median": 0.20527487993240356,
+              "p95": 0.7265660762786865,
+              "max": 2.100107431411743
+            },
+            "output_cosine": {
+              "mean": 0.9705406427383423,
+              "median": 0.9929724931716919,
+              "p95": 0.9999433159828186,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 0.009118026122450829,
+              "median": 0.0022332146763801575,
+              "p95": 0.03923998400568962,
+              "max": 0.680228590965271
+            }
+          },
+          "multiplicity_corrected": {
+            "global_relative_output_l2": 0.1833488494157791,
+            "per_query_head_relative_output_error": {
+              "mean": 0.25744402408599854,
+              "median": 0.19193491339683533,
+              "p95": 0.7161698341369629,
+              "max": 2.099440813064575
+            },
+            "output_cosine": {
+              "mean": 0.9740219116210938,
+              "median": 0.9938814043998718,
+              "p95": 0.9999487996101379,
+              "max": 1.0
+            },
+            "target_attention_mass": {
+              "mean": 0.02833927981555462,
+              "median": 0.007897960022091866,
+              "p95": 0.1247248649597168,
+              "max": 0.8967291116714478
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

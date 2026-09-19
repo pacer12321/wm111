@@ -1,0 +1,35 @@
+{
+  "http_success": true,
+  "requested_steps": 9,
+  "case": "B",
+  "request_seconds": 287.382508,
+  "gpu_memory_sampled_peak_mib": {
+    "GPU-b6d13423-832a-9f23-cf2f-6dd9aabc8670": 51740,
+    "GPU-ce70e1b4-48b4-fd02-3b8a-5484cf25fff3": 54048
+  },
+  "quality_verified": false,
+  "scope": "HTTP request excluding model load; same offload/settings across ABCD",
+  "decoded_frames": 124,
+  "shape_verified": true,
+  "checkpoint_step": 700,
+  "actual_dit_forwards": 8,
+  "interleaved_sp": true,
+  "token_skip": "latent_selector_from_step700_first_x0",
+  "refresh_forwards": [
+    1,
+    5
+  ],
+  "selector": {
+    "step": 700,
+    "active_ratio": 0.6939618587493896,
+    "stable_ratio": 0.3060382008552551,
+    "threshold": 1.3899806141853333
+  },
+  "compile_excluded_from_formal": true,
+  "bootstrap_seconds": 113.553916,
+  "warmup_seconds": 135.083558,
+  "schedule_points": 9,
+  "decoded_semantics": "full denoising output",
+  "purpose": "SAViE step700 DMD8 latent skip SP2 interleaved; seed4101",
+  "formal_speed_comparison": false
+}

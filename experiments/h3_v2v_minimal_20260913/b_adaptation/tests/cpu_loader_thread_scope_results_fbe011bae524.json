@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "torch_version": "2.10.0+cpu",
+  "execution": "Fresh SSH-stdin CPU process with ASCEND_RT_VISIBLE_DEVICES='' and TORCH_DEVICE_BACKEND_AUTOLOAD=0; local source bundle executed in memory; no remote file deployment.",
+  "source_sha256": {
+    "patched/openvdn_checkpoint.py": "fbe011bae524bea16f54a14032e61e82f2c68aa4da6d426b98a13e097fb8f19f",
+    "patched/pipeline_minimax_h3.py": "de86c6d435254db31e4c094f13d06f71aa87c5fe26d5c344b9c97c610febd690",
+    "tests/cpu_loader_thread_scope_regression.py": "de41111478661e7232c91609a2d9814adcb29b3768e4fafa33bcee7317bdfec2"
+  },
+  "initial_intraop": 192,
+  "final_intraop": 192,
+  "initial_interop": 192,
+  "final_interop": 192,
+  "checks": [
+    {
+      "check": "actual-pipeline-scope-success",
+      "passed": true,
+      "phases": [
+        "base",
+        "branch",
+        "lora",
+        "post"
+      ],
+      "intraop_before": 3,
+      "intraop_loading": 4,
+      "intraop_after": 3,
+      "timing_keys": [
+        "base",
+        "branch",
+        "lora"
+      ]
+    },
+    {
+      "check": "actual-pipeline-scope-base-failure",
+      "passed": true,
+      "exception_preserved": "ExpectedLoadFailure",
+      "intraop_before": 3,
+      "intraop_loading": 4,
+      "intraop_after": 3
+    },
+    {
+      "check": "actual-pipeline-scope-branch-failure",
+      "passed": true,
+      "exception_preserved": "ExpectedLoadFailure",
+      "intraop_before": 3,
+      "intraop_loading": 4,
+      "intraop_after": 3
+    },
+    {
+      "check": "actual-pipeline-scope-lora-failure",
+      "passed": true,
+      "exception_preserved": "ExpectedLoadFailure",
+      "intraop_before": 3,
+      "intraop_loading": 4,
+      "intraop_after": 3
+    },
+    {
+      "check": "actual-pipeline-scope-post-failure",
+      "passed": true,
+      "exception_preserved": "ExpectedLoadFailure",
+      "intraop_before": 3,
+      "intraop_loading": 4,
+      "intraop_after": 3
+    },
+    {
+      "check": "A-bypasses-thread-scope",
+      "passed": true,
+      "intraop_set_calls": 0
+    },
+    {
+      "check": "original-FP32-delta-cast-add-with-default-chunk256",
+      "dtype": "torch.float32",
+      "max_abs": 0,
+      "passed": true
+    },
+    {
+      "check": "original-FP32-delta-cast-add-with-default-chunk256",
+      "dtype": "torch.bfloat16",
+      "max_abs": 0,
+      "exact": true,
+      "passed": true
+    },
+    {
+      "check": "strict-nonfinite-rejection-restores-threads",
+      "passed": true
+    }
+  ],
+  "interop_setter_guard": "Patched setter in the isolated test to raise immediately if called; no calls occurred.",
+  "unchanged_function_source_sha256_verified_against_current_remote_vendor": {
+    "_assert_finite": "e96d0c34b235d89b73b164eedaa22b1a0f003bc51f3f40dba297ba2eafa5a5e1",
+    "inspect_header": "a9afa982264a314323534f341d7486aa81ebf88bca194178974bdcf99bfafdfa",
+    "merge_lora_pair_": "2e77cbff6e7a4b5d1d5b691452d10a6ae5e453f79432bd0b768ea35df3fec3e6",
+    "strict_base_weights": "51fb7989883654c69f5d0c5baadb55f1fd3815810ea1e17148394a65454a1d68"
+  },
+  "limitations": "Actual pipeline loading methods were extracted with AST and executed with tiny spies for large base/branch operations. Real thread scope and real rank64 LoRA merge were executed. No full model, NPU use, live process modification, deployment, or speed claim."
+}

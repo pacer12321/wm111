@@ -1,0 +1,32 @@
+{
+  "run_id": "5bcd246fd46d4965915dbf8d2c990304",
+  "sample_id": "shirt_red_couple_124",
+  "reviewed_at": "2026-09-14T12:43:00+08:00",
+  "reviewer": "root assistant; actual image-tool inspection",
+  "output_sha256": "392fd304bab4ca92f8a883f6c85c8a27f7adbd61dd5f1b5a6f678e1dee06d9ba",
+  "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+  "download_complete_and_hash_verified": true,
+  "decode": "Both videos decoded fully: 124 frames, 24fps, every PTS equals frame_index/24. Source1280x720; A1344x768.",
+  "runtime": "Bundled Python3.12 with workspace .audio_tools PyAV18.1.0/Pillow12.3.0. NumPy import failed due to cp311 ABI; extraction does not use NumPy, and av/PIL decode succeeded. No package installation or environment changes.",
+  "viewed_contacts": ["source_A_color_part_1.jpg", "source_A_color_part_2.jpg", "source_A_color_part_3.jpg"],
+  "viewed_corresponding_indices": [0, 15, 30, 45, 60, 75, 90, 105, 123],
+  "viewed_native_A_indices": [0, 60, 123],
+  "findings": {
+    "requested_color_edit": "The man's pale/off-white shirt is red at all nine inspected time points, including collar, torso and rolled sleeves.",
+    "womans_clothing": "The woman's blouse remains white/light at all inspected time points; no broad erroneous red recoloring was seen.",
+    "garment_structure": "Collar, button-shirt structure and rolled sleeves are recognizable. Fine folds/details are not proven unchanged.",
+    "action_order": "Sampled order is preserved: face approach at0/15, kiss at30, separation at45, chest embrace at60 through123. No apparent reversal or major event deletion in samples.",
+    "non_target_content": "Same two people, green-field background and broad framing remain recognizable. This is not pixel-identical preservation; output has altered local appearance/rendering and a different frame aspect ratio.",
+    "visible_artifacts": "No black frame, gross scene collapse or large-area red spill onto the woman's blouse was seen in inspected samples. Native0/60/123 were also inspected. No assertion that all hands/fine details or in-between frames are artifact-free."
+  },
+  "assessment": "Sampled evidence supports a successful coarse shirt-color edit with preserved coarse action order, suitable as a baseline for subsequent matched B/C comparison. It is not a full quality certification or evidence of acceleration.",
+  "continuous_video_playback_reviewed": false,
+  "audio_reviewed": false,
+  "exact_timing_or_camera_preservation_verified": false,
+  "full_video_flicker_absence_verified": false,
+  "quantitative_edit_or_preservation_metrics": null,
+  "ground_truth_edited_target_available": false,
+  "new_model_calls": false,
+  "user_required_to_perform_verification": false,
+  "preview": "Exact downloaded new color A MP4 embedded to user; open_in_codex returned queued, not confirmation that the panel was already opened."
+}

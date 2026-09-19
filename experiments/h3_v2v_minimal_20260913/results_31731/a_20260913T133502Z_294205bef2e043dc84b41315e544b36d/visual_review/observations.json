@@ -1,0 +1,66 @@
+{
+  "run_id": "a_20260913T133502Z_294205bef2e043dc84b41315e544b36d",
+  "review_type": "limited_manual_selected_frame_visual_review",
+  "not_a_full_video_quality_evaluation": true,
+  "input_identity": {
+    "source_sha256": "e02b3df481f66d0968ab65eac1d56ded8493da952c0bfb21b70ecd5715f87cf9",
+    "a8_output_sha256": "1df518c92da95f9f926d1a82284199a6017660a46a502502c08b12219c52c9a8",
+    "both_hashes_independently_rechecked_locally": true,
+    "both_decoded_video_frame_counts": 124,
+    "both_fps": 24,
+    "both_dimensions": [1344, 768],
+    "both_video_track_duration_seconds": 5.166666666666667
+  },
+  "inspection": {
+    "contact_sheet": "source_vs_A8_contact.jpg",
+    "source_and_output_frame_indices_seen_side_by_side": [0, 30, 60, 90, 123],
+    "sample_pts_seconds": [0.0, 1.25, 2.5, 3.75, 5.125],
+    "output_frames_additionally_seen_at_native_resolution": [0, 60, 123],
+    "contact_display_note": "The comparison contact was displayed at 1248x1961 after tool resizing from 1344x2113. The three individual output frames were displayed at their native 1344x768 resolution.",
+    "continuous_playback_performed": false,
+    "audio_listened_to": false,
+    "method": "CPU PyAV decode with one codec thread; selected PNG frames and PIL contact; no new model call and no remote operation."
+  },
+  "observations": {
+    "snow_edit": {
+      "assessment": "clearly_visible_in_all_five_selected_frames",
+      "details": [
+        "The previously mostly bare rocky near shoreline and sloping foreground become visibly snow covered.",
+        "The far/right shoreline receives a broad white cover, and snow patches are visible on the foreground conifer branches.",
+        "The scene remains recognizable as the same lake-at-sunset view rather than a replacement scene."
+      ]
+    },
+    "partial_freezing": {
+      "assessment": "visually_plausible_but_not_strictly_verified",
+      "details": "A flat white strip at the far/right water margin is consistent with ice or snow-covered ice. Static appearance alone does not establish its physical material; the central lake remains visibly rippled open water."
+    },
+    "falling_snow": {
+      "assessment": "not_confirmed",
+      "details": "Distinct falling snowflakes or sustained snowfall cannot be confidently identified from these five static samples. Do not claim this part of the edit instruction has been demonstrated."
+    },
+    "layout_and_camera": {
+      "assessment": "broadly_preserved_at_sampled_times",
+      "details": [
+        "The sun, reflection band, mountain/forest ridge, diagonal rocky shoreline, and right-hand foreground tree remain in corresponding broad image regions.",
+        "Across both sampled source and output sequences, the right foreground tree progressively occupies more of the frame, suggesting the output follows the source's broad camera-view progression.",
+        "This is not an estimated camera trajectory, optical-flow correspondence, or proof of pixelwise/strict framewise alignment. Fine tree/shore details and the sun's local appearance are not identical."
+      ]
+    },
+    "obvious_failure_screen": {
+      "assessment": "none_observed_in_selected_frames",
+      "details": [
+        "No selected frame is black, blank, grossly corrupted, or dominated by a large geometric collapse.",
+        "Foreground branches are locally soft in parts of the later frames; the samples do not establish whether this is motion softness or a synthesis artifact.",
+        "The small green bright spot near the shoreline is already present in the source and is not evidence of a newly introduced A8 artifact."
+      ]
+    }
+  },
+  "limits": [
+    "Five sampled frames cannot establish absence of flicker, transient glitches, or motion discontinuity between samples.",
+    "The output can satisfy the snow appearance edit while still incompletely satisfying snowfall or audio instructions.",
+    "No VLM score, perceptual metric, human-panel score, optical-flow/camera metric, temporal correspondence metric, or audio quality result was measured.",
+    "This inspection does not measure latency, DiT-only timing, NFE, memory, or acceleration.",
+    "No edits were made to either original video, the run's a_status.json/result.json, or any A/B/C production code."
+  ],
+  "concise_conclusion_zh": "A8 在五个抽样时刻表现出明显积雪编辑，场景构图和大致镜头变化保留，未见黑屏或大面积画面崩坏；持续飘雪未确认。此为有限抽帧目检，不代表全视频无闪烁、严格时序一致或完整质量评测通过。"
+}

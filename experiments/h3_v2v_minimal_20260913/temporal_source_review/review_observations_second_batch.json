@@ -1,0 +1,57 @@
+{
+  "review_date": "2026-09-13",
+  "method": "Manual visual review of all nine 4-fps contact sheets, plus all 29 consecutive original frames from dog video PTS 0.500 to 1.667 seconds. Exact source PTS labels; no VLM, ASR, NPU inference, or generated target video.",
+  "limitations": "No natural same-instruction pair with opposite routing labels has been verified. No official benchmark category is treated as routing ground truth. Event boundaries below are approximate visual annotations, not measured model outputs.",
+  "cases": [
+    {
+      "case": "reorder07_jumps",
+      "official_id": "Te_Temporal_reordering_07",
+      "duration_seconds": 8.625,
+      "has_audio_stream": false,
+      "official_goal_paraphrase_zh": "女子先做双腿并拢跳，再做开合跳。",
+      "observed_events": [
+        {"approx_seconds": [0.0, 4.1], "description": "连续重复的开合跳：双臂举起时双腿打开，随后双臂放下、双腿收回，多个完整循环可见。"},
+        {"approx_seconds": [4.25, 5.5], "description": "动作转换，双臂放下，脚步短暂交替调整。"},
+        {"approx_seconds": [5.75, 8.5], "description": "多次连续双脚并拢原地小跳，手臂保持在身体两侧或屈肘，不再随跳跃做开合动作。"}
+      ],
+      "assessment_zh": "目前七条实际核查中最适合首轮的候选。原始动作阶段为开合跳→并腿小跳，官方目标顺序相反，两个动作均有可见完整循环。只看目标文字无法知道原视频是否已符合该顺序；但本样例本身仍不能证明VLM优于text-only router，需要平衡且无标签泄漏的对照。",
+      "annotation_caveat_zh": "开合跳每周期也有并腿姿态；不能把该单帧姿态误标成独立并腿跳阶段。按连续动作阶段及手臂运动标注，而非单帧腿姿。",
+      "input_caveat_zh": "不能直接只取原视频前5秒，否则丢失后半段并腿跳；未来实验应保留两个完整动作阶段，并公开任何裁剪/重采样方案。本次未修改source或H3实验输入。"
+    },
+    {
+      "case": "reorder10_dog",
+      "official_id": "Te_Temporal_reordering_10",
+      "duration_seconds": 10.0,
+      "has_audio_stream": true,
+      "official_goal_paraphrase_zh": "德国牧羊犬先转头并朝池塘跑，随后主人才扔木棍。",
+      "observed_events": [
+        {"approx_seconds": [0.0, 0.75], "description": "狗站在岸边浅水处朝向主人，主人持棍做准备。"},
+        {"approx_seconds": [0.79, 1.04], "description": "主人前挥并松手投掷；约0.92–1.0s可见木棍脱离手部飞出。"},
+        {"approx_seconds": [0.88, 1.29], "description": "狗抬头追踪，逐渐把头和身体转向芦苇及水域；与投掷动作在时间上部分重叠。"},
+        {"approx_seconds": [1.5, 2.5], "description": "狗明显向前蹬进浅水/芦苇，溅水，身体逐渐被芦苇遮挡。"},
+        {"approx_seconds": [3.75, 9.75], "description": "狗在芦苇外水面游动，画面逐渐跟随狗，主人离开主要构图。"}
+      ],
+      "assessment_zh": "已核实投掷释放早于狗明显向水域前进。官方希望狗提前跑、主人后扔，因而涉及主体之间的相对时序。保留为第二阶段压力测试，不当作干净的全帧A/B片段互换。",
+      "correspondence_caveat_zh": "需要保留仍未投掷的主人，同时让狗使用后期运动状态，可能要求主体/区域级不同时间对应。一个target帧只选择一个source帧的全局映射未必足够。头部追踪与投掷相互重叠，不能声称所有子事件都有严格无重叠边界。"
+    },
+    {
+      "case": "reorder08_dance",
+      "official_id": "Te_Temporal_reordering_08",
+      "duration_seconds": 10.0,
+      "has_audio_stream": true,
+      "official_goal_paraphrase_zh": "右侧女孩先做舞蹈动作，左侧随后跟随，表现右侧教左侧。",
+      "observed_events": [
+        {"approx_seconds": [0.25, 1.25], "description": "左侧深色衣服女孩率先改变手部/手臂姿态并伸臂；右侧粉色衣服女孩较长时间保持原手势。"},
+        {"approx_seconds": [1.5, 2.25], "description": "右侧女孩随后作相似手臂转换。"},
+        {"approx_seconds": [5.0, 5.75], "description": "左侧约5.0–5.25s先换向手势，右侧约5.5–5.75s跟随。"},
+        {"approx_seconds": [7.75, 8.5], "description": "左侧约7.75–8.0s先换向，右侧约8.25–8.5s跟随，领先关系再次出现。"}
+      ],
+      "assessment_zh": "多段可见动作支持源视频左侧先、右侧跟随；官方目标要求相反的领先关系。是视觉依据较强的相对时序候选，但属于异步多主体，不适合作为单一全帧frame-map最小验证。",
+      "correspondence_caveat_zh": "不把脚步每个循环都概括为固定精确时间差；目前只人工确认多次手臂转换的先后。单一全局source帧索引难同时维持两人不同目标相位。"
+    }
+  ],
+  "control_design_distinction_zh": {
+    "same_source_two_instructions": "可对07使用官方反向目标与自撰保持原阶段顺序的目标；这是同源双指令对照，保持指令不是官方现成数据。它能检验两种编辑要求，但不等于消除了文本路由的先验偏差。",
+    "same_instruction_two_sources": "更严格是完全相同的目标指令配原始顺序相反的两条source，使路由标签一正一负。本次没有确认天然这样的pair。若人为交换原视频动作段构造第二source，必须显式称自建受控派生数据，不能声称官方天然pair；本次没有实施该构造。"
+  }
+}

@@ -1,0 +1,2285 @@
+{
+  "warning": "Heuristic labels are audit candidates, not ground-truth annotations.",
+  "counts": {
+    "content_edit_candidate": 21882,
+    "temporal_change_candidate": 145,
+    "ambiguous": 2973
+  },
+  "by_category": {
+    "global_freeform1": {
+      "content_edit_candidate": 4496,
+      "ambiguous": 330,
+      "temporal_change_candidate": 33
+    },
+    "global_freeform2": {
+      "content_edit_candidate": 5943,
+      "ambiguous": 467,
+      "temporal_change_candidate": 42
+    },
+    "global_style1": {
+      "content_edit_candidate": 2247,
+      "ambiguous": 869
+    },
+    "global_style2": {
+      "content_edit_candidate": 1684
+    },
+    "local": {
+      "content_edit_candidate": 7512,
+      "temporal_change_candidate": 70,
+      "ambiguous": 1307
+    }
+  },
+  "examples": {
+    "content_edit_candidate": [
+      {
+        "sample_id": "d59b3b8b9fe9c741f031",
+        "category": "local",
+        "instruction": "Change the metal ladder to a wooden one with a rough, unfinished surface and peeling paint.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "cd6e497f59e42ac9d3a0",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a glitch-art style with digital artifacts, pixel distortion, and rhythmic screen tearing that syncs with the subject’s footsteps and reflections.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "8bc714b8d6a2bf9d7d48",
+        "category": "local",
+        "instruction": "Change the toddler’s snack to a brightly colored fruit skewer with berries and grapes.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "5ec81518a1637be45301",
+        "category": "local",
+        "instruction": "Change the black suits to charcoal-gray tailored coats with silver buttons.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "20762c8e44bd9f6e462f",
+        "category": "global_freeform2",
+        "instruction": "Transform the entire video into a high-gloss, reflective chrome aesthetic where the buildings appear as polished metal sculptures, and the city is a mirror world reflecting infinite versions of itself.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "31f531346bc9df6572bb",
+        "category": "local",
+        "instruction": "Add a faint reflection of a hospital room in the subject's eyes.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "97f3c41f260a1390477b",
+        "category": "local",
+        "instruction": "Remove the low-hanging fog that slowly creeps across the wet ground, blurring the lower edges of the helicopters.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "403d0922ab1eca386a76",
+        "category": "global_freeform2",
+        "instruction": "Render the video in a surreal, surrealist painting style with melting clocks, floating ingredients, and dreamlike distortions of space and time, inspired by Salvador Dalí.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "79f3531454b47168c72a",
+        "category": "global_style2",
+        "instruction": "Capture the essence of the Snoopy style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "2c5a404e108c530a10d5",
+        "category": "local",
+        "instruction": "Transform the small green leaf in the woman’s hand into a glowing bioluminescent fern.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b"
+        ]
+      },
+      {
+        "sample_id": "cc19531293088d465195",
+        "category": "global_freeform1",
+        "instruction": "Render the entire video in a cinematic, high-dynamic-range black-and-white film noir style with dramatic chiaroscuro lighting, exaggerated shadows, and a grainy film texture.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "a2eef755cc81fa69896f",
+        "category": "global_style1",
+        "instruction": "Make it a Japanese anime style, cel shading.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "58d4c40f52f0f655ef70",
+        "category": "global_freeform2",
+        "instruction": "Transform the visuals into a high-contrast, graphic novel style with bold outlines, flat colors, and dramatic panel-like composition, emphasizing emotional expressions and gestures.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "0d08ddca9717a12a5864",
+        "category": "global_style2",
+        "instruction": "Duplicate the appearance of the Vector style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "66ec3572faf599651278",
+        "category": "global_style1",
+        "instruction": "Make it vector animation style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "942dfa3a8c1d4fc52516",
+        "category": "global_freeform2",
+        "instruction": "Apply a whimsical, storybook illustration style with oversized characters, exaggerated expressions, and a background that subtly shifts as the girl writes, showing her imagination unfolding.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "abb49436c43ae3195800",
+        "category": "global_freeform1",
+        "instruction": "Render the entire video in a surreal, dreamlike oil painting style with thick brushstrokes and luminous highlights, where the financial data on the screen appears as floating, semi-transparent glyphs in a swirling cosmic sky.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "b63e65e7a61865c40d86",
+        "category": "global_style1",
+        "instruction": "Make it Cyberpunk style. (implants, futuristic).",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "983eaf596e6a784c12b1",
+        "category": "global_freeform2",
+        "instruction": "Transform the video into a delicate hand-painted Persian miniature style with intricate borders, gold leaf accents, and symbolic motifs framing the woman’s gesture.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "6f78f3b6cd9572fdc9eb",
+        "category": "global_freeform2",
+        "instruction": "Transform the video into a high-contrast, monochrome film grain aesthetic with dramatic shadows and a sense of quiet grandeur, like a forgotten agricultural epic.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "7f73b0fe2de14b03fafe",
+        "category": "global_freeform1",
+        "instruction": "Reimagine the video in a minimalist, monochrome ink wash style with only black and white, except for the handwritten text which glows like liquid gold.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "f1f25257304984d6de8d",
+        "category": "global_freeform2",
+        "instruction": "Render the scene in a high-speed motion-tracked animation style with motion blur and dynamic trails, where the motorcycles leave glowing afterimages as they speed through the curves.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "5dccbe651032d5eb2822",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a surreal, hyper-saturated anime-inspired style with exaggerated motion lines, glowing aura trails around limbs, and a vibrant cel-shaded look reminiscent of Studio Ghibli meets cyberpunk.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "68396ff10a6e244928fc",
+        "category": "global_style1",
+        "instruction": "Make it Pop Art style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "20b7969ae20ec5994205",
+        "category": "local",
+        "instruction": "Add a large paper crane made of gold foil floating above their heads, slowly spiraling downward.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "1686d4d7c22eb2fd6b00",
+        "category": "global_style1",
+        "instruction": "Make it Comic Book Style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "f36dfb9d942c61c41636",
+        "category": "global_freeform2",
+        "instruction": "Convert the entire video into a stylized neon-noir urban comic book style with bold outlines, high-contrast shadows, and electric color accents on the clothing and signage.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "e8752dbe8fa5002d3fab",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a fantastical, fairy-tale vision with glowing pollen trails, oversized flowers, and the bee as a tiny knight in a golden armor.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "0def95ab1a19035c97d6",
+        "category": "local",
+        "instruction": "Change the skin tone of the hands to have a warm, sun-kissed glow with soft highlights.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "c0d6c4fb596a7ed01770",
+        "category": "global_freeform1",
+        "instruction": "Render the scene in a high-contrast, cinematic color grading style with deep blues and rich greens, making the mangroves look like a hidden jungle from a lost planet.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "2e5ffc79074bf7bea049",
+        "category": "global_freeform1",
+        "instruction": "Transform the beach scene into a cinematic travel documentary style with golden hour lighting, shallow depth of field, and a warm, sun-kissed color grade that emphasizes the textures of sand and water.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "e3ad4dace5dd2ff67b92",
+        "category": "global_style2",
+        "instruction": "Construct it in the Line style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "cecbab4a3674e7752376",
+        "category": "global_style2",
+        "instruction": "Animate it with the spirit of the Irasutoya style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "ea41ee0494ac54dd49ac",
+        "category": "local",
+        "instruction": "Add a small potted succulent on the desk, placed just to the right of the monitor.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "d8092e39353fe1d860f6",
+        "category": "global_style1",
+        "instruction": "Make it Moe style anime.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "0b3475c1a6b9495bb980",
+        "category": "local",
+        "instruction": "Replace the subtle makeup with bold indigo eyeliner and a red lip with a metallic finish.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b"
+        ]
+      },
+      {
+        "sample_id": "e1be4dc66a0bbbfe3dff",
+        "category": "local",
+        "instruction": "Change the person’s black-and-white striped crop top to a vibrant magenta and white geometric print.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b"
+        ]
+      },
+      {
+        "sample_id": "ce35b969101d3b24144b",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a hand-painted, Persian miniature style with intricate patterns, gold leaf details, and symbolic representations of life and rebirth.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "7775ac224dc2c65f98a6",
+        "category": "global_freeform1",
+        "instruction": "Render the aerial view in a vibrant, high-contrast graphic novel style with thick outlines, bold color blocks, and dramatic shadows to emphasize the road’s path through nature.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "7fecdc8b0f6b77e9b3fe",
+        "category": "local",
+        "instruction": "Transform the dark pants into high-visibility gray reflective joggers with a neon green stripe.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "8f4c1e408079aec94ca4",
+        "category": "local",
+        "instruction": "Change the brown sweater the girl is wearing to a maroon one with a high collar.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "baabbf57c5f9cb0c2093",
+        "category": "global_freeform2",
+        "instruction": "Render the entire video in a gritty, post-apocalyptic cyberpunk style with holographic dust, flickering power lines, and the sky filled with silent drones and floating advertisements.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "b405076585b3c09dbcbd",
+        "category": "global_freeform1",
+        "instruction": "Convert the scene into a hyper-detailed botanical sketch style, where every leaf, rock, and droplet is rendered in fine pen-and-ink with intricate crosshatching and subtle color washes resembling 18th-century scientific illustrations.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "2c291af61a9b3286f8de",
+        "category": "global_style1",
+        "instruction": "Make it the style of Family Guy.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "8aacbc313f333ea8db18",
+        "category": "local",
+        "instruction": "Replace the black sleeveless top with a charcoal gray mesh top layered under a sheer white blouse.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b"
+        ]
+      },
+      {
+        "sample_id": "57e181fcc5db73289d12",
+        "category": "global_style1",
+        "instruction": "Make it Golden Age Warner/Disney style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "6252cc87631fd1151dee",
+        "category": "local",
+        "instruction": "Remove the small, floating dandelion seed from drifting toward the person’s hand.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "9f29099a084c2b604832",
+        "category": "global_style2",
+        "instruction": "Make it look like the Line style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "0d01509facc92fd93d73",
+        "category": "global_freeform1",
+        "instruction": "Transform the entire video into a cinematic oil painting style with visible brushstrokes and rich, layered textures, emphasizing the contrast between the warm tones of the tiles and the cool neutrality of the concrete ceiling.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "801a0d4f54fa18bb9ab9",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a vintage 1970s sports documentary look with grainy film texture, warm color grading, and subtle vignetting, evoking a nostalgic athletic archive.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "0b52f4b622f37226e8df",
+        "category": "local",
+        "instruction": "Change the blue jeans to a pair of olive-green cargo pants with multiple utility pockets, emphasizing functionality.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "8ae9919335f8f5aaf7e2",
+        "category": "global_freeform1",
+        "instruction": "Transform the entire video into a dreamlike, impressionist oil painting style with soft brushstrokes, swirling textures, and heightened color saturation, emphasizing the emotional atmosphere of the castle and cityscape.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "eee55cbfabcb4403f372",
+        "category": "global_freeform1",
+        "instruction": "Render the underwater scene in a deep-sea cinematic style with volumetric lighting, particle fog, and a cold, blue-tinged color palette, enhancing the mystery and depth of the ocean.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "477950935f97c4d84e2f",
+        "category": "local",
+        "instruction": "Change the sleeveless shirt to a long-sleeved black turtleneck with subtle geometric embroidery.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "427a8a55da8505453235",
+        "category": "local",
+        "instruction": "Add a large, floating digital billboard above the sports pitch displaying a rotating weather forecast.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "ed0d30b25012104f0ef0",
+        "category": "local",
+        "instruction": "Change the control panel of the sewing machine to have a brushed metal finish with glowing blue indicators.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b"
+        ]
+      },
+      {
+        "sample_id": "8e79db597b8d844e7629",
+        "category": "local",
+        "instruction": "Transform the red makeup around the eyes into a shimmering gold geometric pattern.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "08ae98216b89f247e685",
+        "category": "global_style1",
+        "instruction": "Make it vector animation style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "307c24156b0c6d8a5cc4",
+        "category": "global_style1",
+        "instruction": "Immerse the scene in the breathtaking beauty of a cosmic ocean. The subject is bathed in the soft, ethereal glow of these cosmic structuresd. Sparkling star clusters and faint, glowing stardust drift through the scene like celestial fireflies. The atmosphere is awe-inspiring, wondrous, and profoundly beautiful.",
+        "evidence": [
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "1aa6fc35c8a1189dffb0",
+        "category": "global_style2",
+        "instruction": "Envision it as the Ghibli style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "9039d01e6dbb12ca868e",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a cinematic sci-fi laboratory aesthetic with holographic displays, floating data streams, and a deep blue ambient glow that highlights the intensity of the microscopes and the focus of the scientists.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "dd59b60ef0d582f227ad",
+        "category": "local",
+        "instruction": "Add a small label on the T-shirt reading \"Sunset Dreams\" near the collar.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "8b5c1faf448165091775",
+        "category": "local",
+        "instruction": "Remove the small, glowing blue LED fish-shaped nightlight floating near the fishbowl.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "429a67e1d01420f5cf33",
+        "category": "global_freeform2",
+        "instruction": "Reimagine the video in a macro photography style with extreme depth of field and glowing highlights, making the leaves appear as living stained glass.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "9011e098ecf6c0cde957",
+        "category": "local",
+        "instruction": "Change the plaid shirt to a solid deep burgundy one with a high collar.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "22a34d129d7c5c07ec71",
+        "category": "global_freeform1",
+        "instruction": "Convert the footage into a faded, vintage film aesthetic with film grain, light leaks, and a sepia-tinted color grade, evoking a forgotten Western frontier diary from the 1930s.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b"
+        ]
+      },
+      {
+        "sample_id": "b0a8f0ccac28c8e494fd",
+        "category": "global_freeform2",
+        "instruction": "Render the video in a hyper-realistic, underwater documentary style with natural lighting, slow-motion, and a focus on the texture of the net and the fish’s scales.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "1b46908b4fef9cb4dbc5",
+        "category": "global_freeform2",
+        "instruction": "Apply a surreal, dreamlike animation style with floating limbs, morphing shapes, and shifting perspectives, making the drummer appear to be playing inside a living canvas.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "460477f26a9db4eb81bb",
+        "category": "global_freeform1",
+        "instruction": "Transform the video into a poetic, misty watercolor style with soft edges, blurred outlines, and a color palette dominated by cool blues and greys that evoke stillness.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "956b129f6e536e7d5de9",
+        "category": "global_freeform2",
+        "instruction": "Render the entire video in a vibrant Afrofuturist mural style with bold geometric patterns, metallic accents, and dynamic motion lines that emphasize the rhythm of their walk.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "0251426bf99bb2fff289",
+        "category": "global_freeform2",
+        "instruction": "Transform the forest tower into a living treehouse sanctuary where the wood is breathing, the platform is a canopy of leaves, and the red-clad person is a guardian spirit.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "ef74dc0c04e0f2fa9273",
+        "category": "local",
+        "instruction": "Remove the delicate silver locket resting on the chest of the left person, dangling from a thin chain.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "70f871dc5f8deef80322",
+        "category": "local",
+        "instruction": "Remove the single, small seashell with a faint bioluminescent glow near the penguins' path.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "0adb08313472dcd0f2eb",
+        "category": "global_freeform2",
+        "instruction": "Render the scene in a macro photography style with extreme depth of field and shallow focus, emphasizing the texture of the wings and the nectar droplets.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "24ceecfdcd7f4e451402",
+        "category": "local",
+        "instruction": "Remove the faint, slow-moving aurora-like ribbon of light that drifts across the sky above the train.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "5224fd87e2bd1cbd622a",
+        "category": "local",
+        "instruction": "Change the dragon tattoo on the back to a cyberpunk-style neon dragon with glowing circuit lines.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "dfbcc7c499c120b8263d",
+        "category": "global_freeform1",
+        "instruction": "Render the entire video in a cinematic, high-contrast film noir style with deep shadows, dramatic lighting, and a sepia-toned filter to evoke a nostalgic, storybook mood.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "744cbf8ec1ca548581e1",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a futuristic gym where the equipment is made of liquid metal, the mats are anti-gravity pads, and the woman performs acrobatics in zero gravity.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "da18254ac8e8c66c92bb",
+        "category": "local",
+        "instruction": "Change the floral design on the pot to a minimalist abstract line drawing in gold.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "cfd4db1d12653f897929",
+        "category": "global_freeform2",
+        "instruction": "Render the entire video in a whimsical, storybook illustration style with soft pastel colors, hand-drawn textures, and subtle cel-shading to mimic children's picture books.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "0f5d66a55490cfd120ab",
+        "category": "global_freeform2",
+        "instruction": "Render the bird and tree in a delicate, botanical illustration style with fine linework, hand-colored watercolor accents, and a vintage scientific journal aesthetic.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "37b5855f2d4f0948e080",
+        "category": "local",
+        "instruction": "Transform the girl’s maroon shirt into a matching metallic silver jacket with a glowing logo.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "04336635b553418dcd80",
+        "category": "global_style1",
+        "instruction": "Make it an Oil Pastel drawing.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "a793cb995b344ee635c8",
+        "category": "global_style1",
+        "instruction": "Make it the style of Alphonse Mucha",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "c14c27778a87708e605f",
+        "category": "global_freeform2",
+        "instruction": "Transform the video into a poetic, abstract animation style where the child’s movements are traced in flowing ink lines, and the sun becomes a giant eye that blinks slowly.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "3c81bc47d9e095e4f329",
+        "category": "global_style1",
+        "instruction": "Make it the style of Tim Burton.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "de9b81bbbe1196cdcc8a",
+        "category": "local",
+        "instruction": "Remove the soft golden light halo around the standing man’s head.",
+        "evidence": [
+          "\\b(add|remove|erase|insert)\\b"
+        ]
+      },
+      {
+        "sample_id": "b3fc6d9ecd41b1f6ef75",
+        "category": "local",
+        "instruction": "Replace the white walls with textured beige panels with subtle geometric patterns.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b"
+        ]
+      },
+      {
+        "sample_id": "bd5c52454b5221f8dced",
+        "category": "global_style2",
+        "instruction": "Dress it up as the 3D Chibi style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "e1a228a7aab994582382",
+        "category": "local",
+        "instruction": "Replace the white shirt with a soft beige linen one that has a faint embroidered pattern of trees.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b"
+        ]
+      },
+      {
+        "sample_id": "a544005ed5c67a4b2cff",
+        "category": "local",
+        "instruction": "Change the dark clothing to a semi-transparent charcoal-gray robe with faint geometric patterns glowing beneath.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "9e7934a7cb29040b762a",
+        "category": "global_style2",
+        "instruction": "Let it become the Jojo style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "19ad8a06886681589f2f",
+        "category": "global_style2",
+        "instruction": "Dress it up as the Irasutoya style.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "d659dc093c6020f08393",
+        "category": "global_freeform1",
+        "instruction": "Render the entire video in a whimsical, storybook illustration style with bold outlines, flat colors, and hand-drawn textures, as if from a children's adventure book.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b"
+        ]
+      },
+      {
+        "sample_id": "7d06cf96b5f1d3040888",
+        "category": "local",
+        "instruction": "Replace the white beanie of the child with a knitted purple one with a pom-pom.",
+        "evidence": [
+          "\\b(color|colour|red|blue|green|yellow|black|white|purple|pink|orange)\\b"
+        ]
+      },
+      {
+        "sample_id": "43c4bc530763ddb84fe8",
+        "category": "global_freeform2",
+        "instruction": "Transform the entire video into a high-contrast, cinematic oil painting style with visible brushstrokes and rich texture, emphasizing the warmth of the lighting and the depth of the man's facial features.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "01ea53f82730959bdf48",
+        "category": "global_freeform1",
+        "instruction": "Transform the visuals into a soft-focus, romantic illustration style with delicate linework and a light dusting of golden sparkles, evoking a moment frozen in time.",
+        "evidence": [
+          "\\b(style|stylized|painting|drawing|anime|cartoon|watercolor|comic|sketch)\\b",
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "40e1869a2be345b7611e",
+        "category": "global_freeform1",
+        "instruction": "Transform the scene into a cyberpunk dream sequence where the DJ is a hologram, the lights are artificial stars, and the crowd is made of shifting digital avatars.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b"
+        ]
+      },
+      {
+        "sample_id": "260ef0546ee7eb021f07",
+        "category": "local",
+        "instruction": "Transform the clay into a luminous, slightly glowing material with a pearlescent sheen.",
+        "evidence": [
+          "\\b(replace|change|transform|turn)\\b.{0,40}\\b(into|to)\\b",
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      },
+      {
+        "sample_id": "3b9a0cbca7bcb54ea83a",
+        "category": "global_freeform2",
+        "instruction": "Reimagine the video in a soft, pastel winter fairy tale aesthetic with glowing snowflakes, dreamy lighting, and buildings that resemble gingerbread houses with candy canes for chimneys.",
+        "evidence": [
+          "\\b(material|texture|lighting|background|weather|atmosphere)\\b"
+        ]
+      }
+    ],
+    "temporal_change_candidate": [
+      {
+        "sample_id": "ce40106c155e2c7e2b95",
+        "category": "local",
+        "instruction": "Add a vintage-style analog tape recorder on the table next to the laptop, playing a faintly audible loop of music.",
+        "evidence": [
+          "\\b(loop|repeat|pause|freeze|stop moving|start moving)\\b"
+        ]
+      },
+      {
+        "sample_id": "d389aead8906e072e433",
+        "category": "local",
+        "instruction": "Remove the small, softly glowing hourglass floating slightly above the cube, its sand flowing in reverse.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "fdc602b055990ba52622",
+        "category": "local",
+        "instruction": "Remove the faint, animated crowd of tiny silhouettes behind the performer, mimicking his gestures in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "f06439550ca6368c4fb1",
+        "category": "global_freeform1",
+        "instruction": "Transform the entire video into a cinematic dream sequence with slow motion, golden dust particles, and a warm, honey-colored filter.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "143b62cb4d14e84df0a9",
+        "category": "local",
+        "instruction": "Remove the small floating emoji sticker of a dancing person above their heads, animated in a loop.",
+        "evidence": [
+          "\\b(loop|repeat|pause|freeze|stop moving|start moving)\\b"
+        ]
+      },
+      {
+        "sample_id": "9ba0704ef6b4e28ac038",
+        "category": "global_freeform2",
+        "instruction": "Reimagine the scene in a dreamlike, surrealist oil painting with melting time: the lavender waves like liquid, the sun moves backward, and the woman’s hair flows upward into the sky.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "d9925dd6b2a300daddf9",
+        "category": "local",
+        "instruction": "Introduce a faint trail of dust particles rising from the front tire as if just accelerating.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "02e56f749254ad50c92d",
+        "category": "global_freeform2",
+        "instruction": "Transform the court into a surreal, animated basketball world where the ball is a glowing orb, the hoop is a portal, and the players move in slow motion with trails of light.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "c4b9369760524603454d",
+        "category": "local",
+        "instruction": "Add a small animated graffiti tag on the wall behind the skateboarder that reads 'RIDE FREE' and fades after 2 seconds.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "770a637e601be86312f4",
+        "category": "local",
+        "instruction": "Change the maroon long-sleeve shirt of the first participant to a charcoal gray turtleneck.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "304f1ae06d59f59e11da",
+        "category": "local",
+        "instruction": "Remove the faint ripple of sound waves radiating outward from the bowl after each strike.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "502c64b516086d7b89ea",
+        "category": "local",
+        "instruction": "Remove the small, glowing hourglass floating near the balloon, its sand flowing upward in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "fe7a81e96899be884fc9",
+        "category": "local",
+        "instruction": "Remove the floating feather that drifts gently above the water after the heron takes flight.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "c1aa2452ce459b8c0a10",
+        "category": "global_freeform1",
+        "instruction": "Apply a surreal, dreamlike animation style with floating elements, slow motion, and a sense of weightlessness, as if the bikes are suspended in a timeless moment.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "f54c82974bb3dbfabbcf",
+        "category": "local",
+        "instruction": "Add a single, floating footprint in the wet sand that fades slowly after each wave.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "ba3315f83c86e5b6620f",
+        "category": "local",
+        "instruction": "Add a small, floating snowflake that lands on the person’s outstretched hand before melting.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "f241f65b84b39f1c3aa8",
+        "category": "global_freeform1",
+        "instruction": "Render the scene as a digital painting with a Van Gogh-style brushstroke effect, where the sky swirls like a storm and the ocean reflects the stars before they appear.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "9f05187beba035db0c69",
+        "category": "local",
+        "instruction": "Change the dark hair of the first person to silver-white streaks.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "f04cc992b9d8967901dc",
+        "category": "local",
+        "instruction": "Add a slow-motion burst of golden embers that spiral upward after each spark.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "9eeb1e32dd63b03cf56c",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a high-fidelity digital art style with volumetric lighting, photorealistic snow particles, and subtle lens flares, as if captured by a high-end cinematic camera in extreme slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "5e33d387bab5f5ce3574",
+        "category": "local",
+        "instruction": "Transform the winding road into a ribbon of liquid mercury that reflects the sky but flows backward.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "2f88b741737a07636c0b",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a high-definition, surreal nature documentary with time-lapse effects where the waterfall flows backward and the moss spreads like ink in water.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "38217e6ed11735c87004",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a dystopian subway station where the fluorescent lights flicker erratically, the walls are covered in cryptic graffiti, and the passengers are silent, cloaked figures moving in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "9f363788247b0eff4b26",
+        "category": "global_freeform1",
+        "instruction": "Render the video in a dramatic, Renaissance fresco style with aged plaster textures, golden halos, and a solemn, almost sacred lighting that frames the subject like a martyr standing before a divine banner.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "55c280237a26b6aad46c",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a surreal, dreamlike tennis match in zero gravity, where the ball floats like a planet and the player moves in slow motion through a starlit court.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "0a70bfebb689887b21da",
+        "category": "global_freeform1",
+        "instruction": "Transform the entire video into a soft pastel dreamcore aesthetic with ethereal lighting, blurred textures, and floating particles resembling pollen in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "a938590f8386b1cc931e",
+        "category": "global_freeform1",
+        "instruction": "Transform the video into a hyper-realistic decay simulation where every crack, graffiti tag, and leaf grows in real time, showing nature’s slow conquest in accelerated time-lapse.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "89a9972e0118304fdbb4",
+        "category": "global_freeform2",
+        "instruction": "Transform the video into a first-person immersive VR environment with a slight motion blur, depth-of-field transitions, and subtle screen distortion to simulate real-world walking sensations.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "2018e3fde8ea55c563b6",
+        "category": "local",
+        "instruction": "Add a faint, floating digital clock ticking backward in the upper right corner of the screen.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "6888f5d3d049b87977d8",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a cyber-zen aesthetic with soft ambient light, slow motion, and a meditative color palette that turns data into a flowing, organic river of insight.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "bdcf9cbd4da36eff40d3",
+        "category": "global_freeform2",
+        "instruction": "Transform the winter scene into a soft-focus, snow-globe animation where the town is miniature and the snow falls in slow motion, creating a fragile, fragile world.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "c6cc8657f02915561b2e",
+        "category": "local",
+        "instruction": "Change the plaid jacket of the first person to a long black trench coat.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "035fe0852e5aa65bd392",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a minimalist Zen animation where the water pours like ink in slow motion, the coffee grounds dissolve into mist, and the carafe becomes a mirror reflecting the viewer's soul.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "273c276d426ea989d537",
+        "category": "global_freeform1",
+        "instruction": "Transform the Ferris wheel into a surreal, steampunk dream machine with brass gears, glowing pipes, and cogs turning in slow motion, bathed in amber gaslight.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "cc15f7dae66f2fd490ee",
+        "category": "global_freeform1",
+        "instruction": "Render the video in a dreamy, first-person perspective with a soft focus and a gentle lens flare that mimics sunlight filtering through leaves.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "3f328a791074c1bdb8d5",
+        "category": "global_freeform2",
+        "instruction": "Transform the entire video into a delicate, pastel watercolor style with soft edges, glowing petals, and a dreamy haze that makes the butterfly appear to float in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "29174162238b438470e8",
+        "category": "global_freeform2",
+        "instruction": "Transform the entire video into a surreal, infinite loop road where the path curves endlessly into a Möbius strip of greenery and sky.",
+        "evidence": [
+          "\\b(loop|repeat|pause|freeze|stop moving|start moving)\\b"
+        ]
+      },
+      {
+        "sample_id": "405fbfb1ea0b7e7b1ac5",
+        "category": "global_freeform1",
+        "instruction": "Transform the scene into a high-energy digital art piece with animated particles, glowing trails on the resistance loop, and a dynamic motion blur effect on the woman’s movements.",
+        "evidence": [
+          "\\b(loop|repeat|pause|freeze|stop moving|start moving)\\b"
+        ]
+      },
+      {
+        "sample_id": "c07445086c075ada865d",
+        "category": "global_freeform1",
+        "instruction": "Render the entire video in a surreal surrealist style with melting clocks, floating objects, and dream logic, where the laptop screen shows a clock that runs backward and the standing woman’s hand floats above the table.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "4cc225b69741c826ecba",
+        "category": "local",
+        "instruction": "Add a faint golden light aura gently surrounding each sapling, suggesting accelerated growth.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "a7376c72d1b9a31b4bc8",
+        "category": "local",
+        "instruction": "Remove the small hand-drawn note on the counter that reads 'For Sarah - First Latte'.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "b645875bae9507cb1bff",
+        "category": "local",
+        "instruction": "Add a single, floating feather that drifts across the water’s surface before sinking.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "882c21c20f67841ce212",
+        "category": "global_freeform1",
+        "instruction": "Render the entire video in a vibrant, 1980s synthwave aesthetic with neon pink and teal gradients, lens flares, and retro-futuristic overlays suggesting a digital memory loop.",
+        "evidence": [
+          "\\b(loop|repeat|pause|freeze|stop moving|start moving)\\b"
+        ]
+      },
+      {
+        "sample_id": "bce7c3a779928629d57d",
+        "category": "local",
+        "instruction": "Remove the small, floating hourglass above the incense stick that slowly drains its sand in reverse.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "cd18f1cabe9e43d4d8ff",
+        "category": "global_freeform1",
+        "instruction": "Reimagine the scene as a digital forest of fire, where the autumn leaves are burning in slow motion, creating a cascade of glowing embers.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "027e4f0a1c933bb3bd07",
+        "category": "global_freeform1",
+        "instruction": "Render the airplane window view as a kaleidoscopic reflection of the sky, where the colors spiral and repeat in symmetrical patterns, like a living stained-glass window.",
+        "evidence": [
+          "\\b(loop|repeat|pause|freeze|stop moving|start moving)\\b"
+        ]
+      },
+      {
+        "sample_id": "8257f9c4177fdb6bb620",
+        "category": "global_freeform1",
+        "instruction": "Apply a digital portrait with chromatic aberration and lens flare—making the eyes glow faintly and the hair appear to float in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "0a2997c01d1d3d7b3d0c",
+        "category": "local",
+        "instruction": "Remove the small, floating clipboard with a single glowing red checkmark that appears after the doctor writes a note.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "a96ce13c5dab3cfac6bf",
+        "category": "global_freeform1",
+        "instruction": "Transform the scene into a surrealist painting where the boats are made of melting wax, the sand is floating, and the mangroves are giant clocks that tick in reverse.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "a18744ea1d2da6a0e3ea",
+        "category": "global_freeform1",
+        "instruction": "Transform the scene into a cinematic fantasy film with golden hour lighting, slow motion water ripples, and a score that swells with each movement of the boat.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "beaaafd3d97894f99797",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a surreal, high-speed particle simulation where every finger movement generates a burst of digital dust that swirls in slow motion around the guitar.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "492318d6af12be72ef66",
+        "category": "global_freeform1",
+        "instruction": "Render the winter forest in a snow globe aesthetic, where the trees are miniature and the snow falls in slow motion, creating a fragile, enclosed world.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "0daa27fb5bdac916cd31",
+        "category": "global_freeform1",
+        "instruction": "Render the entire video in a cinematic winter fairy tale style with snowflakes falling in slow motion, glowing firelight, and a soft-focus, ethereal glow around the characters.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "116059da4bab37d8ee6f",
+        "category": "global_freeform1",
+        "instruction": "Transform the scene into a minimalist AI-generated dream sequence with soft focus, slow motion, and ambient soundscapes visualized as floating geometric shapes.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "224b525618f8b5778dcb",
+        "category": "local",
+        "instruction": "Add a single, slow-moving dolphin arching gracefully just beyond the first boat.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "9e4e76f47ebe84dec404",
+        "category": "global_freeform1",
+        "instruction": "Transform the video into a glitch-art aesthetic with digital corruption, pixelation, and time-lapse raindrops that freeze and stutter like broken frames.",
+        "evidence": [
+          "\\b(loop|repeat|pause|freeze|stop moving|start moving)\\b"
+        ]
+      },
+      {
+        "sample_id": "9cfbfc48097e4214cb1c",
+        "category": "global_freeform2",
+        "instruction": "Apply a soft-focus, ethereal pastel fantasy style where all colors are muted and glowing, with a gentle breeze making the straws float like feathers in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "2c12af272fd9c72d6fd9",
+        "category": "global_freeform2",
+        "instruction": "Apply a glitch-art aesthetic with digital fragmentation, color channel shifting, and pixelated decay, as if the person is trapped in a corrupted memory loop of moving fatigue.",
+        "evidence": [
+          "\\b(loop|repeat|pause|freeze|stop moving|start moving)\\b"
+        ]
+      },
+      {
+        "sample_id": "502c286e1c581b68b496",
+        "category": "local",
+        "instruction": "Remove the tiny floating label above the ceramic pot that reads \"Project: First Pot\".",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "9935eb7ea011ef7190f8",
+        "category": "local",
+        "instruction": "Replace the text \"AND AN ALTERNATIVE REALITY\" on the billboard with \"TIME TO REWIND\" in bold sans-serif font.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "422346a909bbf796de48",
+        "category": "local",
+        "instruction": "Introduce a small, playful dolphin leaping just beyond the kayak’s wake, then diving back under.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "c7c7174e5568825cce1b",
+        "category": "global_freeform1",
+        "instruction": "Transform the scene into a surreal, slow-motion ballet filmed in a cathedral of mirrors — every movement is reflected in infinite copies, and the floor is a polished obsidian that reflects the sky in reverse.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "e55c263a8c057b4acd30",
+        "category": "global_freeform2",
+        "instruction": "Apply a crystalline, ice-fantasy style where the bag is now a frozen sphere of time, the globe and daisies preserved in a glowing block of ice that slowly melts in reverse.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "b787e87c5be7e49cf45a",
+        "category": "global_freeform2",
+        "instruction": "Render the entire video in a high-dynamic range, stormy nature documentary style with deep shadows, turbulent water textures, and cinematic slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "db342d24621aefc6b9ef",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a surreal, animated snow globe world where the frozen pond is the base of a giant glass sphere, and the trees and buildings are miniature, moving in slow motion like a living diorama.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "931ad627cc8de660aacc",
+        "category": "local",
+        "instruction": "Replace the dried flowers in the first vase with fresh pink peonies.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "fc94d1118839c566bdcc",
+        "category": "global_freeform2",
+        "instruction": "Transform the video into a high-speed motion capture style with motion blur, particle effects, and a dynamic camera that follows the surfer’s arms in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "a17ab01bab7d53c22e11",
+        "category": "local",
+        "instruction": "Remove the floating glitter burst above the palette, releasing tiny sparkles in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "d837b0ab01c363b48e61",
+        "category": "global_freeform1",
+        "instruction": "Transform the video into a first-person video game aesthetic with HUD elements, motion blur, and dynamic depth of field, as if the viewer is the snowboarder navigating a virtual winter world.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "e105029a20bd9387d46f",
+        "category": "global_freeform1",
+        "instruction": "Transform the scene into a psychedelic underwater dreamscape where the corals glow with hypnotic colors, the fish are made of light, and the water flows in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "309faa697279836c8529",
+        "category": "local",
+        "instruction": "Remove the small, floating compass hovering just above the sand near the first figure’s feet.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "278aca8c55e133b39ca3",
+        "category": "local",
+        "instruction": "Introduce a tiny, hovering mirror that reflects the dancer’s face and movements in reverse.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "98fd0db122dd45fdabfd",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a surreal, dreamlike animation with melting geometry, floating limbs, and time-lapse distortions, as if the subject is stepping through a portal in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "2a07e6604d5e202984bf",
+        "category": "local",
+        "instruction": "Remove the single seagull flying in slow motion across the sky.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "3960579bb6151f7668a1",
+        "category": "local",
+        "instruction": "Replace the black cap worn backward with a white knit beanie, subtly altering the man’s look.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "6a236249af91ccbaaa8c",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a minimalist Zen garden aesthetic with slow motion, silence, and a single drop echoing in an infinite space.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "a986a6414954603758de",
+        "category": "local",
+        "instruction": "Remove the small, open first-aid kit lying beside the bench on the ground.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "869e30e7d257dca8589b",
+        "category": "local",
+        "instruction": "Remove the small flock of metallic sparrows flying across the background in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "ad987abb15494141d5ed",
+        "category": "global_freeform1",
+        "instruction": "Transform the scene into a surreal, mirror-image reflection style where the water is a perfect mirror of the sky, and the boats move in reverse.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "e168baafc75f0a1c1ca3",
+        "category": "global_freeform1",
+        "instruction": "Transform the visuals into a surreal, animated dream sequence where the pink dress becomes a living ribbon that dances around the children, and the palm trees grow and sway in slow motion like jellyfish.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "b4b08d46731707fe25af",
+        "category": "global_freeform1",
+        "instruction": "Transform the video into a celestial seascape with a sky that reflects the ocean in reverse, where the sun’s reflection is a spiral galaxy and the waves ripple with stardust.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "c469c63a94f45c44fa71",
+        "category": "local",
+        "instruction": "Change the light-colored gloves to transparent gloves with internal LED patterns that change with each movement.",
+        "evidence": [
+          "\\b(change|reverse|reorder|swap|alter)\\b.{0,30}\\b(order|sequence|motion|movement|action|trajectory)\\b"
+        ]
+      },
+      {
+        "sample_id": "7b6771f308cd11531ee1",
+        "category": "local",
+        "instruction": "Introduce a small floating compass above the map, spinning slowly before settling on North.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "be3d287e4821f934348a",
+        "category": "local",
+        "instruction": "Replace the red object slung over the first person’s shoulder with a glowing green satchel.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "ab17946342b0cfb36837",
+        "category": "global_freeform2",
+        "instruction": "Transform the entire video into a lush, impressionist landscape painting with visible brushstrokes, where the flowers bloom in slow motion and the sky shifts like a canvas under a painter’s hand.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "4b9fa00062bf83023975",
+        "category": "local",
+        "instruction": "Introduce a small, hovering golden feather that drifts slowly past the cat’s face, then disappears.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "0e0839ea573bcad4fd28",
+        "category": "global_freeform1",
+        "instruction": "Convert the video into a surreal, dream logic animation where the slide is made of jelly, the wood chips are bouncing foam, and the child floats mid-descent in slow motion.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "f7a6cfb55d3a42f43ea9",
+        "category": "local",
+        "instruction": "Change the lake's water to a mirror-like surface that perfectly reflects the sky and clouds in reverse.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "cd91f99778f8ae262719",
+        "category": "global_freeform2",
+        "instruction": "Transform the patio into a surreal, dream logic space where the wooden panels ripple like water and the evergreen plants grow in slow motion, defying gravity.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "d99f5849f5fe6db15416",
+        "category": "local",
+        "instruction": "Add a small animated butterfly made of light particles fluttering near the woman’s shoulder, then flying away.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "eff4c13ddd7a3a11f505",
+        "category": "global_freeform2",
+        "instruction": "Transform the scene into a first-person perspective from a living bridge entity, where the wood pulses with life and the distant walker is a memory from the past.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "75b772231b8bee3234bb",
+        "category": "local",
+        "instruction": "Change the backward cap to a beaded headband with dangling crystals.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "57427afbd8a16e12a1e2",
+        "category": "global_freeform1",
+        "instruction": "Reimagine the scene in a digital zen garden aesthetic—where the floor is sand, and each movement creates ripples that form temporary calligraphic patterns before dissolving.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "f1084e30353b829bd1d1",
+        "category": "global_freeform1",
+        "instruction": "Transform the scene into a surreal, dream logic animation where the string lights are made of glowing jellyfish, the water ripples in slow motion, and the people’s laughter forms visible sound waves in the air.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "9018fbd2c441e6ca34ac",
+        "category": "global_freeform2",
+        "instruction": "Transform the forest drive into a surreal, animated forest where trees grow in slow motion, leaves rearrange into words, and the road is a living ribbon that pulses with light.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      },
+      {
+        "sample_id": "802583f9498aa6957b65",
+        "category": "local",
+        "instruction": "Replace the snow-covered fields with a blanket of fresh fallen ash-gray snow, darker and denser than before.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "79d14f12dcf50c69aca8",
+        "category": "local",
+        "instruction": "Add a small, floating feather that drifts slowly from the dancer’s shoulder to the floor, then vanishes.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "07450d75d1925d6af9f6",
+        "category": "local",
+        "instruction": "Change the dark cap worn backward to a glossy red one with a reflective emblem on the front.",
+        "evidence": [
+          "\\b(reverse|backward|backwards|rewind|time[- ]reversal)\\b"
+        ]
+      },
+      {
+        "sample_id": "994e1b4787ae1935c709",
+        "category": "local",
+        "instruction": "Add a faint smoke trail rising from the bag after each punch.",
+        "evidence": [
+          "\\b(first|then|afterwards|followed by|before|after)\\b"
+        ]
+      },
+      {
+        "sample_id": "32bcadb6c15fa19adb0d",
+        "category": "global_freeform1",
+        "instruction": "Transform the grasses into a flowing, animated ribbon style where each seed head is a glowing ribbon that dances in slow motion with a trail of light.",
+        "evidence": [
+          "\\b(slow motion|slow down|speed up|faster|slower|accelerat\\w*|decelerat\\w*)\\b"
+        ]
+      }
+    ],
+    "ambiguous": [
+      {
+        "sample_id": "ae0de72543ecbe50c266",
+        "category": "global_freeform1",
+        "instruction": "Render the scene as a solar-powered dream machine, where the turbine is a glowing sun wheel, the blades are solar sails, and the sky is a golden vortex.",
+        "evidence": []
+      },
+      {
+        "sample_id": "85f912b98f1b59af9fdb",
+        "category": "global_freeform2",
+        "instruction": "Reimagine the winter park as a frozen dreamscape in a snow globe, where the walker is a tiny figure in a glowing snowflake, and the world is a miniature, rotating diorama.",
+        "evidence": []
+      },
+      {
+        "sample_id": "7ef4edf77797ee32ae89",
+        "category": "global_freeform2",
+        "instruction": "Reimagine the scene as a high-fantasy manuscript being brought to life: the cards are enchanted relics, the gold script pulses with magic, and the hand is a wizard’s apprentice summoning ancient incantations.",
+        "evidence": []
+      },
+      {
+        "sample_id": "5686ba56f28fb6c9e322",
+        "category": "local",
+        "instruction": "Introduce a single, silent firefly hovering just above the forest canopy.",
+        "evidence": []
+      },
+      {
+        "sample_id": "f928125c28872028f9cb",
+        "category": "global_style1",
+        "instruction": "Make it a Claymation.",
+        "evidence": []
+      },
+      {
+        "sample_id": "9a2b4400d995c54f73b1",
+        "category": "local",
+        "instruction": "Alter the film camera to be a 1950s-era rangefinder model with a leather strap.",
+        "evidence": []
+      },
+      {
+        "sample_id": "c81f7b458206681b4c5f",
+        "category": "global_style1",
+        "instruction": "Make it a Silhouette.",
+        "evidence": []
+      },
+      {
+        "sample_id": "8ec63a4faf59ac2af74f",
+        "category": "global_freeform2",
+        "instruction": "Apply a liquid light filter where the water becomes a flowing sheet of molten gold, the buildings reflect as shimmering glass towers, and the sky is a swirling aurora.",
+        "evidence": []
+      },
+      {
+        "sample_id": "024b9c6c4848fcfe09b9",
+        "category": "local",
+        "instruction": "Introduce a floating holographic heart above the dance floor that pulses with the music.",
+        "evidence": []
+      },
+      {
+        "sample_id": "fda2098de34831bd1a76",
+        "category": "local",
+        "instruction": "Replace the sleeveless top with a lightweight, long-sleeve performance shirt in dusty rose.",
+        "evidence": []
+      },
+      {
+        "sample_id": "5e3973d7e699bca7d3d3",
+        "category": "global_freeform2",
+        "instruction": "Render the urban scene as a retro 1980s synthwave cityscape with neon-lit streets, glowing trees, and floating billboards in Japanese and English, evoking a cybernetic urban dreamscape.",
+        "evidence": []
+      },
+      {
+        "sample_id": "3e3b861414d5261010fa",
+        "category": "global_style1",
+        "instruction": "Make it a Claymation.",
+        "evidence": []
+      },
+      {
+        "sample_id": "83da42df1551d752e01c",
+        "category": "global_freeform1",
+        "instruction": "Reimagine the grasslands as a flowing, liquid metal landscape where the grasses are molten silver waves that ripple in response to unseen wind currents.",
+        "evidence": []
+      },
+      {
+        "sample_id": "b569a21fdab7167427e5",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with bricks.",
+        "evidence": []
+      },
+      {
+        "sample_id": "375ee5327130e68ed0c3",
+        "category": "global_style1",
+        "instruction": "Infuse the scene with a raw, volcanic power. This light casts dramatic, upward-facing shadows.",
+        "evidence": []
+      },
+      {
+        "sample_id": "fd1a8b7acba95bb7ea9c",
+        "category": "global_freeform2",
+        "instruction": "Apply a surreal, digital collage aesthetic where the laptop, mug, and notebook are composed of fragmented, translucent layers of vintage magazine clippings, with the sunset sky morphing into a swirling abstract pattern of memories and thoughts.",
+        "evidence": []
+      },
+      {
+        "sample_id": "30b652223ce76d35065f",
+        "category": "local",
+        "instruction": "Replace the soft sunlight with a cool, golden moonlight that casts long, silhouetted reflections on the water.",
+        "evidence": []
+      },
+      {
+        "sample_id": "78c4cdb30840f2c051ff",
+        "category": "global_freeform2",
+        "instruction": "Render the particle structure as a living, breathing organism made of liquid mercury and light, with shifting fractal patterns and glowing veins pulsing through its core.",
+        "evidence": []
+      },
+      {
+        "sample_id": "d135f88745dad2ba14e8",
+        "category": "local",
+        "instruction": "Transform the sunlight filtering through the trees into a soft, golden-hour glow with long, slanted rays.",
+        "evidence": []
+      },
+      {
+        "sample_id": "e34242f543262de49ff4",
+        "category": "local",
+        "instruction": "Replace the large concrete basin with a shallow ceramic bowl lined in turquoise tiles.",
+        "evidence": []
+      },
+      {
+        "sample_id": "889ea02ff886df2abb7c",
+        "category": "global_freeform2",
+        "instruction": "Render the entire scene in a cinematic desert noir aesthetic with deep shadows, sandstorm haze, and a dusty, sepia-toned filter that evokes a forgotten frontier film.",
+        "evidence": []
+      },
+      {
+        "sample_id": "a6f96a75bd705fd642ac",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with ice.",
+        "evidence": []
+      },
+      {
+        "sample_id": "c2c0835df07e4e9c8a52",
+        "category": "local",
+        "instruction": "Introduce a floating schematic diagram of the mechanical device above her workbench.",
+        "evidence": []
+      },
+      {
+        "sample_id": "c3b5ecd4bdc3b0a1971c",
+        "category": "global_freeform2",
+        "instruction": "Render the video in a futuristic chrome and glass aesthetic with reflective surfaces, where every movement causes the dancer’s silhouette to fracture into mirrored shards that float in the air like broken glass.",
+        "evidence": []
+      },
+      {
+        "sample_id": "e4d796617a1c7685b727",
+        "category": "global_freeform1",
+        "instruction": "Render the scene in a cyberpunk corporate aesthetic with neon-lit blinds, holographic document projections, and a glass desk that displays real-time data streams as the man speaks.",
+        "evidence": []
+      },
+      {
+        "sample_id": "71727f9759b8f33f4dab",
+        "category": "local",
+        "instruction": "Introduce a faint, shimmering reflection of a butterfly on the wall behind her.",
+        "evidence": []
+      },
+      {
+        "sample_id": "7a5702bf3aaa8a8aeb70",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with bricks.",
+        "evidence": []
+      },
+      {
+        "sample_id": "f6e1b3be67cc4c93866a",
+        "category": "global_freeform1",
+        "instruction": "Reimagine the video as a hand-drawn animated cel-shaded sequence with bold outlines, expressive character animation, and a whimsical, storybook aesthetic.",
+        "evidence": []
+      },
+      {
+        "sample_id": "9b3af9cb9136e3c567cb",
+        "category": "local",
+        "instruction": "Replace the dark pants with charcoal-gray wide-leg trousers.",
+        "evidence": []
+      },
+      {
+        "sample_id": "162450fb6379152667d7",
+        "category": "local",
+        "instruction": "Replace the light-colored shirt with a deep burgundy turtleneck.",
+        "evidence": []
+      },
+      {
+        "sample_id": "6bcbc020c77f663b5ee1",
+        "category": "global_style1",
+        "instruction": "Make it a Claymation.",
+        "evidence": []
+      },
+      {
+        "sample_id": "221af11302a93bdd66dc",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with silver.",
+        "evidence": []
+      },
+      {
+        "sample_id": "2902a722d36ca24eece2",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with ice.",
+        "evidence": []
+      },
+      {
+        "sample_id": "94dbf0ad3dedd9b8cb38",
+        "category": "global_freeform2",
+        "instruction": "Reimagine the scene as a dreamlike underwater ballet where the inflatable ring is a floating stage and the person is a mermaid dancing in a sea of light.",
+        "evidence": []
+      },
+      {
+        "sample_id": "6bc3e1aad4ab8fb8dd13",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with glass.",
+        "evidence": []
+      },
+      {
+        "sample_id": "2a051529e92739dbcbe8",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with rusted iron.",
+        "evidence": []
+      },
+      {
+        "sample_id": "ce83eb96679d2841cc10",
+        "category": "local",
+        "instruction": "Replace the cylindrical object with a carved wooden orb covered in intricate runes.",
+        "evidence": []
+      },
+      {
+        "sample_id": "846075d7899eddcca1f8",
+        "category": "global_freeform2",
+        "instruction": "Apply a cyberpunk ambient glow effect with subtle neon reflections on the horses’ coats, enhanced by low-frequency light trails and a grainy, high-contrast digital filter reminiscent of a futuristic surveillance feed.",
+        "evidence": []
+      },
+      {
+        "sample_id": "0317840d455ed4f9f83a",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with glass.",
+        "evidence": []
+      },
+      {
+        "sample_id": "eb5169b53c33f46a7631",
+        "category": "global_freeform2",
+        "instruction": "Apply a glowing, ethereal fantasy aesthetic where the light from the window becomes a magical portal, and the food glows with soft inner light as if enchanted.",
+        "evidence": []
+      },
+      {
+        "sample_id": "f8fb63136cfc564fecc7",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with bricks.",
+        "evidence": []
+      },
+      {
+        "sample_id": "3e4bc7deaf00ccc10e8d",
+        "category": "global_style1",
+        "instruction": "Apply an overgrown effect, as if nature is reclaiming everything. Cover all surfaces with patches of lush moss and intricate networks of fine vines. Tiny wildflowers and small mushrooms sprout from crevices. The air seems humid, with dappled light filtering through an unseen canopy.",
+        "evidence": []
+      },
+      {
+        "sample_id": "2527eb79bdd8e1da0835",
+        "category": "global_freeform1",
+        "instruction": "Recreate the scene as a surreal, waterlogged dream sequence where the fishing net is a ghostly web woven from moonlight, and the water reflects inverted versions of the world above.",
+        "evidence": []
+      },
+      {
+        "sample_id": "2aa803d0f3b2283b8ca4",
+        "category": "global_style1",
+        "instruction": "Make it a Claymation.",
+        "evidence": []
+      },
+      {
+        "sample_id": "856b1a5df2e12833c416",
+        "category": "global_style1",
+        "instruction": "Make it a Pixel Art.",
+        "evidence": []
+      },
+      {
+        "sample_id": "603d1c42d7e975624925",
+        "category": "global_freeform2",
+        "instruction": "Reimagine the scene as a retro-futuristic 1980s arcade game, with pixelated buildings, neon grids, and a scrolling HUD overlay.",
+        "evidence": []
+      },
+      {
+        "sample_id": "2e01c62938268c3d748b",
+        "category": "local",
+        "instruction": "Replace the snow-covered rooftops with those made of dark slate tiles and faint steam rising from chimneys.",
+        "evidence": []
+      },
+      {
+        "sample_id": "59130f4b39ce776642d6",
+        "category": "global_freeform1",
+        "instruction": "Render the scene as a psychedelic dream sequence with swirling colors, morphing shapes, and melting faces, where the crowd pulses in rhythm with a hidden heartbeat and the sky shimmers with abstract patterns.",
+        "evidence": []
+      },
+      {
+        "sample_id": "30fd8dab2732bc29ed03",
+        "category": "local",
+        "instruction": "Replace the plaid shirt with a faded denim jacket featuring patched sleeves and a small embroidered sunflower on the chest.",
+        "evidence": []
+      },
+      {
+        "sample_id": "0b2b3a15cfcddcca9cb2",
+        "category": "global_style1",
+        "instruction": "Make it a Pixel Art.",
+        "evidence": []
+      },
+      {
+        "sample_id": "5d49175c4291cc29aa88",
+        "category": "local",
+        "instruction": "Introduce a single paper lantern hanging from a wire above the dirt road, gently swaying.",
+        "evidence": []
+      },
+      {
+        "sample_id": "8286c428ed9db244e357",
+        "category": "global_style1",
+        "instruction": "Apply an overgrown effect, as if nature is reclaiming everything. Cover all surfaces with patches of lush moss and intricate networks of fine vines. Tiny wildflowers and small mushrooms sprout from crevices. The air seems humid, with dappled light filtering through an unseen canopy.",
+        "evidence": []
+      },
+      {
+        "sample_id": "c8ecfd6537c8a04eacb5",
+        "category": "local",
+        "instruction": "Replace the chain-link fence with a tall, wrought-iron fence topped with ornamental spikes.",
+        "evidence": []
+      },
+      {
+        "sample_id": "665fd22cb56b415c1f92",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with ranbow candy and biscuits.",
+        "evidence": []
+      },
+      {
+        "sample_id": "b291fd8105617a9df2d3",
+        "category": "local",
+        "instruction": "Introduce a single, floating origami crane drifting slowly across the water’s surface.",
+        "evidence": []
+      },
+      {
+        "sample_id": "a6259280ad3d2cedd1d8",
+        "category": "global_freeform2",
+        "instruction": "Convert the scene into a cinematic, high-dynamic-range film look with shallow depth of field, golden hour glow, and lens flares, enhancing the intimacy with a romantic, almost dreamlike luminosity.",
+        "evidence": []
+      },
+      {
+        "sample_id": "65d2aaf9ed211105b544",
+        "category": "local",
+        "instruction": "Replace the moss-covered rocks with dark basalt formations veined with glowing amber minerals.",
+        "evidence": []
+      },
+      {
+        "sample_id": "98ddf82f5a8cc56f2b32",
+        "category": "local",
+        "instruction": "Replace the woman’s dark sports bra with a deep plum one that has a delicate lace overlay.",
+        "evidence": []
+      },
+      {
+        "sample_id": "a1d8fdc29ff28add561b",
+        "category": "global_freeform1",
+        "instruction": "Reimagine the scene in a floating city above the clouds, where the roads are transparent pathways, the houses are suspended pods, and the fields are vertical gardens growing on massive sky-bridges.",
+        "evidence": []
+      },
+      {
+        "sample_id": "1dd3b96cfa5687aa50b4",
+        "category": "local",
+        "instruction": "Replace the silhouetted trees on the horizon with tall, twisted silver trees with reflective bark.",
+        "evidence": []
+      },
+      {
+        "sample_id": "156086073cd8732945bf",
+        "category": "local",
+        "instruction": "Alter the striped hoodie of the person on the far right to a solid charcoal-gray pullover.",
+        "evidence": []
+      },
+      {
+        "sample_id": "d8670882f27e3cb3998b",
+        "category": "local",
+        "instruction": "Introduce a floating, holographic digital clock above the sunbed showing the time in a minimalist font.",
+        "evidence": []
+      },
+      {
+        "sample_id": "8a4e6f7021615aa0b6f2",
+        "category": "local",
+        "instruction": "Introduce a subtle lens flare effect that appears when the phone is tilted slightly.",
+        "evidence": []
+      },
+      {
+        "sample_id": "41eb3d05f68522356404",
+        "category": "local",
+        "instruction": "Alter the clear water of the river to shimmer with a faint turquoise hue, suggesting mineral-rich flow.",
+        "evidence": []
+      },
+      {
+        "sample_id": "0d9788a2d1cc204d4833",
+        "category": "local",
+        "instruction": "Replace the drill-like weapon with a sleek, glowing energy rifle that emits a faint hum.",
+        "evidence": []
+      },
+      {
+        "sample_id": "612278f48392c90dcccb",
+        "category": "global_freeform2",
+        "instruction": "Reimagine the scene in a psychedelic, kaleidoscopic filter where every wing pattern reflects a swirling universe of colors and fractals.",
+        "evidence": []
+      },
+      {
+        "sample_id": "a424fa9dc25939f98019",
+        "category": "local",
+        "instruction": "Switch the gray hoodie of the person across the table to a maroon sweater.",
+        "evidence": []
+      },
+      {
+        "sample_id": "a12f1b72d9276e970768",
+        "category": "local",
+        "instruction": "Change the traditional buildings in the village to brightly painted cottages with floral shutters.",
+        "evidence": []
+      },
+      {
+        "sample_id": "2219761c6ac2fa4b8eab",
+        "category": "global_style1",
+        "instruction": "Render the subject as a flickering, semi-transparent hologram. The image is composed of glowing cyan light, with visible horizontal scan lines and occasional digital glitches.",
+        "evidence": []
+      },
+      {
+        "sample_id": "edba195f30bb6ea37c41",
+        "category": "local",
+        "instruction": "Replace the minimalist wooden table with one made of frosted glass and embedded LED lights.",
+        "evidence": []
+      },
+      {
+        "sample_id": "e8db7b9f1bed2f869a89",
+        "category": "global_style1",
+        "instruction": "Make it glitch art",
+        "evidence": []
+      },
+      {
+        "sample_id": "48bb522fe4b29f316964",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with glass.",
+        "evidence": []
+      },
+      {
+        "sample_id": "6227abaa87dedb3aaea3",
+        "category": "local",
+        "instruction": "Introduce a small potted succulent on the desk in the foreground, beside the notebook.",
+        "evidence": []
+      },
+      {
+        "sample_id": "414a530c9ca646f02dda",
+        "category": "global_freeform2",
+        "instruction": "Reimagine the table setting in a high-gloss, luxury magazine aesthetic: every surface reflects like a mirror, the flowers are illuminated from within, and the wine barrels glow faintly with internal light.",
+        "evidence": []
+      },
+      {
+        "sample_id": "b1c216a093acbc39ad38",
+        "category": "global_style1",
+        "instruction": "Make it Children's Book Illustration.",
+        "evidence": []
+      },
+      {
+        "sample_id": "a2847b43a73491486db3",
+        "category": "global_style1",
+        "instruction": "Make it forged from metal.",
+        "evidence": []
+      },
+      {
+        "sample_id": "45f38265054ef9b7ecbe",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with ice.",
+        "evidence": []
+      },
+      {
+        "sample_id": "b626a4f3e21cd91be617",
+        "category": "local",
+        "instruction": "Alter the mist to appear as slow-moving liquid silver that flows like water.",
+        "evidence": []
+      },
+      {
+        "sample_id": "9d7b614ac3b45276a1d4",
+        "category": "local",
+        "instruction": "Introduce a small digital clock on the desk showing the time 11:47 AM, subtly integrated into the scene.",
+        "evidence": []
+      },
+      {
+        "sample_id": "16ed8e35c9798d7b65e1",
+        "category": "global_freeform1",
+        "instruction": "Render the video in a sleek, modern digital interface aesthetic with glassmorphism, soft blur, and floating UI elements, making the laptop a holographic terminal.",
+        "evidence": []
+      },
+      {
+        "sample_id": "391f09ab1e0b973e7996",
+        "category": "global_style1",
+        "instruction": "Make it a Claymation.",
+        "evidence": []
+      },
+      {
+        "sample_id": "e224b6660187029ed01c",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with ice.",
+        "evidence": []
+      },
+      {
+        "sample_id": "8dcff74c370df623b5da",
+        "category": "global_freeform2",
+        "instruction": "Render the entire video in a textured, hand-sculpted clay animation aesthetic with visible brush marks, uneven surfaces, and a tactile, earthy materiality in every frame.",
+        "evidence": []
+      },
+      {
+        "sample_id": "93043ada592de860c145",
+        "category": "local",
+        "instruction": "Introduce a small wooden fishing net folded neatly on the brick walkway near the railing.",
+        "evidence": []
+      },
+      {
+        "sample_id": "9bbe0ea1a99e80672624",
+        "category": "global_style1",
+        "instruction": "Make it a Pixel Art.",
+        "evidence": []
+      },
+      {
+        "sample_id": "abeef8fe3c58ea632860",
+        "category": "local",
+        "instruction": "Eliminate the ripple effect in the air between the two figures.",
+        "evidence": []
+      },
+      {
+        "sample_id": "0c13e7a5d31b50b8d42a",
+        "category": "global_freeform2",
+        "instruction": "Convert the scene into a neon-drenched cyberpunk night market, where the Louis Vuitton sign is a hologram, and the street is alive with augmented reality shoppers.",
+        "evidence": []
+      },
+      {
+        "sample_id": "da80dd16e1a3b5bd8078",
+        "category": "local",
+        "instruction": "Replace the evergreen forest with a grove of ancient, crystalline trees with translucent bark.",
+        "evidence": []
+      },
+      {
+        "sample_id": "0c762e180246459e47a4",
+        "category": "global_style1",
+        "instruction": "Make it a Claymation.",
+        "evidence": []
+      },
+      {
+        "sample_id": "5673a68a5305135b52dd",
+        "category": "local",
+        "instruction": "Change the woman’s tray of Canadian-themed desserts to one holding miniature maple leaf cookies.",
+        "evidence": []
+      },
+      {
+        "sample_id": "522c09541a70f8bc6364",
+        "category": "local",
+        "instruction": "Replace the light-colored nails with deep burgundy polish and silver rings on all fingers.",
+        "evidence": []
+      },
+      {
+        "sample_id": "906d894ec50450fce567",
+        "category": "local",
+        "instruction": "Introduce a single, slow-moving tear-shaped droplet that falls from the edge of the fabric and dissolves into nothing.",
+        "evidence": []
+      },
+      {
+        "sample_id": "f460c3421e0392c081ba",
+        "category": "local",
+        "instruction": "Replace the gray sweater the artist is wearing with a deep maroon turtleneck with a subtle lion embroidery.",
+        "evidence": []
+      },
+      {
+        "sample_id": "a775d51fd939c0b15af9",
+        "category": "local",
+        "instruction": "Replace the gray t-shirt with a charcoal gray crewneck sweater with a textured knit.",
+        "evidence": []
+      },
+      {
+        "sample_id": "f636a0c117bf9768704a",
+        "category": "local",
+        "instruction": "Alter the Jenga tower to be made of glowing translucent blocks that pulse softly.",
+        "evidence": []
+      },
+      {
+        "sample_id": "d0deadf63bad97cf022d",
+        "category": "global_freeform1",
+        "instruction": "Apply a warm, golden-hour cinematic filter with lens flares and a shallow depth of field, enhancing the festive glow of the balloons and ornaments.",
+        "evidence": []
+      },
+      {
+        "sample_id": "a73e54898dcc1c71c0be",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with ice.",
+        "evidence": []
+      },
+      {
+        "sample_id": "86e78eec808118f939dc",
+        "category": "global_style1",
+        "instruction": "Make it sculptured with silver.",
+        "evidence": []
+      },
+      {
+        "sample_id": "cd3f7a515c110c869516",
+        "category": "global_freeform2",
+        "instruction": "Apply a cinematic dream sequence aesthetic with soft focus, ethereal light flares, and a golden-hour glow that makes the living room appear as a floating island in a sea of memory.",
+        "evidence": []
+      },
+      {
+        "sample_id": "9db894576f7ffb0fa747",
+        "category": "global_freeform2",
+        "instruction": "Apply a vintage 1960s psychedelic poster aesthetic with swirling patterns, kaleidoscopic colors, and a retro-futuristic vibe that warps the geometry of the room.",
+        "evidence": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,921 @@
+[
+  {
+    "stage": "started",
+    "device": "NVIDIA A100-SXM4-80GB",
+    "torch": "2.11.0+cu130"
+  },
+  {
+    "stage": "small_shape_passed",
+    "frames": 1,
+    "world": 2,
+    "cumulative_cases": 48,
+    "seconds": 5.05184343457222
+  },
+  {
+    "stage": "small_shape_passed",
+    "frames": 12,
+    "world": 2,
+    "cumulative_cases": 96,
+    "seconds": 6.973946884274483
+  },
+  {
+    "stage": "small_shape_passed",
+    "frames": 37,
+    "world": 4,
+    "cumulative_cases": 144,
+    "seconds": 9.81283437460661
+  },
+  {
+    "stage": "correctness_gate_passed",
+    "cases": 144,
+    "reference": "independent dense FP32 attention",
+    "source_target_isolation": true,
+    "includes_single_frame_padding_and_all_stable": true
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_whole",
+    "options": {
+      "physical_kv": false,
+      "fused_pack": false,
+      "source_split": false,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.0,
+    "median_ms": {
+      "old_gpu": 75.6654052734375,
+      "new_gpu": 74.08486557006836,
+      "old_wall": 75.69196075201035,
+      "new_wall": 74.11268725991249
+    },
+    "speed_reduction_pct": 2.0864481199952434,
+    "samples": {
+      "old_gpu": [
+        75.71660614013672,
+        75.45958709716797,
+        75.56607818603516,
+        75.67974090576172,
+        75.87123107910156,
+        75.65106964111328
+      ],
+      "new_gpu": [
+        74.07206726074219,
+        74.0474853515625,
+        73.8160629272461,
+        74.53593444824219,
+        74.61273956298828,
+        74.09766387939453
+      ],
+      "old_wall": [
+        75.76615363359451,
+        75.48636198043823,
+        75.59311389923096,
+        75.70572942495346,
+        75.89627057313919,
+        75.67819207906723
+      ],
+      "new_wall": [
+        74.0998387336731,
+        74.07395541667938,
+        73.84198158979416,
+        74.56259429454803,
+        74.6389776468277,
+        74.12553578615189
+      ]
+    },
+    "seconds": 2.5940311774611473,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_whole",
+    "options": {
+      "physical_kv": false,
+      "fused_pack": false,
+      "source_split": true,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.0,
+    "median_ms": {
+      "old_gpu": 75.82464218139648,
+      "new_gpu": 74.10483169555664,
+      "old_wall": 75.85170492529869,
+      "new_wall": 74.13195818662643
+    },
+    "speed_reduction_pct": 2.2672486272601544,
+    "samples": {
+      "old_gpu": [
+        75.29779052734375,
+        75.54969787597656,
+        75.63468933105469,
+        76.25625610351562,
+        76.39552307128906,
+        76.01459503173828
+      ],
+      "new_gpu": [
+        74.33625793457031,
+        74.10790252685547,
+        74.57484436035156,
+        74.06285095214844,
+        74.10176086425781,
+        73.87545776367188
+      ],
+      "old_wall": [
+        75.33404231071472,
+        75.57736337184906,
+        75.66167414188385,
+        76.28203928470612,
+        76.42214745283127,
+        76.04173570871353
+      ],
+      "new_wall": [
+        74.36500489711761,
+        74.13352280855179,
+        74.60081577301025,
+        74.0877240896225,
+        74.13039356470108,
+        73.90199601650238
+      ]
+    },
+    "seconds": 1.3305819630622864,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_whole",
+    "options": {
+      "physical_kv": false,
+      "fused_pack": true,
+      "source_split": false,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.0,
+    "median_ms": {
+      "old_gpu": 75.54252624511719,
+      "new_gpu": 74.2927360534668,
+      "old_wall": 75.5777470767498,
+      "new_wall": 74.32087883353233
+    },
+    "speed_reduction_pct": 1.6630136406965201,
+    "samples": {
+      "old_gpu": [
+        75.34284973144531,
+        75.70738983154297,
+        75.3776626586914,
+        75.99308776855469,
+        76.35558319091797,
+        75.34489440917969
+      ],
+      "new_gpu": [
+        74.29529571533203,
+        74.59737396240234,
+        74.26764678955078,
+        74.40486145019531,
+        74.29017639160156,
+        74.08230590820312
+      ],
+      "old_wall": [
+        75.3924623131752,
+        75.74650645256042,
+        75.40898770093918,
+        76.02152228355408,
+        76.38610899448395,
+        75.3745287656784
+      ],
+      "new_wall": [
+        74.32258129119873,
+        74.62290674448013,
+        74.30940121412277,
+        74.44532215595245,
+        74.31917637586594,
+        74.11137223243713
+      ]
+    },
+    "seconds": 1.3027836382389069,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_whole",
+    "options": {
+      "physical_kv": false,
+      "fused_pack": true,
+      "source_split": true,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.0,
+    "median_ms": {
+      "old_gpu": 76.34482955932617,
+      "new_gpu": 73.7996826171875,
+      "old_wall": 76.37866958975792,
+      "new_wall": 73.82984086871147
+    },
+    "speed_reduction_pct": 3.3370949438326414,
+    "samples": {
+      "old_gpu": [
+        76.2767333984375,
+        76.41292572021484,
+        76.44671630859375,
+        76.45491027832031,
+        76.2081298828125,
+        75.82720184326172
+      ],
+      "new_gpu": [
+        74.15398406982422,
+        73.57644653320312,
+        73.80889892578125,
+        73.75769805908203,
+        73.79046630859375,
+        74.86771392822266
+      ],
+      "old_wall": [
+        76.31705701351166,
+        76.44028216600418,
+        76.4751210808754,
+        76.48345082998276,
+        76.23741775751114,
+        75.86120069026947
+      ],
+      "new_wall": [
+        74.18287545442581,
+        73.60456138849258,
+        73.83939623832703,
+        73.78886640071869,
+        73.82028549909592,
+        74.90218430757523
+      ]
+    },
+    "seconds": 1.3047898635268211,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_whole",
+    "options": {
+      "physical_kv": true,
+      "fused_pack": false,
+      "source_split": false,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 1.4888350960973185e-05,
+    "median_ms": {
+      "old_gpu": 75.68998336791992,
+      "new_gpu": 75.67769622802734,
+      "old_wall": 75.7422000169754,
+      "new_wall": 75.70978999137878
+    },
+    "speed_reduction_pct": 0.042789918419794404,
+    "samples": {
+      "old_gpu": [
+        75.69203186035156,
+        75.68793487548828,
+        75.62547302246094,
+        75.66130828857422,
+        76.22246551513672,
+        75.97465515136719
+      ],
+      "new_gpu": [
+        75.87123107910156,
+        75.33773040771484,
+        75.87020874023438,
+        75.48518371582031,
+        75.96339416503906,
+        75.2332763671875
+      ],
+      "old_wall": [
+        75.75984299182892,
+        75.72455704212189,
+        75.66170394420624,
+        75.69359987974167,
+        76.25322043895721,
+        76.00764185190201
+      ],
+      "new_wall": [
+        75.90533047914505,
+        75.36562532186508,
+        75.9027823805809,
+        75.51679760217667,
+        76.02931559085846,
+        75.28302073478699
+      ]
+    },
+    "seconds": 2.4172510132193565,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_whole",
+    "options": {
+      "physical_kv": true,
+      "fused_pack": false,
+      "source_split": true,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 1.4888350960973185e-05,
+    "median_ms": {
+      "old_gpu": 75.91679763793945,
+      "new_gpu": 75.6495361328125,
+      "old_wall": 75.94648376107216,
+      "new_wall": 75.68182796239853
+    },
+    "speed_reduction_pct": 0.3484766977576492,
+    "samples": {
+      "old_gpu": [
+        76.30847930908203,
+        75.91014099121094,
+        75.92345428466797,
+        75.67462158203125,
+        75.93778991699219,
+        75.42272186279297
+      ],
+      "new_gpu": [
+        75.72787475585938,
+        75.57222747802734,
+        75.72684478759766,
+        75.4176025390625,
+        76.06681823730469,
+        75.49644470214844
+      ],
+      "old_wall": [
+        76.38102769851685,
+        75.94200223684311,
+        75.95096528530121,
+        75.71455836296082,
+        75.98177343606949,
+        75.4571408033371
+      ],
+      "new_wall": [
+        75.76420903205872,
+        75.60409605503082,
+        75.75955986976624,
+        75.45939832925797,
+        76.11937820911407,
+        75.53528994321823
+      ]
+    },
+    "seconds": 1.3175721913576126,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_whole",
+    "options": {
+      "physical_kv": true,
+      "fused_pack": true,
+      "source_split": false,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 1.4888350960973185e-05,
+    "median_ms": {
+      "old_gpu": 75.88659286499023,
+      "new_gpu": 75.12166595458984,
+      "old_wall": 75.91769099235535,
+      "new_wall": 75.1551128923893
+    },
+    "speed_reduction_pct": 1.0044801020658523,
+    "samples": {
+      "old_gpu": [
+        75.40940856933594,
+        76.51225280761719,
+        75.88044738769531,
+        76.48767852783203,
+        75.89273834228516,
+        75.54867553710938
+      ],
+      "new_gpu": [
+        75.19641876220703,
+        75.37561798095703,
+        74.84928131103516,
+        75.63673400878906,
+        74.86463928222656,
+        75.04691314697266
+      ],
+      "old_wall": [
+        75.47762989997864,
+        76.54604315757751,
+        75.91207325458527,
+        76.52220875024796,
+        75.92330873012543,
+        75.58414340019226
+      ],
+      "new_wall": [
+        75.23038983345032,
+        75.40924847126007,
+        74.88016784191132,
+        75.66792517900467,
+        74.89367574453354,
+        75.07983595132828
+      ]
+    },
+    "seconds": 1.3630061373114586,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_whole",
+    "options": {
+      "physical_kv": true,
+      "fused_pack": true,
+      "source_split": true,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 1.4888350960973185e-05,
+    "median_ms": {
+      "old_gpu": 75.89990234375,
+      "new_gpu": 75.53330993652344,
+      "old_wall": 75.9328231215477,
+      "new_wall": 75.5595788359642
+    },
+    "speed_reduction_pct": 0.4915453821413118,
+    "samples": {
+      "old_gpu": [
+        75.9183349609375,
+        76.18150329589844,
+        75.5599365234375,
+        76.05145263671875,
+        75.8814697265625,
+        75.5763168334961
+      ],
+      "new_gpu": [
+        75.15955352783203,
+        75.70944213867188,
+        75.53740692138672,
+        75.52921295166016,
+        75.04383850097656,
+        75.66130828857422
+      ],
+      "old_wall": [
+        75.95811784267426,
+        76.20816677808762,
+        75.58643072843552,
+        76.07777416706085,
+        75.90752840042114,
+        75.60363411903381
+      ],
+      "new_wall": [
+        75.18725842237473,
+        75.73670893907547,
+        75.56378841400146,
+        75.55536925792694,
+        75.1064345240593,
+        75.7092535495758
+      ]
+    },
+    "seconds": 1.3147711083292961,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_selective_proxy_12p5",
+    "options": {
+      "physical_kv": false,
+      "fused_pack": false,
+      "source_split": false,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.0,
+    "median_ms": {
+      "old_gpu": 88.10598373413086,
+      "new_gpu": 86.23155212402344,
+      "old_wall": 88.13777938485146,
+      "new_wall": 86.26267313957214
+    },
+    "speed_reduction_pct": 2.127471622687138,
+    "samples": {
+      "old_gpu": [
+        87.76191711425781,
+        88.39167785644531,
+        87.86739349365234,
+        88.5063705444336,
+        87.70662689208984,
+        88.34457397460938
+      ],
+      "new_gpu": [
+        85.94226837158203,
+        86.30579376220703,
+        86.17472076416016,
+        85.87264251708984,
+        86.28838348388672,
+        86.69184112548828
+      ],
+      "old_wall": [
+        87.80619502067566,
+        88.42068165540695,
+        87.89607137441635,
+        88.53688836097717,
+        87.73384243249893,
+        88.37948739528656
+      ],
+      "new_wall": [
+        85.9694629907608,
+        86.33419126272202,
+        86.20861917734146,
+        85.90501546859741,
+        86.31672710180283,
+        86.71914786100388
+      ]
+    },
+    "seconds": 1.6614905521273613,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_selective_proxy_12p5",
+    "options": {
+      "physical_kv": false,
+      "fused_pack": false,
+      "source_split": true,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.00015674946189392358,
+    "median_ms": {
+      "old_gpu": 88.18329620361328,
+      "new_gpu": 84.98329544067383,
+      "old_wall": 88.21667358279228,
+      "new_wall": 85.01628786325455
+    },
+    "speed_reduction_pct": 3.6278694146567925,
+    "samples": {
+      "old_gpu": [
+        88.05375671386719,
+        87.76908874511719,
+        88.28108978271484,
+        88.34867095947266,
+        88.08550262451172,
+        88.3025894165039
+      ],
+      "new_gpu": [
+        84.6407699584961,
+        85.17222595214844,
+        85.1046371459961,
+        84.91827392578125,
+        84.88038635253906,
+        85.0483169555664
+      ],
+      "old_wall": [
+        88.10871094465256,
+        87.80737966299057,
+        88.31585943698883,
+        88.38163316249847,
+        88.11748772859573,
+        88.3326381444931
+      ],
+      "new_wall": [
+        84.6896544098854,
+        85.22788435220718,
+        85.13899147510529,
+        84.95213836431503,
+        84.91108566522598,
+        85.08043736219406
+      ]
+    },
+    "seconds": 1.5481873750686646,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_selective_proxy_12p5",
+    "options": {
+      "physical_kv": false,
+      "fused_pack": true,
+      "source_split": false,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.0,
+    "median_ms": {
+      "old_gpu": 88.08140563964844,
+      "new_gpu": 85.81222152709961,
+      "old_wall": 88.12346681952477,
+      "new_wall": 85.84464713931084
+    },
+    "speed_reduction_pct": 2.5859396622251674,
+    "samples": {
+      "old_gpu": [
+        88.11417388916016,
+        87.90118408203125,
+        88.47564697265625,
+        88.39065551757812,
+        87.98617553710938,
+        88.04863739013672
+      ],
+      "new_gpu": [
+        85.56543731689453,
+        85.79174041748047,
+        85.83270263671875,
+        86.27200317382812,
+        85.60128021240234,
+        85.87161254882812
+      ],
+      "old_wall": [
+        88.17065507173538,
+        87.93045580387115,
+        88.50616216659546,
+        88.41724693775177,
+        88.01369369029999,
+        88.07627856731415
+      ],
+      "new_wall": [
+        85.60030162334442,
+        85.82669496536255,
+        85.86259931325912,
+        86.30049973726273,
+        85.64486354589462,
+        85.91370284557343
+      ]
+    },
+    "seconds": 1.5532802119851112,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_selective_proxy_12p5",
+    "options": {
+      "physical_kv": false,
+      "fused_pack": true,
+      "source_split": true,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.00015674946189392358,
+    "median_ms": {
+      "old_gpu": 88.00563430786133,
+      "new_gpu": 84.56243133544922,
+      "old_wall": 88.03706616163254,
+      "new_wall": 84.59115400910378
+    },
+    "speed_reduction_pct": 3.914160594813787,
+    "samples": {
+      "old_gpu": [
+        87.8182373046875,
+        88.40499114990234,
+        88.19404602050781,
+        88.17766571044922,
+        87.83360290527344,
+        87.38713836669922
+      ],
+      "new_gpu": [
+        84.56294250488281,
+        84.56192016601562,
+        84.96640014648438,
+        84.13593292236328,
+        85.05343627929688,
+        84.3509750366211
+      ],
+      "old_wall": [
+        87.86413073539734,
+        88.43271434307098,
+        88.22087198495865,
+        88.20617944002151,
+        87.86795288324356,
+        87.41298317909241
+      ],
+      "new_wall": [
+        84.59270745515823,
+        84.58960056304932,
+        84.99301224946976,
+        84.164559841156,
+        85.09255200624466,
+        84.37798917293549
+      ]
+    },
+    "seconds": 1.5615674033761024,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_selective_proxy_12p5",
+    "options": {
+      "physical_kv": true,
+      "fused_pack": false,
+      "source_split": false,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 1.4868706784909591e-05,
+    "median_ms": {
+      "old_gpu": 88.15001678466797,
+      "new_gpu": 86.5351676940918,
+      "old_wall": 88.1902277469635,
+      "new_wall": 86.5742415189743
+    },
+    "speed_reduction_pct": 1.8323869540577742,
+    "samples": {
+      "old_gpu": [
+        88.04454040527344,
+        88.24012756347656,
+        87.93907165527344,
+        88.31180572509766,
+        88.3404769897461,
+        88.05990600585938
+      ],
+      "new_gpu": [
+        86.6662368774414,
+        86.31705474853516,
+        86.36006164550781,
+        86.40409851074219,
+        86.7225570678711,
+        86.92428588867188
+      ],
+      "old_wall": [
+        88.09560537338257,
+        88.27509731054306,
+        87.97091990709305,
+        88.34322541952133,
+        88.38223665952682,
+        88.10535818338394
+      ],
+      "new_wall": [
+        86.71382814645767,
+        86.35672181844711,
+        86.39178425073624,
+        86.43465489149094,
+        86.76351606845856,
+        86.95331960916519
+      ]
+    },
+    "seconds": 1.7202914208173752,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_selective_proxy_12p5",
+    "options": {
+      "physical_kv": true,
+      "fused_pack": false,
+      "source_split": true,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.00015745307609904557,
+    "median_ms": {
+      "old_gpu": 87.96569442749023,
+      "new_gpu": 86.22797012329102,
+      "old_wall": 88.0032628774643,
+      "new_wall": 86.25955507159233
+    },
+    "speed_reduction_pct": 1.9814126759139628,
+    "samples": {
+      "old_gpu": [
+        88.04761505126953,
+        87.49056243896484,
+        88.08345794677734,
+        88.11827087402344,
+        87.88377380371094,
+        87.45267486572266
+      ],
+      "new_gpu": [
+        86.77887725830078,
+        86.20646667480469,
+        86.24947357177734,
+        86.14399719238281,
+        85.97196960449219,
+        86.37542724609375
+      ],
+      "old_wall": [
+        88.09373527765274,
+        87.51867711544037,
+        88.11221271753311,
+        88.14720064401627,
+        87.91279047727585,
+        87.4810591340065
+      ],
+      "new_wall": [
+        86.81224286556244,
+        86.23643964529037,
+        86.28267049789429,
+        86.17667853832245,
+        86.000457406044,
+        86.40705049037933
+      ]
+    },
+    "seconds": 1.5110116600990295,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_selective_proxy_12p5",
+    "options": {
+      "physical_kv": true,
+      "fused_pack": true,
+      "source_split": false,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 1.4868706784909591e-05,
+    "median_ms": {
+      "old_gpu": 88.27852630615234,
+      "new_gpu": 85.98937606811523,
+      "old_wall": 88.30675110220909,
+      "new_wall": 86.01804822683334
+    },
+    "speed_reduction_pct": 2.591764329237667,
+    "samples": {
+      "old_gpu": [
+        88.62413024902344,
+        87.69945526123047,
+        88.58214569091797,
+        88.4326400756836,
+        88.1244125366211,
+        87.7496337890625
+      ],
+      "new_gpu": [
+        85.99858856201172,
+        85.85113525390625,
+        86.0057601928711,
+        85.9310073852539,
+        85.98016357421875,
+        86.6662368774414
+      ],
+      "old_wall": [
+        88.66781741380692,
+        87.72725611925125,
+        88.61160278320312,
+        88.46067637205124,
+        88.15282583236694,
+        87.78814226388931
+      ],
+      "new_wall": [
+        86.02909743785858,
+        85.88007837533951,
+        86.0365480184555,
+        85.95879375934601,
+        86.0069990158081,
+        86.69815212488174
+      ]
+    },
+    "seconds": 1.510569505393505,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "real_shape_timing",
+    "mode": "S_selective_proxy_12p5",
+    "options": {
+      "physical_kv": true,
+      "fused_pack": true,
+      "source_split": true,
+      "source_batch": 64,
+      "fused_merge": true
+    },
+    "relative_l2": 0.00015745307609904557,
+    "median_ms": {
+      "old_gpu": 88.15206146240234,
+      "new_gpu": 85.70316696166992,
+      "old_wall": 88.18113058805466,
+      "new_wall": 85.73248982429504
+    },
+    "speed_reduction_pct": 2.776830765754912,
+    "samples": {
+      "old_gpu": [
+        88.11212921142578,
+        88.15615844726562,
+        88.0179214477539,
+        88.14796447753906,
+        88.3210220336914,
+        88.51148986816406
+      ],
+      "new_gpu": [
+        86.25971221923828,
+        85.7159652709961,
+        85.28793334960938,
+        85.68627166748047,
+        85.69036865234375,
+        85.94022369384766
+      ],
+      "old_wall": [
+        88.15976232290268,
+        88.18601071834564,
+        88.05491775274277,
+        88.17625045776367,
+        88.34852278232574,
+        88.53863924741745
+      ],
+      "new_wall": [
+        86.28576248884201,
+        85.74312180280685,
+        85.32457053661346,
+        85.72185784578323,
+        85.71755886077881,
+        85.96817404031754
+      ]
+    },
+    "seconds": 1.5553058609366417,
+    "scope": "all softmax branches incl fresh KV reorder/pack/kernel/merge/scatter; excludes one-time indices/compile, QKV projection, linear, Ulysses and whole-model runtime"
+  },
+  {
+    "stage": "completed",
+    "end_to_end_measured": false,
+    "weights_changed": false,
+    "connectivity_changed": false
+  }
+]

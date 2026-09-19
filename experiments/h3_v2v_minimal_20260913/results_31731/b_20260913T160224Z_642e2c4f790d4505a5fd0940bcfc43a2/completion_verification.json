@@ -1,0 +1,165 @@
+{
+  "checked_at": "2026-09-13T16:34:44.388728+00:00",
+  "result": "passed",
+  "run_id": "642e2c4f790d4505a5fd0940bcfc43a2",
+  "frozen_matches_current_readonly_snapshot": true,
+  "large_weight_payload_rehashed": false,
+  "both_request_result_http_media_and_log_loads_verified": true,
+  "all_original_process_identities_exited": [
+    428051,
+    428131,
+    428757,
+    428758,
+    428759,
+    428760,
+    428761,
+    428762,
+    428763,
+    428764
+  ],
+  "fresh_idle": {
+    "selected_physical_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "explicitly_idle_cards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "other_busy_cards": []
+  },
+  "fresh_health": {
+    "health": {
+      "0": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "1": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "2": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "3": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "4": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "5": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "6": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "7": {
+        "model": "910B3",
+        "health": "OK"
+      }
+    },
+    "hbm": {
+      "0": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "1": {
+        "used_mib": 3411,
+        "total_mib": 65536,
+        "free_mib": 62125
+      },
+      "2": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "3": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "4": {
+        "used_mib": 3410,
+        "total_mib": 65536,
+        "free_mib": 62126
+      },
+      "5": {
+        "used_mib": 3411,
+        "total_mib": 65536,
+        "free_mib": 62125
+      },
+      "6": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      },
+      "7": {
+        "used_mib": 3409,
+        "total_mib": 65536,
+        "free_mib": 62127
+      }
+    }
+  },
+  "tracebacks_only_after_shutdown_marker": true,
+  "formal_seconds": 923.0886316811666,
+  "formal_sha256": "c15f08b33a5419ee704350133afd7441386738e11836aa7c605e71ae481c75cc",
+  "records": {
+    "status": {
+      "path": "/cache/zhonghao/h3/b_model_trial/01234567/explicit_reverse_couple_124/B/runs/b_20260913T160224Z_642e2c4f790d4505a5fd0940bcfc43a2/b_status.json",
+      "sha256": "9a3c1c890da391ecaa220f8aa76712a3975c5a9f3daa88fa548b8adc26b39a67",
+      "size_bytes": 29736
+    },
+    "result": {
+      "path": "/cache/zhonghao/h3/b_model_trial/01234567/explicit_reverse_couple_124/B/runs/b_20260913T160224Z_642e2c4f790d4505a5fd0940bcfc43a2/b_50step/result.json",
+      "sha256": "be970bc20378ca2b4e54c776ccfe16922108024b5ebeeb5e296e15c353411b3c",
+      "size_bytes": 1529
+    },
+    "request": {
+      "path": "/cache/zhonghao/h3/b_model_trial/01234567/explicit_reverse_couple_124/B/runs/b_20260913T160224Z_642e2c4f790d4505a5fd0940bcfc43a2/b_50step/request.json",
+      "sha256": "2ff23c11e1c0510ae0eb126e8e7e1bd0e45e92eb5d143b3a1b9b48aa38ab43d9",
+      "size_bytes": 1184
+    },
+    "gate": {
+      "path": "/cache/zhonghao/h3/b_model_trial/01234567/explicit_reverse_couple_124/B/runs/b_20260913T160224Z_642e2c4f790d4505a5fd0940bcfc43a2/formal_smoke_gate.json",
+      "sha256": "5c696655843a128db751a90c5065e63e2d092e19d9945b736aef6d5c81df6396",
+      "size_bytes": 19505
+    },
+    "frozen": {
+      "path": "/cache/zhonghao/h3/b_model_trial/01234567/explicit_reverse_couple_124/B/runs/b_20260913T160224Z_642e2c4f790d4505a5fd0940bcfc43a2/frozen_evidence.json",
+      "sha256": "f949d37d90974140850a23c7cb32e3317f676d77df4791b939b9f7949ed54196",
+      "size_bytes": 11623934
+    }
+  },
+  "record_type": "root_actual_read_only_remote_completion_check",
+  "tool_execution": {
+    "exit_code": 0,
+    "chunk_id": "e64ed2",
+    "wall_time_seconds": 8.6497648
+  },
+  "checker_note": "Initial read-only check stopped on int-key versus JSON string-key health comparison. Re-executed the complete check with JSON normalization; no production code, evidence, outputs or environment were modified.",
+  "local_download": {
+    "completed": true,
+    "video_bytes": 4657820,
+    "video_sha256": "c15f08b33a5419ee704350133afd7441386738e11836aa7c605e71ae481c75cc",
+    "result_request_status_gate_sha_equal_remote": true
+  },
+  "quality_note": "Completion and file validation only; editing quality is being reviewed separately. A dense reverse baseline itself failed requested reversal in sampled review."
+}

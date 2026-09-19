@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "limited_independent_visual_review_completed",
+  "reviewer": "/root/h3_resource_expansion_review",
+  "run_id": "1fa6918c2e4743dc81d256610496f489",
+  "case": "C",
+  "sample_id": "shirt_red_couple_124",
+  "review_date_local": "2026-09-14",
+  "method": "Actually inspected all three source-left/C-right contact sheets and three C native frames with view_image at original detail. No continuous video playback was performed.",
+  "viewed_files_sha256": {
+    "source_C_color_part_1.jpg": "37f2a40162597b8ca83861eec74c189751b0978bf953080b131d6469051f49ef",
+    "source_C_color_part_2.jpg": "f9e47919338b531f7987f832b5430876adad3129d38116afa8741c8585f5873d",
+    "source_C_color_part_3.jpg": "4c8205712d2ef61f86aae4c37b57e256819af5d7ab5129b75a521393fea4592d",
+    "C_color_frame_000.png": "8ba7e960807f571288b654e2c7bd279b185e3a8e6b75ca967a8873b989ee7b25",
+    "C_color_frame_060.png": "f504972f989d797151450f4a9ccafaba471ecbdab336de40df7ec6a1f73d1245",
+    "C_color_frame_123.png": "55dae33274fefa8e66efcfc58097fc8d6feed7c37f3d281eda30f5046736e9dc"
+  },
+  "contact_frame_indices": [0, 15, 30, 45, 60, 75, 90, 105, 123],
+  "native_C_frame_indices": [0, 60, 123],
+  "native_source_frames_viewed_separately": false,
+  "A_or_B_video_or_images_viewed_in_this_review": false,
+  "observations": {
+    "shirt_color": {
+      "assessment": "The man's shirt is visibly red at all nine inspected contact-sheet points and all three inspected native C frames.",
+      "scope": "Sampled-frame color success only; this does not establish success of the complete preserve-only editing instruction."
+    },
+    "woman_clothing": {
+      "assessment": "The woman's visible garment remains white in the inspected samples, without an obvious red recoloring of it.",
+      "qualification": "The substantially changed viewing arrangement reveals different garment surfaces and folds. Exact fabric, shape and detail preservation is not established."
+    },
+    "coarse_actions_and_order": {
+      "source_in_contact_sheets": "The source starts face-to-face with the man holding the woman's head, proceeds through approach and a kiss around frame 30, then separation around frame 45 and a chest embrace from around frame 60 onward; the woman's face is outward/toward the camera late in the source.",
+      "C_in_contact_sheets": "C already starts in a kiss with the man's arm around the woman's waist. The early and middle samples remain predominantly face-to-face/kissing, and the late samples show the couple facing each other and smiling with their faces close together. Native frame 60 is still a kiss, and native frame 123 is face-to-face smiling rather than the source's late chest-embrace pose.",
+      "assessment": "The observed C sequence does not preserve the source's approach-to-kiss-to-chest-embrace progression. This is a substantive action-content/order/timing mismatch, not merely uncertainty about exact frame alignment.",
+      "not_a_freeze": "Head poses, smiles, relative posture and composition change across the C samples; the inspected output should not be described as a static or frozen video."
+    },
+    "people_and_viewing_arrangement": {
+      "assessment": "In the source contact images the woman is on the left and the man on the right; in C the man is on the left and the woman on the right, with different visible sides of their faces/bodies and different hand placement. The couple remains broadly recognizable as a man and brown-haired woman, but exact identity preservation is not established from these changed views.",
+      "causal_limit": "The images establish a changed viewing arrangement; they do not establish whether its cause is camera movement, actor rotation or another generative change."
+    },
+    "background_lighting_and_framing": {
+      "assessment": "C introduces a conspicuous large dark tree and a dark distant tree line with a different landscape arrangement from the source's open pale sky/grass and smaller distant tree clumps. The couple's crop, visible head/body surfaces and placement differ substantially. C also appears darker and more contrasty in the inspected comparisons.",
+      "instruction_compliance": "The requested preservation of viewpoint/framing/background/lighting is visibly not satisfied at the sampled points."
+    },
+    "native_frame_artifacts": {
+      "assessment": "Native C frames 0, 60 and 123 show coherent full images without an observed black screen or whole-frame collapse. The main concrete defects for this task are the altered interaction, viewing arrangement, composition and background, rather than an established gross rendering collapse.",
+      "qualification": "No claim is made that hands, faces, cloth details or temporal transitions are artifact-free; only three native output frames were inspected."
+    }
+  },
+  "conclusion": {
+    "limited_task_assessment": "The red-shirt color objective is visible in the inspected C frames, and the woman's garment remains white, but C fails the broader instruction to change only the shirt color while retaining the original action progression and scene composition.",
+    "sampled_shirt_color_objective_observed": true,
+    "preserve_only_edit_supported_by_samples": false,
+    "source_coarse_action_progression_preserved_in_samples": false,
+    "full_quality_equivalence_established": false,
+    "exact_temporal_timing_preservation_established": false,
+    "exact_garment_detail_preservation_established": false,
+    "performance_assessment_performed": false,
+    "algorithmic_root_cause_established": false
+  },
+  "limitations": [
+    "This review inspected nine contact-sheet timestamps and three native C frames, not every output frame and not continuous video playback.",
+    "Audio was not played or evaluated.",
+    "Native source images were not opened separately; source comparisons use the left-hand source panels of the three contact sheets.",
+    "A and B images/videos were not reopened in this review, so this record does not establish a full cross-case equal-quality ranking.",
+    "Exact event timing, motion smoothness, flicker, lip behavior and small intermittent defects cannot be established from these sparse stills.",
+    "This review does not independently validate video extraction, full-video SHA, frame count, PTS, model execution or source/prompt provenance; the six actually viewed image files are bound by SHA256 above.",
+    "Latency numbers were not used to judge image quality. Faster execution cannot compensate for the observed preserve-only instruction failures.",
+    "The visual mismatch alone does not prove its implementation or algorithmic cause."
+  ]
+}

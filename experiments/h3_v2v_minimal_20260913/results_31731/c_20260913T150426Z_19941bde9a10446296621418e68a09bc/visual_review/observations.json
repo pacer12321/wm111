@@ -1,0 +1,105 @@
+{
+  "review_type": "limited_manual_source_A8_B8_C8_selected_frame_comparison",
+  "not_a_full_video_quality_evaluation": true,
+  "runs": {
+    "A8": "a_20260913T133502Z_294205bef2e043dc84b41315e544b36d",
+    "B8": "b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4",
+    "C8": "c_20260913T150426Z_19941bde9a10446296621418e68a09bc"
+  },
+  "input_identity": {
+    "source_sha256": "e02b3df481f66d0968ab65eac1d56ded8493da952c0bfb21b70ecd5715f87cf9",
+    "A8_sha256": "1df518c92da95f9f926d1a82284199a6017660a46a502502c08b12219c52c9a8",
+    "B8_sha256": "ca8aa801cb1c96026b237f4f1dbb93d8e4846071338aae3796ae77c24537d2fa",
+    "C8_sha256": "014fc5c0da43984e7a903ee6cba199e5a62939d852d04eda07eda0a80356366f",
+    "C8_result_sha256": "2543c9d44ab96e84727bc85811b149eced9bec348a7a584077036cc6dac1ed68",
+    "C8_bytes": 12149617,
+    "all_video_files_hashed_before_and_after_decoding": true,
+    "C8_result_success_requested_50_steps_and_exact_output_run_path_verified": true,
+    "all_decoded_frame_counts": 124,
+    "all_fps": 24,
+    "all_dimensions": [1344, 768],
+    "all_video_track_duration_seconds": 5.166666666666667,
+    "every_decoded_pts_verified_exactly_frame_index_divided_by_24": true
+  },
+  "local_execution": {
+    "script": "extract_review.py",
+    "successful_script_invocations": 1,
+    "exit_code": 0,
+    "python_executable": "C:/Users/DZH/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "python_version": "3.12.14",
+    "PYTHONPATH": "C:/Users/DZH/OneDrive/Documents/ChatGPT/wm111/.audio_tools",
+    "av_version": "18.1.0",
+    "av_location": "C:/Users/DZH/OneDrive/Documents/ChatGPT/wm111/.audio_tools/av/__init__.py",
+    "Pillow_version": "12.3.0",
+    "new_packages_installed": false,
+    "remote_operations": false,
+    "new_model_calls": false,
+    "NPU_operations": false
+  },
+  "inspection": {
+    "contact": "source_A8_B8_C8_contact.jpg",
+    "contact_dimensions": [1792, 1462],
+    "contact_displayed_dimensions": [1760, 1435],
+    "contact_single_frame_dimensions_before_display_resize": [448, 256],
+    "source_A8_B8_C8_indices_seen_side_by_side": [0, 30, 60, 90, 123],
+    "pts_seconds": [0.0, 1.25, 2.5, 3.75, 5.125],
+    "C8_native_resolution_frames_additionally_seen": [0, 30, 60, 90, 123],
+    "source_A8_B8_native_frames_seen_again": [123],
+    "continuous_playback_performed": false,
+    "audio_reviewed": false,
+    "method": "Local CPU PyAV full decode with one codec thread; selected native PNGs and PIL contact sheet viewed by the assistant. Full decode verifies metadata, not full-video visual quality."
+  },
+  "prompt_context": {
+    "read_from": "../request.json",
+    "prompt": "Transform the reference lake video into a photorealistic winter snow scene. Preserve the original camera movement, framing, shot timing, lake shoreline, mountains, and overall composition. Cover the landscape with fresh snow, freeze parts of the lake, add gentle falling snow, and keep synchronized natural winter ambience.",
+    "interpretation_limit": "Freezing part of the lake is explicitly requested. More visible ice alone is not an editing failure, and does not establish overall quality superiority."
+  },
+  "observations": {
+    "edit_achievement": {
+      "assessment": "all_three_outputs_show_snow_edit_C8_has_visibly_stronger_snow_and_ice_changes",
+      "details": [
+        "At all five sampled times, A8 and B8 retain a largely open-water lake with snowy shore and branches; C8 shows a broad smooth pale ice/snow-like region across the far lake, while nearer water still has ripples and a sun reflection.",
+        "C8 covers the foreground bank and rocks with thicker, more continuous snow than A8/B8 and renders more heavily snow-covered trees on the opposite bank.",
+        "The prompt explicitly requests fresh snow and partial lake freezing, so the larger C8 ice region is compatible with an intended edit. Its material and physical correctness were not established by still-image inspection.",
+        "Sustained gentle falling snow is not clearly demonstrated by the five still samples; this prompt component remains unverified for all outputs.",
+        "The images visibly differ in edit strength and content, so this review does not support an equal-quality claim for A8, B8, and C8."
+      ]
+    },
+    "composition_and_source_preservation": {
+      "assessment": "broad_C8_scene_layout_recognizable_but_foreground_structure_differs_more_than_A8_B8",
+      "details": [
+        "C8 keeps the central sunset and reflection, distant ridge, lake, diagonally receding right bank, and right-side conifers in broadly corresponding image regions.",
+        "C8 does not preserve every foreground structure: in frame 123, source/A8/B8 have a large nearby branch mass extending across much of the right side; C8 instead has a smaller separated conifer low on the right, a tall tree trunk farther right, and much more exposed snowy bank.",
+        "C8 also introduces a narrow trough or track-like feature along the snowy right bank. This is a visible added snow detail, not a verified artifact or physically validated path.",
+        "Across the selected C8 frames the right-side trees become more prominent, but the distinct tree geometry prevents treating this as evidence of exact camera or same-frame source alignment.",
+        "These are concrete source-fidelity differences, not a metric-backed global ranking of A8/B8/C8."
+      ]
+    },
+    "blue_edges_and_texture": {
+      "assessment": "cool_snow_shadows_visible_no_conspicuous_neon_blue_outline_confirmed_in_sampled_C8_frames",
+      "details": [
+        "C8 has blue-gray shadows across the snow and the edge of the pale lake region; cool-toned snow/ice shadows also occur in A8/B8.",
+        "No conspicuous neon-blue outline, large blue block corruption, or broken image region was identified in the five native-resolution C8 frames.",
+        "The C8 far-lake region is smooth and has long shadow-like bands, unlike the water-ripple texture retained by A8/B8. This is a content/material change and is not by itself proof of numerical attention corruption.",
+        "Fine texture quality, subtle edge artifacts, and transient defects between the sampled frames remain unmeasured."
+      ]
+    },
+    "obvious_failure_screen": {
+      "assessment": "no_black_blank_or_large_geometric_collapse_in_the_five_C8_samples",
+      "details": [
+        "All five C8 frames are recognizable lake-at-sunset winter scenes rather than black screens or grossly corrupted outputs.",
+        "The small green bright spot near the shore is also present in source/A8/B8 and should not be attributed to a new C8 artifact.",
+        "Absence of gross failure in five images does not establish absence of flicker, temporal drift, transient distortion, or audio problems."
+      ]
+    }
+  },
+  "limits": [
+    "Only five selected images per video were visually inspected, with additional native-resolution views recorded above. Decoding every frame does not mean every frame was visually reviewed.",
+    "No continuous playback, audio listening, VLM scoring, image/video perceptual metric, optical flow, or human-panel evaluation was performed.",
+    "Matching PTS and frame counts does not establish source-target semantic alignment or preservation of camera movement.",
+    "A/B/C visual equivalence or non-inferiority has not been established. C8 visibly changes snow/ice extent and foreground structure.",
+    "This visual review does not measure or validate request timing, DiT latency, NFE, memory, or speedup relative to original dense attention.",
+    "Only files under this C run's visual_review directory were created. No input video, result/status record, production code, or remote state was changed."
+  ],
+  "concise_conclusion_zh": "C8 五帧样本均有明确冬季化，无黑屏或大面积畸变；但它比 A8/B8 积雪更厚、结冰范围更大，且末帧右侧前景树枝结构明显不同。部分结冰本就在指令内，不能因此直接判失败；同时也不能宣称三者等质或严格保留相机/时序。持续飘雪、全程闪烁和音频尚未评测。"
+}

@@ -1,0 +1,26 @@
+{
+  "host": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+  "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+  "ssh_port": 31731,
+  "vendor_deployed_at": "2026-09-13T14:32:49.795626+00:00",
+  "vendor_manifest": "/cache/zhonghao/h3/candidates/c_v1/deploy_manifest.json",
+  "vendor_verified_files": 2779,
+  "vendor_verified_bytes": 54252496,
+  "vendor_no_hardlinks_and_sources_unchanged": true,
+  "entry_root": "/cache/zhonghao/h3/c_model_trial_code",
+  "tiny_entry_root": "/cache/zhonghao/h3/c_validation_code",
+  "source_manifest_records_verified": 47,
+  "tiny_five_production_files_verified": true,
+  "real_linux_cpu_test_count": 38,
+  "real_linux_cpu_tests_passed": 38,
+  "real_linux_cpu_skipped": 0,
+  "unittest_wall_seconds": 13.117,
+  "shell_syntax_checks_passed": ["launch_c_trial.sh", "launch_c_validation.sh"],
+  "production_sha256": {
+    "c_trial_gates.py": "45e925f83453e225ac42608e9fad1249d75a5d3dc044c54aaf742c66e77fccce",
+    "run_c_trial.py": "ac5755058f7546de0e36821dae6bcad639f27a771a9cd2855c5b39cdb3aa54b2",
+    "launch_c_trial.sh": "430e522b84ac70d33560c11163af5c8197078a0f9573af88595d9b5bdfb309d6"
+  },
+  "NPU_test_started_by_this_verification": false,
+  "note": "Real Linux CPU regressions and deployed code verification, not C tiny NPU or full-model evidence. B finished and cleaned before this work. Freeze these files once C begins."
+}

@@ -1,0 +1,1491 @@
+{
+  "schema_version": 1,
+  "artifact_type": "independent_live_C_smoke_and_formal_request_integrity_audit",
+  "audit_status": "passed_live_integrity",
+  "author_agent": "/root/h3_b_smoke_result_audit",
+  "run_id": "1fa6918c2e4743dc81d256610496f489",
+  "run_directory": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489",
+  "observed_start_utc": "2026-09-14T05:43:30.045114+00:00",
+  "observed_end_utc": "2026-09-14T05:43:31.601282+00:00",
+  "filename_time_note": "The requested filename ends in1341; the actual single remote read occurred at13:43:30–31 Asia/Shanghai. Use the observation timestamps, not the filename, for chronology.",
+  "summary": {
+    "smoke_and_formal_request_bindings_passed": true,
+    "actual_smoke_mp4_sha_and_http_passed": true,
+    "prefix_and_eight_full_load_records_passed": true,
+    "base_tensors_per_worker": 535,
+    "branch_tensors_per_worker": 800,
+    "lora_pairs_per_worker": 208,
+    "restored_intraop_threads_per_worker": 192,
+    "restored_interop_threads_per_worker": 192,
+    "smoke_strict_request_count_per_pid": 1,
+    "current_strict_request_count_per_pid": 2,
+    "strict_common_metadata": {
+      "mode": "C_strict_visual_source_same_latent_frame_v1",
+      "reference_count": 1,
+      "reference_kind": "video",
+      "patch_size": [
+        1,
+        2,
+        2
+      ],
+      "source_shape": [
+        37,
+        48,
+        84
+      ],
+      "target_shape": [
+        37,
+        48,
+        84
+      ],
+      "text_len": 6159,
+      "source_audio_t": 0,
+      "target_audio_t": 207
+    },
+    "all_ten_original_process_identities_alive": true,
+    "fresh_eight_cards_map_to_expected_workers": true,
+    "all_eight_card_health_ok": true,
+    "latest_observed_progress": [
+      998,
+      " 49%|████▉     | 24/49 [06:53<07:12, 17.31s/it]"
+    ],
+    "progress_is_not_NFE": true,
+    "current_phase": "c_50step_request_running",
+    "formal_request_attempts": 1,
+    "formal_completed": false,
+    "formal_result_exists": false,
+    "blocker_found_in_checked_scope": false
+  },
+  "checks_performed": [
+    "Read only the fixed C run; verified case/run/group/sample, same host/boot and current attempt1 formal-start state.",
+    "Pinned actual C supervisor/C gate/B gate/A gate source hashes before importing CPU-only readers.",
+    "Rehashed actual source bytes and matched frozen source/path and pinned4fb53... SHA.",
+    "Both actual request.json files match exact host/run/group/sample/source/path/SHA/red-shirt prompt, steps2/50 and fixed1344x768/24fps/seed4101/flow12/audioflow3/duration5/ref2va.",
+    "Both requests and saved smoke gate match original server PID/start_ticks/pgrp/session.",
+    "Actual smoke result equals status; raw response header final200/video_mp4/content_length and curlstdout200/curl0/empty stderr verified.",
+    "Actual smoke MP4 hashed a081a0f8bc30c8aefcb31bb013f059fed46f8957c2ee3b704ccdb1f38ac9462c,2847398bytes; saved smoke ffprobe JSON equals result (not a fresh decode).",
+    "Saved formal_smoke_gate equals status; its request/result file hashes match actual smoke artifacts.",
+    "Actual142871byte smoke prefix SHA e50d0733d7e4b5cae926b2445fdafb33a58282ed9a724f5bc1f0b823ce20354a verified against the captured current server.log bytes.",
+    "Real C parse_full_load_evidence ran on prefix and current captured log; all8PID match saved proof and known card identities with535base/800branch/208LoRA and192intraop/inter-op restoration.",
+    "Real C parse_strict_metadata ran with requests1 on prefix and requests2 on current captured log; saved JSON compared with normalized keys/tuples.",
+    "All16 current strict records match the common one-video,patch(1,2,2),source/target(37,48,84),text6159,source_audio0,target_audio207 metadata.",
+    "Fresh /proc identities for supervisor,server and8workers match recorded PID/start/pgrp/session and are non-zombie; expected server/workers appear in run-marked owned group.",
+    "One fresh npu-smi info maps all8physical cards exactly to workers977439–977446; allhealthOK.",
+    "Recorded recent literal iteration lines and status at read end, without interpreting progress as actual model-forward count.",
+    "Confirmed formal result.json and formal_strict_metadata.json not yet present; no completion claim made."
+  ],
+  "not_performed": [
+    "No terminal full evidence_snapshot==frozen comparison, no C tiny revalidation and no full release19-file audit in this live check.",
+    "No current weight-file stat/header audit or large-model payload hash; load parser compares log evidence with existing frozen weight metadata only.",
+    "No independent full frozen file SHA anchoring in this lightweight check; the frozen JSON was read to bind source/generation/weight metadata.",
+    "No model execution, additional generation, task launch/stop, signal, lease modification or remote file write.",
+    "No new ffprobe or visual inspection; smoke saved metadata was compared, and actual smoke bytes were hashed.",
+    "No formal HTTP success/media verification: the50step request was still running and its result did not exist.",
+    "No terminal cleanup/PID-exit/idle check: these ten original processes are intentionally alive and the eight cards are busy with C.",
+    "Strict metadata is per-diffuse input-layout evidence, not a per-layer attention-mask trace.",
+    "The original parser result contains a generic limitation mentioning successful requests; here only smoke has completed, and requests2 only proves two sets of input metadata, not successful formal completion.",
+    "Not a continuing monitor; facts apply to this one observation window.",
+    "No30213 access."
+  ],
+  "tool": {
+    "functions_cell_id": "208",
+    "chunk_id": "5368f2",
+    "exit_code": 0,
+    "wall_time_seconds": 6.8622535,
+    "actual_stdout": "{\"audit_status\": \"passed_live_integrity\", \"observed_start_utc\": \"2026-09-14T05:43:30.045114+00:00\", \"run_id\": \"1fa6918c2e4743dc81d256610496f489\", \"run_directory\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489\", \"scope\": \"Live smoke/formal request integrity only; no terminal dependency/tiny/current-weight audit\", \"status_at_start\": {\"phase\": \"c_50step_request_running\", \"host\": {\"hostname\": \"ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0\", \"boot_id\": \"8e904236-bb23-44b5-b7ba-af73ba5c1f77\", \"machine\": \"aarch64\"}, \"run_id\": \"1fa6918c2e4743dc81d256610496f489\", \"sample_id\": \"shirt_red_couple_124\", \"group\": \"01234567\", \"updated_at\": \"2026-09-14T05:36:09.975631+00:00\", \"formal_request_started_at\": \"2026-09-14T05:36:09.965490+00:00\", \"formal_request_attempts\": 1, \"formal_50step_started\": true, \"formal_50step_completed\": false, \"error\": null, \"attention_policy\": \"C strict same-latent-frame visual source in target softmax queries; B target neighborhoods and linear unchanged\"}, \"parser_code\": {\"c/run_c_trial.py\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/c/run_c_trial.py\", \"sha256\": \"95eed8b294dca789327fdec6639ef7134f4b97745239518fbce88a54960ac172\", \"size_bytes\": 24184}, \"c/c_trial_gates.py\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/c/c_trial_gates.py\", \"sha256\": \"258146df27c938e9f220bb64a6725545cc8d1ce8200b7fe072aca4c1143128be\", \"size_bytes\": 15297}, \"b/b_trial_gates.py\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/b/b_trial_gates.py\", \"sha256\": \"b784b9d7b131230ebbf669a81b9b017fdc7479bab952dc47dd10d520e222dd56\", \"size_bytes\": 10616}, \"a/trial_gates.py\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/a/trial_gates.py\", \"sha256\": \"f786cb3c3ccead8b6de365ca62d2f9dea8aaece1493cd9be0b01e1a4fd4cefa0\", \"size_bytes\": 16502}}, \"source\": {\"path\": \"/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4\", \"sha256\": \"4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2\", \"size_bytes\": 1527004}, \"requests\": [{\"name\": \"smoke_2step\", \"request_record\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/request.json\", \"sha256\": \"58222eacd55e23c3e9d96009941bd9d434e7bb9d0600cd2bdba396dd177f5d92\", \"size_bytes\": 1259}, \"actual_request\": {\"started_at\": \"2026-09-14T05:33:32.108067+00:00\", \"host\": {\"hostname\": \"ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0\", \"boot_id\": \"8e904236-bb23-44b5-b7ba-af73ba5c1f77\", \"machine\": \"aarch64\"}, \"group\": \"01234567\", \"run_id\": \"1fa6918c2e4743dc81d256610496f489\", \"sample_id\": \"shirt_red_couple_124\", \"fields\": {\"width\": 1344, \"height\": 768, \"fps\": 24, \"flow_shift\": 12.0, \"seed\": 4101, \"prompt\": \"Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.\", \"num_inference_steps\": 2, \"extra_params\": \"{\\\"task\\\": \\\"ref2va\\\", \\\"duration\\\": 5.0, \\\"audio_flow_shift\\\": 3.0}\"}, \"source_video\": \"/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4\", \"source_sha256\": \"4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2\", \"requested_steps\": 2, \"actual_model_forward_calls\": null, \"quality_evidence\": false, \"server_proc_identity\": {\"pid\": 976934, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130016739}}, \"all_requested_bindings_passed\": true}, {\"name\": \"c_50step\", \"request_record\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/c_50step/request.json\", \"sha256\": \"580dcbdff320495c6cfcd6f80f167c03d39d288b7a91712e512f9b2ac5b26b17\", \"size_bytes\": 1261}, \"actual_request\": {\"started_at\": \"2026-09-14T05:36:09.974541+00:00\", \"host\": {\"hostname\": \"ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0\", \"boot_id\": \"8e904236-bb23-44b5-b7ba-af73ba5c1f77\", \"machine\": \"aarch64\"}, \"group\": \"01234567\", \"run_id\": \"1fa6918c2e4743dc81d256610496f489\", \"sample_id\": \"shirt_red_couple_124\", \"fields\": {\"width\": 1344, \"height\": 768, \"fps\": 24, \"flow_shift\": 12.0, \"seed\": 4101, \"prompt\": \"Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.\", \"num_inference_steps\": 50, \"extra_params\": \"{\\\"task\\\": \\\"ref2va\\\", \\\"duration\\\": 5.0, \\\"audio_flow_shift\\\": 3.0}\"}, \"source_video\": \"/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4\", \"source_sha256\": \"4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2\", \"requested_steps\": 50, \"actual_model_forward_calls\": null, \"quality_evidence\": false, \"server_proc_identity\": {\"pid\": 976934, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130016739}}, \"all_requested_bindings_passed\": true}], \"smoke\": {\"result_summary\": {\"completed_at\": \"2026-09-14T05:36:05.131307+00:00\", \"request_end_to_end_seconds\": 153.01988986390643, \"http_code\": \"200\", \"curl_returncode\": 0, \"requested_steps\": 2, \"success\": true}, \"media\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/output/smoke_2step.mp4\", \"sha256\": \"a081a0f8bc30c8aefcb31bb013f059fed46f8957c2ee3b704ccdb1f38ac9462c\", \"size_bytes\": 2847398}, \"raw_headers\": \"HTTP/1.1 100 Continue\\n\\nHTTP/1.1 200 OK\\ndate: Mon, 14 Sep 2026 05:33:32 GMT\\nserver: uvicorn\\nx-request-id: video_sync-bf8d989779186acc\\nx-model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA\\nx-inference-time-s: 152.429\\nx-stage-durations: {\\\"queue_wait_ms\\\":0.38949213922023773,\\\"stage_0_gen_ms\\\":130202.67534255981}\\nx-peak-memory-mb: 28666.000\\ncontent-length: 2847398\\ncontent-type: video/mp4\\n\\n\", \"raw_curl_stdout\": \"200\", \"raw_curl_stderr\": \"\", \"records\": {\"result.json\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/result.json\", \"sha256\": \"cfc184dc1011842beb79206debc5b214066e934a7a41bdb36e220523c15e9b13\", \"size_bytes\": 1534}, \"response.headers\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/response.headers\", \"sha256\": \"e34a5a0c3339b926572c4448910c0b33c3135646dfc78aec195b0f53003d237c\", \"size_bytes\": 397}, \"curl.stdout\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/curl.stdout\", \"sha256\": \"27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf\", \"size_bytes\": 3}, \"curl.stderr\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/curl.stderr\", \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"size_bytes\": 0}, \"ffprobe.json\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/ffprobe.json\", \"sha256\": \"cbef153455aa1d8e0ee839610c1520d51b1e98202bc7235e0466ba83f1342765\", \"size_bytes\": 849}}, \"saved_probe_checks\": {\"dimensions\": [1344, 768], \"fps\": 24.0, \"frame_count\": 124, \"container_duration_seconds\": 5.207}, \"fresh_ffprobe_performed\": false}, \"load_and_strict\": {\"smoke_prefix_bytes\": 142871, \"smoke_prefix_sha256\": \"e50d0733d7e4b5cae926b2445fdafb33a58282ed9a724f5bc1f0b823ce20354a\", \"observed_log_bytes\": 148442, \"observed_log_sha256\": \"35c69b99908510db7a6e7818138bc1372ebaaa7e6afa5f3bd6910558dfb343a8\", \"loads_by_pid\": {\"977444\": {\"base\": 535, \"branch\": 800, \"lora_pairs\": 208, \"checkpoint\": \"/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000\", \"intraop_after\": 192, \"interop_after\": 192}, \"977439\": {\"base\": 535, \"branch\": 800, \"lora_pairs\": 208, \"checkpoint\": \"/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000\", \"intraop_after\": 192, \"interop_after\": 192}, \"977441\": {\"base\": 535, \"branch\": 800, \"lora_pairs\": 208, \"checkpoint\": \"/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000\", \"intraop_after\": 192, \"interop_after\": 192}, \"977440\": {\"base\": 535, \"branch\": 800, \"lora_pairs\": 208, \"checkpoint\": \"/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000\", \"intraop_after\": 192, \"interop_after\": 192}, \"977445\": {\"base\": 535, \"branch\": 800, \"lora_pairs\": 208, \"checkpoint\": \"/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000\", \"intraop_after\": 192, \"interop_after\": 192}, \"977446\": {\"base\": 535, \"branch\": 800, \"lora_pairs\": 208, \"checkpoint\": \"/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000\", \"intraop_after\": 192, \"interop_after\": 192}, \"977443\": {\"base\": 535, \"branch\": 800, \"lora_pairs\": 208, \"checkpoint\": \"/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000\", \"intraop_after\": 192, \"interop_after\": 192}, \"977442\": {\"base\": 535, \"branch\": 800, \"lora_pairs\": 208, \"checkpoint\": \"/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000\", \"intraop_after\": 192, \"interop_after\": 192}}, \"smoke_strict_metadata\": {\"records_by_pid\": {\"977440\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977441\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977442\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977443\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977444\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977445\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977446\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977439\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}]}, \"request_count_per_pid\": 1, \"evidence_source\": \"Actual pipeline make_metadata from VAE/ref blocks, logged once per diffuse request.\", \"limitation\": \"Not a per-layer mask/tensor-coordinate trace. Successful requests plus pinned C source and own C tiny establish the strict infer/layout path.\"}, \"current_strict_metadata\": {\"records_by_pid\": {\"977440\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}, {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977441\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}, {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977442\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}, {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977443\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}, {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977444\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}, {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977445\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}, {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977446\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}, {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}], \"977439\": [{\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}, {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}]}, \"request_count_per_pid\": 2, \"evidence_source\": \"Actual pipeline make_metadata from VAE/ref blocks, logged once per diffuse request.\", \"limitation\": \"Not a per-layer mask/tensor-coordinate trace. Successful requests plus pinned C source and own C tiny establish the strict infer/layout path.\"}, \"common_metadata\": {\"mode\": \"C_strict_visual_source_same_latent_frame_v1\", \"reference_count\": 1, \"reference_kind\": \"video\", \"patch_size\": [1, 2, 2], \"source_shape\": [37, 48, 84], \"target_shape\": [37, 48, 84], \"text_len\": 6159, \"source_audio_t\": 0, \"target_audio_t\": 207}}, \"current_processes\": [{\"label\": \"supervisor\", \"expected\": {\"pid\": 976351, \"state\": \"R\", \"pgrp\": 976351, \"session\": 976351, \"start_ticks\": 130013779}, \"current\": {\"pid\": 976351, \"state\": \"S\", \"pgrp\": 976351, \"session\": 976351, \"start_ticks\": 130013779}, \"same_identity_alive\": true}, {\"label\": \"server\", \"expected\": {\"pid\": 976934, \"state\": \"R\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130016739}, \"current\": {\"pid\": 976934, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130016739}, \"same_identity_alive\": true}, {\"label\": \"0\", \"expected\": {\"pid\": 977439, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022068}, \"current\": {\"pid\": 977439, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022068}, \"same_identity_alive\": true}, {\"label\": \"1\", \"expected\": {\"pid\": 977440, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022068}, \"current\": {\"pid\": 977440, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022068}, \"same_identity_alive\": true}, {\"label\": \"2\", \"expected\": {\"pid\": 977441, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022068}, \"current\": {\"pid\": 977441, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022068}, \"same_identity_alive\": true}, {\"label\": \"3\", \"expected\": {\"pid\": 977442, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022068}, \"current\": {\"pid\": 977442, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022068}, \"same_identity_alive\": true}, {\"label\": \"4\", \"expected\": {\"pid\": 977443, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022069}, \"current\": {\"pid\": 977443, \"state\": \"R\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022069}, \"same_identity_alive\": true}, {\"label\": \"5\", \"expected\": {\"pid\": 977444, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022069}, \"current\": {\"pid\": 977444, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022069}, \"same_identity_alive\": true}, {\"label\": \"6\", \"expected\": {\"pid\": 977445, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022069}, \"current\": {\"pid\": 977445, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022069}, \"same_identity_alive\": true}, {\"label\": \"7\", \"expected\": {\"pid\": 977446, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022069}, \"current\": {\"pid\": 977446, \"state\": \"S\", \"pgrp\": 976934, \"session\": 976934, \"start_ticks\": 130022069}, \"same_identity_alive\": true}], \"owned_group_members\": [976934, 977436, 977439, 977440, 977441, 977442, 977443, 977444, 977445, 977446, 1001156, 1001157, 1001158, 1001159, 1001160, 1001161, 1001162, 1001163, 1001331, 1001441, 1001452, 1001460, 1001464, 1001467, 1001499, 1001527, 1001531, 1001535, 1001539, 1001543, 1001545, 1001549, 1001553, 1001557, 1001561, 1001564, 1001565, 1001566, 1001567, 1001568, 1001569, 1001570, 1001571, 1001572, 1001573, 1001574, 1001575, 1001576, 1001577, 1001578, 1001579, 1001580, 1001581, 1001582, 1001583, 1001584, 1001585, 1001586, 1001587, 1001588, 1001589, 1001590, 1001624, 1001629, 1001633, 1001636, 1001640, 1001647, 1001670, 1001706, 1001707, 1001708, 1001709, 1001710, 1001711, 1001712, 1001713, 1001714, 1001715, 1001716, 1001717, 1001718, 1001719, 1001720, 1001721, 1001722, 1001723, 1001724, 1001725, 1001726, 1001727, 1001728, 1001729, 1001730, 1001731, 1001732, 1001733, 1001734, 1001770, 1001775, 1001777, 1001779, 1001782, 1001785, 1001787, 1001791, 1001792, 1001796, 1001797, 1001800, 1001801, 1001802, 1001803, 1001804, 1001805, 1001806, 1001807, 1001808, 1001809, 1001810, 1001811, 1001812, 1001813, 1001814, 1001815, 1001816, 1001817, 1001818, 1001819, 1001820, 1001821, 1001822, 1001823, 1001824, 1001825, 1001826, 1001827, 1001828, 1001829, 1001830, 1001831, 1001832, 1001833, 1001834, 1001835, 1001836, 1001837, 1001838, 1001839, 1001840, 1001841, 1001842, 1001843, 1001844, 1001845, 1001846, 1001847, 1001848, 1001849, 1001850, 1001851, 1001852], \"fresh_resource\": {\"observed_at_utc\": \"2026-09-14T05:43:30.400783+00:00\", \"returncode\": 0, \"stdout\": \"+------------------------------------------------------------------------------------------------+\\n| npu-smi 25.5.1                   Version: 25.5.1                                               |\\n+---------------------------+---------------+----------------------------------------------------+\\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\\n| Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\\n+===========================+===============+====================================================+\\n| 0     910B3               | OK            | 268.7       53                0    / 0             |\\n| 0                         | 0000:C1:00.0  | 77          0    / 0          35498/ 65536         |\\n+===========================+===============+====================================================+\\n| 1     910B3               | OK            | 219.4       57                0    / 0             |\\n| 0                         | 0000:01:00.0  | 33          0    / 0          37106/ 65536         |\\n+===========================+===============+====================================================+\\n| 2     910B3               | OK            | 279.6       54                0    / 0             |\\n| 0                         | 0000:C2:00.0  | 100         0    / 0          37105/ 65536         |\\n+===========================+===============+====================================================+\\n| 3     910B3               | OK            | 351.9       55                0    / 0             |\\n| 0                         | 0000:02:00.0  | 100         0    / 0          37107/ 65536         |\\n+===========================+===============+====================================================+\\n| 4     910B3               | OK            | 306.5       54                0    / 0             |\\n| 0                         | 0000:81:00.0  | 100         0    / 0          37110/ 65536         |\\n+===========================+===============+====================================================+\\n| 5     910B3               | OK            | 253.1       55                0    / 0             |\\n| 0                         | 0000:41:00.0  | 2           0    / 0          37111/ 65536         |\\n+===========================+===============+====================================================+\\n| 6     910B3               | OK            | 326.1       55                0    / 0             |\\n| 0                         | 0000:82:00.0  | 100         0    / 0          37110/ 65536         |\\n+===========================+===============+====================================================+\\n| 7     910B3               | OK            | 345.9       55                0    / 0             |\\n| 0                         | 0000:42:00.0  | 100         0    / 0          37109/ 65536         |\\n+===========================+===============+====================================================+\\n+---------------------------+---------------+----------------------------------------------------+\\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\\n+===========================+===============+====================================================+\\n| 0       0                 | 977439        | vLLM-OmniDiff            | 32147                   |\\n+===========================+===============+====================================================+\\n| 1       0                 | 977440        | vLLM-OmniDiff            | 33755                   |\\n+===========================+===============+====================================================+\\n| 2       0                 | 977441        | vLLM-OmniDiff            | 33755                   |\\n+===========================+===============+====================================================+\\n| 3       0                 | 977442        | vLLM-OmniDiff            | 33755                   |\\n+===========================+===============+====================================================+\\n| 4       0                 | 977443        | vLLM-OmniDiff            | 33759                   |\\n+===========================+===============+====================================================+\\n| 5       0                 | 977444        | vLLM-OmniDiff            | 33759                   |\\n+===========================+===============+====================================================+\\n| 6       0                 | 977445        | vLLM-OmniDiff            | 33759                   |\\n+===========================+===============+====================================================+\\n| 7       0                 | 977446        | vLLM-OmniDiff            | 33759                   |\\n+===========================+===============+====================================================+\\n\", \"stderr\": \"\", \"worker_by_card\": {\"0\": 977439, \"1\": 977440, \"2\": 977441, \"3\": 977442, \"4\": 977443, \"5\": 977444, \"6\": 977445, \"7\": 977446}, \"health\": {\"health\": {\"0\": {\"model\": \"910B3\", \"health\": \"OK\"}, \"1\": {\"model\": \"910B3\", \"health\": \"OK\"}, \"2\": {\"model\": \"910B3\", \"health\": \"OK\"}, \"3\": {\"model\": \"910B3\", \"health\": \"OK\"}, \"4\": {\"model\": \"910B3\", \"health\": \"OK\"}, \"5\": {\"model\": \"910B3\", \"health\": \"OK\"}, \"6\": {\"model\": \"910B3\", \"health\": \"OK\"}, \"7\": {\"model\": \"910B3\", \"health\": \"OK\"}}, \"hbm\": {\"0\": {\"used_mib\": 35498, \"total_mib\": 65536, \"free_mib\": 30038}, \"1\": {\"used_mib\": 37106, \"total_mib\": 65536, \"free_mib\": 28430}, \"2\": {\"used_mib\": 37105, \"total_mib\": 65536, \"free_mib\": 28431}, \"3\": {\"used_mib\": 37107, \"total_mib\": 65536, \"free_mib\": 28429}, \"4\": {\"used_mib\": 37110, \"total_mib\": 65536, \"free_mib\": 28426}, \"5\": {\"used_mib\": 37111, \"total_mib\": 65536, \"free_mib\": 28425}, \"6\": {\"used_mib\": 37110, \"total_mib\": 65536, \"free_mib\": 28426}, \"7\": {\"used_mib\": 37109, \"total_mib\": 65536, \"free_mib\": 28427}}}}, \"recent_progress_lines\": [[993, \" 39%|███▉      | 19/49 [05:26<08:36, 17.20s/it]\"], [994, \" 41%|████      | 20/49 [05:44<08:21, 17.29s/it]\"], [995, \" 43%|████▎     | 21/49 [06:01<07:59, 17.13s/it]\"], [996, \" 45%|████▍     | 22/49 [06:17<07:39, 17.03s/it]\"], [997, \" 47%|████▋     | 23/49 [06:35<07:27, 17.21s/it]\"], [998, \" 49%|████▉     | 24/49 [06:53<07:12, 17.31s/it]\"]], \"progress_interpretation\": \"Literal displayed denoising-loop progress only, not actual model-forward call count/NFE.\", \"log_tail\": [\" 35%|███▍      | 17/49 [04:52<09:09, 17.18s/it]\", \" 37%|███▋      | 18/49 [05:09<08:48, 17.06s/it]\", \" 39%|███▉      | 19/49 [05:26<08:36, 17.20s/it]\", \" 41%|████      | 20/49 [05:44<08:21, 17.29s/it]\", \" 43%|████▎     | 21/49 [06:01<07:59, 17.13s/it]\", \" 45%|████▍     | 22/49 [06:17<07:39, 17.03s/it]\", \" 47%|████▋     | 23/49 [06:35<07:27, 17.21s/it]\", \" 49%|████▉     | 24/49 [06:53<07:12, 17.31s/it]\"], \"status_at_end\": {\"phase\": \"c_50step_request_running\", \"updated_at\": \"2026-09-14T05:36:09.975631+00:00\", \"formal_50step_started\": true, \"formal_50step_completed\": false, \"formal_request_attempts\": 1, \"error\": null}, \"formal_result_exists_at_end\": false, \"formal_strict_metadata_exists_at_end\": false, \"proof_records\": {\"formal_smoke_gate.json\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/formal_smoke_gate.json\", \"sha256\": \"8beb3b9052b9ad885aeec38ebb286d8753f2853307e3d02c0ed78ddb8a130137\", \"size_bytes\": 24104}, \"formal_logging.json\": {\"path\": \"/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/formal_logging.json\", \"sha256\": \"8f45cc782600fef21ec52e6cfd3f7d99a0ea04c81cf2497fa3681e39e6ce4b3f\", \"size_bytes\": 572}}, \"torch_imported\": false, \"observed_end_utc\": \"2026-09-14T05:43:31.601282+00:00\"}\n"
+  },
+  "observation": {
+    "audit_status": "passed_live_integrity",
+    "observed_start_utc": "2026-09-14T05:43:30.045114+00:00",
+    "run_id": "1fa6918c2e4743dc81d256610496f489",
+    "run_directory": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489",
+    "scope": "Live smoke/formal request integrity only; no terminal dependency/tiny/current-weight audit",
+    "status_at_start": {
+      "phase": "c_50step_request_running",
+      "host": {
+        "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+        "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+        "machine": "aarch64"
+      },
+      "run_id": "1fa6918c2e4743dc81d256610496f489",
+      "sample_id": "shirt_red_couple_124",
+      "group": "01234567",
+      "updated_at": "2026-09-14T05:36:09.975631+00:00",
+      "formal_request_started_at": "2026-09-14T05:36:09.965490+00:00",
+      "formal_request_attempts": 1,
+      "formal_50step_started": true,
+      "formal_50step_completed": false,
+      "error": null,
+      "attention_policy": "C strict same-latent-frame visual source in target softmax queries; B target neighborhoods and linear unchanged"
+    },
+    "parser_code": {
+      "c/run_c_trial.py": {
+        "path": "/cache/zhonghao/h3/color_trial_v1/c/run_c_trial.py",
+        "sha256": "95eed8b294dca789327fdec6639ef7134f4b97745239518fbce88a54960ac172",
+        "size_bytes": 24184
+      },
+      "c/c_trial_gates.py": {
+        "path": "/cache/zhonghao/h3/color_trial_v1/c/c_trial_gates.py",
+        "sha256": "258146df27c938e9f220bb64a6725545cc8d1ce8200b7fe072aca4c1143128be",
+        "size_bytes": 15297
+      },
+      "b/b_trial_gates.py": {
+        "path": "/cache/zhonghao/h3/color_trial_v1/b/b_trial_gates.py",
+        "sha256": "b784b9d7b131230ebbf669a81b9b017fdc7479bab952dc47dd10d520e222dd56",
+        "size_bytes": 10616
+      },
+      "a/trial_gates.py": {
+        "path": "/cache/zhonghao/h3/color_trial_v1/a/trial_gates.py",
+        "sha256": "f786cb3c3ccead8b6de365ca62d2f9dea8aaece1493cd9be0b01e1a4fd4cefa0",
+        "size_bytes": 16502
+      }
+    },
+    "source": {
+      "path": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+      "sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+      "size_bytes": 1527004
+    },
+    "requests": [
+      {
+        "name": "smoke_2step",
+        "request_record": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/request.json",
+          "sha256": "58222eacd55e23c3e9d96009941bd9d434e7bb9d0600cd2bdba396dd177f5d92",
+          "size_bytes": 1259
+        },
+        "actual_request": {
+          "started_at": "2026-09-14T05:33:32.108067+00:00",
+          "host": {
+            "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+            "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+            "machine": "aarch64"
+          },
+          "group": "01234567",
+          "run_id": "1fa6918c2e4743dc81d256610496f489",
+          "sample_id": "shirt_red_couple_124",
+          "fields": {
+            "width": 1344,
+            "height": 768,
+            "fps": 24,
+            "flow_shift": 12,
+            "seed": 4101,
+            "prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+            "num_inference_steps": 2,
+            "extra_params": "{\"task\": \"ref2va\", \"duration\": 5.0, \"audio_flow_shift\": 3.0}"
+          },
+          "source_video": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+          "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+          "requested_steps": 2,
+          "actual_model_forward_calls": null,
+          "quality_evidence": false,
+          "server_proc_identity": {
+            "pid": 976934,
+            "state": "S",
+            "pgrp": 976934,
+            "session": 976934,
+            "start_ticks": 130016739
+          }
+        },
+        "all_requested_bindings_passed": true
+      },
+      {
+        "name": "c_50step",
+        "request_record": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/c_50step/request.json",
+          "sha256": "580dcbdff320495c6cfcd6f80f167c03d39d288b7a91712e512f9b2ac5b26b17",
+          "size_bytes": 1261
+        },
+        "actual_request": {
+          "started_at": "2026-09-14T05:36:09.974541+00:00",
+          "host": {
+            "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+            "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+            "machine": "aarch64"
+          },
+          "group": "01234567",
+          "run_id": "1fa6918c2e4743dc81d256610496f489",
+          "sample_id": "shirt_red_couple_124",
+          "fields": {
+            "width": 1344,
+            "height": 768,
+            "fps": 24,
+            "flow_shift": 12,
+            "seed": 4101,
+            "prompt": "Change only the man's pale shirt to a solid red shirt. Preserve the shirt's fabric, shape, and details, and keep the woman's clothing unchanged. Preserve the original actions, their order and timing, the people, camera viewpoint and motion, framing, lighting, and background.",
+            "num_inference_steps": 50,
+            "extra_params": "{\"task\": \"ref2va\", \"duration\": 5.0, \"audio_flow_shift\": 3.0}"
+          },
+          "source_video": "/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4",
+          "source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+          "requested_steps": 50,
+          "actual_model_forward_calls": null,
+          "quality_evidence": false,
+          "server_proc_identity": {
+            "pid": 976934,
+            "state": "S",
+            "pgrp": 976934,
+            "session": 976934,
+            "start_ticks": 130016739
+          }
+        },
+        "all_requested_bindings_passed": true
+      }
+    ],
+    "smoke": {
+      "result_summary": {
+        "completed_at": "2026-09-14T05:36:05.131307+00:00",
+        "request_end_to_end_seconds": 153.01988986390643,
+        "http_code": "200",
+        "curl_returncode": 0,
+        "requested_steps": 2,
+        "success": true
+      },
+      "media": {
+        "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/output/smoke_2step.mp4",
+        "sha256": "a081a0f8bc30c8aefcb31bb013f059fed46f8957c2ee3b704ccdb1f38ac9462c",
+        "size_bytes": 2847398
+      },
+      "raw_headers": "HTTP/1.1 100 Continue\n\nHTTP/1.1 200 OK\ndate: Mon, 14 Sep 2026 05:33:32 GMT\nserver: uvicorn\nx-request-id: video_sync-bf8d989779186acc\nx-model: /cache/zhonghao/h3/models/MiniMax-H3/Ref2VA\nx-inference-time-s: 152.429\nx-stage-durations: {\"queue_wait_ms\":0.38949213922023773,\"stage_0_gen_ms\":130202.67534255981}\nx-peak-memory-mb: 28666.000\ncontent-length: 2847398\ncontent-type: video/mp4\n\n",
+      "raw_curl_stdout": "200",
+      "raw_curl_stderr": "",
+      "records": {
+        "result.json": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/result.json",
+          "sha256": "cfc184dc1011842beb79206debc5b214066e934a7a41bdb36e220523c15e9b13",
+          "size_bytes": 1534
+        },
+        "response.headers": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/response.headers",
+          "sha256": "e34a5a0c3339b926572c4448910c0b33c3135646dfc78aec195b0f53003d237c",
+          "size_bytes": 397
+        },
+        "curl.stdout": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/curl.stdout",
+          "sha256": "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf",
+          "size_bytes": 3
+        },
+        "curl.stderr": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/curl.stderr",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "ffprobe.json": {
+          "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/smoke_2step/ffprobe.json",
+          "sha256": "cbef153455aa1d8e0ee839610c1520d51b1e98202bc7235e0466ba83f1342765",
+          "size_bytes": 849
+        }
+      },
+      "saved_probe_checks": {
+        "dimensions": [
+          1344,
+          768
+        ],
+        "fps": 24,
+        "frame_count": 124,
+        "container_duration_seconds": 5.207
+      },
+      "fresh_ffprobe_performed": false
+    },
+    "load_and_strict": {
+      "smoke_prefix_bytes": 142871,
+      "smoke_prefix_sha256": "e50d0733d7e4b5cae926b2445fdafb33a58282ed9a724f5bc1f0b823ce20354a",
+      "observed_log_bytes": 148442,
+      "observed_log_sha256": "35c69b99908510db7a6e7818138bc1372ebaaa7e6afa5f3bd6910558dfb343a8",
+      "loads_by_pid": {
+        "977439": {
+          "base": 535,
+          "branch": 800,
+          "lora_pairs": 208,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "intraop_after": 192,
+          "interop_after": 192
+        },
+        "977440": {
+          "base": 535,
+          "branch": 800,
+          "lora_pairs": 208,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "intraop_after": 192,
+          "interop_after": 192
+        },
+        "977441": {
+          "base": 535,
+          "branch": 800,
+          "lora_pairs": 208,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "intraop_after": 192,
+          "interop_after": 192
+        },
+        "977442": {
+          "base": 535,
+          "branch": 800,
+          "lora_pairs": 208,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "intraop_after": 192,
+          "interop_after": 192
+        },
+        "977443": {
+          "base": 535,
+          "branch": 800,
+          "lora_pairs": 208,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "intraop_after": 192,
+          "interop_after": 192
+        },
+        "977444": {
+          "base": 535,
+          "branch": 800,
+          "lora_pairs": 208,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "intraop_after": 192,
+          "interop_after": 192
+        },
+        "977445": {
+          "base": 535,
+          "branch": 800,
+          "lora_pairs": 208,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "intraop_after": 192,
+          "interop_after": 192
+        },
+        "977446": {
+          "base": 535,
+          "branch": 800,
+          "lora_pairs": 208,
+          "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+          "intraop_after": 192,
+          "interop_after": 192
+        }
+      },
+      "smoke_strict_metadata": {
+        "records_by_pid": {
+          "977439": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977440": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977441": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977442": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977443": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977444": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977445": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977446": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ]
+        },
+        "request_count_per_pid": 1,
+        "evidence_source": "Actual pipeline make_metadata from VAE/ref blocks, logged once per diffuse request.",
+        "limitation": "Not a per-layer mask/tensor-coordinate trace. Successful requests plus pinned C source and own C tiny establish the strict infer/layout path."
+      },
+      "current_strict_metadata": {
+        "records_by_pid": {
+          "977439": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            },
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977440": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            },
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977441": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            },
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977442": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            },
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977443": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            },
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977444": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            },
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977445": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            },
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ],
+          "977446": [
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            },
+            {
+              "mode": "C_strict_visual_source_same_latent_frame_v1",
+              "reference_count": 1,
+              "reference_kind": "video",
+              "patch_size": [
+                1,
+                2,
+                2
+              ],
+              "source_shape": [
+                37,
+                48,
+                84
+              ],
+              "target_shape": [
+                37,
+                48,
+                84
+              ],
+              "text_len": 6159,
+              "source_audio_t": 0,
+              "target_audio_t": 207
+            }
+          ]
+        },
+        "request_count_per_pid": 2,
+        "evidence_source": "Actual pipeline make_metadata from VAE/ref blocks, logged once per diffuse request.",
+        "limitation": "Not a per-layer mask/tensor-coordinate trace. Successful requests plus pinned C source and own C tiny establish the strict infer/layout path."
+      },
+      "common_metadata": {
+        "mode": "C_strict_visual_source_same_latent_frame_v1",
+        "reference_count": 1,
+        "reference_kind": "video",
+        "patch_size": [
+          1,
+          2,
+          2
+        ],
+        "source_shape": [
+          37,
+          48,
+          84
+        ],
+        "target_shape": [
+          37,
+          48,
+          84
+        ],
+        "text_len": 6159,
+        "source_audio_t": 0,
+        "target_audio_t": 207
+      }
+    },
+    "current_processes": [
+      {
+        "label": "supervisor",
+        "expected": {
+          "pid": 976351,
+          "state": "R",
+          "pgrp": 976351,
+          "session": 976351,
+          "start_ticks": 130013779
+        },
+        "current": {
+          "pid": 976351,
+          "state": "S",
+          "pgrp": 976351,
+          "session": 976351,
+          "start_ticks": 130013779
+        },
+        "same_identity_alive": true
+      },
+      {
+        "label": "server",
+        "expected": {
+          "pid": 976934,
+          "state": "R",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130016739
+        },
+        "current": {
+          "pid": 976934,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130016739
+        },
+        "same_identity_alive": true
+      },
+      {
+        "label": "0",
+        "expected": {
+          "pid": 977439,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022068
+        },
+        "current": {
+          "pid": 977439,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022068
+        },
+        "same_identity_alive": true
+      },
+      {
+        "label": "1",
+        "expected": {
+          "pid": 977440,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022068
+        },
+        "current": {
+          "pid": 977440,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022068
+        },
+        "same_identity_alive": true
+      },
+      {
+        "label": "2",
+        "expected": {
+          "pid": 977441,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022068
+        },
+        "current": {
+          "pid": 977441,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022068
+        },
+        "same_identity_alive": true
+      },
+      {
+        "label": "3",
+        "expected": {
+          "pid": 977442,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022068
+        },
+        "current": {
+          "pid": 977442,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022068
+        },
+        "same_identity_alive": true
+      },
+      {
+        "label": "4",
+        "expected": {
+          "pid": 977443,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022069
+        },
+        "current": {
+          "pid": 977443,
+          "state": "R",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022069
+        },
+        "same_identity_alive": true
+      },
+      {
+        "label": "5",
+        "expected": {
+          "pid": 977444,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022069
+        },
+        "current": {
+          "pid": 977444,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022069
+        },
+        "same_identity_alive": true
+      },
+      {
+        "label": "6",
+        "expected": {
+          "pid": 977445,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022069
+        },
+        "current": {
+          "pid": 977445,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022069
+        },
+        "same_identity_alive": true
+      },
+      {
+        "label": "7",
+        "expected": {
+          "pid": 977446,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022069
+        },
+        "current": {
+          "pid": 977446,
+          "state": "S",
+          "pgrp": 976934,
+          "session": 976934,
+          "start_ticks": 130022069
+        },
+        "same_identity_alive": true
+      }
+    ],
+    "owned_group_members": [
+      976934,
+      977436,
+      977439,
+      977440,
+      977441,
+      977442,
+      977443,
+      977444,
+      977445,
+      977446,
+      1001156,
+      1001157,
+      1001158,
+      1001159,
+      1001160,
+      1001161,
+      1001162,
+      1001163,
+      1001331,
+      1001441,
+      1001452,
+      1001460,
+      1001464,
+      1001467,
+      1001499,
+      1001527,
+      1001531,
+      1001535,
+      1001539,
+      1001543,
+      1001545,
+      1001549,
+      1001553,
+      1001557,
+      1001561,
+      1001564,
+      1001565,
+      1001566,
+      1001567,
+      1001568,
+      1001569,
+      1001570,
+      1001571,
+      1001572,
+      1001573,
+      1001574,
+      1001575,
+      1001576,
+      1001577,
+      1001578,
+      1001579,
+      1001580,
+      1001581,
+      1001582,
+      1001583,
+      1001584,
+      1001585,
+      1001586,
+      1001587,
+      1001588,
+      1001589,
+      1001590,
+      1001624,
+      1001629,
+      1001633,
+      1001636,
+      1001640,
+      1001647,
+      1001670,
+      1001706,
+      1001707,
+      1001708,
+      1001709,
+      1001710,
+      1001711,
+      1001712,
+      1001713,
+      1001714,
+      1001715,
+      1001716,
+      1001717,
+      1001718,
+      1001719,
+      1001720,
+      1001721,
+      1001722,
+      1001723,
+      1001724,
+      1001725,
+      1001726,
+      1001727,
+      1001728,
+      1001729,
+      1001730,
+      1001731,
+      1001732,
+      1001733,
+      1001734,
+      1001770,
+      1001775,
+      1001777,
+      1001779,
+      1001782,
+      1001785,
+      1001787,
+      1001791,
+      1001792,
+      1001796,
+      1001797,
+      1001800,
+      1001801,
+      1001802,
+      1001803,
+      1001804,
+      1001805,
+      1001806,
+      1001807,
+      1001808,
+      1001809,
+      1001810,
+      1001811,
+      1001812,
+      1001813,
+      1001814,
+      1001815,
+      1001816,
+      1001817,
+      1001818,
+      1001819,
+      1001820,
+      1001821,
+      1001822,
+      1001823,
+      1001824,
+      1001825,
+      1001826,
+      1001827,
+      1001828,
+      1001829,
+      1001830,
+      1001831,
+      1001832,
+      1001833,
+      1001834,
+      1001835,
+      1001836,
+      1001837,
+      1001838,
+      1001839,
+      1001840,
+      1001841,
+      1001842,
+      1001843,
+      1001844,
+      1001845,
+      1001846,
+      1001847,
+      1001848,
+      1001849,
+      1001850,
+      1001851,
+      1001852
+    ],
+    "fresh_resource": {
+      "observed_at_utc": "2026-09-14T05:43:30.400783+00:00",
+      "returncode": 0,
+      "stdout": "+------------------------------------------------------------------------------------------------+\n| npu-smi 25.5.1                   Version: 25.5.1                                               |\n+---------------------------+---------------+----------------------------------------------------+\n| NPU   Name                | Health        | Power(W)    Temp(C)           Hugepages-Usage(page)|\n| Chip                      | Bus-Id        | AICore(%)   Memory-Usage(MB)  HBM-Usage(MB)        |\n+===========================+===============+====================================================+\n| 0     910B3               | OK            | 268.7       53                0    / 0             |\n| 0                         | 0000:C1:00.0  | 77          0    / 0          35498/ 65536         |\n+===========================+===============+====================================================+\n| 1     910B3               | OK            | 219.4       57                0    / 0             |\n| 0                         | 0000:01:00.0  | 33          0    / 0          37106/ 65536         |\n+===========================+===============+====================================================+\n| 2     910B3               | OK            | 279.6       54                0    / 0             |\n| 0                         | 0000:C2:00.0  | 100         0    / 0          37105/ 65536         |\n+===========================+===============+====================================================+\n| 3     910B3               | OK            | 351.9       55                0    / 0             |\n| 0                         | 0000:02:00.0  | 100         0    / 0          37107/ 65536         |\n+===========================+===============+====================================================+\n| 4     910B3               | OK            | 306.5       54                0    / 0             |\n| 0                         | 0000:81:00.0  | 100         0    / 0          37110/ 65536         |\n+===========================+===============+====================================================+\n| 5     910B3               | OK            | 253.1       55                0    / 0             |\n| 0                         | 0000:41:00.0  | 2           0    / 0          37111/ 65536         |\n+===========================+===============+====================================================+\n| 6     910B3               | OK            | 326.1       55                0    / 0             |\n| 0                         | 0000:82:00.0  | 100         0    / 0          37110/ 65536         |\n+===========================+===============+====================================================+\n| 7     910B3               | OK            | 345.9       55                0    / 0             |\n| 0                         | 0000:42:00.0  | 100         0    / 0          37109/ 65536         |\n+===========================+===============+====================================================+\n+---------------------------+---------------+----------------------------------------------------+\n| NPU     Chip              | Process id    | Process name             | Process memory(MB)      |\n+===========================+===============+====================================================+\n| 0       0                 | 977439        | vLLM-OmniDiff            | 32147                   |\n+===========================+===============+====================================================+\n| 1       0                 | 977440        | vLLM-OmniDiff            | 33755                   |\n+===========================+===============+====================================================+\n| 2       0                 | 977441        | vLLM-OmniDiff            | 33755                   |\n+===========================+===============+====================================================+\n| 3       0                 | 977442        | vLLM-OmniDiff            | 33755                   |\n+===========================+===============+====================================================+\n| 4       0                 | 977443        | vLLM-OmniDiff            | 33759                   |\n+===========================+===============+====================================================+\n| 5       0                 | 977444        | vLLM-OmniDiff            | 33759                   |\n+===========================+===============+====================================================+\n| 6       0                 | 977445        | vLLM-OmniDiff            | 33759                   |\n+===========================+===============+====================================================+\n| 7       0                 | 977446        | vLLM-OmniDiff            | 33759                   |\n+===========================+===============+====================================================+\n",
+      "stderr": "",
+      "worker_by_card": {
+        "0": 977439,
+        "1": 977440,
+        "2": 977441,
+        "3": 977442,
+        "4": 977443,
+        "5": 977444,
+        "6": 977445,
+        "7": 977446
+      },
+      "health": {
+        "health": {
+          "0": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "1": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "2": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "3": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "4": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "5": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "6": {
+            "model": "910B3",
+            "health": "OK"
+          },
+          "7": {
+            "model": "910B3",
+            "health": "OK"
+          }
+        },
+        "hbm": {
+          "0": {
+            "used_mib": 35498,
+            "total_mib": 65536,
+            "free_mib": 30038
+          },
+          "1": {
+            "used_mib": 37106,
+            "total_mib": 65536,
+            "free_mib": 28430
+          },
+          "2": {
+            "used_mib": 37105,
+            "total_mib": 65536,
+            "free_mib": 28431
+          },
+          "3": {
+            "used_mib": 37107,
+            "total_mib": 65536,
+            "free_mib": 28429
+          },
+          "4": {
+            "used_mib": 37110,
+            "total_mib": 65536,
+            "free_mib": 28426
+          },
+          "5": {
+            "used_mib": 37111,
+            "total_mib": 65536,
+            "free_mib": 28425
+          },
+          "6": {
+            "used_mib": 37110,
+            "total_mib": 65536,
+            "free_mib": 28426
+          },
+          "7": {
+            "used_mib": 37109,
+            "total_mib": 65536,
+            "free_mib": 28427
+          }
+        }
+      }
+    },
+    "recent_progress_lines": [
+      [
+        993,
+        " 39%|███▉      | 19/49 [05:26<08:36, 17.20s/it]"
+      ],
+      [
+        994,
+        " 41%|████      | 20/49 [05:44<08:21, 17.29s/it]"
+      ],
+      [
+        995,
+        " 43%|████▎     | 21/49 [06:01<07:59, 17.13s/it]"
+      ],
+      [
+        996,
+        " 45%|████▍     | 22/49 [06:17<07:39, 17.03s/it]"
+      ],
+      [
+        997,
+        " 47%|████▋     | 23/49 [06:35<07:27, 17.21s/it]"
+      ],
+      [
+        998,
+        " 49%|████▉     | 24/49 [06:53<07:12, 17.31s/it]"
+      ]
+    ],
+    "progress_interpretation": "Literal displayed denoising-loop progress only, not actual model-forward call count/NFE.",
+    "log_tail": [
+      " 35%|███▍      | 17/49 [04:52<09:09, 17.18s/it]",
+      " 37%|███▋      | 18/49 [05:09<08:48, 17.06s/it]",
+      " 39%|███▉      | 19/49 [05:26<08:36, 17.20s/it]",
+      " 41%|████      | 20/49 [05:44<08:21, 17.29s/it]",
+      " 43%|████▎     | 21/49 [06:01<07:59, 17.13s/it]",
+      " 45%|████▍     | 22/49 [06:17<07:39, 17.03s/it]",
+      " 47%|████▋     | 23/49 [06:35<07:27, 17.21s/it]",
+      " 49%|████▉     | 24/49 [06:53<07:12, 17.31s/it]"
+    ],
+    "status_at_end": {
+      "phase": "c_50step_request_running",
+      "updated_at": "2026-09-14T05:36:09.975631+00:00",
+      "formal_50step_started": true,
+      "formal_50step_completed": false,
+      "formal_request_attempts": 1,
+      "error": null
+    },
+    "formal_result_exists_at_end": false,
+    "formal_strict_metadata_exists_at_end": false,
+    "proof_records": {
+      "formal_smoke_gate.json": {
+        "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/formal_smoke_gate.json",
+        "sha256": "8beb3b9052b9ad885aeec38ebb286d8753f2853307e3d02c0ed78ddb8a130137",
+        "size_bytes": 24104
+      },
+      "formal_logging.json": {
+        "path": "/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489/formal_logging.json",
+        "sha256": "8f45cc782600fef21ec52e6cfd3f7d99a0ea04c81cf2497fa3681e39e6ce4b3f",
+        "size_bytes": 572
+      }
+    },
+    "torch_imported": false,
+    "observed_end_utc": "2026-09-14T05:43:31.601282+00:00"
+  },
+  "command": {
+    "ssh": "ssh -F C:/Users/DZH/.ssh/config-vdn-h3-30213 -p 31731 -T -o BatchMode=yes -o ConnectTimeout=15 vdn-h3-ascend-30213",
+    "interpreter": "/cache/zhonghao/h3/env/bin/python -B",
+    "environment": "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin PYTHONDONTWRITEBYTECODE=1 TORCH_DEVICE_BACKEND_AUTOLOAD=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1",
+    "payload_transport": "UTF8Base64 to python-c; no remote script file.",
+    "decoded_python_source": "import datetime,hashlib,json,os,re,sys,subprocess\nfrom pathlib import Path\nr=Path('/cache/zhonghao/h3/color_trial_v1/results/01234567/shirt_red_couple_124/C/runs/c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489'); root=Path('/cache/zhonghao/h3/color_trial_v1'); rid='1fa6918c2e4743dc81d256610496f489'\nreport={'audit_status':'started','observed_start_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'run_id':rid,'run_directory':str(r),'scope':'Live smoke/formal request integrity only; no terminal dependency/tiny/current-weight audit'}\ndef need(ok,label):\n if not ok: raise RuntimeError(label)\ndef record(p):\n need(p.is_file() and not p.is_symlink() and p.resolve()==p,'nonregular path '+str(p))\n raw=p.read_bytes(); return {'path':str(p),'sha256':hashlib.sha256(raw).hexdigest(),'size_bytes':len(raw)}\ndef read(p): return json.loads(p.read_text())\ndef norm(v): return json.loads(json.dumps(v))\ntry:\n s=read(r/'c_status.json'); f=read(r/'frozen_evidence.json'); proof=read(r/'formal_smoke_gate.json')\n need(s['run_id']==f['run_id']==rid and s['run_directory']==str(r) and s['case']=='C' and s['sample_id']=='shirt_red_couple_124' and s['group']=='01234567','fixed run')\n report['status_at_start']={k:s.get(k) for k in ('phase','host','run_id','sample_id','group','updated_at','formal_request_started_at','formal_request_attempts','formal_50step_started','formal_50step_completed','error','attention_policy')}\n need(s['formal_request_attempts']==1 and s['formal_50step_started'] is True and s.get('error') is None,'formal start/error')\n pins={'c/run_c_trial.py':'95eed8b294dca789327fdec6639ef7134f4b97745239518fbce88a54960ac172','c/c_trial_gates.py':'258146df27c938e9f220bb64a6725545cc8d1ce8200b7fe072aca4c1143128be','b/b_trial_gates.py':'b784b9d7b131230ebbf669a81b9b017fdc7479bab952dc47dd10d520e222dd56','a/trial_gates.py':'f786cb3c3ccead8b6de365ca62d2f9dea8aaece1493cd9be0b01e1a4fd4cefa0'}\n report['parser_code']={n:record(root/n) for n in pins}; need(all(report['parser_code'][n]['sha256']==p for n,p in pins.items()),'parser code hashes')\n class NoModel:\n  def find_spec(self,fullname,path=None,target=None):\n   if fullname.split('.')[0] in {'torch','torch_npu','transformers','vllm','vllm_omni','vllm_ascend'}: raise RuntimeError('blocked model import '+fullname)\n sys.meta_path.insert(0,NoModel())\n sys.path.insert(0,str(root/'c')); import run_c_trial as c\n need(Path(c.__file__).resolve()==root/'c/run_c_trial.py','C supervisor import path')\n def no_write(*args,**kwargs): raise RuntimeError('audit blocked write')\n c.base.atomic_json=no_write\n host=c.profiles.require_host(s['host']); need(host==f['host']==read(r/'host_identity.json'),'host boot')\n need(proof==s['formal_smoke_gate'] and proof['status']=='passed' and proof['host']==host and proof['run_id']==rid and proof['group']=='01234567' and proof['sample_id']=='shirt_red_couple_124','same-run smoke proof')\n source=Path('/cache/zhonghao/h3/data/shirt_red_couple_124/source.mp4'); sr=record(source)\n need(sr==f['sample']['source'] and sr['sha256']=='4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2','source path/SHA')\n prompt=c.gates.sample_profile(s['sample_id']).prompt\n need(prompt==f['sample']['manifest']['edit_prompt']==s['edit_prompt'],'prompt')\n gen={'width':1344,'height':768,'fps':24,'duration_seconds':5.0,'seed':4101,'num_inference_steps':50,'flow_shift':12.0,'audio_flow_shift':3.0}\n need(gen==f['generation']==s['requested_generation'],'generation')\n server=s['server_proc_identity']; ik=('pid','start_ticks','pgrp','session')\n need({k:server[k] for k in ik}=={'pid':976934,'start_ticks':130016739,'pgrp':976934,'session':976934},'original server')\n need(all(proof['server_identity'][k]==server[k] for k in ik),'proof server')\n report['source']=sr; report['requests']=[]\n for name,steps in [('smoke_2step',2),('c_50step',50)]:\n  req=read(r/name/'request.json')\n  fields={k:gen[k] for k in ('width','height','fps','flow_shift','seed')}; fields.update(prompt=prompt,num_inference_steps=steps,extra_params=json.dumps({'task':'ref2va','duration':5.0,'audio_flow_shift':3.0}))\n  need(req['host']==host and req['run_id']==rid and req['group']=='01234567' and req['sample_id']==s['sample_id'] and req['source_video']==str(source) and req['source_sha256']==sr['sha256'] and req['fields']==fields and req['requested_steps']==steps,'actual request binding '+name)\n  need(all(req['server_proc_identity'][k]==server[k] for k in ik),'actual request server '+name)\n  report['requests'].append({'name':name,'request_record':record(r/name/'request.json'),'actual_request':req,'all_requested_bindings_passed':True})\n d=r/'smoke_2step'; smoke=read(d/'result.json')\n need(smoke==s['smoke_2step'] and smoke['success'] is True and smoke['http_code']=='200' and smoke['curl_returncode']==0 and smoke['requested_steps']==2 and smoke['content_type']=='video/mp4','smoke result')\n media=record(r/'output/smoke_2step.mp4')\n need(smoke['output_video']==media['path'] and smoke['output_sha256']==media['sha256']=='a081a0f8bc30c8aefcb31bb013f059fed46f8957c2ee3b704ccdb1f38ac9462c' and media['size_bytes']==2847398,'smoke actual MP4 SHA')\n need(smoke['request_end_to_end_seconds']==153.01988986390643 and smoke['completed_at']=='2026-09-14T05:36:05.131307+00:00','smoke expected result time')\n h=(d/'response.headers').read_text(); out=(d/'curl.stdout').read_text(); err=(d/'curl.stderr').read_text()\n need(re.findall(r'^HTTP/\\S+\\s+(\\d{3})\\b',h,re.M)[-1]=='200' and out.strip()=='200' and err=='','raw smoke HTTP/curl')\n need(re.findall(r'^content-type:\\s*([^\\r\\n]+)',h,re.I|re.M)[-1].strip().lower()=='video/mp4' and int(re.findall(r'^content-length:\\s*(\\d+)',h,re.I|re.M)[-1])==media['size_bytes'],'smoke raw mime/length')\n need(proof['smoke_request']==record(d/'request.json') and proof['smoke_result']==record(d/'result.json'),'proof smoke request/result SHA')\n saved_probe=read(d/'ffprobe.json'); need(saved_probe==smoke['ffprobe'] and saved_probe['verified'] is True,'saved smoke ffprobe')\n report['smoke']={'result_summary':{k:smoke[k] for k in ('completed_at','request_end_to_end_seconds','http_code','curl_returncode','requested_steps','success')},'media':media,'raw_headers':h,'raw_curl_stdout':out,'raw_curl_stderr':err,'records':{n:record(d/n) for n in ('result.json','response.headers','curl.stdout','curl.stderr','ffprobe.json')},'saved_probe_checks':saved_probe['checks'],'fresh_ffprobe_performed':False}\n wp=proof['worker_identities_by_card']; need(set(wp)==set(map(str,range(8))),'worker cards')\n for i in range(8):\n  w=wp[str(i)]; need({k:w[k] for k in ik}=={'pid':977439+i,'start_ticks':130022068 if i<4 else 130022069,'pgrp':976934,'session':976934},'recorded worker identity '+str(i))\n pids=set(range(977439,977447)); raw=(r/'server.log').read_bytes(); n=proof['server_log_prefix_bytes']\n need(type(n) is int and 0<n<=len(raw) and hashlib.sha256(raw[:n]).hexdigest()==proof['server_log_prefix_sha256'],'smoke prefix SHA')\n prefix=raw[:n].decode('utf-8',errors='replace'); text=raw.decode('utf-8',errors='replace')\n loads=c.gates.parse_full_load_evidence(prefix,f['weights'])\n need(set(loads)==pids and norm(loads)==proof['loaded_records_by_pid'] and c.gates.parse_full_load_evidence(text,f['weights'])==loads,'8 full load records/prefix/full log')\n for pid,row in loads.items(): need(row['cpu_loading']['intraop_before']==row['cpu_loading']['intraop_after']==row['cpu_loading']['interop_before']==row['cpu_loading']['interop_after']==192,'192 restore '+str(pid))\n strict_smoke=c.gates.parse_strict_metadata(prefix,pids,s['sample_id'],requests=1)\n strict_now=c.gates.parse_strict_metadata(text,pids,s['sample_id'],requests=2)\n need(norm(strict_smoke)==proof['strict_metadata'],'smoke saved strict metadata')\n common=next(iter(strict_now['records_by_pid'].values()))[0]\n need(common['text_len']==6159 and common['source_shape']==common['target_shape']==(37,48,84) and common['source_audio_t']==0 and common['target_audio_t']==207,'expected color strict dimensions')\n report['load_and_strict']={'smoke_prefix_bytes':n,'smoke_prefix_sha256':proof['server_log_prefix_sha256'],'observed_log_bytes':len(raw),'observed_log_sha256':hashlib.sha256(raw).hexdigest(),'loads_by_pid':{pid:{'base':v['load']['base_tensor_count'],'branch':v['load']['branch_tensor_count'],'lora_pairs':v['load']['lora_pairs_merged'],'checkpoint':v['load']['checkpoint'],'intraop_after':v['cpu_loading']['intraop_after'],'interop_after':v['cpu_loading']['interop_after']} for pid,v in loads.items()},'smoke_strict_metadata':strict_smoke,'current_strict_metadata':strict_now,'common_metadata':common}\n identities=[('supervisor',s['supervisor_proc_identity']),('server',server)]+[(k,v) for k,v in wp.items()]\n need(s['supervisor_pid']==976351 and s['supervisor_proc_identity']['pid']==976351 and s['supervisor_proc_identity']['start_ticks']==130013779,'original supervisor')\n report['current_processes']=[]\n for label,old in identities:\n  now=c.base.proc_identity(old['pid']); match=now is not None and all(now[k]==old[k] for k in ik)\n  report['current_processes'].append({'label':label,'expected':old,'current':now,'same_identity_alive':match})\n  need(match and now['state']!='Z','live process identity '+label)\n owner=object.__new__(c.base.ProcessSupervisor); owner.run_id=rid; owned=owner.owned_group_members(server['pid'])\n need(pids.issubset(set(owned)) and server['pid'] in owned,'owned live server/workers')\n report['owned_group_members']=owned\n resource_at=datetime.datetime.now(datetime.timezone.utc).isoformat()\n resource=subprocess.run(['/usr/local/sbin/npu-smi','info'],capture_output=True,text=True,timeout=30,check=False)\n need(resource.returncode==0,'fresh npu-smi')\n mapping=c.selected_workers(resource.stdout,tuple(range(8))); need(mapping=={i:977439+i for i in range(8)},'fresh physical worker mapping')\n report['fresh_resource']={'observed_at_utc':resource_at,'returncode':resource.returncode,'stdout':resource.stdout,'stderr':resource.stderr,'worker_by_card':mapping,'health':c.base.selected_health_memory(resource.stdout,tuple(range(8)),0)}\n lines=text.splitlines(); progress=[(i+1,line) for i,line in enumerate(lines) if re.search(r'\\d+/49',line)]\n report['recent_progress_lines']=progress[-6:]; report['progress_interpretation']='Literal displayed denoising-loop progress only, not actual model-forward call count/NFE.'\n report['log_tail']=lines[-8:]\n end_status=read(r/'c_status.json')\n report['status_at_end']={k:end_status.get(k) for k in ('phase','updated_at','formal_50step_started','formal_50step_completed','formal_request_attempts','error')}\n report['formal_result_exists_at_end']=(r/'c_50step/result.json').is_file(); report['formal_strict_metadata_exists_at_end']=(r/'formal_strict_metadata.json').is_file()\n report['proof_records']={n:record(r/n) for n in ('formal_smoke_gate.json','formal_logging.json')}\n report['torch_imported']='torch' in sys.modules; report['audit_status']='passed_live_integrity'\nexcept Exception as exc:\n report['audit_status']='failed_or_state_changed'; report['error']=type(exc).__name__+': '+str(exc)\nreport['observed_end_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat()\nprint(json.dumps(report,ensure_ascii=False))\nsys.exit(0 if report['audit_status']=='passed_live_integrity' else 1)\n"
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "schema": "h3_svoo_isa_branch_screening_oracle_v1",
+  "definition": "Screening oracle on sampled source queries. The selected branch is partitioned into contiguous fixed-size blocks. Coarse Q-centroid-K scores select exact blocks; every unselected block remains visible through ISA-style zeroth-order Taylor mean-K/V approximation with the correct block multiplicity. High-sharpness query/head pairs can fall back to the exact dense output. All other attention quadrants are preserved exactly. SVOO cross-input profiling and online QK co-clustering are intentionally not included in this first screen.",
+  "capture_dir": "/cache/zhonghao/h3/ss_spatial_oracle_fastest_redshirt_20260917_v1/source_qkv_capture",
+  "branch": "qsks",
+  "layers": [
+    {
+      "layer": 8,
+      "step": 4,
+      "branch": "qsks",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "branch_keys": 37296,
+      "non_branch_keys_preserved_exactly": 43869,
+      "block_size": 64,
+      "blocks": 583,
+      "sharpness": {
+        "mean": 0.09865402430295944,
+        "median": 0.05399759113788605,
+        "p95": 0.3565860390663147,
+        "max": 0.947002112865448
+      },
+      "configs": [
+        {
+          "exact_block_ratio_requested": 0.375,
+          "exact_blocks": 219,
+          "exact_block_ratio_realized": 0.37564322469982847,
+          "full_query_fraction": 0.5,
+          "ideal_branch_compute_fraction": 0.6926993996569468,
+          "ideal_branch_compute_reduction": 0.3073006003430532,
+          "global_relative_output_l2": 0.02565380372107029,
+          "per_query_head_relative_output_error": {
+            "mean": 0.007211361546069384,
+            "median": 0.0,
+            "p95": 0.03991224244236946,
+            "max": 0.46879780292510986
+          },
+          "output_cosine": {
+            "mean": 0.9997919201850891,
+            "median": 0.9999999403953552,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        },
+        {
+          "exact_block_ratio_requested": 0.375,
+          "exact_blocks": 219,
+          "exact_block_ratio_realized": 0.37564322469982847,
+          "full_query_fraction": 0.75,
+          "ideal_branch_compute_fraction": 0.8463496998284734,
+          "ideal_branch_compute_reduction": 0.1536503001715266,
+          "global_relative_output_l2": 0.019516244530677795,
+          "per_query_head_relative_output_error": {
+            "mean": 0.004312672186642885,
+            "median": 0.0,
+            "p95": 0.028083382174372673,
+            "max": 0.4643470346927643
+          },
+          "output_cosine": {
+            "mean": 0.9998703598976135,
+            "median": 1.0,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        },
+        {
+          "exact_block_ratio_requested": 0.5,
+          "exact_blocks": 292,
+          "exact_block_ratio_realized": 0.5008576329331046,
+          "full_query_fraction": 0.5,
+          "ideal_branch_compute_fraction": 0.7543283662092624,
+          "ideal_branch_compute_reduction": 0.24567163379073764,
+          "global_relative_output_l2": 0.01653420552611351,
+          "per_query_head_relative_output_error": {
+            "mean": 0.004059609025716782,
+            "median": 0.0,
+            "p95": 0.02332960069179535,
+            "max": 0.3801373541355133
+          },
+          "output_cosine": {
+            "mean": 0.9999200105667114,
+            "median": 0.9999999403953552,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        },
+        {
+          "exact_block_ratio_requested": 0.5,
+          "exact_blocks": 292,
+          "exact_block_ratio_realized": 0.5008576329331046,
+          "full_query_fraction": 0.75,
+          "ideal_branch_compute_fraction": 0.8771641831046312,
+          "ideal_branch_compute_reduction": 0.12283581689536882,
+          "global_relative_output_l2": 0.01269249152392149,
+          "per_query_head_relative_output_error": {
+            "mean": 0.0024622329510748386,
+            "median": 0.0,
+            "p95": 0.015163373202085495,
+            "max": 0.3801373541355133
+          },
+          "output_cosine": {
+            "mean": 0.9999493360519409,
+            "median": 1.0,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        }
+      ]
+    },
+    {
+      "layer": 24,
+      "step": 4,
+      "branch": "qsks",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "branch_keys": 37296,
+      "non_branch_keys_preserved_exactly": 43869,
+      "block_size": 64,
+      "blocks": 583,
+      "sharpness": {
+        "mean": 0.04822109639644623,
+        "median": 0.021717973053455353,
+        "p95": 0.18616481125354767,
+        "max": 0.9702620506286621
+      },
+      "configs": [
+        {
+          "exact_block_ratio_requested": 0.375,
+          "exact_blocks": 219,
+          "exact_block_ratio_realized": 0.37564322469982847,
+          "full_query_fraction": 0.5,
+          "ideal_branch_compute_fraction": 0.6926993996569468,
+          "ideal_branch_compute_reduction": 0.3073006003430532,
+          "global_relative_output_l2": 0.0344812348484993,
+          "per_query_head_relative_output_error": {
+            "mean": 0.017342563718557358,
+            "median": 0.0,
+            "p95": 0.08691754937171936,
+            "max": 0.8680392503738403
+          },
+          "output_cosine": {
+            "mean": 0.9992918372154236,
+            "median": 0.9999998807907104,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        },
+        {
+          "exact_block_ratio_requested": 0.375,
+          "exact_blocks": 219,
+          "exact_block_ratio_realized": 0.37564322469982847,
+          "full_query_fraction": 0.75,
+          "ideal_branch_compute_fraction": 0.8463496998284734,
+          "ideal_branch_compute_reduction": 0.1536503001715266,
+          "global_relative_output_l2": 0.02864370495080948,
+          "per_query_head_relative_output_error": {
+            "mean": 0.01040057186037302,
+            "median": 0.0,
+            "p95": 0.0694282203912735,
+            "max": 0.8680392503738403
+          },
+          "output_cosine": {
+            "mean": 0.9995171427726746,
+            "median": 1.0,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        },
+        {
+          "exact_block_ratio_requested": 0.5,
+          "exact_blocks": 292,
+          "exact_block_ratio_realized": 0.5008576329331046,
+          "full_query_fraction": 0.5,
+          "ideal_branch_compute_fraction": 0.7543283662092624,
+          "ideal_branch_compute_reduction": 0.24567163379073764,
+          "global_relative_output_l2": 0.02353852614760399,
+          "per_query_head_relative_output_error": {
+            "mean": 0.01042327843606472,
+            "median": 0.0,
+            "p95": 0.05343744531273842,
+            "max": 0.85086590051651
+          },
+          "output_cosine": {
+            "mean": 0.9996941089630127,
+            "median": 0.9999999403953552,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        },
+        {
+          "exact_block_ratio_requested": 0.5,
+          "exact_blocks": 292,
+          "exact_block_ratio_realized": 0.5008576329331046,
+          "full_query_fraction": 0.75,
+          "ideal_branch_compute_fraction": 0.8771641831046312,
+          "ideal_branch_compute_reduction": 0.12283581689536882,
+          "global_relative_output_l2": 0.020269295200705528,
+          "per_query_head_relative_output_error": {
+            "mean": 0.006359336897730827,
+            "median": 0.0,
+            "p95": 0.042325764894485474,
+            "max": 0.85086590051651
+          },
+          "output_cosine": {
+            "mean": 0.9997841119766235,
+            "median": 1.0,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        }
+      ]
+    },
+    {
+      "layer": 41,
+      "step": 4,
+      "branch": "qsks",
+      "sampled_source_queries": 592,
+      "heads": 56,
+      "branch_keys": 37296,
+      "non_branch_keys_preserved_exactly": 43869,
+      "block_size": 64,
+      "blocks": 583,
+      "sharpness": {
+        "mean": 0.0319126732647419,
+        "median": 0.012382467277348042,
+        "p95": 0.12337019294500351,
+        "max": 0.9028170108795166
+      },
+      "configs": [
+        {
+          "exact_block_ratio_requested": 0.375,
+          "exact_blocks": 219,
+          "exact_block_ratio_realized": 0.37564322469982847,
+          "full_query_fraction": 0.5,
+          "ideal_branch_compute_fraction": 0.6926993996569468,
+          "ideal_branch_compute_reduction": 0.3073006003430532,
+          "global_relative_output_l2": 0.0619601309299469,
+          "per_query_head_relative_output_error": {
+            "mean": 0.034938275814056396,
+            "median": 0.0,
+            "p95": 0.14808346331119537,
+            "max": 0.7821048498153687
+          },
+          "output_cosine": {
+            "mean": 0.9980690479278564,
+            "median": 0.9999998807907104,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        },
+        {
+          "exact_block_ratio_requested": 0.375,
+          "exact_blocks": 219,
+          "exact_block_ratio_realized": 0.37564322469982847,
+          "full_query_fraction": 0.75,
+          "ideal_branch_compute_fraction": 0.8463496998284734,
+          "ideal_branch_compute_reduction": 0.1536503001715266,
+          "global_relative_output_l2": 0.048841822892427444,
+          "per_query_head_relative_output_error": {
+            "mean": 0.02018357440829277,
+            "median": 0.0,
+            "p95": 0.12405519932508469,
+            "max": 0.7821048498153687
+          },
+          "output_cosine": {
+            "mean": 0.9988141655921936,
+            "median": 1.0,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        },
+        {
+          "exact_block_ratio_requested": 0.5,
+          "exact_blocks": 292,
+          "exact_block_ratio_realized": 0.5008576329331046,
+          "full_query_fraction": 0.5,
+          "ideal_branch_compute_fraction": 0.7543283662092624,
+          "ideal_branch_compute_reduction": 0.24567163379073764,
+          "global_relative_output_l2": 0.04531217738986015,
+          "per_query_head_relative_output_error": {
+            "mean": 0.02330458164215088,
+            "median": 0.0,
+            "p95": 0.10220354795455933,
+            "max": 0.7708185315132141
+          },
+          "output_cosine": {
+            "mean": 0.9990302920341492,
+            "median": 0.9999998807907104,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        },
+        {
+          "exact_block_ratio_requested": 0.5,
+          "exact_blocks": 292,
+          "exact_block_ratio_realized": 0.5008576329331046,
+          "full_query_fraction": 0.75,
+          "ideal_branch_compute_fraction": 0.8771641831046312,
+          "ideal_branch_compute_reduction": 0.12283581689536882,
+          "global_relative_output_l2": 0.03673632815480232,
+          "per_query_head_relative_output_error": {
+            "mean": 0.01363343931734562,
+            "median": 0.0,
+            "p95": 0.08547800034284592,
+            "max": 0.7708185315132141
+          },
+          "output_cosine": {
+            "mean": 0.9993863701820374,
+            "median": 1.0,
+            "p95": 1.0000001192092896,
+            "max": 1.000000238418579
+          }
+        }
+      ]
+    }
+  ]
+}

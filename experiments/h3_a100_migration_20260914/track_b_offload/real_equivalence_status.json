@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "all real tensors, two tensor-wise shards; not runtime block ordering or GPU",
+  "torch_version": "2.11.0+cu130",
+  "threads": 4,
+  "bitwise_required": true,
+  "verified": 1335,
+  "lora_pairs": 208,
+  "qkv": 52,
+  "elapsed_seconds": 370.4781277179718,
+  "peak_rss_kib": 1570712
+}

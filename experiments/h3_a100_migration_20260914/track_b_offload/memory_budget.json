@@ -1,0 +1,76 @@
+{
+  "status": "budget_gate_incomplete",
+  "units": "bytes (GB=1e9; A100 80 GiB=85899345920 bytes)",
+  "baseline": {
+    "cpu_bytes": 21000000000,
+    "provenance": "root supplied latest approx 21GB; not live measured by this script",
+    "gpu0_old_residual_bytes": 891289600,
+    "gpu1_old_residual_bytes": 0,
+    "cgroup_limit_bytes": 250999996416,
+    "gpu_total_bytes_each": 85899345920
+  },
+  "dit": {
+    "main_blocks_bytes": 68836504000,
+    "main_pinned_shard_bytes_each_rank": 34418252000,
+    "non_main_bytes_each_rank": 1723246144,
+    "largest_full_layer_bytes": 1376730080,
+    "gpu_two_full_output_buffers_bytes": 2753460160,
+    "gpu_two_half_input_buffers_bytes": 1376730080,
+    "gpu_allgather_buffers_total_each_rank": 4130190240,
+    "pinned_warning": "Pinned shard storage is the main weight term itself; do NOT add it twice."
+  },
+  "encoder": {
+    "full_shardable_bytes": 50314608640,
+    "vision_replicated_bytes": 1190533600,
+    "norm_replicated_bytes": 1049600,
+    "per_rank_bytes": 26348887520
+  },
+  "audio_vae_runtime_fp32_bytes_each_rank": 605306340,
+  "video_vae_runtime_fp32_bytes_each_rank": null,
+  "cases": {
+    "UNVERIFIED_if_checkpoint_F32_approx_includes_header": {
+      "video_vae_bytes_per_rank": 10415548320,
+      "cpu_model_payload_both_ranks": 147022480648,
+      "cpu_payload_plus_provided_baseline": 168022480648,
+      "cpu_hard_limit_headroom_before_unknowns": 82977515768,
+      "gpu_per_rank_static_TE_offloaded": 16874291044,
+      "gpu_per_rank_static_TE_resident": 43223178564,
+      "gpu0_headroom_TE_resident_before_unknowns": 41784877756
+    },
+    "UNVERIFIED_if_checkpoint_16bit_approx_includes_header": {
+      "video_vae_bytes_per_rank": 20831096640,
+      "cpu_model_payload_both_ranks": 167853577288,
+      "cpu_payload_plus_provided_baseline": 188853577288,
+      "cpu_hard_limit_headroom_before_unknowns": 62146419128,
+      "gpu_per_rank_static_TE_offloaded": 27289839364,
+      "gpu_per_rank_static_TE_resident": 53638726884,
+      "gpu0_headroom_TE_resident_before_unknowns": 31369329436
+    }
+  },
+  "illustrative_activation_formula": {
+    "local_tokens": "L=ceil(total packed tokens / 2); real request layout must supply N",
+    "hidden_BF16_bytes": "L*5376*2 per live hidden tensor",
+    "qkv_BF16_bytes": "L*(3*7168)*2; Ulysses may simultaneously retain send/receive copies",
+    "ffn_gate_up_BF16_bytes": "L*(2*14336)*2 before SiLU/multiply/output temporaries",
+    "example_L_40000_hidden_bytes": 430080000,
+    "example_L_40000_qkv_bytes": 1720320000,
+    "example_L_40000_ffn_gate_up_bytes": 2293760000,
+    "warning": "These are individual tensor payloads, not peak sums or measured activation bounds."
+  },
+  "unresolved": [
+    "Video VAE nested checkpoint header dtype/numel missing",
+    "TE load_file maps whole source file before TP copy; largest observed shard 4932328944 bytes; mappings/page cache not private payload",
+    "File cache/readahead, old allocator retained CPU pages, process/runtime heaps, pinned allocator metadata",
+    "CUDA contexts, allocator fragmentation, cuBLAS/FlashAttention/NCCL workspaces and attention local gather scratch",
+    "VAE encode/decode activations, text encoder attention/vision activations, packed source/target tensors and branch scans",
+    "External tasks can consume resources after admission; current xuchubo CPU recovery process may later use GPU"
+  ],
+  "proposed_admission_not_installed": {
+    "before_model": "No new foreign GPU process; fresh cgroup/host memory and /proc rank RSS samples; agree available GPUs",
+    "cpu_after_load": "At least 32 GiB headroom using cgroup usage minus inactive_file (working-set estimate), plus stable pin/offload peaks; never equate all file cache with guaranteed reclaimable memory",
+    "gpu_before_first_denoise": "After real buffers/nonblock placement, at least 20 GiB free per GPU as a provisional gate; measure first-block peak before committing long generation",
+    "first_denoise": "Aim peak total usage <=70 GiB/GPU (10 GiB margin); this is a proposed safety margin, not a proven model requirement or change to existing guard",
+    "continuous": "Monitor through encoder, pinning, AllGather, every denoise step and VAE decode; stage markers + allocated/reserved + device-used + cgroup counters"
+  },
+  "comparison": "Final B/D timing first, then quality; both use identical offload implementation/settings. Equal-weight and runtime validation gates remain."
+}

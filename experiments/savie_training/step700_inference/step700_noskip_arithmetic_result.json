@@ -1,0 +1,42 @@
+{
+  "http_success": true,
+  "requested_steps": 9,
+  "case": "B",
+  "request_seconds": 269.397988,
+  "gpu_memory_sampled_peak_mib": {
+    "GPU-b6d13423-832a-9f23-cf2f-6dd9aabc8670": 48878,
+    "GPU-ce70e1b4-48b4-fd02-3b8a-5484cf25fff3": 51072
+  },
+  "quality_verified": false,
+  "scope": "HTTP request excluding model load; same offload/settings across ABCD",
+  "decoded_frames": 124,
+  "shape_verified": true,
+  "checkpoint_step": 700,
+  "actual_dit_forwards": 8,
+  "interleaved_sp": true,
+  "token_skip": false,
+  "refresh_forwards": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "selector": {
+    "step": 700,
+    "active_ratio": 1.0,
+    "stable_ratio": 0.0,
+    "selector_enabled": false,
+    "purpose": "skip disabled: all queries active, all steps fresh, no cache reads or fusion"
+  },
+  "compile_excluded_from_formal": true,
+  "bootstrap_seconds": 95.701123,
+  "warmup_seconds": 86.456794,
+  "schedule_points": 9,
+  "decoded_semantics": "full denoising output",
+  "purpose": "SAViE step700 DMD8 SKIP OFF SP2 interleaved; seed4101",
+  "formal_speed_comparison": false
+}

@@ -1,0 +1,784 @@
+{
+  "status": "passed",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "run_id": "19941bde9a10446296621418e68a09bc",
+  "group": "01234567",
+  "smoke_result": {
+    "path": "/cache/zhonghao/h3/c_model_trial/01234567/lake_snow/C/runs/c_20260913T150426Z_19941bde9a10446296621418e68a09bc/smoke_2step/result.json",
+    "sha256": "22787943ef1cbe16b6fed33f789b32a2ea0d7e8a88996233efb63d9cad4f1669",
+    "size_bytes": 1515
+  },
+  "smoke_request": {
+    "path": "/cache/zhonghao/h3/c_model_trial/01234567/lake_snow/C/runs/c_20260913T150426Z_19941bde9a10446296621418e68a09bc/smoke_2step/request.json",
+    "sha256": "fb2067d52d3b663cbb2cbd7188d6dcb1e1450f36bbf96ab42dfe71344470eccc",
+    "size_bytes": 1291
+  },
+  "server_identity": {
+    "pid": 211371,
+    "state": "S",
+    "pgrp": 211371,
+    "session": 211371,
+    "start_ticks": 124855681
+  },
+  "worker_identities_by_card": {
+    "0": {
+      "pid": 211794,
+      "state": "S",
+      "pgrp": 211371,
+      "session": 211371,
+      "start_ticks": 124860926
+    },
+    "1": {
+      "pid": 211795,
+      "state": "S",
+      "pgrp": 211371,
+      "session": 211371,
+      "start_ticks": 124860926
+    },
+    "2": {
+      "pid": 211796,
+      "state": "S",
+      "pgrp": 211371,
+      "session": 211371,
+      "start_ticks": 124860926
+    },
+    "3": {
+      "pid": 211797,
+      "state": "S",
+      "pgrp": 211371,
+      "session": 211371,
+      "start_ticks": 124860926
+    },
+    "4": {
+      "pid": 211798,
+      "state": "S",
+      "pgrp": 211371,
+      "session": 211371,
+      "start_ticks": 124860926
+    },
+    "5": {
+      "pid": 211799,
+      "state": "S",
+      "pgrp": 211371,
+      "session": 211371,
+      "start_ticks": 124860926
+    },
+    "6": {
+      "pid": 211800,
+      "state": "S",
+      "pgrp": 211371,
+      "session": 211371,
+      "start_ticks": 124860926
+    },
+    "7": {
+      "pid": 211801,
+      "state": "S",
+      "pgrp": 211371,
+      "session": 211371,
+      "start_ticks": 124860926
+    }
+  },
+  "health": {
+    "health": {
+      "0": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "1": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "2": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "3": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "4": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "5": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "6": {
+        "model": "910B3",
+        "health": "OK"
+      },
+      "7": {
+        "model": "910B3",
+        "health": "OK"
+      }
+    },
+    "hbm": {
+      "0": {
+        "used_mib": 34817,
+        "total_mib": 65536,
+        "free_mib": 30719
+      },
+      "1": {
+        "used_mib": 34778,
+        "total_mib": 65536,
+        "free_mib": 30758
+      },
+      "2": {
+        "used_mib": 34776,
+        "total_mib": 65536,
+        "free_mib": 30760
+      },
+      "3": {
+        "used_mib": 34778,
+        "total_mib": 65536,
+        "free_mib": 30758
+      },
+      "4": {
+        "used_mib": 34782,
+        "total_mib": 65536,
+        "free_mib": 30754
+      },
+      "5": {
+        "used_mib": 34783,
+        "total_mib": 65536,
+        "free_mib": 30753
+      },
+      "6": {
+        "used_mib": 34781,
+        "total_mib": 65536,
+        "free_mib": 30755
+      },
+      "7": {
+        "used_mib": 34779,
+        "total_mib": 65536,
+        "free_mib": 30757
+      }
+    }
+  },
+  "sample_id": "lake_snow",
+  "loaded_records_by_pid": {
+    "211797": {
+      "load": {
+        "base_partition": "ref2va",
+        "base_tensor_count": 535,
+        "branch": {
+          "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+          "size_bytes": 4279428112,
+          "tensor_count": 800
+        },
+        "branch_tensor_count": 800,
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "load_and_merge_seconds": 92.48443649802357,
+        "lora": {
+          "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+          "size_bytes": 334026912,
+          "tensor_count": 416
+        },
+        "lora_alpha": 64,
+        "lora_pairs_merged": 208,
+        "lora_rank": 64,
+        "lora_scale": 1.0,
+        "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+        "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+        "phase_seconds": {
+          "base": 128.58718778099865,
+          "branch": 17.42193622002378,
+          "lora": 75.03139387513511
+        },
+        "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+      },
+      "cpu_loading": {
+        "interop_after": 192,
+        "interop_before": 192,
+        "interop_loading": 192,
+        "intraop_after": 192,
+        "intraop_before": 192,
+        "intraop_loading": 4,
+        "phase_seconds": {
+          "base": 128.58718778099865,
+          "branch": 17.42193622002378,
+          "lora": 75.03139387513511
+        },
+        "requested_loading_intraop": 4,
+        "scope_seconds": 221.2935725999996,
+        "status": "completed"
+      }
+    },
+    "211798": {
+      "load": {
+        "base_partition": "ref2va",
+        "base_tensor_count": 535,
+        "branch": {
+          "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+          "size_bytes": 4279428112,
+          "tensor_count": 800
+        },
+        "branch_tensor_count": 800,
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "load_and_merge_seconds": 86.67857862799428,
+        "lora": {
+          "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+          "size_bytes": 334026912,
+          "tensor_count": 416
+        },
+        "lora_alpha": 64,
+        "lora_pairs_merged": 208,
+        "lora_rank": 64,
+        "lora_scale": 1.0,
+        "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+        "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+        "phase_seconds": {
+          "base": 136.90593629493378,
+          "branch": 16.274486473063007,
+          "lora": 70.37190864700824
+        },
+        "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+      },
+      "cpu_loading": {
+        "interop_after": 192,
+        "interop_before": 192,
+        "interop_loading": 192,
+        "intraop_after": 192,
+        "intraop_before": 192,
+        "intraop_loading": 4,
+        "phase_seconds": {
+          "base": 136.90593629493378,
+          "branch": 16.274486473063007,
+          "lora": 70.37190864700824
+        },
+        "requested_loading_intraop": 4,
+        "scope_seconds": 224.15543676889502,
+        "status": "completed"
+      }
+    },
+    "211799": {
+      "load": {
+        "base_partition": "ref2va",
+        "base_tensor_count": 535,
+        "branch": {
+          "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+          "size_bytes": 4279428112,
+          "tensor_count": 800
+        },
+        "branch_tensor_count": 800,
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "load_and_merge_seconds": 98.37470135698095,
+        "lora": {
+          "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+          "size_bytes": 334026912,
+          "tensor_count": 416
+        },
+        "lora_alpha": 64,
+        "lora_pairs_merged": 208,
+        "lora_rank": 64,
+        "lora_scale": 1.0,
+        "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+        "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+        "phase_seconds": {
+          "base": 135.77527900598943,
+          "branch": 16.720164712984115,
+          "lora": 81.62330831005238
+        },
+        "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+      },
+      "cpu_loading": {
+        "interop_after": 192,
+        "interop_before": 192,
+        "interop_loading": 192,
+        "intraop_after": 192,
+        "intraop_before": 192,
+        "intraop_loading": 4,
+        "phase_seconds": {
+          "base": 135.77527900598943,
+          "branch": 16.720164712984115,
+          "lora": 81.62330831005238
+        },
+        "requested_loading_intraop": 4,
+        "scope_seconds": 234.51958955312148,
+        "status": "completed"
+      }
+    },
+    "211794": {
+      "load": {
+        "base_partition": "ref2va",
+        "base_tensor_count": 535,
+        "branch": {
+          "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+          "size_bytes": 4279428112,
+          "tensor_count": 800
+        },
+        "branch_tensor_count": 800,
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "load_and_merge_seconds": 106.35543271782808,
+        "lora": {
+          "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+          "size_bytes": 334026912,
+          "tensor_count": 416
+        },
+        "lora_alpha": 64,
+        "lora_pairs_merged": 208,
+        "lora_rank": 64,
+        "lora_scale": 1.0,
+        "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+        "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+        "phase_seconds": {
+          "base": 133.90848690783605,
+          "branch": 16.801191996084526,
+          "lora": 89.52370370202698
+        },
+        "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+      },
+      "cpu_loading": {
+        "interop_after": 192,
+        "interop_before": 192,
+        "interop_loading": 192,
+        "intraop_after": 192,
+        "intraop_before": 192,
+        "intraop_loading": 4,
+        "phase_seconds": {
+          "base": 133.90848690783605,
+          "branch": 16.801191996084526,
+          "lora": 89.52370370202698
+        },
+        "requested_loading_intraop": 4,
+        "scope_seconds": 240.46497047087178,
+        "status": "completed"
+      }
+    },
+    "211796": {
+      "load": {
+        "base_partition": "ref2va",
+        "base_tensor_count": 535,
+        "branch": {
+          "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+          "size_bytes": 4279428112,
+          "tensor_count": 800
+        },
+        "branch_tensor_count": 800,
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "load_and_merge_seconds": 94.64112015604042,
+        "lora": {
+          "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+          "size_bytes": 334026912,
+          "tensor_count": 416
+        },
+        "lora_alpha": 64,
+        "lora_pairs_merged": 208,
+        "lora_rank": 64,
+        "lora_scale": 1.0,
+        "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+        "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+        "phase_seconds": {
+          "base": 127.80446852790192,
+          "branch": 16.26424736599438,
+          "lora": 78.34744788496755
+        },
+        "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+      },
+      "cpu_loading": {
+        "interop_after": 192,
+        "interop_before": 192,
+        "interop_loading": 192,
+        "intraop_after": 192,
+        "intraop_before": 192,
+        "intraop_loading": 4,
+        "phase_seconds": {
+          "base": 127.80446852790192,
+          "branch": 16.26424736599438,
+          "lora": 78.34744788496755
+        },
+        "requested_loading_intraop": 4,
+        "scope_seconds": 222.83167800004594,
+        "status": "completed"
+      }
+    },
+    "211795": {
+      "load": {
+        "base_partition": "ref2va",
+        "base_tensor_count": 535,
+        "branch": {
+          "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+          "size_bytes": 4279428112,
+          "tensor_count": 800
+        },
+        "branch_tensor_count": 800,
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "load_and_merge_seconds": 105.94080878212117,
+        "lora": {
+          "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+          "size_bytes": 334026912,
+          "tensor_count": 416
+        },
+        "lora_alpha": 64,
+        "lora_pairs_merged": 208,
+        "lora_rank": 64,
+        "lora_scale": 1.0,
+        "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+        "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+        "phase_seconds": {
+          "base": 132.46534794894978,
+          "branch": 16.71003199601546,
+          "lora": 89.19997556391172
+        },
+        "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+      },
+      "cpu_loading": {
+        "interop_after": 192,
+        "interop_before": 192,
+        "interop_loading": 192,
+        "intraop_after": 192,
+        "intraop_before": 192,
+        "intraop_loading": 4,
+        "phase_seconds": {
+          "base": 132.46534794894978,
+          "branch": 16.71003199601546,
+          "lora": 89.19997556391172
+        },
+        "requested_loading_intraop": 4,
+        "scope_seconds": 238.73972174501978,
+        "status": "completed"
+      }
+    },
+    "211801": {
+      "load": {
+        "base_partition": "ref2va",
+        "base_tensor_count": 535,
+        "branch": {
+          "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+          "size_bytes": 4279428112,
+          "tensor_count": 800
+        },
+        "branch_tensor_count": 800,
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "load_and_merge_seconds": 102.3052443920169,
+        "lora": {
+          "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+          "size_bytes": 334026912,
+          "tensor_count": 416
+        },
+        "lora_alpha": 64,
+        "lora_pairs_merged": 208,
+        "lora_rank": 64,
+        "lora_scale": 1.0,
+        "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+        "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+        "phase_seconds": {
+          "base": 132.27635612082668,
+          "branch": 16.690337274922058,
+          "lora": 85.58556877193041
+        },
+        "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+      },
+      "cpu_loading": {
+        "interop_after": 192,
+        "interop_before": 192,
+        "interop_loading": 192,
+        "intraop_after": 192,
+        "intraop_before": 192,
+        "intraop_loading": 4,
+        "phase_seconds": {
+          "base": 132.27635612082668,
+          "branch": 16.690337274922058,
+          "lora": 85.58556877193041
+        },
+        "requested_loading_intraop": 4,
+        "scope_seconds": 234.9204835020937,
+        "status": "completed"
+      }
+    },
+    "211800": {
+      "load": {
+        "base_partition": "ref2va",
+        "base_tensor_count": 535,
+        "branch": {
+          "header_sha256": "f80b733e3770c2c900ec3e7cbeb0fdd00a6231d2caf3fa3e59bddfd05b08d862",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/linear_branch/model.safetensors",
+          "size_bytes": 4279428112,
+          "tensor_count": 800
+        },
+        "branch_tensor_count": 800,
+        "checkpoint": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000",
+        "load_and_merge_seconds": 116.59252641699277,
+        "lora": {
+          "header_sha256": "eba8e41049e45c855e08c44a996dac81806020087d17f052de84fd2b5d9ab47b",
+          "metadata": {},
+          "path": "/cache/zhonghao/h3/models/OpenVDN-vdn-minimax-h3/stage-b-step-2000/adapters/default/adapter_model.safetensors",
+          "size_bytes": 334026912,
+          "tensor_count": 416
+        },
+        "lora_alpha": 64,
+        "lora_pairs_merged": 208,
+        "lora_rank": 64,
+        "lora_scale": 1.0,
+        "merge_dtype": "FP32 delta, cast to parameter dtype, then add",
+        "official_scale_source_commit": "2f740c9291431d89d4f2330743b093fac4390d09",
+        "phase_seconds": {
+          "base": 131.0517882029526,
+          "branch": 20.054296816000715,
+          "lora": 96.50900636706501
+        },
+        "qkv_merge_layout": "post-base-loader contiguous Q/K/V thirds"
+      },
+      "cpu_loading": {
+        "interop_after": 192,
+        "interop_before": 192,
+        "interop_loading": 192,
+        "intraop_after": 192,
+        "intraop_before": 192,
+        "intraop_loading": 4,
+        "phase_seconds": {
+          "base": 131.0517882029526,
+          "branch": 20.054296816000715,
+          "lora": 96.50900636706501
+        },
+        "requested_loading_intraop": 4,
+        "scope_seconds": 248.00504397787154,
+        "status": "completed"
+      }
+    }
+  },
+  "strict_metadata": {
+    "records_by_pid": {
+      "211794": [
+        {
+          "mode": "C_strict_visual_source_same_latent_frame_v1",
+          "reference_count": 1,
+          "reference_kind": "video",
+          "patch_size": [
+            1,
+            2,
+            2
+          ],
+          "source_shape": [
+            37,
+            48,
+            84
+          ],
+          "target_shape": [
+            37,
+            48,
+            84
+          ],
+          "text_len": 6167,
+          "source_audio_t": 209,
+          "target_audio_t": 207
+        }
+      ],
+      "211795": [
+        {
+          "mode": "C_strict_visual_source_same_latent_frame_v1",
+          "reference_count": 1,
+          "reference_kind": "video",
+          "patch_size": [
+            1,
+            2,
+            2
+          ],
+          "source_shape": [
+            37,
+            48,
+            84
+          ],
+          "target_shape": [
+            37,
+            48,
+            84
+          ],
+          "text_len": 6167,
+          "source_audio_t": 209,
+          "target_audio_t": 207
+        }
+      ],
+      "211796": [
+        {
+          "mode": "C_strict_visual_source_same_latent_frame_v1",
+          "reference_count": 1,
+          "reference_kind": "video",
+          "patch_size": [
+            1,
+            2,
+            2
+          ],
+          "source_shape": [
+            37,
+            48,
+            84
+          ],
+          "target_shape": [
+            37,
+            48,
+            84
+          ],
+          "text_len": 6167,
+          "source_audio_t": 209,
+          "target_audio_t": 207
+        }
+      ],
+      "211797": [
+        {
+          "mode": "C_strict_visual_source_same_latent_frame_v1",
+          "reference_count": 1,
+          "reference_kind": "video",
+          "patch_size": [
+            1,
+            2,
+            2
+          ],
+          "source_shape": [
+            37,
+            48,
+            84
+          ],
+          "target_shape": [
+            37,
+            48,
+            84
+          ],
+          "text_len": 6167,
+          "source_audio_t": 209,
+          "target_audio_t": 207
+        }
+      ],
+      "211798": [
+        {
+          "mode": "C_strict_visual_source_same_latent_frame_v1",
+          "reference_count": 1,
+          "reference_kind": "video",
+          "patch_size": [
+            1,
+            2,
+            2
+          ],
+          "source_shape": [
+            37,
+            48,
+            84
+          ],
+          "target_shape": [
+            37,
+            48,
+            84
+          ],
+          "text_len": 6167,
+          "source_audio_t": 209,
+          "target_audio_t": 207
+        }
+      ],
+      "211799": [
+        {
+          "mode": "C_strict_visual_source_same_latent_frame_v1",
+          "reference_count": 1,
+          "reference_kind": "video",
+          "patch_size": [
+            1,
+            2,
+            2
+          ],
+          "source_shape": [
+            37,
+            48,
+            84
+          ],
+          "target_shape": [
+            37,
+            48,
+            84
+          ],
+          "text_len": 6167,
+          "source_audio_t": 209,
+          "target_audio_t": 207
+        }
+      ],
+      "211800": [
+        {
+          "mode": "C_strict_visual_source_same_latent_frame_v1",
+          "reference_count": 1,
+          "reference_kind": "video",
+          "patch_size": [
+            1,
+            2,
+            2
+          ],
+          "source_shape": [
+            37,
+            48,
+            84
+          ],
+          "target_shape": [
+            37,
+            48,
+            84
+          ],
+          "text_len": 6167,
+          "source_audio_t": 209,
+          "target_audio_t": 207
+        }
+      ],
+      "211801": [
+        {
+          "mode": "C_strict_visual_source_same_latent_frame_v1",
+          "reference_count": 1,
+          "reference_kind": "video",
+          "patch_size": [
+            1,
+            2,
+            2
+          ],
+          "source_shape": [
+            37,
+            48,
+            84
+          ],
+          "target_shape": [
+            37,
+            48,
+            84
+          ],
+          "text_len": 6167,
+          "source_audio_t": 209,
+          "target_audio_t": 207
+        }
+      ]
+    },
+    "request_count_per_pid": 1,
+    "evidence_source": "Actual pipeline make_metadata from VAE/ref blocks, logged once per diffuse request.",
+    "limitation": "Not a per-layer mask/tensor-coordinate trace. Successful requests plus pinned C source and own C tiny establish the strict infer/layout path."
+  },
+  "server_log_prefix_bytes": 142379,
+  "server_log_prefix_sha256": "77d4e092ffe3d092c46ba0c248b7d01eb78bba97b162365ef75e6efb346dd6ee",
+  "note": "Connectivity/metadata only, not edit-quality evidence."
+}

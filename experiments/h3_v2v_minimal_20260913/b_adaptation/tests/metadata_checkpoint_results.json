@@ -1,0 +1,213 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "source_sha256": {
+    "patched/openvdn_npu.py": "4808ef3017343904d8b52cda9cfebc94798f4d609f8ec19e63c59b92abf3381f",
+    "patched/openvdn_checkpoint.py": "e34c45deabb3def3019879d7ffef36e3aeabf69d824281433a7182804360adfc"
+  },
+  "checks": [
+    {
+      "check": "dynamic-grid-noninteger-coordinates-padding",
+      "layout": {
+        "used_len": 56,
+        "video_start": 11,
+        "num_frames": 7,
+        "tokens_per_frame": 6,
+        "frame_height": 2,
+        "frame_width": 3,
+        "text_start": 53,
+        "text_len": 3
+      }
+    },
+    {
+      "check": "empty-text-layout",
+      "passed": true
+    },
+    {
+      "check": "out-of-order-target-rows",
+      "rejected": "ValueError",
+      "reason": "OpenVDN requires ordered contiguous target rows"
+    },
+    {
+      "check": "missing-target-row",
+      "rejected": "ValueError",
+      "reason": "OpenVDN requires ordered contiguous target rows"
+    },
+    {
+      "check": "source-row-in-target-mask",
+      "rejected": "ValueError",
+      "reason": "OpenVDN target frames must have equal patch counts"
+    },
+    {
+      "check": "inconsistent-grid-across-frames",
+      "rejected": "ValueError",
+      "reason": "OpenVDN target spatial grid must be identical across frames"
+    },
+    {
+      "check": "non-row-major-grid",
+      "rejected": "ValueError",
+      "reason": "OpenVDN target patches must be in frame/height/width row-major order"
+    },
+    {
+      "check": "text-overlaps-target",
+      "rejected": "ValueError",
+      "reason": "OpenVDN text and target video segments must not overlap"
+    },
+    {
+      "check": "multiple-real-documents",
+      "rejected": "ValueError",
+      "reason": "OpenVDN supports one packed document plus optional trailing padding"
+    },
+    {
+      "check": "nonfinite-grid",
+      "rejected": "ValueError",
+      "reason": "OpenVDN target coordinates must be finite"
+    },
+    {
+      "check": "lora-post-reorder-QKV-thirds-and-O",
+      "pairs": 208
+    },
+    {
+      "check": "all-branch-name-mapping",
+      "tensors": 800
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 71,
+      "dtype": "torch.float32",
+      "chunk_rows": 1,
+      "max_abs": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 71,
+      "dtype": "torch.float32",
+      "chunk_rows": 3,
+      "max_abs": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 71,
+      "dtype": "torch.float32",
+      "chunk_rows": 256,
+      "max_abs": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 71,
+      "dtype": "torch.bfloat16",
+      "chunk_rows": 1,
+      "max_abs": 0.0,
+      "atol": 0.0,
+      "rtol": 0.0
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 71,
+      "dtype": "torch.bfloat16",
+      "chunk_rows": 3,
+      "max_abs": 0.0,
+      "atol": 0.0,
+      "rtol": 0.0
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 71,
+      "dtype": "torch.bfloat16",
+      "chunk_rows": 256,
+      "max_abs": 0.0,
+      "atol": 0.0,
+      "rtol": 0.0
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 83,
+      "dtype": "torch.float32",
+      "chunk_rows": 1,
+      "max_abs": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 83,
+      "dtype": "torch.float32",
+      "chunk_rows": 3,
+      "max_abs": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 83,
+      "dtype": "torch.float32",
+      "chunk_rows": 256,
+      "max_abs": 0.0,
+      "atol": 1e-07,
+      "rtol": 1e-06
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 83,
+      "dtype": "torch.bfloat16",
+      "chunk_rows": 1,
+      "max_abs": 0.0,
+      "atol": 0.0,
+      "rtol": 0.0
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 83,
+      "dtype": "torch.bfloat16",
+      "chunk_rows": 3,
+      "max_abs": 0.0,
+      "atol": 0.0,
+      "rtol": 0.0
+    },
+    {
+      "check": "official-scale-one-LoRA",
+      "seed": 83,
+      "dtype": "torch.bfloat16",
+      "chunk_rows": 256,
+      "max_abs": 0.0,
+      "atol": 0.0,
+      "rtol": 0.0
+    },
+    {
+      "check": "invalid-LoRA-shape",
+      "rejected": "ValueError",
+      "reason": "bad: invalid LoRA shapes (2, 5), (3, 2), (3, 4)"
+    },
+    {
+      "check": "nonfinite-LoRA",
+      "rejected": "ValueError",
+      "reason": "nan.lora_A: non-finite values in elements [0:1048576]"
+    },
+    {
+      "check": "valid-BF16-header",
+      "passed": true
+    },
+    {
+      "check": "truncated-data",
+      "rejected": "ValueError",
+      "reason": "/cache/zhonghao/h3_v2v_minimal_20260913/cpu_regression_20260913_1828/synthetic_headers_pru10gft/truncated.safetensors: truncated file or unexpected trailing bytes"
+    },
+    {
+      "check": "unexpected-FP32-checkpoint",
+      "rejected": "ValueError",
+      "reason": "/cache/zhonghao/h3_v2v_minimal_20260913/cpu_regression_20260913_1828/synthetic_headers_pru10gft/unexpected-dtype.safetensors:tiny: unexpected dtype or invalid/noncontiguous extent"
+    },
+    {
+      "check": "duplicate-header-key",
+      "rejected": "ValueError",
+      "reason": "Duplicate safetensors header key 'tiny'"
+    }
+  ],
+  "limitations": "Synthetic unit tests only; no full checkpoint loading, vLLM loader integration, actual NPU execution, or actual H3 sample metadata."
+}

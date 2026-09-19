@@ -1,0 +1,79 @@
+{
+  "record_type": "local_summary_of_root_remote_completion_checks_and_downloaded_evidence",
+  "record_as_of": "2026-09-14T00:07:32+08:00",
+  "remote_checked_at": "2026-09-14T00:01:02.055988+08:00",
+  "remote_check_timestamp_note": "Root supplied the actual completion timestamp of its read-only reverse-specific verification, exit0/session38188. This is a local evidence summary, not raw execution stdout or a fabricated log.",
+  "run_id": "91c6c0f98ba84c7c828202d5934176cd",
+  "run_directory": "/cache/zhonghao/h3/model_trial/01234567/explicit_reverse_couple_124/A/runs/a_20260913T153514Z_91c6c0f98ba84c7c828202d5934176cd",
+  "host": {
+    "hostname": "ma-job-042f8bbb-1a1b-41f0-bd5e-6ee86199e9e3-worker-0",
+    "boot_id": "8e904236-bb23-44b5-b7ba-af73ba5c1f77",
+    "machine": "aarch64"
+  },
+  "case": "A",
+  "sample_id": "explicit_reverse_couple_124",
+  "physical_cards": [0,1,2,3,4,5,6,7],
+  "formal_completed_at": "2026-09-13T15:55:49.400031+00:00",
+  "cleanup_finished_at": "2026-09-13T15:56:22.550435+00:00",
+  "terminal_phase": "formal_completed_review_required",
+  "formal_request_attempts": 1,
+  "http_code": "200",
+  "request_end_to_end_seconds": 846.0936839610804,
+  "output_bytes": 4271598,
+  "output_metadata_from_verified_result": {
+    "dimensions": [1344,768],
+    "fps": 24,
+    "decoded_video_frames": 124,
+    "container_duration_seconds": 5.207,
+    "codecs": ["h264","aac"]
+  },
+  "sha256": {
+    "source_video": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+    "output_video": "17b83ee2196302e9523e3e54aa239e3d6e7c8d5070c83d7c066e4f8cf06b38d7",
+    "formal_result": "c15ab3b9319b9f1c3e40810848041a6419d8ed3222d0dbb3ba9e1d73e44e5d28",
+    "formal_request": "10224de5f592e71f5e3ebbcd0821a1957a9bde2689037a7aeda500864edf16f8",
+    "terminal_status": "cf916c5323d4fb9f409d0369b592e5e76d1be0136880d1c415f05c6fe1a75a7b",
+    "frozen_evidence_reported_and_bound_in_status": "155236583775cf8822d17e5755693a1efe8f24d32eedec6b541316a1a76aafd9",
+    "smoke_gate": "07dde87f6f27eb5d9894b8bda7b9d25e9f771a210db841df6502f7e216e807f6",
+    "visual_observations": "c809cc93bbc3a1a8364263ebc3b7069bd5a6242f8c7384ab02de0676535d0eaf"
+  },
+  "root_reported_remote_verification": {
+    "completed": true,
+    "exact_reverse_case_sample_run_host_and_source_prompt": true,
+    "one_formal_request_after_fresh_same_service_smoke": true,
+    "actual_formal_request_result_video_sha_and_ffprobe": true,
+    "frozen_equals_current_source_runtime_transfer_tiny_and_model_identity_headers": true,
+    "terminal_cleanup_and_original_process_identities_exited": true,
+    "fresh_eight_cards_idle_before_reverse_B": true,
+    "checker_scope": "Reviewed reverse-specific read-only check using object.__new__(ATrialSupervisor) and evidence_snapshot with explicit reverse profile; no initialization/write/launch, no lake-only completion reader, no module-global mutation, no full large-model payload rehash."
+  },
+  "local_record_update_verification": {
+    "downloaded_request_result_status_and_visual_observations_read": true,
+    "downloaded_source_video_output_video_result_request_status_smoke_gate_and_observations_sha_recomputed": true,
+    "no_remote_operation": true,
+    "no_model_or_NPU_operation": true,
+    "original_downloaded_artifacts_unmodified": true
+  },
+  "historical_process_binding": {
+    "supervisor": {"pid":322556,"start_ticks":125039821,"pgrp":321375,"session":321375},
+    "server": {"pid":322752,"start_ticks":125040225,"pgrp":322752,"session":322752},
+    "worker_pids": [323631,323632,323633,323634,323635,323636,323637,323638],
+    "worker_start_ticks": 125045365,
+    "worker_pgrp_and_session": 322752
+  },
+  "visual_review": {
+    "record": "visual_review/observations.json",
+    "reviewer": "Independent visual-review agent; summarized here from its frozen observations, not re-inspected by this progress-record updater.",
+    "sampled_output_frames": [0,15,30,45,60,75,90,105,123],
+    "additional_native_frames_viewed": [0,30,123],
+    "additional_root_review": "Root also inspected source_forward_reversed_A8_contact_part_1.jpg and part_3.jpg; the initial/final states support forward source ordering rather than the requested reversal. The independent observations file was not modified.",
+    "assessment": "Requested whole-clip reversal failed in the observed sequence: facial approach/contact precedes close chest embrace, matching the forward source order rather than reversing it.",
+    "continuous_playback_performed": false,
+    "audio_reviewed": false,
+    "not_a_source_dependent_VLM_necessity_test": true
+  },
+  "quality_evidence_from_runtime": false,
+  "NFE_measured": false,
+  "dit_only_seconds": null,
+  "note": "Successful execution and valid video do not establish edit success. Dense A itself fails this reversal, so later B/C reversal failure alone cannot be attributed to C fixed-frame sparsity. No claim of pixel identity, all-frame motion direction, equal quality or overall acceleration."
+}

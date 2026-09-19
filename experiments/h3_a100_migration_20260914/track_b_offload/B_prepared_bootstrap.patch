@@ -1,0 +1,14 @@
+--- a/vllm_omni/diffusion/models/minimax_h3/pipeline_minimax_h3.py
++++ b/vllm_omni/diffusion/models/minimax_h3/pipeline_minimax_h3.py
+@@ -1301,3 +1301,11 @@
+     "MiniMaxH3Pipeline",
+     "get_minimax_h3_post_process_func",
+ ]
++
++
++# Isolated prepared-storage experiment bootstrap; no attention/model edits.
++import os as _h3_prepared_os
++if _h3_prepared_os.environ.get("ZHONGHAO_H3_PREPARED_OFFLOAD", "0") != "0":
++    import sys as _h3_prepared_sys
++    from h3_prepared_integration import install_for_pipeline_module as _h3_prepared_install
++    _h3_prepared_install(_h3_prepared_sys.modules[__name__])

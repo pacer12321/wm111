@@ -1,0 +1,61 @@
+{
+  "schema": "h3_spotedit_ablation_matrix_v1",
+  "sample": {
+    "id": "Te_Temporal_reordering_08_124",
+    "source": "/cache/zhonghao/h3/data/temporal_reordering_08_124/source.mp4",
+    "prompt": "Let the girl on the right in the video do the dancing action first, then the girl on the left follows, reflecting the relationship of the girl on the right teaching the girl on the left to dance.",
+    "frames": 124,
+    "fps": 24,
+    "seed": 4101,
+    "schedule_points": 50,
+    "actual_dit_forwards": 49
+  },
+  "invariants": {
+    "target_source_visibility": "all source KV visible; no strict same-frame restriction",
+    "target_target_attention": "OpenVDN local plus linear",
+    "formal_runs_use_full_denoising": true,
+    "selector_first_x0_capture_is_preprocessing_not_an_evaluation_run": true
+  },
+  "experiments": [
+    {
+      "id": 1,
+      "name": "A",
+      "attention": "original Ref2VA dense",
+      "token_skip": false,
+      "role": "fixed quality and latency upper-bound reference"
+    },
+    {
+      "id": 2,
+      "name": "B",
+      "attention": "T-T OpenVDN; T-S full source visible; S-S dense",
+      "token_skip": false,
+      "role": "ablation root"
+    },
+    {
+      "id": 3,
+      "name": "B+SS",
+      "attention": "B plus S-S local plus linear",
+      "token_skip": false,
+      "compare_to": 2
+    },
+    {
+      "id": 4,
+      "name": "B+Skip",
+      "attention": "same as B; S-S remains dense",
+      "token_skip": "stable-token reuse plus cosine gradual fusion",
+      "compare_to": 2
+    },
+    {
+      "id": 5,
+      "name": "B+SS+Skip",
+      "attention": "B plus S-S local plus linear",
+      "token_skip": "stable-token reuse plus cosine gradual fusion",
+      "compare_to": [3, 4, 1]
+    }
+  ],
+  "reset_ablation": {
+    "with_reset": [13, 22, 31],
+    "without_reset": [],
+    "base_experiment": 5
+  }
+}

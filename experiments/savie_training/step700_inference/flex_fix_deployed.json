@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "files": {
+    "savie_overlay.py": "e0460e3a44d032adaa2a433d109395a33f5ba9b452a63bebc408635637c194b9",
+    "savie_mask_arithmetic.py": "5ebb31e481be6e58f5a9e553114fbdcf437f131f0f7a0bc238a5550d223b426f",
+    "test_flex_arithmetic.py": "ba940324dc0ee9dabe5e375e692e7f4a7a33df43f809b7cc6fc091839e367fb3"
+  },
+  "baseline_sha256": "66efcc1158088a43322dd7adc0c715a26a391e60dff1b72b51245b2122df4396",
+  "token_ownership": "unchanged interleaved",
+  "checkpoint_step": 700,
+  "deployed": true,
+  "old_runtime_sha256": "66efcc1158088a43322dd7adc0c715a26a391e60dff1b72b51245b2122df4396",
+  "changed_scope": "inference mask/index implementation only; no weights, selector, training or collectives changed"
+}

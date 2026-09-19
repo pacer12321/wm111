@@ -1,0 +1,75 @@
+{
+  "review_type": "limited_manual_source_A8_B8_selected_frame_comparison",
+  "not_a_full_video_quality_evaluation": true,
+  "runs": {
+    "A8": "a_20260913T133502Z_294205bef2e043dc84b41315e544b36d",
+    "B8": "b_20260913T140300Z_6362ce1811da4db69d335b3b3ca5d1a4"
+  },
+  "input_identity": {
+    "source_sha256": "e02b3df481f66d0968ab65eac1d56ded8493da952c0bfb21b70ecd5715f87cf9",
+    "A8_sha256": "1df518c92da95f9f926d1a82284199a6017660a46a502502c08b12219c52c9a8",
+    "B8_sha256": "ca8aa801cb1c96026b237f4f1dbb93d8e4846071338aae3796ae77c24537d2fa",
+    "B8_bytes": 11740798,
+    "all_complete_files_hashed_before_decoding": true,
+    "all_decoded_frame_counts": 124,
+    "all_fps": 24,
+    "all_dimensions": [1344, 768],
+    "all_video_track_duration_seconds": 5.166666666666667
+  },
+  "inspection": {
+    "contact": "source_A8_B8_contact.jpg",
+    "contact_dimensions": [1344, 1462],
+    "contact_single_frame_dimensions": [448, 256],
+    "source_A8_B8_indices_seen_side_by_side": [0, 30, 60, 90, 123],
+    "pts_seconds": [0.0, 1.25, 2.5, 3.75, 5.125],
+    "B8_native_resolution_frames_additionally_seen": [0, 30, 60, 90, 123],
+    "A8_native_frame_seen_again_for_texture_comparison": 60,
+    "earlier_A8_native_review_frames": [0, 60, 123],
+    "continuous_playback_performed": false,
+    "audio_reviewed": false,
+    "method": "Local CPU PyAV full decode with one codec thread; selected PNGs and a PIL contact sheet. No new model call or remote operation."
+  },
+  "observations": {
+    "edit_achievement": {
+      "assessment": "snow_cover_clearly_visible_in_both_A8_and_B8_samples",
+      "details": [
+        "Relative to source, both outputs add obvious snow cover to near-shore stones and sloping ground, the far/right shoreline, and the foreground conifer branches.",
+        "Both remain recognizable as the same lake-at-sunset scene, with warm sunlit snow and darker cool-toned shadows.",
+        "The flat white band near the far/right water margin is consistent in appearance with partial ice or snow-covered ice; neither the material nor physical consistency is established by this static review.",
+        "Sustained falling snow is not clearly demonstrated by these five still samples for either output. This part of the prompt should remain unverified rather than marked satisfied."
+      ]
+    },
+    "composition_and_view_progression": {
+      "assessment": "broadly_preserved_and_similar_between_A8_and_B8_at_sampled_times",
+      "details": [
+        "The sun/reflection, distant forest ridge, lake shoreline, and right foreground tree occupy broadly corresponding image regions.",
+        "Across all three sampled sequences, the right foreground tree occupies progressively more of the image, supporting broad preservation of the source view progression.",
+        "The ice/snow boundary, snow distribution, water ripples, and fine branch/shore details are not identical between A8 and B8. No exact geometric, optical-flow, camera, or framewise correspondence was measured."
+      ]
+    },
+    "blue_edges_and_texture": {
+      "assessment": "no_conspicuous_abnormal_bright_blue_outline_confirmed_in_the_selected_samples",
+      "details": [
+        "Blue-gray tones appear in snow/ice shadows and dark shoreline/tree regions in both A8 and B8. Their presence alone is not evidence of a B-specific blue-edge artifact.",
+        "No conspicuous neon-blue border or large blue texture corruption was identified in the five native-resolution B8 frames.",
+        "Fine texture and local softness differ, especially around snowy branches and shore details. This limited inspection does not establish that B8 has equal texture quality, nor rule out subtle edge artifacts or transient artifacts outside the sampled frames."
+      ]
+    },
+    "obvious_failure_screen": {
+      "assessment": "no_gross_failure_observed_in_selected_B8_frames",
+      "details": [
+        "No selected B8 frame is black, blank, dominated by block corruption, or visibly affected by a large geometric collapse.",
+        "There is no obvious wholesale quality collapse of B8 relative to A8 in this contact comparison; this is not an equivalence or non-inferiority result.",
+        "The small green bright spot near the shoreline is already in source and both outputs; it should not be attributed to a newly introduced B8 artifact."
+      ]
+    }
+  },
+  "limits": [
+    "Five selected frames cannot establish absence of flicker, transient distortion, stutter, or temporal discontinuity between samples.",
+    "No continuous playback, audio listening, VLM scoring, image/video perceptual metric, or human-panel evaluation was performed.",
+    "Preserving broad scene composition does not prove exact same-frame source-target alignment.",
+    "This review does not measure or validate request timing, DiT latency, NFE, memory, speedup, or efficiency claims.",
+    "No source/A8/B8 video, result/status record, or production code was changed; only the B result's visual_review subdirectory was created."
+  ],
+  "concise_conclusion_zh": "B8 在五个抽样时刻也有明显积雪编辑，整体构图与 A8 接近，未见黑屏、大面积畸变或醒目的异常蓝色轮廓；但局部细节不完全一致，持续飘雪未确认。不能据此宣称与 A8 等质、全程无闪烁、严格时序一致或音频合格。"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "scope": "Current color ABC plus real VLM stage0 admission. No prior model/environment/math changes. CPU tests do not imply real inference success.",
+  "files": {
+    "a/trial_gates.py": "f786cb3c3ccead8b6de365ca62d2f9dea8aaece1493cd9be0b01e1a4fd4cefa0",
+    "a/vlm_gate.py": "8cb2f37ef94461e62f65882ee6a8b049de1f34679d680f13cf7d37511351f021",
+    "a/run_a_trial.py": "2afe8d793ed7c2cd9a16746f7fb1e918b41f92fae0e87224b0dea11a970f3bc7",
+    "a/launch_a_trial.sh": "a5dae774cbbda7d8f016b5c13cfc1908a1d1d020468175d8c0fba593facc32d4",
+    "b/b_trial_gates.py": "b784b9d7b131230ebbf669a81b9b017fdc7479bab952dc47dd10d520e222dd56",
+    "b/run_b_trial.py": "9dc51899363b56fe5e7a4b5ced42738902f14406a0d0dda473060dd1ed354081",
+    "b/launch_b_trial.sh": "f24c4333b10a661f6e976a8b88b70704f3a931ea64588dc1723bdc218fb599c2",
+    "c/c_trial_gates.py": "258146df27c938e9f220bb64a6725545cc8d1ce8200b7fe072aca4c1143128be",
+    "c/run_c_trial.py": "95eed8b294dca789327fdec6639ef7134f4b97745239518fbce88a54960ac172",
+    "c/launch_c_trial.sh": "6e40da846fbf20d3daa7dcc8916c92c14326d379163827fc42b6dcdef1dccf4f",
+    "vlm/vlm_contract.py": "a1af1e66166a4f2da9fcd3a12061dc9865fbf85d299adaf277bf2cf397e43ea7",
+    "vlm/vlm_worker.py": "ceb55fd54e55d5d1e8c4c887a6721963f4247fd8ea3622e135ee47629f02129b",
+    "vlm/run_vlm.py": "cfaaf60ae7f914369aaacc7f4ccddb002e56250a659eeb6f5a2799b61a9092c0",
+    "vlm/launch_vlm.sh": "ab2246cc57b9fb8f3ae17a9a634cb0e1a308f328bec47a83fdbed6b31ce444a1",
+    "vlm/test_vlm_cpu.py": "7e0369ccd6d20cbb890397bd88e94f24c624c8229326aaccb5c2bc25a00cd763",
+    "vlm/README.md": "b2f729fbbec7295ff7a7b1dcf8e989a0812bd5968948c5d1ed882ed9e859ca6c",
+    "test_color_trial_cpu.py": "be492a8002922ccbc80ea5f6d3d5daf1145cc31e5d3fe6983b499168f6bbc299",
+    "prepare_color_source.py": "894f0004cf9dd9e3846e408b6c1b75268e5c540f29a581266bc18a97d4f432be",
+    "README.md": "f4b57538eea35cfe5e2d2d6d9d17c895cb18a6b9533d7d1fae9eb4fae668996a"
+  }
+}

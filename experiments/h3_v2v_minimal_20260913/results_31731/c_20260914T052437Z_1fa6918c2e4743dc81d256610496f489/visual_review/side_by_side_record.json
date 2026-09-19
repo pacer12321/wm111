@@ -1,0 +1,20 @@
+{
+  "output": "C:\\Users\\DZH\\OneDrive\\Documents\\ChatGPT\\wm111\\experiments\\h3_v2v_minimal_20260913\\results_31731\\c_20260914T052437Z_1fa6918c2e4743dc81d256610496f489\\visual_review\\source_vs_C_synchronized.mp4",
+  "sha256": "941ee112714220dbaf9ee797a86fdbb07f3146efc862feaf5ef68dc43a03b5c7",
+  "bytes": 1179350,
+  "left_source_sha256": "4fb53ba396d3695eb3bb4eadb0b9fe64dc88592e1c8baf3f6cab59a43f66b0a2",
+  "right_C_sha256": "f17aedffb0f1492266e81e6d866a9fb887ac653706291d7f6fb3c5dbb313b593",
+  "frames": 124,
+  "fps": 24,
+  "dimensions": [
+    1344,
+    428
+  ],
+  "synchronization": "Same original frame index and verified i/24 PTS; no retiming or reversal",
+  "resizing": "Aspect-preserving fit into672x384 per half with black letterboxing; labels above",
+  "silent": true,
+  "audio_note": "Source has no audio; generated C audio deliberately omitted from visual comparison only",
+  "is_original_model_output": false,
+  "new_model_call": false,
+  "inputs_unchanged": true
+}

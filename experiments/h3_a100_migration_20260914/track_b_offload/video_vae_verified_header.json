@@ -1,0 +1,9 @@
+{
+  "evidence_source": "Root agent read-only header inspection reported 2026-09-15 07:43 CST",
+  "path": "/cache/zhonghao/h3/models/MiniMax-H3/Ref2VA/video_vae/source/model.safetensors",
+  "file_size": 10415548320,
+  "header_size": 64184,
+  "dtype": "F32",
+  "numel": 2603871032,
+  "runtime_fp32_bytes": 10415484128
+}

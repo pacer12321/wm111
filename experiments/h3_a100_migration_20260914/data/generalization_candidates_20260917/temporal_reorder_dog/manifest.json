@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "sample_id": "temporal_reorder_dog_124",
+  "source_video": "/cache/zhonghao/h3/data/generalization_candidates_20260917/temporal_reorder_dog/source.mp4",
+  "source_sha256": "77f337d9904db09e71a0c2d9decc517746fa637564e9c10dda499c21040a25c7",
+  "source_metadata": {
+    "width": 1280,
+    "height": 720,
+    "frames": 124,
+    "fps": 24,
+    "duration_seconds": 5.166667
+  },
+  "edit_prompt": "This German Shepherd first turns its head and runs toward the pond, and only afterward its owner throws a stick into the pond. Preserve the dog and owner's identities, the environment, camera motion, lighting, and all unrelated details.",
+  "temporal_structure_change_required": true,
+  "provenance": {
+    "dataset": "OmniEdit-Bench",
+    "official_source_id": "Te_Temporal_reordering_10",
+    "official_instruction": "This German Shepherd first turned its head and ran towards the pond, and then its owner threw a stick into the pond.",
+    "source_path": "Temporal/Temporal Composition/Temporal_reordering/10_1280x720.mp4",
+    "source_url": "https://huggingface.co/datasets/OmniEdit-Bench/OmniEdit-Bench/resolve/main/Temporal/Temporal%20Composition/Temporal_reordering/10_1280x720.mp4",
+    "license": "CC-BY-NC-4.0"
+  },
+  "preparation": {
+    "operation": "first 124 frames re-encoded with libx264 CRF 18",
+    "original_frames": 240,
+    "original_duration_seconds": 10.0
+  }
+}

@@ -40,9 +40,9 @@ def classify(instruction: str) -> tuple[str, list[str]]:
     temporal_hits = [pattern.pattern for pattern in TEMPORAL_RE if pattern.search(instruction)]
     content_hits = [pattern.pattern for pattern in CONTENT_RE if pattern.search(instruction)]
     if temporal_hits:
-        return "temporal_change", temporal_hits
+        return "temporal_change_candidate", temporal_hits
     if content_hits:
-        return "content_preserving", content_hits
+        return "content_edit_candidate", content_hits
     return "ambiguous", []
 
 

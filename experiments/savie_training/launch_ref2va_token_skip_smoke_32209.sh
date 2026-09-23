@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT=/cache/zhonghao/h3
 REPO="$ROOT/train_repos/vdn-minimax-h3"
-BASE="$ROOT/models/OpenVDN-vdn-minimax-h3/h3-base"
+BASE="$ROOT/models/OpenVDN-vdn-minimax-h3/ref2va-base"  # build_ref2va_base.py output, never h3-base (FL2VA)
 DMD8="$ROOT/models/OpenVDN-vdn-minimax-h3/stage-dmd-step-250"
 OUT="$ROOT/train_runs/ref2va_dual_token_skip_smoke_dmd8"
 

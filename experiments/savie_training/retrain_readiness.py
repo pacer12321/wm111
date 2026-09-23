@@ -8,6 +8,11 @@ import hashlib
 import json
 from pathlib import Path
 
+try:
+    from src.training.ref2va_base_contract import RECEIPT_NAME, verify_ref2va_base
+except ImportError:  # run beside the module, as the unit tests do
+    from ref2va_base_contract import RECEIPT_NAME, verify_ref2va_base
+
 REQUIRED = (
     "dataset_pair_qc_and_coverage", "source_disjoint_split", "shared_clip_encoders",
     "visual_prompt_tags", "dmd8_weights_and_schedule", "train_infer_full_inputs",
@@ -24,13 +29,17 @@ def sha(path):
     return h.hexdigest()
 
 
-def verify(report, manifest, sample_dir, output, audio_policy):
+def verify(report, manifest, sample_dir, output, audio_policy, base):
     if report.get("schema") != "savie-retrain-readiness-v1":
         raise ValueError("missing full retrain readiness report; tag-only preflight is insufficient")
     if report.get("audio_input_policy") != audio_policy or not audio_policy:
         raise ValueError("audio policy does not match validated training/inference configuration")
     if report.get("starting_point") != "fresh-dmd8-new-lora":
         raise ValueError("must initialize from correct DMD8, not old SAViE checkpoint")
+    # Evidence gathered on the FL2VA h3-base says nothing about the Ref2VA model we serve.
+    verify_ref2va_base(base)
+    if report.get("base_receipt_sha256") != sha(Path(base) / RECEIPT_NAME):
+        raise ValueError("readiness evidence was not produced on this Ref2VA base; rerun the checks")
     if report.get("train_token_skip") is not False or report.get("audio_objective") is not False:
         raise ValueError("unexpected training objective or token-skip setting")
     if Path(report["sample_dir"]).resolve() != Path(sample_dir).resolve():
@@ -71,12 +80,13 @@ def verify(report, manifest, sample_dir, output, audio_policy):
 
 def main():
     p = argparse.ArgumentParser(__doc__)
-    for name in ("report", "manifest", "sample-dir", "output"):
+    for name in ("report", "manifest", "sample-dir", "output", "base"):
         p.add_argument("--" + name, type=Path, required=True)
     p.add_argument("--audio-policy", required=True)
     args = p.parse_args()
     report = json.loads(args.report.read_text(encoding="utf-8"))
-    print(json.dumps(verify(report, args.manifest, args.sample_dir, args.output, args.audio_policy)))
+    print(json.dumps(verify(report, args.manifest, args.sample_dir, args.output, args.audio_policy,
+                            args.base)))
 
 
 if __name__ == "__main__":

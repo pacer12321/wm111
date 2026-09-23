@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import retrain_readiness
 from retrain_readiness import REQUIRED, sha, verify
 
 
@@ -24,17 +25,35 @@ class ReadinessTests(unittest.TestCase):
             path = root/f"code{i}.py";path.write_text("# fixture\n")
             code[str(path)]=sha(path)
         receipt=root/"receipt.json";receipt.write_text('{"fixture":true}')
+        # The base contract itself is covered by test_build_ref2va_base.py.
+        self.base=root/"ref2va-base";self.base.mkdir()
+        (self.base/retrain_readiness.RECEIPT_NAME).write_text('{"fixture":"ref2va"}')
+        self.checked_bases=[]
+        original=retrain_readiness.verify_ref2va_base
+        retrain_readiness.verify_ref2va_base=self.checked_bases.append
+        self.addCleanup(setattr,retrain_readiness,"verify_ref2va_base",original)
         self.report=dict(schema="savie-retrain-readiness-v1",audio_input_policy="fixed-silent",
             starting_point="fresh-dmd8-new-lora",train_token_skip=False,audio_objective=False,
+            base_receipt_sha256=sha(self.base/retrain_readiness.RECEIPT_NAME),
             sample_dir=str(self.samples),manifest_sha256=sha(self.manifest),code_sha256=code,
             initial_buffer_size=4,checks={k:dict(passed=True,receipt_path=str(receipt),
                 receipt_sha256=sha(receipt)) for k in REQUIRED})
 
     def run_gate(self, report=None):
-        return verify(report or self.report,self.manifest,self.samples,self.output,"fixed-silent")
+        return verify(report or self.report,self.manifest,self.samples,self.output,"fixed-silent",self.base)
 
     def test_streaming_does_not_require_all_2000_encodes(self):
         self.assertTrue(self.run_gate()["passed"])
+
+    def test_base_contract_is_checked(self):
+        self.run_gate()
+        self.assertEqual(self.checked_bases,[self.base])
+
+    def test_evidence_from_another_base_rejected(self):
+        report=copy.deepcopy(self.report);report["base_receipt_sha256"]="h3-base-era-evidence"
+        with self.assertRaisesRegex(ValueError,"Ref2VA base"):self.run_gate(report)
+        del report["base_receipt_sha256"]
+        with self.assertRaisesRegex(ValueError,"Ref2VA base"):self.run_gate(report)
 
     def test_tag_only_old_preflight_fails(self):
         with self.assertRaises(ValueError):

@@ -10,6 +10,8 @@ REPO="$ROOT/train_repos/vdn-minimax-h3"
 : "${SAVIE_READY_REPORT:?full real-data test receipts required}"
 : "${SAVIE_AUDIO_POLICY:?explicit matching training/inference audio policy required}"
 OUT="$SAVIE_RETRAIN_OUT"
+# Inference serves Ref2VA, so training must too; build_ref2va_base.py writes this. Never h3-base (FL2VA).
+BASE="$ROOT/models/OpenVDN-vdn-minimax-h3/ref2va-base"
 cd "$REPO"
 export PYTHONPATH="$REPO"
 export CUDA_VISIBLE_DEVICES=0,1,2,3
@@ -17,10 +19,11 @@ export OMP_NUM_THREADS=4
 export LD_LIBRARY_PATH="$ROOT/cuda_compat13/usr/local/cuda-13.0/compat:$ROOT/env_cuda_v1/lib:${LD_LIBRARY_PATH:-}"
 "$ROOT/env_cuda_v1/bin/python" -u "$ROOT/retrain_readiness.py" \
   --report "$SAVIE_READY_REPORT" --manifest "$SAVIE_RETRAIN_MANIFEST" \
-  --sample-dir "$SAVIE_RETRAIN_SAMPLES" --output "$OUT" --audio-policy "$SAVIE_AUDIO_POLICY"
+  --sample-dir "$SAVIE_RETRAIN_SAMPLES" --output "$OUT" --audio-policy "$SAVIE_AUDIO_POLICY" \
+  --base "$BASE"
 exec "$ROOT/env_cuda_v1/bin/torchrun" --standalone --nproc-per-node=4 \
   -m src.training.train_ref2va_dual \
-  --base "$ROOT/models/OpenVDN-vdn-minimax-h3/h3-base" \
+  --base "$BASE" \
   --dmd8 "$ROOT/models/OpenVDN-vdn-minimax-h3/stage-dmd-step-250" \
   --output "$OUT" \
   --sample-dir "$SAVIE_RETRAIN_SAMPLES" --audio-input-policy "$SAVIE_AUDIO_POLICY" \

@@ -27,6 +27,7 @@ from src.models.factory import build_model, load_model_weights
 from src.models.hybrid_transform import (install_token_skip_training, set_layout,
                                          set_softmax_backend, set_token_skip)
 from src.training import fsdp_stage as fs
+from src.training.ref2va_base_contract import RECEIPT_NAME, sha256_file, verify_ref2va_base
 from src.training.ref2va_batch import (latent_selector_mask, pack_ref2va_batch,
                                        unpatchify_video_rows)
 from src.training.t2va_batch import x0_from_velocity
@@ -35,7 +36,8 @@ from src.training.shared_clip_contract import audio_latent_count, merge_encoded_
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--base", required=True)
+    parser.add_argument("--base", required=True,
+                        help="Ref2VA base built by build_ref2va_base.py (never the FL2VA h3-base).")
     parser.add_argument("--dmd8", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--max-steps", type=int, default=1)
@@ -315,6 +317,14 @@ def main():
     replica_id = rank // shard_size
     shard_rank = rank % shard_size
 
+    # Inference serves the Ref2VA partition; a LoRA trained on any other base (the FL2VA
+    # h3-base included) is merged onto weights it never saw. Refuse before loading 66 GB.
+    base_receipt = verify_ref2va_base(args.base)
+    base_provenance = {
+        "partition": base_receipt["partition"],
+        "source": base_receipt["source"],
+        "receipt_sha256": sha256_file(os.path.join(args.base, RECEIPT_NAME)),
+    }
     t0 = time.time()
     model, spec = load_dmd8_model(args.base, args.dmd8, rank)
     model = configure_savie_lora(model, args.lora_rank, args.lora_alpha)
@@ -525,6 +535,8 @@ def main():
                 step + 1, rank, spec, lambda _name, parameter: parameter.requires_grad,
                 metadata={
                     "task_base": "MiniMax-H3 Ref2VA",
+                    "base_source": base_provenance["source"],
+                    "base_receipt_sha256": base_provenance["receipt_sha256"],
                     "acceleration_checkpoint": "OpenVDN stage-dmd-step-250 DMD8",
                     "token_skip": ("validated latent selector" if args.train_token_skip
                                    else "disabled during connectivity training"),
@@ -548,6 +560,7 @@ def main():
                 "gradient_sync": "FSDP2 replicate-mesh reduction every backward",
             },
             "base": os.path.abspath(args.base),
+            "base_provenance": base_provenance,
             "dmd8": os.path.abspath(args.dmd8),
             "architecture": {
                 "tt": "VDN local softmax + VDN linear",

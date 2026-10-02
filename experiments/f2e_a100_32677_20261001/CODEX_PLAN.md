@@ -398,7 +398,11 @@ OmniEdit-Bench 没有为这个用途筛过，负责人决定不用。全部从 D
 上面的类型是按指令关键词粗分的，抽样时人工核对一遍指令。某一类经过下面的检查后不够数，就用同类型的另一个划分或者换色类补，缺口写进清单。
 
 **用之前必须做的检查**：
-1. **和训练数据去重**：SAViE 的训练数据是从同一份 25k 候选清单里另选的（见 `experiments/savie_training/data_reselection_summary_20260919.json`），不保证避开这两个划分。拿 step700 / step1000 和 Ref2VA 底座重训实际用过的训练清单，按源视频路径和 SHA256 去重，重叠的剔除。
+1. **和训练数据去重**（v3.1 补充：不必等 step700 / step1000 的原始清单）：
+   - 按仓库里的脚本，step700 / step1000 的训练数据链路是：25k 候选清单（`experiments/ditto_tools/liveedit_candidates_25k_labeled.jsonl`，25,000 行、25,000 个不同的源视频，一个源视频只出现一次）→ `experiments/savie_training/build_savie_extraction_pool.py` 只保留 `global_freeform1`、`global_freeform2`、`global_style1` 三类 → `prepare_stream_manifests.py` 从中抽 4k 池和 2k 训练集。所以**局部编辑类和 `global_style2` 类的源视频不可能进过 step700 / step1000 的训练**。
+   - Ref2VA 底座重训的 2,000 条里有局部编辑（之前的选样报告里约 446 条），必须拿那 2,000 条审计记录按源视频路径和 SHA256 去重。
+   - 因此：局部编辑从验证 / 测试划分里抽，和重训的 2,000 条去重；全局组只从 `global_style2` 里抽（验证划分 33 条、测试划分 43 条，够开发集 8 条和测试集 24 条）。这样不需要 step700 / step1000 的原始清单。
+   - 原始清单在旧机器上的位置（仓库脚本里的路径）：`/temp/zhonghao/savie_stream/manifests/` 下的 `pool_4k.jsonl`、`train_2k.jsonl`、`reserve_2k.jsonl`、`train_2k_reserve_filled_actual.jsonl`（实际训练用的是最后这个），样本目录 `/temp/zhonghao/savie_stream/samples`，训练输出 `/cache/zhonghao/h3/train_runs/savie_dmd8_skipoff_2k` 和 `..._tagsfix_20260919`。如果之后找到，再核对一遍上面的推断。
 2. **长度、帧率、画幅（v3.1 更正）**：之前写的"4 条核心片段是 124 帧 / 24 fps"是错的。实际上这 4 条也是 Ditto 片段：源视频 101 帧、20 fps，模型生成 107 帧，其中有竖屏。新 Ditto 片段**沿用这 4 条现有的请求构造规则**（同一套帧数、帧率、分辨率和画幅处理），不另立新口径，这样筛选集、开发集、测试集的数字可以直接放在一起比。横竖屏都保留，记录画幅作为分层属性，竖屏占比不超过 Ditto 原始比例（约 20%）。
 3. **分辨率**：用 ffprobe 查源视频分辨率，明显低于 4 条核心片段的剔除，原因写进清单。
 4. **文件是否在盘上**：局部编辑类的源视频之前大多没解压。只从 Ditto 压缩包里提取选中的这两百来条（可以参考 `experiments/ditto_tools/extract_ditto_selected.sh`），不要整包解压，注意 `/temp` 的余量。

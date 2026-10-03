@@ -1,6 +1,6 @@
 # F2E 加速：交给 Codex 的执行方案（A100，集群端口 32677）
 
-版本：2026-10-03 v3.7（外部基线按"8 步优先"重排，大模型存放位置已指定，见 0.00 阶段二第 4 条）｜ 交接自：上一位助手（Claude）｜ 负责人：daizhonghao
+版本：2026-10-03 v3.8（外部基线逐个核对是否 v2v；VDN-H3 8 步改为消融实验；补充 Lucy Edit、Kiwi-Edit 作可选参照，见 0.00 阶段二第 4 条）｜ 交接自：上一位助手（Claude）｜ 负责人：daizhonghao
 
 > 目录名里的 32677 保留不改。v2.5 起主力机器是 30141（2 卡），见 0.1 和 2.1。
 
@@ -50,9 +50,12 @@
    | 基线 | 设置 | 条数 | 状态 |
    |---|---|---|---|
    | H3 Ref2VA + LightX2V Turbo 8 步 v1.0 768p LoRA | 8 步，video shift 12、audio shift 3，Euler | 测试集 120 | 底座在机器上，LoRA 小，**马上开始** |
-   | VDN-H3 8 步（OpenVDN 公开权重 `stage-dmd-step-250`），直接套到 Ref2VA 做视频编辑，不加我们的 SAViE 和 skip | 8 步 | 测试集 120 | 权重已在机器上，**马上开始**；它同时说明 SAViE 和 skip 的贡献 |
-   | Editto + CausVid LoRA（8 步） | Editto 默认 40 步；CausVid LoRA 社区用法是 8 步左右可接近 50 步效果 | 测试集 120 | 先在 4 条上试能否正常出片，不能就只跑 Editto 原版 |
+      | Editto + CausVid LoRA（8 步） | Editto 默认 40 步；CausVid LoRA 社区用法是 8 步左右可接近 50 步效果 | 测试集 120 | 先在 4 条上试能否正常出片，不能就只跑 Editto 原版 |
    | Wan2.1 VACE-14B + CausVid LoRA（8 步） | VACE 本身不是纯指令编辑模型，需要掩码或控制信号；用了什么输入要写清楚 | 测试集 120 | 同上，先 4 条试跑 |
+
+   **是不是 v2v（v3.8 补充）**：Editto 是专门的指令式视频编辑（v2v）模型；H3 Ref2VA 原版和两组 LightX2V LoRA 是把源视频当参考视频输入来做编辑（LightX2V 的 LoRA 是用参考图片训练的，用在视频参考上属于超出训练分布）；VACE 也能做 v2v，但要掩码或控制信号，不是纯指令。**VDN-H3 8 步不是 v2v 模型**（官方只支持 T2VA / I2VA / FL2VA 和用图片做参考），把它套到 Ref2VA 做视频编辑是我们自己的改法，所以从外部基线移到**消融实验**："F2E 去掉 SAViE 和 skip"，权重已在机器上，照常跑 120 条。
+
+   **补充的专门 v2v 指令编辑模型（可选，权重公开，先核实许可证和默认步数）**：Lucy Edit Dev（`decart-ai/Lucy-Edit-Dev`，基于 Wan2.2 5B）、Kiwi-Edit。它们不是 8 步，放在第二组作画质参照。
 
    **第二组：其他步数（作为参照）**
 
